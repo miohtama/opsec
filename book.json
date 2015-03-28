@@ -1,0 +1,20 @@
+ {
+    "links": {
+        "sidebar": {
+            "Need help? Talk to us in IRC!": ""
+        }
+    },
+
+    "plugins": [
+        "anchors", "ga", "richquotes"
+    ],
+
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-61278902-1"
+        },
+        "richquotes" : {
+            "todos" : true
+        }
+    }
+}
