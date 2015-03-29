@@ -1,4 +1,6 @@
-This is the project for free-to-edit Operations Security (OPSEC) book.
+This is an online book for operations security (OPSEC) for running sensitive services in Internet.
+
+The book teaches best practices of the industry how to protect your team, your users, your service and your infrastructure, so that your service does not get hacked.
 
 * [Read the book](http://www.operationssecurity.org/content/index.html)
 
@@ -6,10 +8,6 @@ This is the project for free-to-edit Operations Security (OPSEC) book.
 
 * [View project on Github](http://github.com/miohtama/opsec)
 
-
-This is an online book for operations security (OPSEC) for running sensitive services in Internet.
-
-The book teaches best practices of the industry how to protect your team, your users, your service and your infrastructure, so that malicious actors cannot cause harm.
 
 # What is operations security (OPSEC)
 
