@@ -9,3 +9,6 @@
 ### Windows
 
 ## Sleep and password
+
+Epoxy
+Kensington Lock
