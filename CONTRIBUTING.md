@@ -106,5 +106,5 @@ Github emails will notify you for the follow up process.
 
 GitHub has an excellent [documentation](https://help.github.com/). Check it out if you need help!
 
-For further questions please [contact DjangoGirls](http://djangogirls.org/).
+For further questions please [contact authors](http://github/miohtama/opsec).
 

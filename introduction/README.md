@@ -16,7 +16,7 @@ The book guides you how to secure your services against mmalicious actors includ
 
 * Industrial espionage
 
-* Law enforcement and hostile government actors
+* Law enforcement, hostile government actors and nation states
 
 ## More information
 
@@ -32,11 +32,11 @@ The book audience includes, but is not limited, to
 
 * Technology officers
 
-* ...and everybody how is resposible for making sure their services do not get hacked.
+* ...and everybody how is resposible for making sure their services and users do not get hacked.
 
 # Contributing
 
-The book is free-to-edit for everybody. Please see how to contribute. We are looking for
+The book is free-to-edit for everybody. [Please see how to contribute](https://github.com/miohtama/opsec/blob/master/CONTRIBUTING.md). We are looking for
 
 * New chapters
 
@@ -55,6 +55,3 @@ You are free to:
 
 for any purpose, even commercially.
 
-# Authors
-
-Mikko Ohtamaa
