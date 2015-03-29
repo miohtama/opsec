@@ -1,6 +1,5 @@
 # Summary
 
-* [Introduction](README.md)
 * [Introduction](introduction/README.md)
 * [Team security](team/README.md)
    * [Physical security](Physical.md)
@@ -16,6 +15,7 @@
     * [Login protection](users/Login.md)
     * [Sign up process](users/Signup.md)
 * [Infrastructure security](infrastructure/README.md)
+    * [Reverse proxies](users/Proxy.md)
 * [Bitcoin and cryptoassets specific](bitcoin/README.md)
     * [Multisig](bitcoin/Multisig.md)
     * [Hot and cold wallet setups](bitcoin/Coldwallet.md)
