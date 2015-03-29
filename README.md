@@ -1,8 +1,4 @@
-# Operations Security (OPSEC)
-
-This is an online book for operations security (OPSEC) for running sensitive services in Internet.
-
-The book teaches best practices of the industry how to protect your team, your users, your service and your infrastructure, so that malicious actors cannot cause harm.
+This is the project for free-to-edit Operations Security (OPSEC) book.
 
 * [Read the book](http://www.operationssecurity.org/content/index.html)
 
@@ -10,7 +6,12 @@ The book teaches best practices of the industry how to protect your team, your u
 
 * [View project on Github](http://github.com/miohtama/opsec)
 
-# What is OPSEC
+
+This is an online book for operations security (OPSEC) for running sensitive services in Internet.
+
+The book teaches best practices of the industry how to protect your team, your users, your service and your infrastructure, so that malicious actors cannot cause harm.
+
+# What is operations security (OPSEC)
 
 Operations security (OPSEC) is multidisciplinary approach for protecting your information and service. Though the term has wider general meaning, this book discusses OPSEC in the context of securing Internet services.
 
