@@ -1,6 +1,5 @@
 # Summary
 
-* [Introduction](introduction/README.md)
 * [Team security](team/README.md)
    * [Physical security](Physical.md)
    * [Laptops and workstations](Computers.md)
