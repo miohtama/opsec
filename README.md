@@ -1,6 +1,6 @@
 This is an online book for operations security (OPSEC) for running sensitive services in Internet.
 
-The book teaches best practices of the industry how to protect your team, your users, your service and your infrastructure, so that your service does not get hacked.
+The book teaches best practices of the industry how to protect your service, users, infrastructure and team, so that your service does not get hacked.
 
 * [Read the book](http://www.operationssecurity.org/content/index.html)
 
