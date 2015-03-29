@@ -1,1 +1,0 @@
-# Laptops and workstations
