@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Team security &mdash; Operations Security (latest) documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Operations Security (latest) documentation" href="../index.html"/>
+        <link rel="next" title="Web security" href="../web/index.html"/>
+        <link rel="prev" title="What is operations security (OPSEC)" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> Operations Security</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Team security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#password-manager">Password manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#third-party-devices">Third party devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#encrypted-computers">Encrypted computers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#encrypted-mobile-devices">Encrypted mobile devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#two-factor-authentication-on-email">Two-factor authentication on email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#two-factor-authentication-on-critical-services">Two-factor authentication on critical services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-login-keys-are-passphrase-protected">Server login keys are passphrase protected</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-login-requires-two-factor-authentication">Server login requires two-factor authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-login-keys-are-audited">Server login keys are audited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-comes-from-secure-sources">Software comes from secure sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#backend-sensitive-data-access-is-limited">Backend sensitive data access is limited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-scrubbing-is-used">Data scrubbing is used</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../web/index.html">Web security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../web/index.html#background">Background</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/index.html">Asset management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../assets/index.html#background">Background</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Operations Security</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Team security</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/team/index.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="team-security">
+<h1>Team security<a class="headerlink" href="#team-security" title="Permalink to this headline">¶</a></h1>
+<p>Ensure integrity of team personal accounts and development tools.</p>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>The physical security, like door access keys or security cameras, is de-emphasized because these aspects might no longer reflect the reality of a mobile worker.</p>
+</div>
+<div class="section" id="password-manager">
+<h2>Password manager<a class="headerlink" href="#password-manager" title="Permalink to this headline">¶</a></h2>
+<p><strong>The team members use password manager?</strong></p>
+<p>All team members use password manager for all of their the passwords. The password manager is the only rational way to manager sensitive, strong and random passwords. If no password manager is used the cognitive load for maintaining secure passwords is too high. Without randomized passwords, a compromised third party site may lead to loss of other passwords due to password or password pattern reuse.</p>
+<p>Applies for: Everyone</p>
+</div>
+<div class="section" id="third-party-devices">
+<h2>Third party devices<a class="headerlink" href="#third-party-devices" title="Permalink to this headline">¶</a></h2>
+<p><strong>The team members do not use third party devices for logging in?</strong></p>
+<p>If the device comes from an untrusted party, it may contain keyloggers and other malware to record the user actions. Such devices include internet kiosks and other free terminals.</p>
+<p>Applies for: Everyone</p>
+</div>
+<div class="section" id="encrypted-computers">
+<h2>Encrypted computers<a class="headerlink" href="#encrypted-computers" title="Permalink to this headline">¶</a></h2>
+<p><strong>The team members have disk encryption enabled on their personal computers?</strong> Yes / No</p>
+<p>The disk encryption implies password login to the computer wake up. A lost device, when encrypted, cannot lead to any kind of compromises</p>
+<p>Applies for: Everyone</p>
+</div>
+<div class="section" id="encrypted-mobile-devices">
+<h2>Encrypted mobile devices<a class="headerlink" href="#encrypted-mobile-devices" title="Permalink to this headline">¶</a></h2>
+<p><strong>The team members have disk encryption enabled on their mobiles and tablets. The devices are password protected?</strong> Yes / No</p>
+<p>A lost device, when encrypted, cannot lead to any kind of compromises. Even if the device were not to contain sensitive data it may contain an accessible email session which can be used to further account compromise and phishing.</p>
+<p>Applies for: Everyone</p>
+</div>
+<div class="section" id="two-factor-authentication-on-email">
+<h2>Two-factor authentication on email<a class="headerlink" href="#two-factor-authentication-on-email" title="Permalink to this headline">¶</a></h2>
+<p><strong>The team member email accounts require two-factor authentication to log in?</strong> Yes / No</p>
+<p>Email accounts contain sensitive information and they can be used to reset the master password of services and infrastructure. Email account is also attractive target to hack in as it is public. Even if email account is protected by strong password, various flaws may exist in the password reset process, e.g. by intercepting the voice mail of the target user. Two-factor authentication provides additional protection against such attacks.</p>
+<p>Applies for: Everyone</p>
+</div>
+<div class="section" id="two-factor-authentication-on-critical-services">
+<h2>Two-factor authentication on critical services<a class="headerlink" href="#two-factor-authentication-on-critical-services" title="Permalink to this headline">¶</a></h2>
+<p><strong>Administrating infrastructure services requires two-factor authentication?</strong> Yes / No</p>
+<p>The team relies on third party services for infrastructure: hosting, domain name, certificates, email, SMS, attack mitigation proxies, etc. If these services provide a two-factor authentication this option is used. This adds additional layer of security if the infrastructure provider becomes a target of attack and the master password can be reset e.g. through phishing.</p>
+<p>Applies for: Everyone</p>
+</div>
+<div class="section" id="server-login-keys-are-passphrase-protected">
+<h2>Server login keys are passphrase protected<a class="headerlink" href="#server-login-keys-are-passphrase-protected" title="Permalink to this headline">¶</a></h2>
+<p><strong>The server logging in is by keys only which are passphrase protected?</strong> Yes / No</p>
+<p>The logging in to production or staging servers is only allowed with the key files. The key files are passphrase protected. The usual logging method is by SSH, but if alternative methods exist accessing the servers they must provide similar method. This protects against brute force attacks against devop access. Furthermore keys must be passphrase protected so in the the case keys are accidentally leaked they are not useful.</p>
+<p>Applies for: Everyone</p>
+</div>
+<div class="section" id="server-login-requires-two-factor-authentication">
+<h2>Server login requires two-factor authentication<a class="headerlink" href="#server-login-requires-two-factor-authentication" title="Permalink to this headline">¶</a></h2>
+<p><strong>The server logging in requires one time token?</strong> Yes / No</p>
+<p>The server login is further restricted to two-factor authentication, so that even in the case the devop laptop is hijacked by malware, this laptop cannot login to the server without a token from an external device.</p>
+<p>Applies for: Everyone</p>
+</div>
+<div class="section" id="server-login-keys-are-audited">
+<h2>Server login keys are audited<a class="headerlink" href="#server-login-keys-are-audited" title="Permalink to this headline">¶</a></h2>
+<p><strong>A real-time method of maintaining and revoking keys across all servers is used?</strong></p>
+<p>In any point of time, the system administrators of the company can revoke any key in the whole organization. Full audit logs of key usage is available and stored separately. This allows quickly to address issues when a key compromise is suspected.</p>
+<p>Applies for: Medium and large enterprises</p>
+</div>
+<div class="section" id="software-comes-from-secure-sources">
+<h2>Software comes from secure sources<a class="headerlink" href="#software-comes-from-secure-sources" title="Permalink to this headline">¶</a></h2>
+<p><strong>Software installation comes from knonw good sources?</strong></p>
+<p>Pirated software is riddled with malware. The team installs software which comes from legit sources only, reducing the risk the software comes with maware.</p>
+<p>Applies for: Everyone</p>
+</div>
+<div class="section" id="backend-sensitive-data-access-is-limited">
+<h2>Backend sensitive data access is limited<a class="headerlink" href="#backend-sensitive-data-access-is-limited" title="Permalink to this headline">¶</a></h2>
+<p><strong>Backend sensitive data access is limited?</strong></p>
+<p>If multiple people access the backend data, the access is limited in a way that the sensitive information is not exposed unless necessary for performing the work.</p>
+<p>Applies for: Everyone</p>
+</div>
+<div class="section" id="data-scrubbing-is-used">
+<h2>Data scrubbing is used<a class="headerlink" href="#data-scrubbing-is-used" title="Permalink to this headline">¶</a></h2>
+<p><strong>When working with datasets, it is cleaned from sensitive information?</strong></p>
+<p>Instead of working with full datasets, there exist a documented process of making a cleaned dataset with reduced sensitive information. This cleaned dataset is given for team members who need to analyse, test and develop against the data. This also limits the impact of data dump leak in the case the data dump ends up to the hands of a third party.</p>
+<p>Applies for: Everyone</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../web/index.html" class="btn btn-neutral float-right" title="Web security">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="What is operations security (OPSEC)"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Mikko Ohtamaa.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'(latest)',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
