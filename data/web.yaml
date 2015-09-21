@@ -28,10 +28,11 @@ questions:
     links:
       - SQL injection in Wikipedia, https://en.wikipedia.org/wiki/SQL_injection
       - SQL injection in OWASP, https://www.owasp.org/index.php/SQL_Injection
-      - PCI DSS, v3.1, requirement 6.5.1, https://www.pcisecuritystandards.org/documents/PCI_DSS_v3-1.pdf
+      - PCI DSS v3.1 requirement 6.5.1, https://www.pcisecuritystandards.org/documents/PCI_DSS_v3-1.pdf
 
   A framework preventing cross-site scripting attacks:
     question: The software is written in a manner that there is no possibility of cross-site scripting attack
+    answers: default
     rationale: Cross-site scripting attack is a way to perform actions on the behalf of the user when the user views or clicks a compromised payload. The attack target can be the site visitor or the site administrator. The usual cross-site scripting attack is posting text or file attachment which payload is not well-escaped HTML. This attack can be avoided by using a proper software development framework which always escapes variables in output and not relying the developers to manually escape variables in page templates, JavaScript or HTML JSON embeds.
     applies: everyone
     links:
@@ -41,15 +42,18 @@ questions:
 
   Password storage best practices:
     question: The user passwords and two-factor seed tokens are hashed using the state-of-the-art encryption
+    answers: default
     rationale: This protects the user password integrity in the case the database is compromised. The developers should not do password management themselves, but use a proper framework or a library for it.
     applies: everyone
     links:
       - PBKDF2 (Password-Based Key Derivation Function 2) in Wikipedia, https://en.wikipedia.org/wiki/PBKDF2
       - Password storage cheat sheet in OWASP, https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet
 
-  Non-guessable administration site:
-    question: The administration site URLs cannot be guessed
-    rationale: Many common software platforms come with the default administration site location like */admin/*. If these URLs are well-known the attacker can exploit this and guess weak administration interface HTTP endpoints to exploit those. An easy solution is to move the administration interface to a non-guessable, non-end user visible, URL.
+  Non-public administration site
+    question: The administration site is not easily accessible to public
+    answers: default
+    rationale: Many common software platforms come with the default administration site in a location like */admin/*. If the administrative URLs are well-known the attacker can exploit this and guess weak administration interface HTTP endpoints to exploit those. The administration interface should be in non-guessable, non-end user visible, URL. Furthermore the additional access restrictions can be placed (see Team security chapter).
+    applies: everyone
     links:
       - Failure to restrict URL Access in OWASP, https://www.owasp.org/index.php/Top_10_2010-A8-Failure_to_Restrict_URL_Access
 
