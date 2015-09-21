@@ -5,34 +5,40 @@ This is an online guide for operations security (OPSEC) for Internet services.
 What is operations security (OPSEC)
 ===================================
 
-Operations security (OPSEC) is multidisciplinary approach for protecting information and services. Though the term has wider general meaning, this book discusses OPSEC in the context of securing Internet services.
+Operations security (OPSEC) is multidisciplinary approach for protecting information and services. Though the term has a wider general meaning, this guide discusses OPSEC in the context of securing Internet services. This includes, but is not limited to, protecting information from industrial espionage, blackhat hackers, law enforcement, social engineering, and mass surveillance. `Please read further introduction to OPSEC in Wikipedia <https://en.wikipedia.org/wiki/Opsec>`_.
 
-More information
+About this guide
+================
 
-* `OPSEC in Wikipedia <https://en.wikipedia.org/wiki/Opsec>`_
+*OperationsSecurity.org* is guide and assessment tool to audit the security of Internet services. The aim is to provide 100% transparent, open, lightweight and practical way to develop and evaluate the security of a service from a holistic perspective. The scope of the guide is interdisciplinary, covering the full range of business operations from the mobile phone of CEO to safe software development practices.
+
+The developers and system administrators can use the guide as a reference when building and auditing their organizations. Furthermore, with the evaluation points provided by the guide a third party can audit an organization and provide a public track record of the matter.
+
+Audience
+========
+
+Not all Internet services are equally critical. This guide is aimed for the services dealing with private and financial data. It can be used as a reference for other kind of services, but in this case some evaluation points might not apply. The guide is not a general guide for IT administrators or normal IT service deployments dealing with issues like provisioning workstations or maintaining intranet.
+
+The audience of the guide includes, but is not limited, to
+
+* Website developers
+
+* System administrators and infrastructure operators
+
+* Technology and security officers
+
+* ...or everybody how is responsible for making sure their services and users do not get hacked.
 
 Chapters
 ========
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 1
 
+    background/index
 {% for chapter in chapters %}
-   {{ chapter }}/index
+    {{ chapter }}/index
 {% endfor %}
-
-Audience
-========
-
-The book audience includes, but is not limited, to
-
-* Website developers
-
-* Sysadmins and infrastructure operators
-
-* Technology officers
-
-* ...and everybody how is resposible for making sure their services and users do not get hacked.
 
 License and copyright
 =====================

@@ -5,12 +5,42 @@
 Team security
 ===========================================
 
-Ensure integrity of team personal accounts and development tools.
+Ensure the integrity of team personal accounts and devices. This chapter discusses how to protect team interperson communications, devices and authorization keys so that they are unlikely to be compromised. This involves key management best practices, cyberhygiene and limiting the scope of the data in a potential leak.
 
 Background
 ==========
 
-The physical security, like door access keys or security cameras, is de-emphasized because these aspects might no longer reflect the reality of a mobile worker.
+The physical security, like door access keys or security cameras, is de-emphasized because these security aspects rarely longer reflect the reality of a mobile contemporary worker. Regardless of the broken physical security, the service should stay intact and uncompromised.
+
+
+
+
+Basic security training
+==============================================================
+
+**The team members are trained in basic security matters?** Yes / No
+
+The team members are trained and aware of common cyber threads like phishing attacks, social engineering. They can identify the basic attacks, like spearhead phishing emails, and do not fall victim to those. The team members maintain cyber hygiene and do not use working devices to visit sites which might compromise the web browser.
+
+Applies for: Everyone
+
+
+
+
+
+
+
+File attachments
+==============================================================
+
+**Potentially dangerous file attachments are handled securely?** Yes / No
+
+A file attachment in email and chat is one of the most common attack vectors. The desktop applications opening likely rigged payloads, like office suite files, PDFs and Flash animations are disabled or the team members do not use them to view the files. Instead, the suspicious attachments, especially ones coming outside the security barrier, are opened in a web browser based viewer or similarly sandboxed tool.
+
+Applies for: Everyone
+
+
+
 
 
 
@@ -18,7 +48,7 @@ The physical security, like door access keys or security cameras, is de-emphasiz
 Password manager
 ==============================================================
 
-**The team members use password manager?** 
+**The team members use password manager?** Yes / No
 
 All team members use password manager for all of their the passwords. The password manager is the only rational way to manager sensitive, strong and random passwords. If no password manager is used the cognitive load for maintaining secure passwords is too high. Without randomized passwords, a compromised third party site may lead to loss of other passwords due to password or password pattern reuse.
 
@@ -28,14 +58,18 @@ Applies for: Everyone
 
 
 
+
+
 Third party devices
 ==============================================================
 
-**The team members do not use third party devices for logging in?** 
+**The team members do not use third party devices for logging in?** Yes / No
 
 If the device comes from an untrusted party, it may contain keyloggers and other malware to record the user actions. Such devices include internet kiosks and other free terminals.
 
 Applies for: Everyone
+
+
 
 
 
@@ -54,6 +88,8 @@ Applies for: Everyone
 
 
 
+
+
 Encrypted mobile devices
 ==============================================================
 
@@ -62,6 +98,8 @@ Encrypted mobile devices
 A lost device, when encrypted, cannot lead to any kind of compromises. Even if the device were not to contain sensitive data it may contain an accessible email session which can be used to further account compromise and phishing.
 
 Applies for: Everyone
+
+
 
 
 
@@ -79,6 +117,13 @@ Applies for: Everyone
 
 
 
+Links:
+
+- `Two-factor Authentication List <https://twofactorauth.org/>`_
+
+
+
+
 
 Two-factor authentication on critical services
 ==============================================================
@@ -88,6 +133,33 @@ Two-factor authentication on critical services
 The team relies on third party services for infrastructure: hosting, domain name, certificates, email, SMS, attack mitigation proxies, etc. If these services provide a two-factor authentication this option is used. This adds additional layer of security if the infrastructure provider becomes a target of attack and the master password can be reset e.g. through phishing.
 
 Applies for: Everyone
+
+
+
+
+Links:
+
+- `Two-factor Authentication List <https://twofactorauth.org/>`_
+
+
+
+
+
+Two-factor authentication on the administrative site
+==============================================================
+
+**The administrative part of the website requires two-factor authentication?** Yes / No
+
+Usually the Internet services provide an administrative site or a backend site where the site managers and support personell can perform in-house tasks. If the attackers compromise the passwords of the team members they should not be able to get in to the administrative site just with the password. Instead, a two-factor authentication token is required for the site admins to log in. Furthermore the administrative address can be limited to VPN or other well-known (office) IPs.
+
+Applies for: Everyone
+
+
+
+
+Links:
+
+- `Two-factor Authentication List <https://twofactorauth.org/>`_
 
 
 
@@ -106,6 +178,8 @@ Applies for: Everyone
 
 
 
+
+
 Server login requires two-factor authentication
 ==============================================================
 
@@ -118,11 +192,18 @@ Applies for: Everyone
 
 
 
+Links:
+
+- `SSH login with Google Authenticator TTOP two-factor <http://sam.xnet.tk/2014/09/ubuntu-2-factor-login-public-key-google-authenticator/>`_
+
+
+
+
 
 Server login keys are audited
 ==============================================================
 
-**A real-time method of maintaining and revoking keys across all servers is used?** 
+**A real-time method of maintaining and revoking keys across all servers is used?** Yes / No
 
 In any point of time, the system administrators of the company can revoke any key in the whole organization. Full audit logs of key usage is available and stored separately. This allows quickly to address issues when a key compromise is suspected.
 
@@ -132,10 +213,12 @@ Applies for: Medium and large enterprises
 
 
 
+
+
 Software comes from secure sources
 ==============================================================
 
-**Software installation comes from knonw good sources?** 
+**Software installation comes from knonw good sources?** Yes / No
 
 Pirated software is riddled with malware. The team installs software which comes from legit sources only, reducing the risk the software comes with maware.
 
@@ -145,10 +228,12 @@ Applies for: Everyone
 
 
 
+
+
 Backend sensitive data access is limited
 ==============================================================
 
-**Backend sensitive data access is limited?** 
+**Backend sensitive data access is limited?** Yes / No
 
 If multiple people access the backend data, the access is limited in a way that the sensitive information is not exposed unless necessary for performing the work.
 
@@ -158,14 +243,18 @@ Applies for: Everyone
 
 
 
+
+
 Data scrubbing is used
 ==============================================================
 
-**When working with datasets, it is cleaned from sensitive information?** 
+**When working with datasets, it is cleaned from sensitive information?** Yes / No
 
 Instead of working with full datasets, there exist a documented process of making a cleaned dataset with reduced sensitive information. This cleaned dataset is given for team members who need to analyse, test and develop against the data. This also limits the impact of data dump leak in the case the data dump ends up to the hands of a third party.
 
 Applies for: Everyone
+
+
 
 
 

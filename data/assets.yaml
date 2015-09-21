@@ -2,6 +2,23 @@
 ---
 meta:
   title: Asset management
-  desciption: The management of customer assets in done in a secure manner
+  description:
+    This chapter discusses about maintaining the assets of the behalf of the user. The assets here refer to cryptoassets, like Bitcoin, other cryptocurrencies and other non-reversable transaction mechanism.
+
+  background:
+
+    The services having high amount of crypto assets are especially valuable cybercrime targets. The cryptoasset transactions are non-reversible and non-traceable, making laundering and liquiding the stolen assets an easy operation.
+
+    Traditional credit and debit card backed transaction mechanism are usually reversible. Furthermore the institutions maintaining the balances have mechanism to address the stolen assets and the user funds are insured. Thus, the traditional transaction mechanism do not have the same issues to deal with.
+
 questions:
 
+  Cold wallet:
+    question: Does the service have a cold wallet and maintain the main share of their assets offline
+    rationale: In the case of the compromised service, the attacker cannot get access to all assets and only can steal minor part of them, severely limiting the damage. Most of the assets are stored offline, in a non-connected computer, which has only physical offline access in a safe location. Thus, the attack taking all the assets would need a physical access to this device, making over-the-internet attacks impossible.
+    answers: default
+    applies: everyone
+    links:
+      - Cold storage in Bitcoin Wiki, https://en.bitcoin.it/wiki/Cold_storage
+    incidences:
+      - Bitstamp

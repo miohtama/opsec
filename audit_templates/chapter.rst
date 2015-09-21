@@ -18,7 +18,7 @@ Background
 {{ question_title }}
 ==============================================================
 
-**{{ question.question }}?** {{ answers[question.answers] }}
+**{{ question.question }}?** {{ answers[question.answers] or question.answers }}
 
 {{ question.rationale }}
 
@@ -26,6 +26,13 @@ Applies for: {{ applies[question.applies] }}
 
 {% if question.categores %}
     Categories: {{ question.categories }}
+{% endif %}
+
+{% if question.links %}
+Links:
+{% for link in question.links %}
+- `{{ link.split(',')[0].strip() }} <{{ link.split(',')[1].strip() }}>`_
+{% endfor %}
 {% endif %}
 
 {% endfor %}
