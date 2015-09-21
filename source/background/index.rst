@@ -13,12 +13,12 @@ Even if the service is not a high value target per se, one might host informatio
 
 In most cases saying "our data is encrypted" does not mean anything. Having the server disks encrypted protects only against very unlikely event that the physical access of the offline server is compromised. Data must be decryptable for the service to be able to run. Thus, the data must always pass in plain text in the server memory. Anybody gaining the access to the live server, through the application vulnerability or the compromised team member device, has the full data access.
 
-Guide structure
-===============
+Guide structure and evaluation points
+=====================================
 
 The guide is divided to different chapters, each reflecting the specific organization or development operations functionality.
 
-Each chapter consists of evalution points, or questions, on a specific matter. Ultimately you want to be able to answer yes to every evaluation point.
+Each chapter consists of questions, called *evalution points*, on a specific matter. Ultimately you want to be able to answer yes to every evaluation point.
 
 Evaluation point applicable criteria
 ====================================

@@ -16,6 +16,30 @@ This section does not discuss the web application vulnerabilities and mitigating
 
 
 
+HTTPS / TLS only
+==============================================================
+
+**The service is HTTPS only?** Yes / No
+
+The service offers traffic only over encrypted channels. Any sensitive service has no excuse not to to use full encryption anymore. It is well known that powerful actors tap and modify Internet traffic globally. Furthermore, the HTTP responses include security headers, like  HTTP Strict Transport Security and X-Frame-Option.
+
+Applies for: Everyone
+
+
+
+
+Links:
+
+- `Let’s Encrypt <a free>`_
+
+- `Security/Server Side TLS in Mozilla Wiki <https://wiki.mozilla.org/Security/Server_Side_TLS>`_
+
+- `X-Frame-Option on MDN <https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options>`_
+
+
+
+
+
 A framework preventing database injection attacks
 ==============================================================
 
@@ -33,6 +57,8 @@ Links:
 - `SQL injection in Wikipedia <https://en.wikipedia.org/wiki/SQL_injection>`_
 
 - `SQL injection in OWASP <https://www.owasp.org/index.php/SQL_Injection>`_
+
+- `PCI DSS <v3.1>`_
 
 
 

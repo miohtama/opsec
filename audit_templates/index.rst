@@ -12,7 +12,7 @@ About this guide
 
 *OperationsSecurity.org* is guide and assessment tool to audit the security of Internet services. The aim is to provide 100% transparent, open, lightweight and practical way to develop and evaluate the security of a service from a holistic perspective. The scope of the guide is interdisciplinary, covering the full range of business operations from the mobile phone of CEO to safe software development practices.
 
-The developers and system administrators can use the guide as a reference when building and auditing their organizations. Furthermore, with the evaluation points provided by the guide a third party can audit an organization and provide a public track record of the matter.
+The developers and system administrators can use the guide as a reference when building and :doc:`auditing their organizations <audit/index>`. Furthermore, with the :doc:`evaluation points <background/index>` provided by the guide a third party can audit an organization and provide a public track record of the matter.
 
 Audience
 ========
@@ -36,7 +36,8 @@ Chapters
     :maxdepth: 1
 
     background/index
-{% for chapter in chapters %}
+    audit/index
+    {% for chapter in chapters %}
     {{ chapter }}/index
 {% endfor %}
 

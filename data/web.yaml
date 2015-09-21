@@ -9,6 +9,17 @@ meta:
     This section does not discuss the web application vulnerabilities and mitigating them in detail. Instead, the team should use proper well-known secure framework in their application development, as usually the framework authors are well-versed in security matters and have thought out and documented the proper security matters.
 
 questions:
+
+  HTTPS / TLS only:
+    question: The service is HTTPS only
+    rationale: The service offers traffic only over encrypted channels. Any sensitive service has no excuse not to to use full encryption anymore. It is well known that powerful actors tap and modify Internet traffic globally. Furthermore, the HTTP responses include security headers, like  HTTP Strict Transport Security and X-Frame-Option.
+    answers: default
+    applies: everyone
+    links:
+      - Let’s Encrypt, a free, automated, and open certificate authority brought to you by the Internet Security Research Group (ISRG), https://letsencrypt.org/
+      - Security/Server Side TLS in Mozilla Wiki, https://wiki.mozilla.org/Security/Server_Side_TLS
+      - X-Frame-Option on MDN, https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options
+
   A framework preventing database injection attacks:
     question: The software is written in a manner that there is no possibility of database injection attack
     rationale: One of the most common web application vulnerabilities is a database injection attack. In the most cases, the database is SQL based, providing opportunity for SQL injections. This can be easily prevented by never constructing database statements by hand and always using a framework to construct the queries, so that all values are properly escaped. The manual SQL manipulation should be prevented from the application developers, so that no room is left for a human error.

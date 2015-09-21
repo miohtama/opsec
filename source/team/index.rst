@@ -50,7 +50,7 @@ Password manager
 
 **The team members use password manager?** Yes / No
 
-All team members use password manager for all of their the passwords. The password manager is the only rational way to manager sensitive, strong and random passwords. If no password manager is used the cognitive load for maintaining secure passwords is too high. Without randomized passwords, a compromised third party site may lead to loss of other passwords due to password or password pattern reuse.
+All team members use password manager for their passwords. The password manager is the only cognitive sane way to manage a lot of sensitive, strong and random passwords. Without randomized passwords, a compromised third party site may lead to loss of other passwords due to password reuse or password pattern reuse.
 
 Applies for: Everyone
 
@@ -65,7 +65,7 @@ Third party devices
 
 **The team members do not use third party devices for logging in?** Yes / No
 
-If the device comes from an untrusted party, it may contain keyloggers and other malware to record the user actions. Such devices include internet kiosks and other free terminals.
+If the device comes from an untrusted party, it may contain keyloggers and other malware to record the user actions. Such devices include internet kiosks and other free terminals. The team members use only their own working devices for the work.
 
 Applies for: Everyone
 
