@@ -18,11 +18,11 @@ Our goals
 
 This guide is a collaborate effort from people who need to deal with Internet security in their professional life. There exist similar projects, but
 
-There exist many similar project, but here we aim to be
+There exist projects which partially overlapping scope. We aim to be
 
 * **Holistic**: We aim to guarantee the security of the project as a whole. This includes organization practices, tools and devices, infrastructure and not just a piece of software.
 
-* **Grassroots effort**: from bottom to up, from individuals to decision makers. The effort sprouts from on real-life, practical, best practices.
+* **Grassroots effort**: from bottom to up, from individuals to decision makers. The effort sprouts from on real-life security practices. The audience and authors are not limited to security researchers, but include software developers and decision makers.
 
 * **Open**: The content is hosted on Github and the editing open-ended for everybody.
 

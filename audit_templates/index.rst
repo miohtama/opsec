@@ -18,9 +18,7 @@ Operations security (OPSEC) is multidisciplinary approach for protecting informa
 About this guide
 ================
 
-*OperationsSecurity.org* is guide and assessment tool to audit the security of Internet services. The aim is to provide 100% transparent, open, lightweight and practical way to develop and evaluate the security of a service from a holistic perspective. The scope of the guide is interdisciplinary, covering the full range of business operations from the mobile phone of CEO to safe software development practices.
-
-The developers and system administrators can use the guide as a reference when building and :doc:`assessing security of their organizations <assessment/index>`. Furthermore, with the :doc:`evaluation points <background/index>` provided by the guide a third party can audit an organization and provide a public track record of the matter.
+*OperationsSecurity.org* is guide and assessment tool to audit the security of Internet services. The aim is to provide 100% transparent, open, lightweight and practical way to develop and evaluate the security of a service from a holistic perspective. The scope of the guide is interdisciplinary, covering the full range of business operations from the mobile phone of CEO to safe software development practices. :doc:`Read more about how and why this guide was created <background/index>`.
 
 Audience
 ========
@@ -37,6 +35,8 @@ The audience of the guide includes, but is not limited, to
 
 * ...or everybody how is responsible for making sure their services and users do not get hacked.
 
+The developers and system administrators can use the guide as a reference when building and :doc:`assessing security of their organizations <assessment/index>`. Furthermore, with the :doc:`evaluation points <background/index>` provided by the guide a third party can audit an organization and provide a public track record of the matter.
+
 Chapters
 ========
 
@@ -45,9 +45,10 @@ Chapters
 
     background/index
     assessment/index
-    {% for chapter in chapters %}
+{% for chapter in chapters %}
     {{ chapter }}/index
 {% endfor %}
+    incidences/index
 
 License and copyright
 =====================

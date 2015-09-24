@@ -76,6 +76,8 @@ questions:
     applies: everyone
     links:
       - Two-factor Authentication List, https://twofactorauth.org/
+    incidences:
+      - bitly
 
   Two-factor authentication on the administrative site:
     question: The administrative part of the website requires two-factor authentication
@@ -96,6 +98,8 @@ questions:
     rationale: The server login is further restricted to two-factor authentication, so that even in the case the devop laptop is hijacked by malware, this laptop cannot login to the server without a token from an external device.
     answers: default
     applies: everyone
+    incidences:
+      - bitstamp
     links:
       - SSH login with Google Authenticator TTOP two-factor, http://sam.xnet.tk/2014/09/ubuntu-2-factor-login-public-key-google-authenticator/
 
@@ -116,9 +120,14 @@ questions:
     rationale: If multiple people access the backend data, the access is limited in a way that the sensitive information is not exposed unless necessary for performing the work.
     answers: default
     applies: everyone
+    incidences:
+      - ashley-madison
 
   Data scrubbing is used:
     question: When working with datasets, it is cleaned from sensitive information
     rationale: Instead of working with full datasets, there exist a repeatable process of making a cleaned dataset with reduced sensitive information from the production data. This cleaned dataset is given for the team members who need to analyse, test and develop against the data. This limits the impact of data dump leak in the case the data dump ends up to the hands of an unknown party.
     answers: default
     applies: everyone
+    incidences:
+      - ashley-madison
+
