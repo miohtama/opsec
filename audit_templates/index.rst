@@ -8,7 +8,7 @@ This is an online guide for operations security (OPSEC) for Internet services.
 
 .. note ::
 
-    This is a living, work-in-progress, document. We kindly ask you no to refer to this document or use the material presented here until the authors get the version 1.0 released.
+    This is a living, work-in-progress, document. We kindly ask you no to refer to this document or use the material presented here until the authors release the version 1.0.
 
 What is operations security (OPSEC)
 ===================================

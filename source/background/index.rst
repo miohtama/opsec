@@ -5,13 +5,30 @@ Background
 Introduction
 ============
 
-operationssecurity.org provides guide and assesment tool to audit security of Internet services.
+This Operations Security guide provides information for designing secure Internet services and a tool to do as security assessments.
 
-The landscape of the Internet security has greatly changed during 2010s. The cyberthriller worst case threat scenarios are no longer fiction. Foreign malicous actors are state sponsored - in the case of an incident there is no remedy through legal means. The global nature of Internet makes it a lawless anarchy. When you plug your server to Internet, you make a social contract that you accept any traffic coming over the wire, even if it is malicious.
+The landscape of the Internet security has greatly changed during 2010s. The cyberthriller worst case threat scenarios are no longer fiction. Foreign malicious actors are state sponsored - in the case of an incident there is no remedy through legal means. The global nature of Internet makes it a lawless anarchy. When you plug your server to Internet, you make a social contract that you accept any traffic coming over the wire, even if it is malicious.
 
 Even if the service is not a high value target per se, one might host information which is valuable blackmail or cyber reconnaissance material for a nation-state actor. If you are carefree you might even be stamped by an attack which was not especially targeting you. The worst case scenario is that the incident will strip everything of the service and it's unlikely there is an insurance fund which will cover this.
 
 In most cases saying "our data is encrypted" does not mean anything. Having the server disks encrypted protects only against very unlikely event that the physical access of the offline server is compromised. Data must be decryptable for the service to be able to run. Thus, the data must always pass in plain text in the server memory. Anybody gaining the access to the live server, through the application vulnerability or the compromised team member device, has the full data access.
+
+Our goals
+=========
+
+This guide is a collaborate effort from people who need to deal with Internet security in their professional life. There exist similar projects, but
+
+There exist many similar project, but here we aim to be
+
+* **Holistic**: We aim to guarantee the security of the project as a whole. This includes organization practices, tools and devices, infrastructure and not just a piece of software.
+
+* **Grassroots effort**: from bottom to up, from individuals to decision makers. The effort sprouts from on real-life, practical, best practices.
+
+* **Open**: The content is hosted on Github and the editing open-ended for everybody.
+
+* **Lightweight**: Everybody from a single person startup should be able to follow the guide.
+
+* **High critical service**: The services storing private data or financial data are high risk targets. We focus is on these services as operators of these services have the responsible to guarantee the safe future of Internet.
 
 Guide structure and evaluation points
 =====================================
