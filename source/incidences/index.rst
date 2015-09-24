@@ -9,8 +9,12 @@ This chapter contains references to historical security breaches, their implicat
 
 
 
+.. _bitstamp:
+
 Bitstamp
 ==============================================================
+
+*Date: 2015-01-04*
 
 Bitstamp lost 5M USD customer assets due to a breach
 
@@ -30,14 +34,15 @@ Even though Bitstamp followed high level software and infrastructure security pr
 
 
 
-
 Related evaluation points:
 
-- team, File attachments
+- :ref:`basic-security-training`
 
-- team, Server login requires two-factor authentication
+- :ref:`opening-file-attachments`
 
-- assets, Cold wallet
+- :ref:`server-login-requires-two-factor-authentication`
+
+- :ref:`cold-wallet`
 
 
 
@@ -55,10 +60,14 @@ Links:
 
 
 
+.. _ashley-madison:
+
 Ashley Madison
 ==============================================================
 
-Ashley Madison, a service billed as enabling extramarital affairs, comprehensibly compromised. A Canadian, Avid Life Media, was running a dating site for married people.
+*Date: 2015-07-01*
+
+Ashley Madison, a service billed as enabling extramarital affairs, got comprehensibly compromised. A Canadian, Avid Life Media, was running a dating site for married people.
 
 "In July 2015, a group calling itself "The Impact Team" stole the user data of Ashley Madison, a commercial website billed as enabling extramarital affairs. The group copied personal information about the site's user base, and threatened to release users' names and personally identifying information if Ashley Madison was not immediately shut down. On 18 and 20 August, the group leaked more than 25 gigabytes of company data, including user details." (Wikipedia)
 
@@ -70,12 +79,11 @@ The CEO of Avid Life Media claims the breach was by an insider who was not an em
 
 
 
-
 Related evaluation points:
 
-- team, Backend sensitive data access is limited
+- :ref:`backend-sensitive-data-access-is-limited`
 
-- team, Data scrubbing is used
+- :ref:`data-scrubbing-is-used`
 
 
 
@@ -97,8 +105,12 @@ Links:
 
 
 
+.. _bitly:
+
 Bitly
 ==============================================================
+
+*Date: 2014-05-08*
 
 Bitly unecrypted backups got compromised.
 
@@ -116,10 +128,9 @@ The authoritative report "More detail", by Bitly, is now taken down (http://blog
 
 
 
-
 Related evaluation points:
 
-- team, Two-factor authentication on critical services
+- :ref:`two-factor-authentication-on-critical-services`
 
 
 
@@ -130,6 +141,204 @@ Links:
 - `Bitly users must change passwords <account credentials might have been compromised>`_
 
 - `More detail (Bitly blog in the Wayback machine) <https://web.archive.org/web/20140515093107/http://blog.bitly.com/>`_
+
+
+
+
+
+.. _cloudflare:
+
+CloudFlare
+==============================================================
+
+*Date: 2012-06-04*
+
+Matthew Prince, the CEO of CloudFlare, a security proxy service company, had his personal Google email account hacked. The account was protected by two-factor authentication.
+
+Google offers two-factor authentication on their web based email a.k.a. GMail. Two-factor authentication should protect against cases where the attacked somehow gains access to the password. In this case, the two-factor authentication is believed to be reset through social engineering AT&T customer support. Prince’s voicemail message was modified by the attacker in order to receive and record an automated phone call from Google with a audible code that could be used to reset his account.
+
+The personal email account of Prince was the recovery email for Google Apps for Business. After gaining the access to Apps, the attacker could read some transaction email traffic, including password reset emails, which was BCC'ed to CloudFlare team. BCC feature was mostly for error diagnostics. The attacker performed password reset on 4Chan.org account, grabbed the password reset email, logged in to 4Chan account and then was able to redirect all 4Chan.org traffic to a page under the control of the attacker.
+
+
+
+Related evaluation points:
+
+- :ref:`two-factor-authentication-on-email`
+
+
+
+
+
+Links:
+
+- `The Four Critical Security Flaws that Resulted in Last Friday's Hack (CloudFlare) <https://blog.cloudflare.com/the-four-critical-security-flaws-that-resulte/>`_
+
+- `Google Two-Factor Authentication Flaw Exposed Google Apps Customers (SecurityWeek) <http://www.securityweek.com/exclusive-google-two-factor-authentication-flaw-exposed-google-apps-customers>`_
+
+
+
+
+
+.. _xcode:
+
+XCode
+==============================================================
+
+*Date: 2015-09-17*
+
+XCode is Apple's development tool for building iOS and OSX applications. A pirated version was distributed with an ability to infect all applications created with the pirated versions. Many official Chinese applications in App Store got rigged. The high valued targets included the official application of Baidu, a large Chinese search engine.
+
+Apple's App Store review policies did not caught the malware and rigged applications passed the review.
+
+The reason why Chinese developers used the pirated XCode in the first place is that the development tool is large (3GB) and downloading it from official Apple sources takes forever in China.
+
+
+
+Related evaluation points:
+
+- :ref:`software-comes-from-secure-sources`
+
+
+
+
+
+Links:
+
+- `Novel Malware XcodeGhost Modifies Xcode <Infects Apple iOS Apps and Hits App Store (PaloAlto Networks)>`_
+
+- `Apple will host Xcode on Chinese servers following malware attack <http://mashable.com/2015/09/24/apple-xcode-china/>`_
+
+
+
+
+
+.. _slack:
+
+Slack
+==============================================================
+
+*Date: 2015-03-01*
+
+Slack is a popular team communication tool among software companies and in US. The database of Slack got compromised, leading to the exposure of salted passwords.
+
+After the breach Slack detected suspicious activity targetting some of its customers. Slack reseted the passwords for these customers. Furthermore, after the incident, Slack enabled two-factor authentication and kill switch as options for its users. Two-factor authentication was not an option before Slack got hacked.
+
+Whether two-factor authentication effectively stops the attackers in the case of database breach is a subject to discussion. If the salted passwords are compromised you usually also lose the two-factor authentication tokens stored in the same database.
+
+
+
+Related evaluation points:
+
+- :ref:`two-factor-authentication`
+
+- :ref:`effective-session-kill`
+
+
+
+
+
+Links:
+
+- `March 2015 Security Incident and the Launch of Two Factor Authentication <http://slackhq.com/post/114696167740/march-2015-security-incident-and-launch-of-2fa>`_
+
+- `Slack enables two-factor authentication following security breach <http://www.theverge.com/2015/3/27/8301031/slack-office-app-two-factor-authentication-secure>`_
+
+
+
+
+
+.. _lastpass:
+
+LastPass
+==============================================================
+
+*Date: 2015-06-10*
+
+A popular password management service, LastPass, got compromised.
+
+LastPass account email addresses, password reminders, server per user salts, and authentication hashes were compromised.
+
+The salted user master passwords where exposed to the attacker. A weak master password could lead to the compromise of the whole password vault of a user. All users were prompted to change their master passwords. LastPass does third factor authentication on its users, claiming this could have protected the potential victims.
+
+
+
+Related evaluation points:
+
+- :ref:`password-manager`
+
+
+
+
+
+Links:
+
+- `LastPass Security Notice <https://blog.lastpass.com/2015/06/lastpass-security-notice.html/>`_
+
+- `Hack Brief: Password Manager LastPass Got Breached Hard <http://www.wired.com/2015/06/hack-brief-password-manager-lastpass-got-breached-hard/>`_
+
+
+
+
+
+.. _chinese-android:
+
+Asian Android phones
+==============================================================
+
+*Date: 2015-09-01*
+
+Various (low budget) Asian Android phones ship with malware preinstalled. This includes brands available in western markets, like Huawei, Lenovo and Xiaomi.
+
+G DATA security experts discovered over 26 Android phone models which are sold having malware preinstalled. Supply chain companies, operators or manufacturers themselves are suspected of planting the malware. The attacker siphons the user data and then resells it on the black markets to substitute the phone price. The malware is usually hidden in a legitimate app which is manipulated to contain malware as an add-on.
+
+
+
+Related evaluation points:
+
+- :ref:`third-party-devices`
+
+
+
+
+
+Links:
+
+- `G DATA Releases Mobile Malware Report for the Second Quarter of 2015 <https://www.gdata-software.com/g-data/newsroom/news/article/g-data-releases-mobile-malware-report-for-the-second-quarter-of-2015>`_
+
+- `Chinese Android smartphones now shipping with pre-installed malware <http://www.scmagazineuk.com/chinese-android-smartphones-now-shipping-with-pre-installed-malware/article/436631/>`_
+
+
+
+
+
+.. _nasa:
+
+NASA
+==============================================================
+
+*Date: 2012-11-15*
+
+NASA lost a laptop containing data on 10,000 users.
+
+Personally identifiable information of at least 10,000 NASA employees and contractors remained at risk of compromise.
+
+The laptop did not have whole disk encryption, making it possible for the thief to access all the data.
+
+The incident prompted an immediate agency-wide initiative to implement full disk encryption on all NASA laptops.
+
+
+
+Related evaluation points:
+
+- :ref:`encrypted-computers`
+
+
+
+
+
+Links:
+
+- `NASA breach update: Stolen laptop had data on 10 <000 users>`_
 
 
 

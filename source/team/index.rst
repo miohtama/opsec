@@ -15,6 +15,8 @@ The physical security, like door access keys or security cameras, is de-emphasiz
 
 
 
+.. _basic-security-training:
+
 Basic security training
 ==============================================================
 
@@ -25,12 +27,19 @@ The team members are trained and aware of common cyber threads like phishing att
 Applies for: Everyone
 
 
+Related incidences:
+
+- :ref:`bitstamp`
 
 
 
 
 
-File attachments
+
+
+.. _opening-file-attachments:
+
+Opening file attachments
 ==============================================================
 
 **Potentially dangerous file attachments are handled securely?** Yes / No
@@ -40,10 +49,17 @@ A file attachment in email and chat is one of the most common attack vectors. Th
 Applies for: Everyone
 
 
+Related incidences:
+
+- :ref:`bitstamp`
 
 
 
 
+
+
+
+.. _password-manager:
 
 Password manager
 ==============================================================
@@ -51,14 +67,27 @@ Password manager
 **The team members use password manager?** Yes / No
 
 All team members use password manager for their passwords. The password manager is the only cognitive sane way to manage a lot of sensitive, strong and random passwords. Without randomized passwords, a compromised third party site may lead to loss of other passwords due to password reuse or password pattern reuse.
+Whether one can trust third party service to store password is a subject to discussion depending on the sensitivity of the project.
 
 Applies for: Everyone
 
 
+Related incidences:
+
+- :ref:`lastpass`
 
 
 
 
+Links:
+
+- `KeePassX <https://www.keepassx.org/>`_
+
+
+
+
+
+.. _third-party-devices:
 
 Third party devices
 ==============================================================
@@ -70,10 +99,17 @@ If the device comes from an untrusted party, it may contain keyloggers and other
 Applies for: Everyone
 
 
+Related incidences:
+
+- :ref:`chinese-android`
 
 
 
 
+
+
+
+.. _encrypted-computers:
 
 Encrypted computers
 ==============================================================
@@ -85,10 +121,17 @@ The disk encryption implies password login to the computer wake up. A lost devic
 Applies for: Everyone
 
 
+Related incidences:
+
+- :ref:`nasa`
 
 
 
 
+
+
+
+.. _encrypted-mobile-devices:
 
 Encrypted mobile devices
 ==============================================================
@@ -105,14 +148,21 @@ Applies for: Everyone
 
 
 
+.. _two-factor-authentication-on-email:
+
 Two-factor authentication on email
 ==============================================================
 
 **The team member email accounts require two-factor authentication to log in?** Yes / No
 
-Email accounts contain sensitive information and they can be used to reset the master password of services and infrastructure. Email account is also attractive target to hack in as it is public. Even if email account is protected by strong password, various flaws may exist in the password reset process, e.g. by intercepting the voice mail of the target user. Two-factor authentication provides additional protection against such attacks.
+Email accounts contain sensitive information and they can be used to reset the master password of services and infrastructure. Email account is also attractive target to hack in as they are either public or easily guessable. Even if email account is protected by strong password, flaws may exist in the password reset process, e.g. by intercepting the voice mail of the target user. Two-factor authentication provides additional protection against such attacks.
 
 Applies for: Everyone
+
+
+Related incidences:
+
+- :ref:`cloudflare`
 
 
 
@@ -121,9 +171,13 @@ Links:
 
 - `Two-factor Authentication List <https://twofactorauth.org/>`_
 
+- `Google 2-Step Verification <https://www.google.com/landing/2step/>`_
 
 
 
+
+
+.. _two-factor-authentication-on-critical-services:
 
 Two-factor authentication on critical services
 ==============================================================
@@ -135,6 +189,11 @@ The team relies on third party services for infrastructure: hosting, domain name
 Applies for: Everyone
 
 
+Related incidences:
+
+- :ref:`bitly`
+
+
 
 
 Links:
@@ -144,6 +203,8 @@ Links:
 
 
 
+
+.. _two-factor-authentication-on-the-administrative-site:
 
 Two-factor authentication on the administrative site
 ==============================================================
@@ -165,6 +226,8 @@ Links:
 
 
 
+.. _server-login-keys-are-passphrase-protected:
+
 Server login keys are passphrase protected
 ==============================================================
 
@@ -180,6 +243,8 @@ Applies for: Everyone
 
 
 
+.. _server-login-requires-two-factor-authentication:
+
 Server login requires two-factor authentication
 ==============================================================
 
@@ -188,6 +253,11 @@ Server login requires two-factor authentication
 The server login is further restricted to two-factor authentication, so that even in the case the devop laptop is hijacked by malware, this laptop cannot login to the server without a token from an external device.
 
 Applies for: Everyone
+
+
+Related incidences:
+
+- :ref:`bitstamp`
 
 
 
@@ -199,6 +269,8 @@ Links:
 
 
 
+
+.. _server-login-keys-are-audited:
 
 Server login keys are audited
 ==============================================================
@@ -215,6 +287,8 @@ Applies for: Medium and large enterprises
 
 
 
+.. _software-comes-from-secure-sources:
+
 Software comes from secure sources
 ==============================================================
 
@@ -225,10 +299,17 @@ Pirated software is riddled with malware. The team installs software which comes
 Applies for: Everyone
 
 
+Related incidences:
+
+- :ref:`xcode`
 
 
 
 
+
+
+
+.. _backend-sensitive-data-access-is-limited:
 
 Backend sensitive data access is limited
 ==============================================================
@@ -240,10 +321,17 @@ If multiple people access the backend data, the access is limited in a way that 
 Applies for: Everyone
 
 
+Related incidences:
+
+- :ref:`ashley-madison`
 
 
 
 
+
+
+
+.. _data-scrubbing-is-used:
 
 Data scrubbing is used
 ==============================================================
@@ -253,6 +341,11 @@ Data scrubbing is used
 Instead of working with full datasets, there exist a repeatable process of making a cleaned dataset with reduced sensitive information from the production data. This cleaned dataset is given for the team members who need to analyse, test and develop against the data. This limits the impact of data dump leak in the case the data dump ends up to the hands of an unknown party.
 
 Applies for: Everyone
+
+
+Related incidences:
+
+- :ref:`ashley-madison`
 
 
 

@@ -16,6 +16,8 @@ Traditional credit and debit card backed transaction mechanism are usually rever
 
 
 
+.. _cold-wallet:
+
 Cold wallet
 ==============================================================
 
@@ -24,6 +26,11 @@ Cold wallet
 In the case of the compromised service, the attacker cannot get access to all assets and only can steal minor part of them, severely limiting the damage. Most of the assets are stored offline, in a non-connected computer, which has only physical offline access in a safe location. Thus, the attack taking all the assets would need a physical access to this device, making over-the-internet attacks impossible.
 
 Applies for: Everyone
+
+
+Related incidences:
+
+- :ref:`Bitstamp`
 
 
 

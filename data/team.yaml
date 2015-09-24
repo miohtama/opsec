@@ -24,27 +24,38 @@ questions:
     rationale: The team members are trained and aware of common cyber threads like phishing attacks, social engineering. They can identify the basic attacks, like spearhead phishing emails, and do not fall victim to those. The team members maintain cyber hygiene and do not use working devices to visit sites which might compromise the web browser.
     answers: default
     applies: everyone
+    incidences:
+    - bitstamp
 
-  File attachments:
+  Opening file attachments:
     question: Potentially dangerous file attachments are handled securely
     rationale: A file attachment in email and chat is one of the most common attack vectors. The desktop applications opening likely rigged payloads, like office suite files, PDFs and Flash animations are disabled or the team members do not use them to view the files. Instead, the suspicious attachments, especially ones coming outside the security barrier, are opened in a web browser based viewer or similarly sandboxed tool.
     answers: default
     applies: everyone
     incidences:
-    - Bitstamp
+    - bitstamp
 
   Password manager:
     question: The team members use password manager
-    rationale: All team members use password manager for their passwords. The password manager is the only cognitive sane way to manage a lot of sensitive, strong and random passwords. Without randomized passwords, a compromised third party site may lead to loss of other passwords due to password reuse or password pattern reuse.
+    rationale:
+      All team members use password manager for their passwords. The password manager is the only cognitive sane way to manage a lot of sensitive, strong and random passwords. Without randomized passwords, a compromised third party site may lead to loss of other passwords due to password reuse or password pattern reuse.
+
+      Whether one can trust third party service to store password is a subject to discussion depending on the sensitivity of the project.
     answers: default
     applies: everyone
     categories: password, authentication
+    links:
+    - KeePassX, https://www.keepassx.org/
+    incidences:
+    - lastpass
 
   Third party devices:
     question: The team members do not use third party devices for logging in
     rationale: If the device comes from an untrusted party, it may contain keyloggers and other malware to record the user actions. Such devices include internet kiosks and other free terminals. The team members use only their own working devices for the work.
     answers: default
     applies: everyone
+    incidences:
+    - chinese-android
 
   Encrypted computers:
     question: The team members have disk encryption enabled on their personal computers
@@ -52,6 +63,8 @@ questions:
     answers: default
     applies: everyone
     categories: encryption
+    incidences:
+    - nasa
 
   Encrypted mobile devices:
     question: The team members have disk encryption enabled on their mobiles and tablets. The devices are password protected
@@ -62,12 +75,15 @@ questions:
 
   Two-factor authentication on email:
     question: The team member email accounts require two-factor authentication to log in
-    rationale: Email accounts contain sensitive information and they can be used to reset the master password of services and infrastructure. Email account is also attractive target to hack in as it is public. Even if email account is protected by strong password, various flaws may exist in the password reset process, e.g. by intercepting the voice mail of the target user. Two-factor authentication provides additional protection against such attacks.
+    rationale: Email accounts contain sensitive information and they can be used to reset the master password of services and infrastructure. Email account is also attractive target to hack in as they are either public or easily guessable. Even if email account is protected by strong password, flaws may exist in the password reset process, e.g. by intercepting the voice mail of the target user. Two-factor authentication provides additional protection against such attacks.
     answers: default
     applies: everyone
     categories: password, authentication
     links:
       - Two-factor Authentication List, https://twofactorauth.org/
+      - Google 2-Step Verification, https://www.google.com/landing/2step/
+    incidences:
+      - cloudflare
 
   Two-factor authentication on critical services:
     question: Administrating infrastructure services requires two-factor authentication
@@ -114,6 +130,8 @@ questions:
     rationale: Pirated software is riddled with malware. The team installs software which comes from legit sources only, reducing the risk the software comes with maware.
     answers: default
     applies: everyone
+    incidences:
+    - xcode
 
   Backend sensitive data access is limited:
     question: Backend sensitive data access is limited

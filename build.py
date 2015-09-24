@@ -1,7 +1,9 @@
 import os
 import jinja2
+from slugify import slugify
 from yaml import safe_load as load
 import yaml
+
 from collections import OrderedDict
 
 def ordered_load(stream, Loader=yaml.Loader, object_pairs_hook=OrderedDict):
@@ -24,6 +26,11 @@ APPLIES = {
     "everyone": "Everyone",
     "mle": "Medium and large enterprises"
 }
+
+
+@jinja2.contextfilter
+def normalize_id(jinja_ctx, context, **kw):
+    return slugify(context)
 
 
 def get_audit_data(chapter):
@@ -59,6 +66,7 @@ def get_incidences_data(chapters):
 
 loader = jinja2.FileSystemLoader(os.path.join(os.getcwd(), "audit_templates"))
 env = jinja2.Environment(loader=loader)
+env.filters["normalize_id"] = normalize_id
 
 chapter_template = env.get_template('chapter.rst')
 chapter_ids = load(open("data/index.yaml", "rt"))

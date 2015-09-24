@@ -9,16 +9,19 @@ This chapter contains references to historical security breaches, their implicat
 
 {% for incidence_id, incidence in incidences.items() %}
 
+.. _{{ incidence_id|normalize_id }}:
+
 {{ incidence.title }}
 ==============================================================
 
-{{ incidence.description }}
+*Date: {{ incidence.date }}*
 
+{{ incidence.description }}
 
 {% if incidence.references %}
 Related evaluation points:
 {% for chapter_id, question_id in incidence.references %}
-- {{ chapter_id }}, {{ question_id }}
+- :ref:`{{ question_id|normalize_id }}`
 {% endfor %}
 
 {% endif %}

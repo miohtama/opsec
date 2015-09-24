@@ -15,6 +15,8 @@ Background
 {% if questions %}
 {% for question_title, question in questions.items() %}
 
+.. _{{ question_title|normalize_id }}:
+
 {{ question_title }}
 ==============================================================
 
@@ -24,14 +26,17 @@ Background
 
 Applies for: {{ applies[question.applies] }}
 
-{% if question.categores %}
-    Categories: {{ question.categories }}
+{% if question.incidences %}
+Related incidences:
+{% for incidence_id in question.incidences %}
+- :ref:`{{ incidence_id }}`
+{% endfor %}
 {% endif %}
 
 {% if question.links %}
 Links:
 {% for link in question.links %}
-- `{{ link.split(',')[0].strip() }} <{{ link.split(',')[1].strip() }}>`_
+- `{{ ','.join(link.split(',')[0:-1]) }} <{{ link.split(',')[-1].strip() }}>`_
 {% endfor %}
 {% endif %}
 

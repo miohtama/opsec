@@ -66,3 +66,86 @@ bitly:
   links:
     - Bitly users must change passwords, account credentials might have been compromised, http://www.techtimes.com/articles/6773/20140510/bitly-users-must-change-passwords-account-credentials-might-have-been-compromised.htm
     - More detail (Bitly blog in the Wayback machine), https://web.archive.org/web/20140515093107/http://blog.bitly.com/
+
+cloudflare:
+  title: CloudFlare
+  date: 2012-06-04
+  description: |
+    Matthew Prince, the CEO of CloudFlare, a security proxy service company, had his personal Google email account hacked. The account was protected by two-factor authentication.
+
+    Google offers two-factor authentication on their web based email a.k.a. GMail. Two-factor authentication should protect against cases where the attacked somehow gains access to the password. In this case, the two-factor authentication is believed to be reset through social engineering AT&T customer support. Prince’s voicemail message was modified by the attacker in order to receive and record an automated phone call from Google with a audible code that could be used to reset his account.
+
+    The personal email account of Prince was the recovery email for Google Apps for Business. After gaining the access to Apps, the attacker could read some transaction email traffic, including password reset emails, which was BCC'ed to CloudFlare team. BCC feature was mostly for error diagnostics. The attacker performed password reset on 4Chan.org account, grabbed the password reset email, logged in to 4Chan account and then was able to redirect all 4Chan.org traffic to a page under the control of the attacker.
+
+  links:
+    - The Four Critical Security Flaws that Resulted in Last Friday's Hack (CloudFlare), https://blog.cloudflare.com/the-four-critical-security-flaws-that-resulte/
+    - Google Two-Factor Authentication Flaw Exposed Google Apps Customers (SecurityWeek), http://www.securityweek.com/exclusive-google-two-factor-authentication-flaw-exposed-google-apps-customers
+
+xcode:
+  title: XCode
+  date: 2015-09-17
+  description: |
+    XCode is Apple's development tool for building iOS and OSX applications. A pirated version was distributed with an ability to infect all applications created with the pirated versions. Many official Chinese applications in App Store got rigged. The high valued targets included the official application of Baidu, a large Chinese search engine.
+
+    Apple's App Store review policies did not caught the malware and rigged applications passed the review.
+
+    The reason why Chinese developers used the pirated XCode in the first place is that the development tool is large (3GB) and downloading it from official Apple sources takes forever in China.
+
+  links:
+   - Novel Malware XcodeGhost Modifies Xcode, Infects Apple iOS Apps and Hits App Store (PaloAlto Networks), http://researchcenter.paloaltonetworks.com/2015/09/novel-malware-xcodeghost-modifies-xcode-infects-apple-ios-apps-and-hits-app-store/#
+   - Apple will host Xcode on Chinese servers following malware attack, http://mashable.com/2015/09/24/apple-xcode-china/
+
+slack:
+  title: Slack
+  date: 2015-03-01
+  description: |
+    Slack is a popular team communication tool among software companies and in US. The database of Slack got compromised, leading to the exposure of salted passwords.
+
+    After the breach Slack detected suspicious activity targetting some of its customers. Slack reseted the passwords for these customers. Furthermore, after the incident, Slack enabled two-factor authentication and kill switch as options for its users. Two-factor authentication was not an option before Slack got hacked.
+
+    Whether two-factor authentication effectively stops the attackers in the case of database breach is a subject to discussion. If the salted passwords are compromised you usually also lose the two-factor authentication tokens stored in the same database.
+
+  links:
+   - March 2015 Security Incident and the Launch of Two Factor Authentication, http://slackhq.com/post/114696167740/march-2015-security-incident-and-launch-of-2fa
+   - Slack enables two-factor authentication following security breach, http://www.theverge.com/2015/3/27/8301031/slack-office-app-two-factor-authentication-secure
+
+lastpass:
+  title: LastPass
+  date: 2015-06-10
+  description: |
+    A popular password management service, LastPass, got compromised.
+
+    LastPass account email addresses, password reminders, server per user salts, and authentication hashes were compromised.
+
+    The salted user master passwords where exposed to the attacker. A weak master password could lead to the compromise of the whole password vault of a user. All users were prompted to change their master passwords. LastPass does third factor authentication on its users, claiming this could have protected the potential victims.
+
+  links:
+    - LastPass Security Notice, https://blog.lastpass.com/2015/06/lastpass-security-notice.html/
+    - "Hack Brief: Password Manager LastPass Got Breached Hard, http://www.wired.com/2015/06/hack-brief-password-manager-lastpass-got-breached-hard/"
+
+chinese-android:
+  date: 2015-09-01
+  title: Asian Android phones
+  description: |
+    Various (low budget) Asian Android phones ship with malware preinstalled. This includes brands available in western markets, like Huawei, Lenovo and Xiaomi.
+
+    G DATA security experts discovered over 26 Android phone models which are sold having malware preinstalled. Supply chain companies, operators or manufacturers themselves are suspected of planting the malware. The attacker siphons the user data and then resells it on the black markets to substitute the phone price. The malware is usually hidden in a legitimate app which is manipulated to contain malware as an add-on.
+
+  links:
+   - G DATA Releases Mobile Malware Report for the Second Quarter of 2015, https://www.gdata-software.com/g-data/newsroom/news/article/g-data-releases-mobile-malware-report-for-the-second-quarter-of-2015
+   - Chinese Android smartphones now shipping with pre-installed malware, http://www.scmagazineuk.com/chinese-android-smartphones-now-shipping-with-pre-installed-malware/article/436631/
+
+nasa:
+  date: 2012-11-15
+  title: NASA
+  description: |
+    NASA lost a laptop containing data on 10,000 users.
+
+    Personally identifiable information of at least 10,000 NASA employees and contractors remained at risk of compromise.
+
+    The laptop did not have whole disk encryption, making it possible for the thief to access all the data.
+
+    The incident prompted an immediate agency-wide initiative to implement full disk encryption on all NASA laptops.
+
+  links:
+  - "NASA breach update: Stolen laptop had data on 10,000 users, http://www.computerworld.com/article/2493084/security0/nasa-breach-update--stolen-laptop-had-data-on-10-000-users.html"

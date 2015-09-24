@@ -20,4 +20,20 @@ questions:
     links:
       - Two-factor Authentication List, https://twofactorauth.org/
     incidences:
-      - Slack
+      - slack
+
+  Effective session kill:
+    question: When the user account is deactivated, all related sessions are killed
+    rationale:
+      If the attacker gains access to an user account the system administrators must be able to kick out the attacker. The account deactivation may only affect the database records of the account, not dropping the active HTTP sessions which are stored in a separate store. When an user account is deactivated, all communication channels to this user must be dropped.
+    links:
+      - Simultaneous Session Logons (OWASP), https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Considerations_When_Using_Multiple_Cookies
+    incidences:
+    - slack
+
+  User audit logs:
+    question: x
+    rationale: x
+    links:
+    - "Logging Sessions Life Cycle: Monitoring Creation: Usage, and Destruction of Session IDs (OWASP), https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Considerations_When_Using_Multiple_Cookies"
+

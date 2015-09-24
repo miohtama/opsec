@@ -22,25 +22,27 @@ There exist projects which partially overlapping scope. We aim to be
 
 * **Holistic**: We aim to guarantee the security of the project as a whole. This includes organization practices, tools and devices, infrastructure and not just a piece of software.
 
-* **Grassroots effort**: from bottom to up, from individuals to decision makers. The effort sprouts from on real-life security practices. The audience and authors are not limited to security researchers, but include software developers and decision makers.
+* **Grassroots effort**: from bottom to up, from individuals to decision makers. The effort sprouts from real life security practices. The authors and audience are not limited to security researchers, but include software developers and project managers.
 
 * **Open**: The content is hosted on Github and the editing open-ended for everybody.
 
 * **Lightweight**: Everybody from a single person startup should be able to follow the guide.
 
-* **High critical service**: The services storing private data or financial data are high risk targets. We focus is on these services as operators of these services have the responsible to guarantee the safe future of Internet.
+* **High critical service**: The services storing private data or financial data are the most valued targets. The guide focus is on these services as their operators have the highest responsibility to guarantee the safe future of Internet.
 
-Guide structure and evaluation points
-=====================================
+Chapters and evaluation points
+==============================
 
-The guide is divided to different chapters, each reflecting the specific organization or development operations functionality.
+The guide is divided to different chapters, each chapter reflecting different organizational or IT functionality.
 
-Each chapter consists of questions, called *evalution points*, on a specific matter. Ultimately you want to be able to answer yes to every evaluation point.
+The chapters consist of questions, called *evalution points*, on a specific matter. Ultimately you want to be able to answer yes to every evaluation point.
 
-Evaluation point applicable criteria
-====================================
+Applicable criteria
+===================
 
-Some evaluation points might not be applicable for small businesses. For example, having a tool for managing server login keys might not be in the reach of a team of few members or less. Or it would be not needed at all, because only one person has access to the servers. Thus, each evaluation point contains an applicable criteria. The used criteria is following
+Some evaluation points might not be applicable for small businesses. For example, having a tool for managing server login keys might not be in the reach of a team of few members or less. Or it would be not needed at all, because only one person has access to the servers. Thus, each evaluation point contains an applicable criteria.
+
+The following rough rules can be used to decide whether your organization should consider the evaluation point:
 
 * **Everybody**: Everybody should do this, regardless of the mature and resources of their organization
 

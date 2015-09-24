@@ -15,6 +15,8 @@ Even if the Internet service itself is well secured, the malicious actors can go
 
 
 
+.. _two-factor-authentication:
+
 Two-factor authentication
 ==============================================================
 
@@ -25,11 +27,65 @@ The site users use the service for the sensitive purposes. The site user may rec
 Applies for: Everyone
 
 
+Related incidences:
+
+- :ref:`slack`
+
+
 
 
 Links:
 
 - `Two-factor Authentication List <https://twofactorauth.org/>`_
+
+
+
+
+
+.. _effective-session-kill:
+
+Effective session kill
+==============================================================
+
+**When the user account is deactivated, all related sessions are killed?** 
+
+If the attacker gains access to an user account the system administrators must be able to kick out the attacker. The account deactivation may only affect the database records of the account, not dropping the active HTTP sessions which are stored in a separate store. When an user account is deactivated, all communication channels to this user must be dropped.
+
+Applies for: 
+
+
+Related incidences:
+
+- :ref:`slack`
+
+
+
+
+Links:
+
+- `Simultaneous Session Logons (OWASP) <https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Considerations_When_Using_Multiple_Cookies>`_
+
+
+
+
+
+.. _user-audit-logs:
+
+User audit logs
+==============================================================
+
+**x?** 
+
+x
+
+Applies for: 
+
+
+
+
+Links:
+
+- `Logging Sessions Life Cycle: Monitoring Creation: Usage, and Destruction of Session IDs (OWASP) <https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Considerations_When_Using_Multiple_Cookies>`_
 
 
 

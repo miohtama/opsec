@@ -16,6 +16,8 @@ This section does not discuss the web application vulnerabilities and mitigating
 
 
 
+.. _https-tls-only:
+
 HTTPS / TLS only
 ==============================================================
 
@@ -30,7 +32,7 @@ Applies for: Everyone
 
 Links:
 
-- `Let’s Encrypt <a free>`_
+- `Let’s Encrypt, a free, automated, and open certificate authority brought to you by the Internet Security Research Group (ISRG) <https://letsencrypt.org/>`_
 
 - `Security/Server Side TLS in Mozilla Wiki <https://wiki.mozilla.org/Security/Server_Side_TLS>`_
 
@@ -39,6 +41,8 @@ Links:
 
 
 
+
+.. _a-framework-preventing-database-injection-attacks:
 
 A framework preventing database injection attacks
 ==============================================================
@@ -64,6 +68,8 @@ Links:
 
 
 
+.. _a-framework-preventing-cross-site-scripting-attacks:
+
 A framework preventing cross-site scripting attacks
 ==============================================================
 
@@ -88,6 +94,8 @@ Links:
 
 
 
+.. _password-storage-best-practices:
+
 Password storage best practices
 ==============================================================
 
@@ -109,6 +117,8 @@ Links:
 
 
 
+
+.. _non-public-administration-site:
 
 Non-public administration site
 ==============================================================
