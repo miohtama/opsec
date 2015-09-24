@@ -49,7 +49,7 @@ questions:
       - PBKDF2 (Password-Based Key Derivation Function 2) in Wikipedia, https://en.wikipedia.org/wiki/PBKDF2
       - Password storage cheat sheet in OWASP, https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet
 
-  Non-public administration site
+  Non-public administration site:
     question: The administration site is not easily accessible to public
     answers: default
     rationale: Many common software platforms come with the default administration site in a location like */admin/*. If the administrative URLs are well-known the attacker can exploit this and guess weak administration interface HTTP endpoints to exploit those. The administration interface should be in non-guessable, non-end user visible, URL. Furthermore the additional access restrictions can be placed (see Team security chapter).

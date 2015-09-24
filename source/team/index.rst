@@ -250,7 +250,7 @@ Data scrubbing is used
 
 **When working with datasets, it is cleaned from sensitive information?** Yes / No
 
-Instead of working with full datasets, there exist a documented process of making a cleaned dataset with reduced sensitive information. This cleaned dataset is given for team members who need to analyse, test and develop against the data. This also limits the impact of data dump leak in the case the data dump ends up to the hands of a third party.
+Instead of working with full datasets, there exist a repeatable process of making a cleaned dataset with reduced sensitive information from the production data. This cleaned dataset is given for the team members who need to analyse, test and develop against the data. This limits the impact of data dump leak in the case the data dump ends up to the hands of an unknown party.
 
 Applies for: Everyone
 
