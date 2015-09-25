@@ -21,11 +21,18 @@ This section does not discuss the web application vulnerabilities and mitigating
 HTTPS / TLS only
 ==============================================================
 
-**The service is HTTPS only?** Yes / No
+**The service is HTTPS only with security HTTP headers?** Yes / No
 
-The service offers traffic only over encrypted channels. Any sensitive service has no excuse not to to use full encryption anymore. It is well known that powerful actors tap and modify Internet traffic globally. Furthermore, the HTTP responses include security headers, like  HTTP Strict Transport Security and X-Frame-Option.
+The service offers traffic only over encrypted channels. Any sensitive service has no excuse not to to use full encryption anymore. It is well known that powerful actors tap and modify Internet traffic globally. Furthermore, the HTTP response headers should include security headers, like  HTTP Strict Transport Security and X-Frame-Option which mitigate the man-in-the-middle attack risk in the case the user's network is compromised.
 
 Applies for: Everyone
+
+
+Related incidences:
+
+- :ref:`tor`
+
+- :ref:`soho`
 
 
 
@@ -42,9 +49,9 @@ Links:
 
 
 
-.. _a-framework-preventing-database-injection-attacks:
+.. _database-injection:
 
-A framework preventing database injection attacks
+Database injection
 ==============================================================
 
 **The software is written in a manner that there is no possibility of database injection attack?** Yes / No
@@ -52,6 +59,11 @@ A framework preventing database injection attacks
 One of the most common web application vulnerabilities is a database injection attack. In the most cases, the database is SQL based, providing opportunity for SQL injections. This can be easily prevented by never constructing database statements by hand and always using a framework to construct the queries, so that all values are properly escaped. The manual SQL manipulation should be prevented from the application developers, so that no room is left for a human error.
 
 Applies for: Everyone
+
+
+Related incidences:
+
+- :ref:`sebastian`
 
 
 
@@ -64,13 +76,15 @@ Links:
 
 - `PCI DSS v3.1 requirement 6.5.1 <https://www.pcisecuritystandards.org/documents/PCI_DSS_v3-1.pdf>`_
 
+- `SQL injection hall of shame <http://codecurmudgeon.com/wp/sql-injection-hall-of-shame/>`_
 
 
 
 
-.. _a-framework-preventing-cross-site-scripting-attacks:
 
-A framework preventing cross-site scripting attacks
+.. _cross-site-scripting-xss:
+
+Cross-site scripting (XSS)
 ==============================================================
 
 **The software is written in a manner that there is no possibility of cross-site scripting attack?** Yes / No
@@ -80,15 +94,48 @@ Cross-site scripting attack is a way to perform actions on the behalf of the use
 Applies for: Everyone
 
 
+Related incidences:
+
+- :ref:`facebook`
+
+
 
 
 Links:
 
-- `Cross site scripting in Wikipedia <https://en.wikipedia.org/wiki/Cross-site_scripting>`_
+- `Cross site scripting (Wikipedia) <https://en.wikipedia.org/wiki/Cross-site_scripting>`_
 
-- `Cross site scripting in OWASP <https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29>`_
+- `Cross site scripting (OWASP) <https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29>`_
 
-- `Handling untrusted JSON safely in WhiteHat Security <https://blog.whitehatsec.com/handling-untrusted-json-safely/>`_
+- `Handling untrusted JSON safely (WhiteHat Security) <https://blog.whitehatsec.com/handling-untrusted-json-safely/>`_
+
+
+
+
+
+.. _cross-site-request-forgery-csrf:
+
+Cross-site request forgery (CSRF)
+==============================================================
+
+**The software is written in a manner that there is no possibility of cross-site request forgery attack?** 
+
+Cross-site request forgery is an attack where a JavaScript payload hosted on a third party site performs attack on the behalf on the user on the targeted website.
+The software should be written using a framework which prevents HTTP POST submissions without CSRF token. Any state changing action (login, create, modify, delete) should not be GET request.
+
+Applies for: 
+
+
+Related incidences:
+
+- :ref:`twitter`
+
+
+
+
+Links:
+
+- `Cross-site request forgery (Wikipedia) <https://en.wikipedia.org/wiki/Cross-site_request_forgery>`_
 
 
 
@@ -99,11 +146,20 @@ Links:
 Password storage best practices
 ==============================================================
 
-**The user passwords and two-factor seed tokens are hashed using the state-of-the-art encryption?** Yes / No
+**The user passwords and two-factor seeds are hashed and salted so that bruteforcing them is not viable.?** Yes / No
 
-This protects the user password integrity in the case the database is compromised. The developers should not do password management themselves, but use a proper framework or a library for it.
+This protects the user password integrity in the case the database is compromised. The developers should not do password management themselves, but use a specialized library to do the password hashing and salting for persistent storage.
 
 Applies for: Everyone
+
+
+Related incidences:
+
+- :ref:`sebastian`
+
+- :ref:`slack`
+
+- :ref:`lastpass`
 
 
 
@@ -125,9 +181,14 @@ Non-public administration site
 
 **The administration site is not easily accessible to public?** Yes / No
 
-Many common software platforms come with the default administration site in a location like */admin/*. If the administrative URLs are well-known the attacker can exploit this and guess weak administration interface HTTP endpoints to exploit those. The administration interface should be in non-guessable, non-end user visible, URL. Furthermore the additional access restrictions can be placed (see Team security chapter).
+Many common software platforms come with the default administration site in a location like */admin/*. If the administrative URLs are well-known the attacker can exploit this and guess weak administration interface HTTP endpoints to exploit those. The administration interface should be in non-guessable, non-end user visible, URL. Furthermore the additional access restrictions can be placed with two-factor authentication, VPN and IP restrictions (see :doc:`Team security <../team/index>`).
 
 Applies for: Everyone
+
+
+Related incidences:
+
+- :ref:`veeder-root`
 
 
 

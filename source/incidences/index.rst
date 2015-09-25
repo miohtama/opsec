@@ -138,7 +138,7 @@ Related evaluation points:
 
 Links:
 
-- `Bitly users must change passwords <account credentials might have been compromised>`_
+- `Bitly users must change passwords, account credentials might have been compromised <http://www.techtimes.com/articles/6773/20140510/bitly-users-must-change-passwords-account-credentials-might-have-been-compromised.htm>`_
 
 - `More detail (Bitly blog in the Wayback machine) <https://web.archive.org/web/20140515093107/http://blog.bitly.com/>`_
 
@@ -204,7 +204,7 @@ Related evaluation points:
 
 Links:
 
-- `Novel Malware XcodeGhost Modifies Xcode <Infects Apple iOS Apps and Hits App Store (PaloAlto Networks)>`_
+- `Novel Malware XcodeGhost Modifies Xcode, Infects Apple iOS Apps and Hits App Store (PaloAlto Networks) <http://researchcenter.paloaltonetworks.com/2015/09/novel-malware-xcodeghost-modifies-xcode-infects-apple-ios-apps-and-hits-app-store/#>`_
 
 - `Apple will host Xcode on Chinese servers following malware attack <http://mashable.com/2015/09/24/apple-xcode-china/>`_
 
@@ -228,6 +228,8 @@ Whether two-factor authentication effectively stops the attackers in the case of
 
 
 Related evaluation points:
+
+- :ref:`password-storage-best-practices`
 
 - :ref:`two-factor-authentication`
 
@@ -265,6 +267,8 @@ The salted user master passwords where exposed to the attacker. A weak master pa
 Related evaluation points:
 
 - :ref:`password-manager`
+
+- :ref:`password-storage-best-practices`
 
 
 
@@ -338,7 +342,211 @@ Related evaluation points:
 
 Links:
 
-- `NASA breach update: Stolen laptop had data on 10 <000 users>`_
+- `NASA breach update: Stolen laptop had data on 10,000 users <http://www.computerworld.com/article/2493084/security0/nasa-breach-update--stolen-laptop-had-data-on-10-000-users.html>`_
+
+
+
+
+
+.. _tor:
+
+Tor
+==============================================================
+
+*Date: 2014-01-22*
+
+Security researches detected Tor exit nodes performing man-in-the-middle attack on the traffic.
+
+Tor is a layered network to obfuscate the source of the traffic i.e. hide your tracks. It is used by criminals, privacy advocates and security researchers. Tor relies on *exit nodes* where the traffic comes out from Tor network and connects to normal Internet.
+
+Malicious Tor exit nodes where intercepting the traffic. They performed HTTP traffic snooping, HTTP -> HTTPS redirection interception and HTTPS man-in-the-middle with self-signed certificate. There are recorded cases where the victim accepted the invalid HTTPS certificate even though Firefox-based Tor browser presented a red warning screen with difficult options to proceed beyond it.
+
+
+
+Related evaluation points:
+
+- :ref:`https-tls-only`
+
+
+
+
+
+Links:
+
+- `What the "Spoiled Onions" paper means for Tor users <https://blog.torproject.org/blog/what-spoiled-onions-paper-means-tor-users>`_
+
+- `Scientists detect “spoiled onions” trying to sabotage Tor privacy network <http://arstechnica.com/security/2014/01/scientists-detect-spoiled-onions-trying-to-sabotage-tor-privacy-network/>`_
+
+
+
+
+
+.. _soho:
+
+Soho
+==============================================================
+
+*Date: 2015-05-16*
+
+Hackers hijack 300,000 SOHO routers with man-in-the-middle attacks.
+
+SOHO routers were infected via drive-by download attacks and malvertising on popular websites. The initial drive-by attack exploited a CSRF flaw in the router administration page. When a victim behind the router visited a malicious site, a JavaScript payload reconfigured the routers.
+
+The attackers modified the routers DNS settings so that everybody from the router network could be redirected to a malicious site. This puts all sensitive transactions made from the network to risk.
+
+
+
+Related evaluation points:
+
+- :ref:`https-tls-only`
+
+
+
+
+
+Links:
+
+- `Malware don't need Coffee <http://malware.dontneedcoffee.com/2015/05/an-exploit-kit-dedicated-to-csrf.html>`_
+
+- `Exploit Kit Using CSRF to Redirect SOHO Router DNS Settings <https://threatpost.com/exploit-kit-using-csrf-to-redirect-soho-router-dns-settings/112993/#sthash.GRLJ8k7N.dpuf>`_
+
+- `Hackers hijack 300,000 SOHO routers with man-in-the-middle attacks <http://www.v3.co.uk/v3-uk/news/2331953/hackers-hijack-300-000-soho-routers-with-man-in-the-middle-attacks>`_
+
+
+
+
+
+.. _twitter:
+
+Twitter
+==============================================================
+
+*Date: 2010-09-26*
+
+Twitter allowed to post a tweet using a HTTP GET request.
+
+The attacker created a worm which posted itself on behalf of the user when the users clicked a link they saw in their friends feed.
+
+
+
+Related evaluation points:
+
+- :ref:`cross-site-request-forgery-csrf`
+
+
+
+
+
+Links:
+
+- `CSRF attack strikes Twitter <https://nacin.com/2010/09/26/csrf-twitter/>`_
+
+- `Don't Click The WTF Link On Twitter Unless You DO Like Sex With Goats <http://techcrunch.com/2010/09/26/dont-click-the-wtf-link-on-twitter-unless-you-do-like-sex-with-goats/>`_
+
+
+
+
+
+.. _sebastian:
+
+Sebastian
+==============================================================
+
+*Date: 2013-10-23*
+
+A hacker group TeamBerserk claimed to have stolen more than 100k USD via SQL injeciton injection from Sebastian, a Californian based ISP.
+
+Through SQL injection, the attackers downloaded the list of ISP's customers, their usernames and passwords in clear text.
+The attackers exploited the fact the users recycle the same password and used usernames and passwords login GMail, PayPal, CitiBank, etc. The attack was demostrated on a video uploaded to MEGA (now defunct).
+
+Tom Dominico, marketing and business development manager for Sebastian, told “We are aware of the claims that our system has been compromised. We have checked with our service providers and their records indicate that no such attack has occurred. We take the security of our customer's personal information very seriously and are constantly working to keep them safe from online threats.”
+
+
+
+Related evaluation points:
+
+- :ref:`database-injection`
+
+- :ref:`password-storage-best-practices`
+
+
+
+
+
+Links:
+
+- `Hacker group claims to have looted $100k via SQL injection attack (SC Magazine) <http://www.scmagazine.com/hacker-group-claims-to-have-looted-100k-via-sql-injection-attack/article/317412/>`_
+
+- `Hacker stole $100,000 from Users of California based ISP using SQL Injection (The Hacker News) <http://thehackernews.com/2013/10/hacker-stole-100000-from-users-of.html>`_
+
+
+
+
+
+.. _facebook:
+
+Facebook
+==============================================================
+
+*Date: 2011-04-11*
+
+Facebook status update functionality did not properly escape parameters.
+
+It was possible to post HTML content which was not properly sanitized which further loaded JavaScript. The loaded JavaScript then took actions on the behalf of the user.
+This allowed the attacker to create a worm which propagated through Facebook walls.
+
+The root cause was is that PHP's built-in `parse_url()` function does not properly check for malformed URLs. The issue still exists in PHP today and is only addresses in the documentation.
+
+
+
+Related evaluation points:
+
+- :ref:`cross-site-scripting-xss`
+
+
+
+
+
+Links:
+
+- `Recent Facebook XSS Attacks Show Increasing Sophistication <http://theharmonyguy.com/oldsite/2011/04/21/recent-facebook-xss-attacks-show-increasing-sophistication/>`_
+
+- `Bug #54600 <https://bugs.php.net/bug.php?id=54600>`_
+
+
+
+
+
+.. _veeder-root:
+
+Veeder-Root
+==============================================================
+
+*Date: 2015-01-23*
+
+Gas stations use automated tank gauges (ATGs) for remote control and diagnostics. Automated tank gauges were exposed to Internet through serial port servers that map ATG serial interfaces to the Internet-accessible TCP port.
+
+Most of ATGs were manufactured bt Veeder-Root, a petroleum equipment service company. The system allows maximum of six letters password, but often the password is not set.
+
+The attacker could change the calibration and make the tank report full or empty. Worst case the attacker could shut down the pumps.
+
+
+
+Related evaluation points:
+
+- :ref:`non-public-administration-site`
+
+
+
+
+
+Links:
+
+- `Internet attack could shut down US gas stations <http://arstechnica.com/security/2015/01/internet-attack-could-shut-down-us-gasoline-stations/>`_
+
+- `Thousands of U.S. gas stations exposed to Internet attacks <http://www.csoonline.com/article/2874230/cybercrime-hacking/thousands-of-us-gas-stations-exposed-to-internet-attacks.html>`_
+
+- `Mideast Hackers May Be Attacking US Gas Stations <http://bit.ly/1eVcSCD>`_
 
 
 

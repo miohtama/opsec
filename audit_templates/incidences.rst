@@ -29,7 +29,7 @@ Related evaluation points:
 {% if incidence.links %}
 Links:
 {% for link in incidence.links %}
-- `{{ link.split(',')[0].strip() }} <{{ link.split(',')[1].strip() }}>`_
+- `{{ ','.join(link.split(',')[0:-1]) }} <{{ ((link.split(',')|length) > 1) and link.split(',')[-1].strip() }}>`_
 {% endfor %}
 {% endif %}
 

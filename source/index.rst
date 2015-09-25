@@ -23,7 +23,7 @@ About this guide
 Audience
 ========
 
-Not all Internet services are equally critical. This guide is aimed for the services dealing with private and financial data. It can be used as a reference for other kind of services, but in this case some evaluation points might not apply. The guide is not a general guide for IT administrators or normal IT service deployments dealing with issues like provisioning workstations or maintaining intranet.
+Not all Internet services are equally critical. This guide is aimed for teams who themselves are developing services dealing with private and financial data, though it can be used as a reference for other kind of services. The guide is not geared towards your average company business card website, software product deployments or generic IT administration.
 
 The audience of the guide includes, but is not limited, to
 
@@ -51,6 +51,8 @@ Chapters
     web/index
 
     user/index
+
+    infrastructure/index
 
     assets/index
 
