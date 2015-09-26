@@ -44,6 +44,8 @@ Related evaluation points:
 
 - :ref:`cold-wallet`
 
+- :ref:`transaction-verification`
+
 
 
 
@@ -82,6 +84,8 @@ The CEO of Avid Life Media claims the breach was by an insider who was not an em
 Related evaluation points:
 
 - :ref:`backend-view-access-limitations`
+
+- :ref:`sensitive-data-access-logs`
 
 - :ref:`data-scrubbing`
 

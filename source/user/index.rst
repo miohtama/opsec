@@ -58,21 +58,37 @@ Related incidences:
 
 Links:
 
+
 - `HMAC-based One-time Password Algorithm (Wikipedia) <https://en.wikipedia.org/wiki/HMAC-based_One-time_Password_Algorithm>`_
+
+
 
 - `Time-based One-time Password Algorithm (Wikipedia) <https://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm>`_
 
+
+
 - `Two-factor Authentication List <https://twofactorauth.org/>`_
+
+
 
 - `$45k stolen in phone porting scam (SC Magazine) <http://www.itnews.com.au/news/45k-stolen-in-phone-porting-scam-282310/page0>`_
 
+
+
 - `What is YubiKey? <https://www.yubico.com/faq/yubikey/>`_
+
+
 
 - `Google Authenticator (Wikipedia) <https://en.wikipedia.org/wiki/Google_Authenticator>`_
 
+
+
 - `Authy <https://www.authy.com/>`_
 
+
+
 - `Clef <https://getclef.com/>`_
+
 
 
 
@@ -113,9 +129,13 @@ Related incidences:
 
 Links:
 
+
 - `Detecting suspicious account activity (Google) <http://gmailblog.blogspot.fi/2010/03/detecting-suspicious-account-activity.html>`_
 
+
+
 - `Introducing Login Approvals (Facebook) <https://www.facebook.com/notes/facebook-engineering/introducing-login-approvals/10150172618258920>`_
+
 
 
 
@@ -175,11 +195,17 @@ Related incidences:
 
 Links:
 
+
 - `Blocking Brute Force Attacks (OWASP) <https://www.owasp.org/index.php/Blocking_Brute_Force_Attacks>`_
+
+
 
 - `Rolling time window counters with Redis and mitigating botnet (Mikko Ohtamaa) <https://opensourcehacker.com/2014/07/09/rolling-time-window-counters-with-redis-and-mitigating-botnet-driven-login-attacks/>`_
 
+
+
 - `reCAPTCHA <https://www.google.com/recaptcha/intro/index.html>`_
+
 
 
 
@@ -217,7 +243,9 @@ Related incidences:
 
 Links:
 
+
 - `Simultaneous Session Logons (OWASP) <https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Considerations_When_Using_Multiple_Cookies>`_
+
 
 
 
@@ -268,9 +296,13 @@ Related incidences:
 
 Links:
 
+
 - `Logging Sessions Life Cycle: Monitoring Creation: Usage, and Destruction of Session IDs (OWASP) <https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Considerations_When_Using_Multiple_Cookies>`_
 
+
+
 - `Investigation report of the claimed security breach at LocalBitcoins <http://localbitcoins.blogspot.fi/2014/04/investigation-report-of-claimed.html>`_
+
 
 
 
@@ -320,21 +352,37 @@ Related incidences:
 
 Links:
 
+
 - `reCAPTCHA <https://www.google.com/recaptcha/intro/index.html>`_
+
+
 
 - `Dialing Back Abuse on Phone Verified Accounts <http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/43134.pdf>`_
 
+
+
 - `Trafficking Fraudulent Accounts: The Role of the Underground Market in Twitter Spam and Abuse <http://www.icir.org/vern/papers/twitter-acct-purch.usesec13.pdf>`_
+
+
 
 - `Priceless: The Role of Payments in Abuse-advertised Goods <http://www.icir.org/vern/papers/twitter-acct-purch.usesec13.pdf>`_
 
+
+
 - `Facebook Asks Every User For A Verified Phone Number To Prevent Security Disaster (TechCrunch) <http://techcrunch.com/2012/06/14/facebook-security-tips/>`_
+
+
 
 - `Facebook Requesting Government ID to Unlock Accounts (TheBlaze) <http://www.theblaze.com/stories/2013/10/29/absurd-facebook-requesting-government-id-to-unlock-accounts-again/>`_
 
+
+
 - `Jumio <https://www.jumio.com/>`_
 
+
+
 - `Trulioo <https://www.trulioo.com/>`_
+
 
 
 

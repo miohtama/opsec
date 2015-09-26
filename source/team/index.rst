@@ -87,7 +87,9 @@ Related incidences:
 
 Links:
 
+
 - `KeePassX <https://www.keepassx.org/>`_
+
 
 
 
@@ -183,9 +185,13 @@ Related incidences:
 
 Links:
 
+
 - `Two-factor Authentication List <https://twofactorauth.org/>`_
 
+
+
 - `Google 2-Step Verification <https://www.google.com/landing/2step/>`_
+
 
 
 
@@ -216,7 +222,9 @@ Related incidences:
 
 Links:
 
+
 - `Two-factor Authentication List <https://twofactorauth.org/>`_
+
 
 
 
@@ -240,7 +248,9 @@ Applies for: Everyone
 
 Links:
 
+
 - `Two-factor Authentication List <https://twofactorauth.org/>`_
+
 
 
 
@@ -264,7 +274,9 @@ Applies for: Everyone
 
 Links:
 
+
 - `SSH key and passwordless login basics for developers (Mikko Ohtamaa) <https://opensourcehacker.com/2012/10/24/ssh-key-and-passwordless-login-basics-for-developers/>`_
+
 
 
 
@@ -293,7 +305,9 @@ Related incidences:
 
 Links:
 
+
 - `SSH login with Google Authenticator TTOP two-factor <http://sam.xnet.tk/2014/09/ubuntu-2-factor-login-public-key-google-authenticator/>`_
+
 
 
 
@@ -350,6 +364,31 @@ Backend view access limitations
 **Backend sensitive data access is limited?** Yes / No / Not applicable
 
 If multiple people access the backend data, the access is limited in a way that the sensitive information is not exposed unless necessary for performing the work.
+
+
+Applies for: Everyone
+
+
+
+Related incidences:
+
+- :ref:`ashley-madison`
+
+
+
+
+
+
+
+.. _sensitive-data-access-logs:
+
+Sensitive data access logs
+==============================================================
+
+**Backend sensitive data access is logged?** Yes / No / Not applicable
+
+All actions of team and support persons accessing and manipulating sensitive data are logged. In the case of privacy breach claims these logs can be used to reconstruct the scenario who have been accessing the data.
+See also :ref:`log-server`.
 
 
 Applies for: Everyone

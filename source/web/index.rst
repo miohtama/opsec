@@ -41,11 +41,17 @@ Related incidences:
 
 Links:
 
+
 - `Let’s Encrypt, a free, automated, and open certificate authority brought to you by the Internet Security Research Group (ISRG) <https://letsencrypt.org/>`_
+
+
 
 - `Security/Server Side TLS in Mozilla Wiki <https://wiki.mozilla.org/Security/Server_Side_TLS>`_
 
+
+
 - `X-Frame-Option on MDN <https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options>`_
+
 
 
 
@@ -74,13 +80,21 @@ Related incidences:
 
 Links:
 
+
 - `SQL injection in Wikipedia <https://en.wikipedia.org/wiki/SQL_injection>`_
+
+
 
 - `SQL injection in OWASP <https://www.owasp.org/index.php/SQL_Injection>`_
 
+
+
 - `PCI DSS v3.1 requirement 6.5.1 <https://www.pcisecuritystandards.org/documents/PCI_DSS_v3-1.pdf>`_
 
+
+
 - `SQL injection hall of shame <http://codecurmudgeon.com/wp/sql-injection-hall-of-shame/>`_
+
 
 
 
@@ -109,11 +123,17 @@ Related incidences:
 
 Links:
 
+
 - `Cross site scripting (Wikipedia) <https://en.wikipedia.org/wiki/Cross-site_scripting>`_
+
+
 
 - `Cross site scripting (OWASP) <https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29>`_
 
+
+
 - `Handling untrusted JSON safely (WhiteHat Security) <https://blog.whitehatsec.com/handling-untrusted-json-safely/>`_
+
 
 
 
@@ -141,7 +161,9 @@ Related incidences:
 
 Links:
 
+
 - `Cross-site request forgery (Wikipedia) <https://en.wikipedia.org/wiki/Cross-site_request_forgery>`_
+
 
 
 
@@ -174,9 +196,13 @@ Related incidences:
 
 Links:
 
+
 - `PBKDF2 (Password-Based Key Derivation Function 2) in Wikipedia <https://en.wikipedia.org/wiki/PBKDF2>`_
 
+
+
 - `Password storage cheat sheet in OWASP <https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet>`_
+
 
 
 
@@ -205,7 +231,9 @@ Related incidences:
 
 Links:
 
+
 - `Failure to restrict URL Access in OWASP <https://www.owasp.org/index.php/Top_10_2010-A8-Failure_to_Restrict_URL_Access>`_
+
 
 
 

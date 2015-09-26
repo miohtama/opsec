@@ -38,7 +38,9 @@ Related incidences:
 {% if question.links %}
 Links:
 {% for link in question.links %}
+{% if link.split %}
 - `{{ ','.join(link.split(',')[0:-1]) }} <{{ link.split(',')[-1].strip() }}>`_
+{% endif %}
 {% endfor %}
 {% endif %}
 
