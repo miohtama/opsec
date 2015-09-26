@@ -25,7 +25,7 @@ Two-factor authentication
 
 The site user loes their password through many channels: passwords are recycled across multiple sites (e.g. email account), passwords are too weak, password are given out through phishing emails or devices are compromised by malware. In this case, the two-factor authentication should stop the attacker with a mere password to access the user account.
 
-Having the two-factor authentication as optional is not often enough, as the users only see reduced usability (longer login time) and are not aware of thread models. Incentives, like reduced fees, should be used to encourage enabling the two-factor authentication. From business perspective, this can be justified as reduced support cost of dealing with hacked account cases.
+Having the two-factor authentication as optional is not often enough, as the users only see the reduced usability (longer login process) and are not aware of thread models. Incentives, like reduced fees, should be used to encourage enabling the two-factor authentication. From business perspective, this can be justified as reduced support cost of dealing with hacked account cases.
 
 The most sensitive operations, like where money is transferred out from the system, should require minimum of two different two-factor tokens: one for login and one for transfer. This makes two-factor intercepting phishing site operation less robust, as the users are more likely notice bad URLs if they need to spend more time on the phishing site. With only one authentication token the phishing site can do transfer out on the second the user hits the login, making phishing more likely to success.
 
@@ -131,17 +131,25 @@ Brute force login prevention
 The attackers try to brute force the logins of the users. The site should take adequate measures that so that multiple login attempts are effectively stopped.
 
 There are few different password brute force attack modes:
+
   * Spearhead bruteforcing targetting a single user
+
   * Email and password combination guessing from a third party site leak or blackmarket
+
   * Email and common password list guessing, like 1000 most common passwords
+
   * Scraping the site for user account names and then combining them with above
 
 The attacker may be in possession of thousands of IP addresses.
 
 The counter actions should include:
+
   * CAPTCA on second login (allow one wrong password attempt per user)
+
   * Prevent login attempts per IP (fail2ban)
+
   * Prevent login attempts per username (spreadhead attack)
+
   * Force all users to go through CAPTCHA before login if the system global login rate is abnormal high (botnet-based attack)
 
 Relying solely to CAPTCHA to prevent brute forcing is not recommended, as the automated CAPTCHA solving success rates are counted in tens of percents.
@@ -187,10 +195,14 @@ Effective session kill
 If the attacker gains access to an user account the system administrators must be able to kick out the attacker. The account deactivation may only affect the database records of the account, not dropping the active HTTP sessions which are stored in a separate store. When an user account is deactivated, all communication channels to this user must be dropped.
 
 All user sessions should be dropped on
-  * Account delete
-  * Password change
-  * Email change
-  * Third factor authentication
+
+* Account delete
+
+* Password change
+
+* Email change
+
+* Third factor authentication
 
 
 
@@ -223,14 +235,23 @@ All sensitive actions of the users should be logged to a user specific action li
 The list is also important to protect the service operator itself against fraud. For example. the user can arrange stealing of the user account. The thief transfers the assets of the user to the friendly party of theirs. Then the user can blackmail and threat to sue the service unless the user is (incorrecly) reimbursed. The user audit logs prove  the correct password and authentications codes were used to initiate the transfer and shift the resposibility to the users themselves.
 
 The log should include at least:
+
 * The user logins and login attempts
+
 * Password change and reset operations
+
 * Enabling and disabling two-factor authentication
+
 * Email change operations
+
 * All financial operations
+
 * Timestamp with timezone
+
 * IP address
+
 * User agent
+
 
 Furthermore the user audit logs can be used to recover the system in the case of flaw leading to a mass account compromise.
 
@@ -269,13 +290,20 @@ To keep the system clean, one should prevent the creation of fake and robot acco
 The account verification is also important for anti-money laundering (AML) and know-your-customer (KYC) cases where it is imperative to know one is dealing with the rightful holder of the financial assets.
 
 The common account verification methods include:
-  * CAPTCHA
-  * Email verification
-  * Phone verification
-  * Browser verification by security proxy (CloudFlare, etc.)
-  * IP reputation system (block countries where you have no business, block Tor and VPN IPs)
-  * Piggybacking the authentication mechanism of a large service (Facebook, Twitter, Google OAuth)
-  * Government id verification services (available as-a-service like Jumio and Trulioo)
+
+* CAPTCHA
+
+* Email verification
+
+* Phone verification
+
+* Browser verification by security proxy (CloudFlare, etc.)
+
+* IP reputation system (block countries where you have no business, block Tor and VPN IPs)
+
+* Piggybacking the authentication mechanism of a large service (Facebook, Twitter, Google OAuth)
+
+* Government id verification services (available as-a-service like Jumio and Trulioo)
 
 Please note that all of these can be defeated if the financial incentive of the attacker is high enough.
 
