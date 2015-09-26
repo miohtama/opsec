@@ -37,9 +37,9 @@ Related incidences:
 
 
 
-.. _opening-file-attachments:
+.. _unsafe-file-attachments:
 
-Opening file attachments
+Unsafe file attachments
 ==============================================================
 
 **Potentially dangerous file attachments are handled securely?** Yes / No
@@ -193,6 +193,8 @@ Related incidences:
 
 - :ref:`bitly`
 
+- :ref:`icloud`
+
 
 
 
@@ -226,9 +228,9 @@ Links:
 
 
 
-.. _server-login-keys-are-passphrase-protected:
+.. _passphrase-on-server-login-keys:
 
-Server login keys are passphrase protected
+Passphrase on server login keys
 ==============================================================
 
 **The server logging in is by keys only which are passphrase protected?** Yes / No
@@ -240,12 +242,17 @@ Applies for: Everyone
 
 
 
+Links:
+
+- `SSH key and passwordless login basics for developers (Mikko Ohtamaa) <https://opensourcehacker.com/2012/10/24/ssh-key-and-passwordless-login-basics-for-developers/>`_
 
 
 
-.. _server-login-requires-two-factor-authentication:
 
-Server login requires two-factor authentication
+
+.. _two-factor-authentication-on-server-login:
+
+Two-factor authentication on server login
 ==============================================================
 
 **The server logging in requires one time token?** Yes / No
@@ -270,9 +277,9 @@ Links:
 
 
 
-.. _server-login-keys-are-audited:
+.. _audited-server-login-keys:
 
-Server login keys are audited
+Audited server login keys
 ==============================================================
 
 **A real-time method of maintaining and revoking keys across all servers is used?** Yes / No
@@ -309,12 +316,12 @@ Related incidences:
 
 
 
-.. _backend-sensitive-data-access-is-limited:
+.. _backend-view-access-limitations:
 
-Backend sensitive data access is limited
+Backend view access limitations
 ==============================================================
 
-**Backend sensitive data access is limited?** Yes / No
+**Backend sensitive data access is limited?** Yes / No / Not applicable
 
 If multiple people access the backend data, the access is limited in a way that the sensitive information is not exposed unless necessary for performing the work.
 
@@ -331,9 +338,9 @@ Related incidences:
 
 
 
-.. _data-scrubbing-is-used:
+.. _data-scrubbing:
 
-Data scrubbing is used
+Data scrubbing
 ==============================================================
 
 **When working with datasets, it is cleaned from sensitive information?** Yes / No

@@ -38,9 +38,9 @@ Related evaluation points:
 
 - :ref:`basic-security-training`
 
-- :ref:`opening-file-attachments`
+- :ref:`unsafe-file-attachments`
 
-- :ref:`server-login-requires-two-factor-authentication`
+- :ref:`two-factor-authentication-on-server-login`
 
 - :ref:`cold-wallet`
 
@@ -81,9 +81,9 @@ The CEO of Avid Life Media claims the breach was by an insider who was not an em
 
 Related evaluation points:
 
-- :ref:`backend-sensitive-data-access-is-limited`
+- :ref:`backend-view-access-limitations`
 
-- :ref:`data-scrubbing-is-used`
+- :ref:`data-scrubbing`
 
 
 
@@ -269,6 +269,8 @@ Related evaluation points:
 - :ref:`password-manager`
 
 - :ref:`password-storage-best-practices`
+
+- :ref:`third-factor-authentication`
 
 
 
@@ -547,6 +549,151 @@ Links:
 - `Thousands of U.S. gas stations exposed to Internet attacks <http://www.csoonline.com/article/2874230/cybercrime-hacking/thousands-of-us-gas-stations-exposed-to-internet-attacks.html>`_
 
 - `Mideast Hackers May Be Attacking US Gas Stations <http://bit.ly/1eVcSCD>`_
+
+
+
+
+
+.. _icloud:
+
+Apple iCloud
+==============================================================
+
+*Date: 2014-09-01*
+
+Apple iCloud service was subject to login brute force attack leading to the compromise of several celebrity accounts.
+
+Apple did not follow the security best practices to prevent brute forced login attempts. Find my iPhone, a part of iCloud services, allowed unthrottled login attempts.
+
+Later the private photos of victims, most of them being celebrities, were leaked in Internet, causing harm to these people.
+
+Apple did not apologize.
+
+
+
+Related evaluation points:
+
+- :ref:`two-factor-authentication-on-critical-services`
+
+- :ref:`two-factor-authentication`
+
+- :ref:`brute-force-login-prevention`
+
+
+
+
+
+Links:
+
+- `Apple Media Advisory - Update to Celebrity Photo Investigation <http://www.apple.com/pr/library/2014/09/02Apple-Media-Advisory.html>`_
+
+- `Apple patches 'Find My iPhone' exploit (ZDNet) <http://www.zdnet.com/article/apple-patches-find-my-iphone-exploit/>`_
+
+- `Find My iPhone exploit may be to blame for celebrity photo hacks (Engadget) <http://www.engadget.com/2014/09/01/find-my-iphone-exploit/>`_
+
+- `Was iCloud vulnerable... (Quora) <https://www.quora.com/Was-iCloud-vulnerable-patched-9-1-14-to-a-brute-force-attack-because-unlimited-password-attempts-were-allowed-and-if-so-is-Apple-responsible-for-the-Fappening>`_
+
+
+
+
+
+.. _sms-malware:
+
+SMS intercepting trojans
+==============================================================
+
+*Date: 2015-09-01*
+
+
+Multiple malware and trojan programs are observed to steal SMS two-factor authentication codes. These mostly target banks and popular services. Malware is mostly Android ecosystem issue, though other operating systems, especially jailbroken ones, can be infected.
+
+When the user receives two-factor authentication codes over SMS they are forwared to the attacker. Furthermore the malware intercepts logins and passwords to popular services.
+
+
+
+Related evaluation points:
+
+- :ref:`two-factor-authentication`
+
+
+
+
+
+Links:
+
+- `New Banking Trojan Targets Android, Steals SMS <https://threatpost.com/new-banking-trojan-targets-android-steals-sms/110819/>`_
+
+- `Zeus Banking Trojan Hits Android Phones <http://www.informationweek.com/mobile/zeus-banking-trojan-hits-android-phones/d/d-id/1098909?>`_
+
+
+
+
+
+.. _instagram:
+
+Instagram
+==============================================================
+
+*Date: 2014-12-08*
+
+Instagram deleted millions of accounts.
+
+Due to lax account creation process, A large proportion of Instagram accounts were fake and automatically created robot accounts. The fake accounts can be exploited as fake followers or to send spam. Social media PR companies may buy fake followers to inflate their campaign success rates.
+
+It can be speculated that even if being aware of the severity of the issue Instagram was not in rush to delete the fake accounts before acquisition by Facebook to inflate their market value.
+
+Some celebrities lost up to 90% of their followers. Instagram's own Instagram account lost 30% of its followers.
+
+
+
+Related evaluation points:
+
+- :ref:`account-verification-process`
+
+
+
+
+
+Links:
+
+- `Instagram mass-deletes spam accounts, users freak out <http://www.digitaltrends.com/social-media/instagram-mass-deletes-spam-accounts-users-freak/>`_
+
+- `Chaos Ensues As Instagram Deletes Millions Of Accounts <http://uk.businessinsider.com/chaos-ensues-as-instagram-deletes-millions-of-accounts-2014-12?r=US&IR=T>`_
+
+
+
+
+
+.. _steam:
+
+Steam
+==============================================================
+
+*Date: 2015-07-25*
+
+A flaw in password reset procedure allowed login to any Steam account without two-factor authentication.
+
+A bug in Steam, a popular gaming platform and store by Valve, allowed to reset the password of the user without entering the verification token send to the email. User accounts with two-factor authentication enabled were protected.
+
+One could submit empty ("") verification code and it passed as valid.
+
+Valve forced the users with suspected malicious password reset to go through additional password reset procedure.
+
+
+
+Related evaluation points:
+
+- :ref:`user-audit-logs`
+
+
+
+
+
+Links:
+
+- `Steam accounts hacked during security lapse "bug" (TrustedReviews) <http://www.trustedreviews.com/news/steam-accounts-hacked-during-security-lapse-bug#Jih1G6ugCR2SeEOV.99>`_
+
+- `Valve patches huge password reset hole that allowed anyone to hijack Steam accounts (ComputerWorld) <http://www.computerworld.com/article/2953016/cybercrime-hacking/valve-patches-huge-password-reset-hole-that-allowed-anyone-to-hijack-steam-accounts.html>`_
 
 
 

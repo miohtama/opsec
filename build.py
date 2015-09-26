@@ -19,7 +19,8 @@ def ordered_load(stream, Loader=yaml.Loader, object_pairs_hook=OrderedDict):
 
 
 ANSWERS = {
-    "default": "Yes / No"
+    "default": "Yes / No",
+    "default_na": "Yes / No / Not applicable",
 }
 
 APPLIES = {
@@ -56,9 +57,21 @@ def get_incidences_data(chapters):
     for incidence_id, incidence in struct.items():
         incidence["references"] = []
         for chapter_id, chapter_data in chapters.items():
+            previous_question_id = None
             for question_id, question in chapter_data["questions"].items():
-                if incidence_id in [inc.lower() for inc in question.get("incidences", [])]:
+
+                try:
+                    incidence_ids = question.get("incidences", [])
+                except AttributeError:
+                    raise RuntimeError("Bad question data: {}, previous: {}".format(question_id, previous_question_id))
+
+                if type(incidence_ids) != list:
+                    raise RuntimeError("Bad incidence list for question: {}".format(question_id))
+
+                if incidence_id in [inc.lower() for inc in incidence_ids]:
                     incidence["references"].append((chapter_id, question_id))
+
+                previous_question_id = question_id
 
 
     return struct
