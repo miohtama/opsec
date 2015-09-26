@@ -25,7 +25,9 @@ HTTPS / TLS only
 
 The service offers traffic only over encrypted channels. Any sensitive service has no excuse not to to use full encryption anymore. It is well known that powerful actors tap and modify Internet traffic globally. Furthermore, the HTTP response headers should include security headers, like  HTTP Strict Transport Security and X-Frame-Option which mitigate the man-in-the-middle attack risk in the case the user's network is compromised.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -58,7 +60,9 @@ Database injection
 
 One of the most common web application vulnerabilities is a database injection attack. In the most cases, the database is SQL based, providing opportunity for SQL injections. This can be easily prevented by never constructing database statements by hand and always using a framework to construct the queries, so that all values are properly escaped. The manual SQL manipulation should be prevented from the application developers, so that no room is left for a human error.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -91,7 +95,9 @@ Cross-site scripting (XSS)
 
 Cross-site scripting attack is a way to perform actions on the behalf of the user when the user views or clicks a compromised payload. The attack target can be the site visitor or the site administrator. The usual cross-site scripting attack is posting text or file attachment which payload is not well-escaped HTML. This attack can be avoided by using a proper software development framework which always escapes variables in output and not relying the developers to manually escape variables in page templates, JavaScript or HTML JSON embeds.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -123,7 +129,7 @@ Cross-site request forgery (CSRF)
 Cross-site request forgery is an attack where a JavaScript payload hosted on a third party site performs attack on the behalf on the user on the targeted website.
 The software should be written using a framework which prevents HTTP POST submissions without CSRF token. Any state changing action (login, create, modify, delete) should not be GET request.
 
-Applies for: 
+
 
 
 Related incidences:
@@ -150,7 +156,9 @@ Password storage best practices
 
 This protects the user password integrity in the case the database is compromised. The developers should not do password management themselves, but use a specialized library to do the password hashing and salting for persistent storage.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -183,7 +191,9 @@ Non-public administration site
 
 Many common software platforms come with the default administration site in a location like */admin/*. If the administrative URLs are well-known the attacker can exploit this and guess weak administration interface HTTP endpoints to exploit those. The administration interface should be in non-guessable, non-end user visible, URL. Furthermore the additional access restrictions can be placed with two-factor authentication, VPN and IP restrictions (see :doc:`Team security <../team/index>`).
 
+
 Applies for: Everyone
+
 
 
 Related incidences:

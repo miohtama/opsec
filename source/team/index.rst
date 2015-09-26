@@ -24,7 +24,9 @@ Basic security training
 
 The team members are trained and aware of common cyber threads like phishing attacks, social engineering. They can identify the basic attacks, like spearhead phishing emails, and do not fall victim to those. The team members maintain cyber hygiene and do not use working devices to visit sites which might compromise the web browser.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -46,7 +48,9 @@ Unsafe file attachments
 
 A file attachment in email and chat is one of the most common attack vectors. The desktop applications opening likely rigged payloads, like office suite files, PDFs and Flash animations are disabled or the team members do not use them to view the files. Instead, the suspicious attachments, especially ones coming outside the security barrier, are opened in a web browser based viewer or similarly sandboxed tool.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -69,7 +73,9 @@ Password manager
 All team members use password manager for their passwords. The password manager is the only cognitive sane way to manage a lot of sensitive, strong and random passwords. Without randomized passwords, a compromised third party site may lead to loss of other passwords due to password reuse or password pattern reuse.
 Whether one can trust third party service to store password is a subject to discussion depending on the sensitivity of the project.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -96,7 +102,9 @@ Third party devices
 
 If the device comes from an untrusted party, it may contain keyloggers and other malware to record the user actions. Such devices include internet kiosks and other free terminals. The team members use only their own working devices for the work.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -118,7 +126,9 @@ Encrypted computers
 
 The disk encryption implies password login to the computer wake up. A lost device, when encrypted, cannot lead to any kind of compromises
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -140,7 +150,9 @@ Encrypted mobile devices
 
 A lost device, when encrypted, cannot lead to any kind of compromises. Even if the device were not to contain sensitive data it may contain an accessible email session which can be used to further account compromise and phishing.
 
+
 Applies for: Everyone
+
 
 
 
@@ -157,7 +169,9 @@ Two-factor authentication on email
 
 Email accounts contain sensitive information and they can be used to reset the master password of services and infrastructure. Email account is also attractive target to hack in as they are either public or easily guessable. Even if email account is protected by strong password, flaws may exist in the password reset process, e.g. by intercepting the voice mail of the target user. Two-factor authentication provides additional protection against such attacks.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -186,7 +200,9 @@ Two-factor authentication on critical services
 
 The team relies on third party services for infrastructure: hosting, domain name, certificates, email, SMS, attack mitigation proxies, etc. If these services provide a two-factor authentication this option is used. This adds additional layer of security if the infrastructure provider becomes a target of attack and the master password can be reset e.g. through phishing.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -215,7 +231,9 @@ Two-factor authentication on the administrative site
 
 Usually the Internet services provide an administrative site or a backend site where the site managers and support personell can perform in-house tasks. If the attackers compromise the passwords of the team members they should not be able to get in to the administrative site just with the password. Instead, a two-factor authentication token is required for the site admins to log in. Furthermore the administrative address can be limited to VPN or other well-known (office) IPs.
 
+
 Applies for: Everyone
+
 
 
 
@@ -237,7 +255,9 @@ Passphrase on server login keys
 
 The logging in to production or staging servers is only allowed with the key files. The key files are passphrase protected. The usual logging method is by SSH, but if alternative methods exist accessing the servers they must provide similar method. This protects against brute force attacks against devop access. Furthermore keys must be passphrase protected so in the the case keys are accidentally leaked they are not useful.
 
+
 Applies for: Everyone
+
 
 
 
@@ -259,7 +279,9 @@ Two-factor authentication on server login
 
 The server login is further restricted to two-factor authentication, so that even in the case the devop laptop is hijacked by malware, this laptop cannot login to the server without a token from an external device.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -286,7 +308,9 @@ Audited server login keys
 
 In any point of time, the system administrators of the company can revoke any key in the whole organization. Full audit logs of key usage is available and stored separately. This allows quickly to address issues when a key compromise is suspected.
 
+
 Applies for: Medium and large enterprises
+
 
 
 
@@ -303,7 +327,9 @@ Software comes from secure sources
 
 Pirated software is riddled with malware. The team installs software which comes from legit sources only, reducing the risk the software comes with maware.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -325,7 +351,9 @@ Backend view access limitations
 
 If multiple people access the backend data, the access is limited in a way that the sensitive information is not exposed unless necessary for performing the work.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -347,7 +375,9 @@ Data scrubbing
 
 Instead of working with full datasets, there exist a repeatable process of making a cleaned dataset with reduced sensitive information from the production data. This cleaned dataset is given for the team members who need to analyse, test and develop against the data. This limits the impact of data dump leak in the case the data dump ends up to the hands of an unknown party.
 
+
 Applies for: Everyone
+
 
 
 Related incidences:

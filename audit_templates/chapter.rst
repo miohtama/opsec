@@ -24,7 +24,9 @@ Background
 
 {{ question.rationale }}
 
+{% if question.applies %}
 Applies for: {{ applies[question.applies] }}
+{% endif %}
 
 {% if question.incidences %}
 Related incidences:

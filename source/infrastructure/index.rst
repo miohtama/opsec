@@ -26,7 +26,9 @@ Prevent bruteforce attacks against your service by blocking multiple login attem
 Log monitoring software like fail2ban can do this with almost zero configuration for stock applications like SSH and common web servers.
 Please note that IP blocking is not effective against adversaries with botnets with thousands of global IPs in their posession.
 
+
 Applies for: Everyone
+
 
 
 
@@ -49,7 +51,7 @@ Security proxy
 Using a security proxy service hides the IP of your servers from the attacker, thus making denial-of-service attacks more difficult to perform.
 The security proxy services are provided by specialized companies who possess geographically distributed servers, a lot of bandwidth and can thus withstand attacks. Furthermore these services apply rules on the traffic to prevent common malicious visitors and crawlers.
 
-Applies for: 
+
 
 
 

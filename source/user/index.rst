@@ -40,7 +40,9 @@ Google Authenticator is a popular open mobile two-factor app. Despite the name s
   SMS is not deemed secure in large scale. SMS messages are intercepted by mobile malware. SMS may travel in plain text and various parties in operator business can read them. Mobile number portability opens a vector for the attacker to gain access to the victims phone number. SMS may not be reliable in third world countries, thus making it not viable option for global business.
 
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -99,7 +101,7 @@ In these cases the service should prompt the login to go through additional veri
   Third-factor authentication does not protect against cases where the device of the user is compromised by malware and the service cannot differetiate between the legit and the malicious traffic coming from the same device.
 
 
-Applies for: 
+
 
 
 Related incidences:
@@ -151,7 +153,9 @@ Beside the security ramifications, well-armed brute force logging attacker may c
   Forcing the users to choose long passwords brings limited additional value. Passwords are effectively dead. It doesn't matter how complex the password is, as usually the whole password is lost due to phishing or keylogging malware. Instead, two-factor authentication should be encouraged as the primary option to increase the account security.
 
 
+
 Applies for: Everyone
+
 
 
 Related incidences:
@@ -182,7 +186,14 @@ Effective session kill
 
 If the attacker gains access to an user account the system administrators must be able to kick out the attacker. The account deactivation may only affect the database records of the account, not dropping the active HTTP sessions which are stored in a separate store. When an user account is deactivated, all communication channels to this user must be dropped.
 
-Applies for: 
+All user sessions should be dropped on
+  * Account delete
+  * Password change
+  * Email change
+  * Third factor authentication
+
+
+
 
 
 Related incidences:
@@ -208,11 +219,23 @@ User audit logs
 **The service keeps audit logs of sensitive user actions?** 
 
 All sensitive actions of the users should be logged to a user specific action list. In the case case of a crime, the user audit log may be handed to the officials. The user itself may or may not review his past actions based on this list.
+
 The list is also important to protect the service operator itself against fraud. For example. the user can arrange stealing of the user account. The thief transfers the assets of the user to the friendly party of theirs. Then the user can blackmail and threat to sue the service unless the user is (incorrecly) reimbursed. The user audit logs prove  the correct password and authentications codes were used to initiate the transfer and shift the resposibility to the users themselves.
-The log should include at least * The user logins and login attempts * Password change and reset operations * Enabling and disabling two-factor authentication * Email change operations * All financial operations * Timestamp with timezone * IP address * User agent
+
+The log should include at least:
+* The user logins and login attempts
+* Password change and reset operations
+* Enabling and disabling two-factor authentication
+* Email change operations
+* All financial operations
+* Timestamp with timezone
+* IP address
+* User agent
+
 Furthermore the user audit logs can be used to recover the system in the case of flaw leading to a mass account compromise.
 
-Applies for: 
+
+
 
 
 Related incidences:
@@ -240,13 +263,24 @@ Account verification process
 **The creation of bogus accounts is prevented?** Yes / No / Not applicable
 
 This only applies for services where users can interact with other users or the world e.g. spam and harrash them.
+
 To keep the system clean, one should prevent the creation of fake and robot accounts. The cost of automatic account creation should be so high that there is no financial gain to use the account for automated harrashment. The account creation proces should be still easy enough not to discourage the users to sign up.
+
 The account verification is also important for anti-money laundering (AML) and know-your-customer (KYC) cases where it is imperative to know one is dealing with the rightful holder of the financial assets.
-The common account verification methods include
-* CAPTCHA * Email verification * Phone verification * Browser verification by security proxy (CloudFlare, etc.) * IP reputation system (block countries where you have no business, block Tor and VPN IPs) * Piggybacking the authentication mechanism of a large service (Facebook, Twitter, Google OAuth) * Government id verification services (available as-a-service like Jumio and Trulioo)
+
+The common account verification methods include:
+  * CAPTCHA
+  * Email verification
+  * Phone verification
+  * Browser verification by security proxy (CloudFlare, etc.)
+  * IP reputation system (block countries where you have no business, block Tor and VPN IPs)
+  * Piggybacking the authentication mechanism of a large service (Facebook, Twitter, Google OAuth)
+  * Government id verification services (available as-a-service like Jumio and Trulioo)
+
 Please note that all of these can be defeated if the financial incentive of the attacker is high enough.
 
-Applies for: 
+
+
 
 
 Related incidences:

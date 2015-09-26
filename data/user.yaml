@@ -110,8 +110,15 @@ questions:
 
   Effective session kill:
     question: When the user account is deactivated, all related sessions are killed
-    rationale:
+    rationale: |
       If the attacker gains access to an user account the system administrators must be able to kick out the attacker. The account deactivation may only affect the database records of the account, not dropping the active HTTP sessions which are stored in a separate store. When an user account is deactivated, all communication channels to this user must be dropped.
+
+      All user sessions should be dropped on
+        * Account delete
+        * Password change
+        * Email change
+        * Third factor authentication
+
     links:
       - Simultaneous Session Logons (OWASP), https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Considerations_When_Using_Multiple_Cookies
     incidences:
@@ -119,20 +126,20 @@ questions:
 
   User audit logs:
     question: The service keeps audit logs of sensitive user actions
-    rationale:
-        All sensitive actions of the users should be logged to a user specific action list. In the case case of a crime, the user audit log may be handed to the officials. The user itself may or may not review his past actions based on this list.
+    rationale: |
+      All sensitive actions of the users should be logged to a user specific action list. In the case case of a crime, the user audit log may be handed to the officials. The user itself may or may not review his past actions based on this list.
 
-        The list is also important to protect the service operator itself against fraud. For example. the user can arrange stealing of the user account. The thief transfers the assets of the user to the friendly party of theirs. Then the user can blackmail and threat to sue the service unless the user is (incorrecly) reimbursed. The user audit logs prove  the correct password and authentications codes were used to initiate the transfer and shift the resposibility to the users themselves.
+      The list is also important to protect the service operator itself against fraud. For example. the user can arrange stealing of the user account. The thief transfers the assets of the user to the friendly party of theirs. Then the user can blackmail and threat to sue the service unless the user is (incorrecly) reimbursed. The user audit logs prove  the correct password and authentications codes were used to initiate the transfer and shift the resposibility to the users themselves.
 
-        The log should include at least
-        * The user logins and login attempts
-        * Password change and reset operations
-        * Enabling and disabling two-factor authentication
-        * Email change operations
-        * All financial operations
-        * Timestamp with timezone
-        * IP address
-        * User agent
+      The log should include at least:
+      * The user logins and login attempts
+      * Password change and reset operations
+      * Enabling and disabling two-factor authentication
+      * Email change operations
+      * All financial operations
+      * Timestamp with timezone
+      * IP address
+      * User agent
 
       Furthermore the user audit logs can be used to recover the system in the case of flaw leading to a mass account compromise.
 
@@ -146,22 +153,21 @@ questions:
   Account verification process:
     question: The creation of bogus accounts is prevented
     answers: default_na
-    rationale:
+    rationale: |
       This only applies for services where users can interact with other users or the world e.g. spam and harrash them.
 
       To keep the system clean, one should prevent the creation of fake and robot accounts. The cost of automatic account creation should be so high that there is no financial gain to use the account for automated harrashment. The account creation proces should be still easy enough not to discourage the users to sign up.
 
       The account verification is also important for anti-money laundering (AML) and know-your-customer (KYC) cases where it is imperative to know one is dealing with the rightful holder of the financial assets.
 
-      The common account verification methods include
-
-      * CAPTCHA
-      * Email verification
-      * Phone verification
-      * Browser verification by security proxy (CloudFlare, etc.)
-      * IP reputation system (block countries where you have no business, block Tor and VPN IPs)
-      * Piggybacking the authentication mechanism of a large service (Facebook, Twitter, Google OAuth)
-      * Government id verification services (available as-a-service like Jumio and Trulioo)
+      The common account verification methods include:
+        * CAPTCHA
+        * Email verification
+        * Phone verification
+        * Browser verification by security proxy (CloudFlare, etc.)
+        * IP reputation system (block countries where you have no business, block Tor and VPN IPs)
+        * Piggybacking the authentication mechanism of a large service (Facebook, Twitter, Google OAuth)
+        * Government id verification services (available as-a-service like Jumio and Trulioo)
 
       Please note that all of these can be defeated if the financial incentive of the attacker is high enough.
 
