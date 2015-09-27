@@ -1,5 +1,0 @@
-# Bitcoin and cryptoassets specific
-
-
-
-

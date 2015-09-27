@@ -1,3 +1,0 @@
-# Two-factor authentication
-
-xxx

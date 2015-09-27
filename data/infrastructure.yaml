@@ -108,4 +108,22 @@ questions:
     links:
       - Nmap, https://nmap.org/
 
+  Intrusion detection:
+    question: Intrusion detection alerts on unexpected server activity
+    applies: mle
+    rationale: |
+      Intrusion detection software monitors the servers and alerts in the case there is unexpected activity.
+
+      Intrusion detection is a measure to detect compromised servers. Intrusion detection software monitors processes, file system, configuration files, passwords and user database. In the case there are changes not matching the predefined ruleset an alert is fired.
+
+    links:
+      - Tripwire, http://www.tripwire.com/
+
+  Priviledge separated software installation:
+    question: Software installations are under custom accounts and rights
+    rationale: |
+      Any installed software is under non-root (non-admin) account. The compromise of the software throguh an exploit cannot compromise the server as a whole.
+
+    links:
+      - Privledge separation (Wikipedia), https://en.wikipedia.org/wiki/Privilege_separation
 
