@@ -253,6 +253,33 @@ Links:
 
 
 
+.. _no-caching-policy:
+
+No caching policy
+==============================================================
+
+**Sensitive resources are not cached?** Yes / No
+
+Front end web server and web browsers caches pages and documents by default. Sensitive pages and downloads should have explicit no caching headers present.
+Thread models include
+* A caching front end web server may also result session leakage when HTTP response with a private cookie is accidentally cached
+* The device of the user is compromised and sensitive information is exctracted from the browser cache
+
+
+
+
+
+
+Links:
+
+
+- `The Security Impact of HTTP Caching Headers (SANS ISC InfoSec) <https://isc.sans.edu/forums/diary/The+Security+Impact+of+HTTP+Caching+Headers/17033/>`_
+
+
+
+
+
+
 .. _non-guessable-ids:
 
 Non-guessable ids
