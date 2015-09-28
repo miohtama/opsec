@@ -210,6 +210,89 @@ Links:
 
 
 
+.. _authorization-and-permission-framework:
+
+Authorization and permission framework
+==============================================================
+
+**Private pages and data access is protected by authorization framework?** Yes / No
+
+When protecting the private data a systematic authorization framework us used instead of ad-hoc conditions.
+In †he systematic approach
+* The same methods are used in the all permission checks
+* Manual conditions (ifs) are unnecessary to make permission checks as the approach is human error prone
+* All data is preferably private unless explicitly made public
+
+
+
+
+Related incidences:
+
+- :ref:`purse`
+
+
+
+
+Links:
+
+
+- `Role-based access control (Wikipedia) <https://en.wikipedia.org/wiki/Role-based_access_control>`_
+
+
+
+- `Permissions and Authorization (Django) <https://docs.djangoproject.com/en/1.8/topics/auth/default/#topic-authorization>`_
+
+
+
+- `Pundit, Minimal authorization object-oriented design for Ruby on Rails <https://github.com/elabs/pundit>`_
+
+
+
+
+
+
+
+
+.. _non-guessable-ids:
+
+Non-guessable ids
+==============================================================
+
+**Publicly exposed ids are not guessable?** Yes / No
+
+If the service uses running counters as database primary keys, these ids should not be exposed to the public.
+
+Knowing the id sequence allows the attacker to gain knowledge of the item count. If HTTP endpoints or pages lack proper permission checks, guessing the id sequence allows the attacker to scrape private data.
+
+It is recommended to use known good ID generation method, like Universally unique identifier (UUID) version 4 "random" which provide 122 truly random bits to prevent guessing.
+
+
+
+Applies for: Everyone
+
+
+
+Related incidences:
+
+- :ref:`purse`
+
+
+
+
+Links:
+
+
+- `UUID (Wikipedia) <https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_.28random.29>`_
+
+
+
+- `URL safe UUIDs in the smallest number of characters (StackOverlow) <http://stackoverflow.com/q/11431886/315168>`_
+
+
+
+
+
+
 .. _non-public-administration-site:
 
 Non-public administration site

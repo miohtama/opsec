@@ -77,6 +77,46 @@ questions:
       - lastpass
       - hacking-team
 
+  Authorization and permission framework:
+    question: Private pages and data access is protected by authorization framework
+    answers: default
+    rationale:
+      When protecting the private data a systematic authorization framework us used instead of ad-hoc conditions.
+
+      In †he systematic approach
+
+      * The same methods are used in the all permission checks
+
+      * Manual conditions (ifs) are unnecessary to make permission checks as the approach is human error prone
+
+      * All data is preferably private unless explicitly made public
+
+    incidences:
+      - purse
+
+    links:
+      - Role-based access control (Wikipedia), https://en.wikipedia.org/wiki/Role-based_access_control
+      - Permissions and Authorization (Django), https://docs.djangoproject.com/en/1.8/topics/auth/default/#topic-authorization
+      - Pundit, Minimal authorization object-oriented design for Ruby on Rails, https://github.com/elabs/pundit
+      - MustBe: Authorization Plumbing For NodeJS, https://github.com/derickbailey/mustbe
+
+  Non-guessable ids:
+    question: Publicly exposed ids are not guessable
+    answers: default
+    rationale: |
+      If the service uses running counters as database primary keys, these ids should not be exposed to the public.
+
+      Knowing the id sequence allows the attacker to gain knowledge of the item count. If HTTP endpoints or pages lack proper permission checks, guessing the id sequence allows the attacker to scrape private data.
+
+      It is recommended to use known good ID generation method, like Universally unique identifier (UUID) version 4 "random" which provide 122 truly random bits to prevent guessing.
+
+    applies: everyone
+    incidences:
+      - purse
+    links:
+      - UUID (Wikipedia), https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_.28random.29
+      - URL safe UUIDs in the smallest number of characters (StackOverlow), http://stackoverflow.com/q/11431886/315168
+
   Non-public administration site:
     question: The administration site is not easily accessible to public
     answers: default
@@ -86,4 +126,3 @@ questions:
     - veeder-root
     links:
       - Failure to restrict URL Access in OWASP, https://www.owasp.org/index.php/Top_10_2010-A8-Failure_to_Restrict_URL_Access
-

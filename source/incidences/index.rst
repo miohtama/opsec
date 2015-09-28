@@ -782,3 +782,69 @@ Links:
 
 
 
+
+.. _starbucks:
+
+Starbucks
+==============================================================
+
+*Date: 2015-05-21*
+
+A researcher was able to steal money from Starbucks by exploiting a race condition in its gift card value-transfer protocol.
+
+By doing two gift card value transfers at the same time, the researcher was able to duplicate the transfer and duplicate the balance on the accounts of the researcher.
+
+The researched disclosed the exploit to Starbucks who did not thank the researcher for his efforts.
+
+
+
+Related evaluation points:
+
+- :ref:`race-condition-prevention`
+
+
+
+
+
+Links:
+
+- `Hacking Starbucks for unlimited coffee (Egor Homakov) <http://sakurity.com/blog/2015/05/21/starbucks.html>`_
+
+- `Race Condition Exploit in Starbucks Gift Cards (Schneier on Security) <https://www.schneier.com/blog/archives/2015/05/race_condition_.html>`_
+
+
+
+
+
+.. _purse:
+
+PurseIO
+==============================================================
+
+*Date: 2015-07-31*
+
+Guessable ids allowed the researcher to scrape private orders from PurseIO service.
+
+PurseIO is a service where one can pay in Bitcoin for somebody to ask him or her to make an Amazon order on the behalf of the payer.
+
+PurseIO AJAX call endpoint had guessable id sequence, allowing the researcher to scrape semi-private data.
+
+
+
+Related evaluation points:
+
+- :ref:`authorization-and-permission-framework`
+
+- :ref:`non-guessable-ids`
+
+
+
+
+
+Links:
+
+- `Purse.io Data Spelunking <https://gist.github.com/ummjackson/e0abc55bdbe3d5ae9a03>`_
+
+
+
+

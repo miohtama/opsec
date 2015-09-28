@@ -334,3 +334,31 @@ cryptoine:
   links:
     - Cryptoine.com HACKED [race condition bug] [exchange closed] (BitcoinTalk), https://bitcointalk.org/index.php?topic=1001408.0
     - Bitcoin exchange Cryptoine hacked (ZDNet), http://www.zdnet.com/article/bitcoin-exchange-cryptoine-hacked/
+
+
+starbucks:
+  date: 2015-05-21
+  title: Starbucks
+  description: |
+    A researcher was able to steal money from Starbucks by exploiting a race condition in its gift card value-transfer protocol.
+
+    By doing two gift card value transfers at the same time, the researcher was able to duplicate the transfer and duplicate the balance on the accounts of the researcher.
+
+    The researched disclosed the exploit to Starbucks who did not thank the researcher for his efforts.
+
+  links:
+    - Hacking Starbucks for unlimited coffee (Egor Homakov), http://sakurity.com/blog/2015/05/21/starbucks.html
+    - Race Condition Exploit in Starbucks Gift Cards (Schneier on Security), https://www.schneier.com/blog/archives/2015/05/race_condition_.html
+
+purse:
+  date: 2015-07-31
+  title: PurseIO
+  description: |
+    Guessable ids allowed the researcher to scrape private orders from PurseIO service.
+
+    PurseIO is a service where one can pay in Bitcoin for somebody to ask him or her to make an Amazon order on the behalf of the payer.
+
+    PurseIO AJAX call endpoint had guessable id sequence, allowing the researcher to scrape semi-private data.
+
+  links:
+    - Purse.io Data Spelunking, https://gist.github.com/ummjackson/e0abc55bdbe3d5ae9a03
