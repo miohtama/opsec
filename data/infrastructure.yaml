@@ -14,7 +14,7 @@ questions:
   Login throttle:
     question: Throttle or ban IPs with multiple login attempts
     rationale:
-        Prevent bruteforce attacks against your service by blocking multiple login attempts.
+        Prevent bruteforce attacks against your service by blocking multiple login attempts. asdf
 
         Log monitoring software like fail2ban can do this with almost zero configuration for stock applications like SSH and common web servers.
 
@@ -57,7 +57,7 @@ questions:
   Encrypted server data:
     question: Data is stored on encrypted partitions
     rationale: |
-      All user data should be stored on encrypted partitions. In the case of unauthorized physical access the data cannot be compromised.
+      All user data should be stored on encrypted partitions or files. In the case of unauthorized physical access the data cannot be compromised. Encryption should apply for backups and other offsite files too.
 
       Disk encryption protects the data when the server is offline. All sensitive databases should reside on the partitions which are not accessible if the physical machine is compromised. If the server is rebooted without authorization the server should ask a passphrase to unecrypt the data partitions. The easiest way to achieve this is to have separate partitions for boot volume and data volume. Having separate "high" and "low" states the server cannot enter to to the state with access to data unless an authorized person enters a passphrase through a terminal.
 
@@ -73,6 +73,8 @@ questions:
 
       Furthermore all dedicated servers which you do not install yourself in your own rack can be deemed as unsafe. If you do not have the key to th  physical lock at the rack you can never be sure that somebody tampers with the server.
 
+    incidences:
+      - bitly
     links:
     - U.S. v. Ross Ulbricht: Declaration of Joshua J. Horowitz [dissemination], https://news.ycombinator.com/item?id=8401627
     - Analyzing the FBI’s Explanation of How They Located Silk Road (Nik Cubrilovic), https://www.nikcub.com/posts/analyzing-fbi-explanation-silk-road/
@@ -103,7 +105,7 @@ questions:
 
       .. note ::
 
-        A firewall should be only a secondary measure. By default the services should be configure in a manner that they to do not bind to publicly exposed IPs.
+        A firewall should be only a secondary measure. By default the services should be configure in a manner that they to do not bind to publicly exposed IPs. Furthermore firewalling outgoing connections might be problematic, as many services rely on third party API service today.
 
     links:
       - Nmap, https://nmap.org/
@@ -118,6 +120,7 @@ questions:
 
     links:
       - Tripwire, http://www.tripwire.com/
+      - OSSEC, http://www.ossec.net/
 
   Priviledge separated software installation:
     question: Software installations are under custom accounts and rights

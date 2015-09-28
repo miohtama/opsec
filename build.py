@@ -4,6 +4,10 @@ from slugify import slugify
 from yaml import safe_load as load
 import yaml
 
+
+from docx import Document
+from docx.shared import Pt
+
 from collections import OrderedDict
 
 def ordered_load(stream, Loader=yaml.Loader, object_pairs_hook=OrderedDict):
@@ -77,6 +81,66 @@ def get_incidences_data(chapters):
     return struct
 
 
+def generate_word(chapters:dict, incidences:dict):
+    """Generate the word document for proof reading.
+
+    :param chapters:
+    :param incidences:
+    :return:
+    """
+
+    document = Document()
+    document.add_heading('Chapters', 0)
+    document.add_page_break()
+
+    for chapter_id, chapter in chapters.items():
+
+        document.add_heading("Chapter: {}".format(chapter_id), 1)
+        document.add_page_break()
+
+        for question_id, question in chapter["questions"].items():
+            table = document.add_table(rows=3, cols=1)
+
+            # table.rows[0].cells[0].text = "Short title"
+            table.rows[0].cells[0].text = question_id
+
+            # table.rows[2].cells[0].text = "Title"
+            table.rows[1].cells[0].text = question["question"]
+
+            p = document.add_paragraph()
+            # table.rows[4].cells[0].text = "Rationale"
+            p = table.rows[2].cells[0].add_paragraph()
+            run = p.add_run(question["rationale"])
+            run.font.name = "Courier New"
+            run.font.size = Pt(12)
+
+            document.add_page_break()
+
+    document.add_heading('Incidences', 0)
+    document.add_page_break()
+
+    for incidence_id, incidence in incidences.items():
+
+        table = document.add_table(rows=3, cols=1)
+
+        # table.rows[0].cells[0].text = "Incidence id"
+        table.rows[0].cells[0].text = incidence_id
+
+        # table.rows[2].cells[0].text = "Title"
+        table.rows[1].cells[0].text = incidence["title"]
+
+        p = document.add_paragraph()
+        # table.rows[4].cells[0].text = "Description"
+        p = table.rows[2].cells[0].add_paragraph()
+        run = p.add_run(incidence["description"])
+        run.font.name = "Courier New"
+        run.font.size = Pt(12)
+
+        document.add_page_break()
+
+    document.save("opsec.docx")
+
+
 loader = jinja2.FileSystemLoader(os.path.join(os.getcwd(), "audit_templates"))
 env = jinja2.Environment(loader=loader)
 env.filters["normalize_id"] = normalize_id
@@ -106,4 +170,4 @@ for chapter_id, chapter in chapters.items():
         out.write(md)
 
 
-
+generate_word(chapters, incidences)

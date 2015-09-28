@@ -36,7 +36,7 @@ Even though Bitstamp followed high level software and infrastructure security pr
 
 Related evaluation points:
 
-- :ref:`basic-security-training`
+- :ref:`basic-security-practices`
 
 - :ref:`unsafe-file-attachments`
 
@@ -83,7 +83,7 @@ The CEO of Avid Life Media claims the breach was by an insider who was not an em
 
 Related evaluation points:
 
-- :ref:`backend-view-access-limitations`
+- :ref:`sensitive-data-access-limitations`
 
 - :ref:`sensitive-data-access-logs`
 
@@ -135,6 +135,8 @@ The authoritative report "More detail", by Bitly, is now taken down (http://blog
 Related evaluation points:
 
 - :ref:`two-factor-authentication-on-critical-services`
+
+- :ref:`encrypted-server-data`
 
 
 
@@ -698,6 +700,84 @@ Links:
 - `Steam accounts hacked during security lapse "bug" (TrustedReviews) <http://www.trustedreviews.com/news/steam-accounts-hacked-during-security-lapse-bug#Jih1G6ugCR2SeEOV.99>`_
 
 - `Valve patches huge password reset hole that allowed anyone to hijack Steam accounts (ComputerWorld) <http://www.computerworld.com/article/2953016/cybercrime-hacking/valve-patches-huge-password-reset-hole-that-allowed-anyone-to-hijack-steam-accounts.html>`_
+
+
+
+
+
+.. _hacking-team:
+
+Hacking Team
+==============================================================
+
+*Date: 2015-06-05*
+
+Hacking Team was a company selling offensive intrusion and surveillance capabilities to governments. Hacking Team got compromised, all 400GB of internal data leaked.
+
+All the stolen information was likely accessed via the compromised computers of Christian Pozzi and Mauro Romeo, two Hacking Team’s sysadmins.
+
+The leaked data demostrated Hacking Team operations security standards were not high. Weak password policies, lack of sensitive data access limitations and bad software development practices. For example, the customer software contained a hidden switch to disable it. This switch was exposed in the leak, forcing all the customers to stop using the software.
+
+As the writing of this the attacker is still not known.
+
+
+
+Related evaluation points:
+
+- :ref:`password-manager`
+
+- :ref:`sensitive-data-access-limitations`
+
+- :ref:`password-storage-best-practices`
+
+
+
+
+
+Links:
+
+- `Hacking Team (Wikipedia) <https://en.wikipedia.org/wiki/Hacking_Team>`_
+
+- `Hacking Team hacked, attackers claim 400GB in dumped data (CSO Online) <http://www.csoonline.com/article/2943968/data-breach/hacking-team-hacked-attackers-claim-400gb-in-dumped-data.html>`_
+
+- `Hacking Team goes to war against former employees, suspects some helped hackers (Ars Technica) <http://arstechnica.com/security/2015/07/italian-prosecutors-investigate-former-hacking-team-employees-for-role-in-hack/>`_
+
+- `Hacking Team’s KillSwitch – Disabling the Galileo RCS remotely and silently (4Armed) <https://www.4armed.com/blog/hacking-teams-killswitch-disabling-galileo-rcs-remotely-silently/>`_
+
+
+
+
+
+.. _cryptoine:
+
+Cryptoine
+==============================================================
+
+*Date: 2015-04-04*
+
+A race condition existed in the software of Cryptoine, now defunct Bitcoin exchange.
+
+The race condition allowed the attacker to drain all hot wallets.
+
+This damage caused the closure of the exchange.
+
+
+
+Related evaluation points:
+
+- :ref:`cold-wallet`
+
+- :ref:`race-condition-prevention`
+
+
+
+
+
+Links:
+
+- `Cryptoine.com HACKED [race condition bug] [exchange closed] (BitcoinTalk) <https://bitcointalk.org/index.php?topic=1001408.0>`_
+
+- `Bitcoin exchange Cryptoine hacked (ZDNet) <http://www.zdnet.com/article/bitcoin-exchange-cryptoine-hacked/>`_
 
 
 

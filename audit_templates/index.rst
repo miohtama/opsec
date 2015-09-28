@@ -1,8 +1,11 @@
 .. This is a generated file from data/. DO NOT EDIT.
 
 
-Operations Security guide
-=========================
+.. image:: _static/logo-text.png
+    :align: center
+    :width: 610
+    :alt: Opsec - Operations Security
+
 
 This is an online guide for operations security (OPSEC) for Internet services.
 
@@ -10,8 +13,8 @@ This is an online guide for operations security (OPSEC) for Internet services.
 
     This is a living, work-in-progress, document. We kindly ask you no to refer to this document or use the material presented here until the authors release the version 1.0.
 
-What is operations security (OPSEC)
-===================================
+OPSEC - Operations Security
+===========================
 
 Operations security (OPSEC) is multidisciplinary approach for protecting information and services. Though the term has a wider general meaning, this guide discusses OPSEC in the context of securing Internet services. This includes, but is not limited to, protecting information from industrial espionage, blackhat hackers, law enforcement, social engineering, and mass surveillance. `Please read further introduction to OPSEC in Wikipedia <https://en.wikipedia.org/wiki/Opsec>`_.
 
@@ -20,59 +23,20 @@ About this guide
 
 *OperationsSecurity.org* is guide and assessment tool to audit the security of Internet services. The aim is to provide 100% transparent, open, lightweight and practical way to develop and evaluate the security of a service from a holistic perspective. The scope of the guide is interdisciplinary, covering the full range of business operations from the mobile phone of CEO to safe software development practices. :doc:`Read more about how and why this guide was created <background/index>`.
 
-Audience
-========
-
-Not all Internet services are equally critical. This guide is aimed for teams who themselves are developing services dealing with private and financial data, though it can be used as a reference for other kind of services. The guide is not geared towards your average company business card website, software product deployments or generic IT administration.
-
-The audience of the guide includes, but is not limited, to
-
-* Website developers
-
-* System administrators and infrastructure operators
-
-* Technology and security officers
-
-* ...and everybody who is responsible for making sure they do not get hacked
-
-The guide assumes the reader has the basic understanding how Internet services are developed and operated. The developers and system administrators can use the guide as a reference when building and :doc:`assessing security of their organizations <assessment/index>`. Furthermore, with the :doc:`evaluation points <background/index>` provided by the guide a third party can audit an organization and provide a public track record of the matter.
-
 Chapters
 ========
 
 .. toctree::
     :maxdepth: 1
 
+    background/audience
     background/index
     assessment/index
 {% for chapter in chapters %}
     {{ chapter }}/index
 {% endfor %}
     incidences/index
+    background/contact
+    background/license
 
 
-Contact
-=======
-
-For spelling fixes and updates find the `appropriate source files on Github <https://github.com/miohtama/opsec/tree/master/data>`_ and use Github's Edit button.
-
-For content questions `open an issue on Github <https://github.com/miohtama/opsec>`_.
-
-For other matters contact `mikko@opensourcehacker.com <mikko@opensourcehacker.com>`_.
-
-License and copyright
-=====================
-
-The material is licensed under `Creative Commons Attribution 4.0 International (CC BY 4.0) license <http://creativecommons.org/licenses/by/4.0/>`_.
-
-You are free to:
-
-* Share — copy and redistribute the material in any medium or format
-
-* Adapt — remix, transform, and build upon the material for any purpose, even commercially.
-
-The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:
-
-* Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-
-* No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.

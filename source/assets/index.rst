@@ -37,6 +37,8 @@ Related incidences:
 
 - :ref:`bitstamp`
 
+- :ref:`cryptoine`
+
 
 
 
@@ -108,6 +110,54 @@ Links:
 
 
 - `Multisignature (Bitcoin Wiki) <https://en.bitcoin.it/wiki/Multisignature>`_
+
+
+
+
+
+
+.. _race-condition-prevention:
+
+Race condition prevention
+==============================================================
+
+**A systematic development method prevents race conditions?** Yes / No
+
+A systematic development method is applied to all transactions, so that race conditions cannot exist in financial transactions. Otherwise exploiting a race condition allows the attacker to manipulate account balances.
+For all financial transactions
+* Optimistic database-level transaction isolation is applied or...
+* Pessimistic application level locks are applie
+
+
+
+
+Related incidences:
+
+- :ref:`cryptoine`
+
+
+
+
+Links:
+
+
+- `Lock (database) (Wikipedia) <https://en.wikipedia.org/wiki/Lock_%28database%29>`_
+
+
+
+- `Race condition (Wikipedia) <https://en.wikipedia.org/wiki/Race_condition>`_
+
+
+
+- `Atomicity (Wikipedia) <https://en.wikipedia.org/wiki/Atomicity_(database_systems)>`_
+
+
+
+- `Transaction Isolation (PostgreSQL) <http://www.postgresql.org/docs/9.1/static/transaction-iso.html>`_
+
+
+
+- `How I stole roughly 100 BTC from an exchange and how I could have stolen more <https://www.reddit.com/r/Bitcoin/comments/1wtbiu/how_i_stole_roughly_100_btc_from_an_exchange_and/>`_
 
 
 

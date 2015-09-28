@@ -1,6 +1,6 @@
-===========================
-Security assessment process
-===========================
+==================
+Assessing security
+==================
 
 Introduction
 ============

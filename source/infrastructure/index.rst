@@ -23,7 +23,7 @@ Login throttle
 
 **Throttle or ban IPs with multiple login attempts?** Yes / No
 
-Prevent bruteforce attacks against your service by blocking multiple login attempts.
+Prevent bruteforce attacks against your service by blocking multiple login attempts. asdf
 Log monitoring software like fail2ban can do this with almost zero configuration for stock applications like SSH and common web servers.
 Please note that IP blocking is not effective against adversaries with botnets with thousands of global IPs in their posession.
 
@@ -133,7 +133,7 @@ Encrypted server data
 
 **Data is stored on encrypted partitions?** 
 
-All user data should be stored on encrypted partitions. In the case of unauthorized physical access the data cannot be compromised.
+All user data should be stored on encrypted partitions or files. In the case of unauthorized physical access the data cannot be compromised. Encryption should apply for backups and other offsite files too.
 
 Disk encryption protects the data when the server is offline. All sensitive databases should reside on the partitions which are not accessible if the physical machine is compromised. If the server is rebooted without authorization the server should ask a passphrase to unecrypt the data partitions. The easiest way to achieve this is to have separate partitions for boot volume and data volume. Having separate "high" and "low" states the server cannot enter to to the state with access to data unless an authorized person enters a passphrase through a terminal.
 
@@ -151,6 +151,11 @@ Furthermore all dedicated servers which you do not install yourself in your own 
 
 
 
+
+
+Related incidences:
+
+- :ref:`bitly`
 
 
 
@@ -223,7 +228,7 @@ The easiest method to verify this is to scan the ports of all public IPs. Only t
 
 .. note ::
 
-  A firewall should be only a secondary measure. By default the services should be configure in a manner that they to do not bind to publicly exposed IPs.
+  A firewall should be only a secondary measure. By default the services should be configure in a manner that they to do not bind to publicly exposed IPs. Furthermore firewalling outgoing connections might be problematic, as many services rely on third party API service today.
 
 
 
@@ -235,6 +240,64 @@ Links:
 
 
 - `Nmap <https://nmap.org/>`_
+
+
+
+
+
+
+.. _intrusion-detection:
+
+Intrusion detection
+==============================================================
+
+**Intrusion detection alerts on unexpected server activity?** 
+
+Intrusion detection software monitors the servers and alerts in the case there is unexpected activity.
+
+Intrusion detection is a measure to detect compromised servers. Intrusion detection software monitors processes, file system, configuration files, passwords and user database. In the case there are changes not matching the predefined ruleset an alert is fired.
+
+
+
+Applies for: Medium and large enterprises
+
+
+
+
+
+Links:
+
+
+- `Tripwire <http://www.tripwire.com/>`_
+
+
+
+- `OSSEC <http://www.ossec.net/>`_
+
+
+
+
+
+
+.. _priviledge-separated-software-installation:
+
+Priviledge separated software installation
+==============================================================
+
+**Software installations are under custom accounts and rights?** 
+
+Any installed software is under non-root (non-admin) account. The compromise of the software throguh an exploit cannot compromise the server as a whole.
+
+
+
+
+
+
+
+Links:
+
+
+- `Privledge separation (Wikipedia) <https://en.wikipedia.org/wiki/Privilege_separation>`_
 
 
 

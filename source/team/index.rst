@@ -15,14 +15,15 @@ The physical security, like door access keys or security cameras, is de-emphasiz
 
 
 
-.. _basic-security-training:
+.. _basic-security-practices:
 
-Basic security training
+Basic security practices
 ==============================================================
 
-**The team members are trained in basic security matters?** Yes / No
+**The team members are trained and follow the basic security practices?** Yes / No
 
-The team members are trained and aware of common cyber threads like phishing attacks, social engineering. They can identify the basic attacks, like spearhead phishing emails, and do not fall victim to those. The team members maintain cyber hygiene and do not use working devices to visit sites which might compromise the web browser.
+The team members are trained and aware of common cyber threads like phishing attacks, social engineering. They can identify the basic attacks, like spearhead phishing emails, and do not fall victim to those. The team members maintain cyber hygiene and do not use working devices to visit sites which might compromise the web browser. Software, both desktop and server software, is maintained in up-to-date versions where know vulnerabilities do not exist.
+
 
 
 Applies for: Everyone
@@ -46,7 +47,7 @@ Unsafe file attachments
 
 **Potentially dangerous file attachments are handled securely?** Yes / No
 
-A file attachment in email and chat is one of the most common attack vectors. The desktop applications opening likely rigged payloads, like office suite files, PDFs and Flash animations are disabled or the team members do not use them to view the files. Instead, the suspicious attachments, especially ones coming outside the security barrier, are opened in a web browser based viewer or similarly sandboxed tool.
+File attachments in email and chat are one of the most common attack vectors. is The desktop applications opening likely rigged payloads, like office suite files, PDFs and Flash animations are disabled or the team members do not use them to view the files. Instead, the suspicious attachments, especially ones coming outside the security barrier, are opened in a web browser based viewer or similarly sandboxed tool.
 
 
 Applies for: Everyone
@@ -81,6 +82,8 @@ Applies for: Everyone
 Related incidences:
 
 - :ref:`lastpass`
+
+- :ref:`hacking-team`
 
 
 
@@ -126,7 +129,12 @@ Encrypted computers
 
 **The team members have disk encryption enabled on their personal computers?** Yes / No
 
-The disk encryption implies password login to the computer wake up. A lost device, when encrypted, cannot lead to any kind of compromises
+The permanent storage, SSD or hard disk, on the team laptops and desktop computers is encrypted.
+
+This implies the usage of disk encryption technology like FileVault (OSX), dm-crypt (Linux) or BitLocker (Windows).
+
+A lost device, when encrypted, cannot lead to any kind of compromises as password is always required to unlock the device. Even if the device wakes up from hibernation.
+
 
 
 Applies for: Everyone
@@ -150,12 +158,25 @@ Encrypted mobile devices
 
 **The team members have disk encryption enabled on their mobiles and tablets. The devices are password protected?** Yes / No
 
-A lost device, when encrypted, cannot lead to any kind of compromises. Even if the device were not to contain sensitive data it may contain an accessible email session which can be used to further account compromise and phishing.
+
+A lost device, when encrypted, cannot lead to any kind of compromises. Even if the device were not to contain sensitive data it could contain active email inboxes and team chats leading to further account compromise and phishing.
+
 
 
 Applies for: Everyone
 
 
+
+
+
+Links:
+
+
+- `Encrypt your data on Android (Google) <https://support.google.com/nexus/answer/2844831?hl=en>`_
+
+
+
+- `iOS: Understanding data protection (Apple) <https://support.apple.com/en-us/HT202064>`_
 
 
 
@@ -356,9 +377,9 @@ Related incidences:
 
 
 
-.. _backend-view-access-limitations:
+.. _sensitive-data-access-limitations:
 
-Backend view access limitations
+Sensitive data access limitations
 ==============================================================
 
 **Backend sensitive data access is limited?** Yes / No / Not applicable
@@ -373,6 +394,8 @@ Applies for: Everyone
 Related incidences:
 
 - :ref:`ashley-madison`
+
+- :ref:`hacking-team`
 
 
 

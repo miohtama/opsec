@@ -75,6 +75,7 @@ questions:
       - sebastian
       - slack
       - lastpass
+      - hacking-team
 
   Non-public administration site:
     question: The administration site is not easily accessible to public

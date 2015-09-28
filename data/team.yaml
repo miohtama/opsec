@@ -22,9 +22,7 @@ questions:
   Basic security practices:
     question: The team members are trained and follow the basic security practices
     rationale: |
-      The team members are trained and aware of common cyber threads like phishing attacks, social engineering. They can identify the basic attacks, like spearhead phishing emails, and do not fall victim to those. The team members maintain cyber hygiene and do not use working devices to visit sites which might compromise the web browser.
-
-      Software, both desktop and server software, is maintained in up-to-date versions where know vulnerabilities do not exist.
+      The team members are trained and aware of common cyber threads like phishing attacks, social engineering. They can identify the basic attacks, like spearhead phishing emails, and do not fall victim to those. The team members maintain cyber hygiene and do not use working devices to visit sites which might compromise the web browser. Software, both desktop and server software, is maintained in up-to-date versions where know vulnerabilities do not exist.
 
     answers: default
     applies: everyone
@@ -33,7 +31,7 @@ questions:
 
   Unsafe file attachments:
     question: Potentially dangerous file attachments are handled securely
-    rationale: A file attachment in email and chat is one of the most common attack vectors. The desktop applications opening likely rigged payloads, like office suite files, PDFs and Flash animations are disabled or the team members do not use them to view the files. Instead, the suspicious attachments, especially ones coming outside the security barrier, are opened in a web browser based viewer or similarly sandboxed tool.
+    rationale: File attachments in email and chat are one of the most common attack vectors. is The desktop applications opening likely rigged payloads, like office suite files, PDFs and Flash animations are disabled or the team members do not use them to view the files. Instead, the suspicious attachments, especially ones coming outside the security barrier, are opened in a web browser based viewer or similarly sandboxed tool.
     answers: default
     applies: everyone
     incidences:
@@ -52,6 +50,7 @@ questions:
     - KeePassX, https://www.keepassx.org/
     incidences:
     - lastpass
+    - hacking-team
 
   Third party devices:
     question: The team members do not use third party devices for logging in
@@ -86,8 +85,8 @@ questions:
     applies: everyone
     categories: encryption
     links:
-      Encrypt your data [on Android] (Google), https://support.google.com/nexus/answer/2844831?hl=en
-      iOS: Understanding data protection (Apple), https://support.apple.com/en-us/HT202064
+      - Encrypt your data on Android (Google), https://support.google.com/nexus/answer/2844831?hl=en
+      - "iOS: Understanding data protection (Apple), https://support.apple.com/en-us/HT202064"
 
   Two-factor authentication on email:
     question: The team member email accounts require two-factor authentication to log in
@@ -152,13 +151,14 @@ questions:
     incidences:
     - xcode
 
-  Backend view access limitations:
+  Sensitive data access limitations:
     question: Backend sensitive data access is limited
     rationale: If multiple people access the backend data, the access is limited in a way that the sensitive information is not exposed unless necessary for performing the work.
     answers: default_na
     applies: everyone
     incidences:
       - ashley-madison
+      - hacking-team
 
   Sensitive data access logs:
     question: Backend sensitive data access is logged
