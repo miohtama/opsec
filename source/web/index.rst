@@ -350,3 +350,50 @@ Links:
 
 
 
+
+.. _whitehat-program:
+
+Whitehat program
+==============================================================
+
+**The service has a public whitehat or security bounty program?** Yes / No
+
+A whitehat program, also known as a security bountry program, is a published guide how the service deals with the security researchers. The purpose of a whitehat program is to encourage legit security research to cover issues on the service and credit third parties for doing this work.
+The third party security researches usually scan the service using a web security audit tools like Burp Suite and try to discover XSS, CSRF, database injection and authorization flaws.
+The whitehat program usually includes
+* How to contact the service when reporting a security issues
+* What response time one should expect
+* Security issues types eglible to bounty
+* What is the amount of bounty and how it is paid
+* Crediting the researcher for uncovering the issue
+There exist third party services providing the creation and management of whitehat programs (Cobalt, HackerOne).
+
+
+Applies for: Medium and large enterprises
+
+
+
+Related incidences:
+
+- :ref:`coinbase`
+
+
+
+
+Links:
+
+
+- `Cobalt <https://cobalt.io/>`_
+
+
+
+- `HackerOne <https://hackerone.com/>`_
+
+
+
+- `Burp <https://portswigger.net/burp/>`_
+
+
+
+
+

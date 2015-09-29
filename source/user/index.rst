@@ -27,8 +27,6 @@ The site user loes their password through many channels: passwords are recycled 
 
 Having the two-factor authentication as optional is not often enough, as the users only see the reduced usability (longer login process) and are not aware of thread models. Incentives, like reduced fees, should be used to encourage enabling the two-factor authentication. From business perspective, this can be justified as reduced support cost of dealing with hacked account cases.
 
-The most sensitive operations, like where money is transferred out from the system, should require minimum of two different two-factor tokens: one for login and one for transfer. This makes two-factor intercepting phishing site operation less robust, as the users are more likely notice bad URLs if they need to spend more time on the phishing site. With only one authentication token the phishing site can do transfer out on the second the user hits the login, making phishing more likely to success.
-
 Popular two-factor authentication methods include Time-Based One Time Password (TOTP, mobile apps, Google Authenticator), One time pad (HOTP, paper codes, used by many European banks), SMS and hardware devices (like YubiKey).
 
 External services like Authy and Clef provide two-factor-as-a-service.
@@ -135,6 +133,46 @@ Links:
 
 
 - `Introducing Login Approvals (Facebook) <https://www.facebook.com/notes/facebook-engineering/introducing-login-approvals/10150172618258920>`_
+
+
+
+
+
+
+.. _re-authentication-on-sensitive-actions:
+
+Re-authentication on sensitive actions
+==============================================================
+
+**Security sensitive actions should prompt for authentication?** Yes / No
+
+Security sensitive actions should ask the user perform additional authentication besides loggging in to the system.
+
+The additional authetication could be
+
+* Give the password again
+
+* Email confirmation
+
+* Give another two-factor authentication token
+
+Security sensitive actions include e.g.
+
+* Making withdraw from the service
+
+* Sending money to another user
+
+* Changing password, email or phone number
+
+* Closing the account
+
+Asking the additional authentication gives another layer of protection against phishing and XSS attacks.
+
+The most sensitive operations, like where money is transferred out from the system, should require minimum of two different two-factor tokens: one for login and one for transfer. This makes two-factor intercepting phishing site operation less robust, as the users are more likely notice bad URLs if they need to spend more time on the phishing site. With only one authentication token the phishing site can do transfer out on the second the user hits the login, making phishing more likely to success.
+
+
+
+
 
 
 
@@ -382,6 +420,39 @@ Links:
 
 
 - `Trulioo <https://www.trulioo.com/>`_
+
+
+
+
+
+
+.. _flood-action-throttle:
+
+Flood action throttle
+==============================================================
+
+**Actions sending messages to other users are throttled?** Yes / No
+
+When the service provides actions to message or contact other users or users outside the service, these actions should be throttled so that flood attack is not possible.
+
+Example actions include
+
+* Sending messages to the other users
+
+* Sending invitation emails
+
+If a malicious actor is free to send infinite number of messages, this can be used to harrass people. Even if direct financial damage is not possible, the service takes a reputation hit and the brand suffers.
+
+Actions sending outgoing messages or signals should be throttled, so that a malicious actor cannot flood the system. If the threshold of the actions in a time window exceeds the limit what a normal person would do, the action should be disabled or the user banned.
+
+
+
+
+
+Related incidences:
+
+- :ref:`coinbase`
+
 
 
 

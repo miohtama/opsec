@@ -21,7 +21,9 @@ Operations security (OPSEC) is multidisciplinary approach for protecting informa
 About this guide
 ================
 
-*OperationsSecurity.org* is guide and assessment tool to audit the security of Internet services. The aim is to provide 100% transparent, open, lightweight and practical way to develop and evaluate the security of a service from a holistic perspective. The scope of the guide is interdisciplinary, covering the full range of business operations from the mobile phone of CEO to safe software development practices. :doc:`Read more about how and why this guide was created <background/index>`.
+|opsec| is security guide and assessment tool for developing sensitive Internet services.
+
+The aim is to provide transparent, lightweight and practical way to develop and evaluate the security of a service from a holistic perspective. The scope of the guide is interdisciplinary, covering the full range of business operations from the mobile phone of CEO to safe software development practices. :doc:`Read more about how and why this guide was created <background/index>`.
 
 Chapters
 ========
@@ -29,6 +31,7 @@ Chapters
 .. toctree::
     :maxdepth: 1
 
+    background/author
     background/audience
     background/index
     assessment/index

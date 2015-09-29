@@ -358,3 +358,8 @@ epub_exclude_files = ['search.html']
 
 # If false, no index is generated.
 #epub_use_index = True
+
+# http://stackoverflow.com/a/10042061/315168
+rst_epilog = """
+.. |opsec| replace:: OPSEC - Operations Security Guide
+"""
