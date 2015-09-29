@@ -121,7 +121,7 @@ questions:
 
         * Prevent login attempts per IP (fail2ban)
 
-        * Prevent login attempts per username (spreadhead attack)
+        * Prevent login attempts per username (spearhead attack)
 
         * Force all users to go through CAPTCHA before login if the system global login rate is abnormal high (botnet-based attack)
 
