@@ -23,7 +23,7 @@ About this guide
 
 |opsec| is a security guide and assessment tool for developing sensitive Internet services.
 
-The aim is to provide transparent, lightweight and practical way to develop and evaluate the security of an Internet service from a holistic viewpoint. The scope of the guide is interdisciplinary, covering the full range of business operations from mobile phone usage to safe software development practices. :doc:`Read more how and why this guide was born <background/index>`.
+The aim is to provide transparent, lightweight and practical way to develop and evaluate the security of an Internet service from a holistic viewpoint. The scope of the guide is interdisciplinary, covering the full range of business operations from mobile phone usage to safe software development practices. :doc:`Read more how and why this guide was created <background/index>`.
 
 Chapters
 ========

@@ -89,13 +89,22 @@ def generate_word(chapters:dict, incidences:dict):
     :return:
     """
 
-    document = Document()
-    document.add_heading('Chapters', 0)
-    document.add_page_break()
+    # document.add_heading('Chapters', 0)
+    # document.add_page_break()
 
     for chapter_id, chapter in chapters.items():
 
+        print("Building {}.docx".format(chapter_id))
+        document = Document()
+
         document.add_heading("Chapter: {}".format(chapter_id), 1)
+        p = document.add_paragraph(chapter["meta"]["description"], style="Subtitle")
+
+        p = document.add_paragraph()
+        run = p.add_run(chapter["meta"]["background"])
+        run.font.name = "Courier New"
+        run.font.size = Pt(12)
+
         document.add_page_break()
 
         for question_id, question in chapter["questions"].items():
@@ -119,6 +128,9 @@ def generate_word(chapters:dict, incidences:dict):
             run.font.size = Pt(12)
 
             document.add_page_break()
+        document.save("{}.docx".format(chapter_id))
+
+    return
 
     document.add_heading('Incidences', 0)
     document.add_page_break()
@@ -142,7 +154,7 @@ def generate_word(chapters:dict, incidences:dict):
 
         document.add_page_break()
 
-    document.save("opsec.docx")
+
 
 
 loader = jinja2.FileSystemLoader(os.path.join(os.getcwd(), "audit_templates"))

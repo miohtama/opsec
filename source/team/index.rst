@@ -644,13 +644,13 @@ Data scrubbing
 
 **Data dumps are cleaned from sensitive information?** Yes / No
 
-Instead of working with full datasets, there exist a repeatable process of making a cleaned dataset with sensitive information removed from the production data.
+Instead of working with full production datasets, there exist a repeatable process of making a cleaned dataset with sensitive information removed from the data.
 
 The data scrubbing process e.g. can reset
 
 * User email addresses
 
-* Phone numbers
+* Phone numbers, physical addresses and social security number
 
 * Password hashes
 
@@ -670,6 +670,13 @@ Related incidences:
 
 - :ref:`ashley-madison`
 
+
+
+
+Links:
+
+
+- `How to Anonymize Data in a PostgreSQL Database (Michael Krenz) <http://www.michaelkrenz.de/2012/08/05/how-to-anonymize-data-in-a-postgresql-database/>`_
 
 
 
