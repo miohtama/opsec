@@ -38,7 +38,7 @@ Related evaluation points:
 
 - :ref:`basic-security-practices`
 
-- :ref:`unsafe-file-attachments`
+- :ref:`dangerous-file-attachments`
 
 - :ref:`two-factor-authentication-on-server-login`
 
@@ -83,9 +83,9 @@ The CEO of Avid Life Media claims the breach was by an insider who was not an em
 
 Related evaluation points:
 
-- :ref:`sensitive-data-access-limitations`
+- :ref:`limited-sensitive-data-access`
 
-- :ref:`sensitive-data-access-logs`
+- :ref:`logged-sensitive-data-access`
 
 - :ref:`data-scrubbing`
 
@@ -202,7 +202,7 @@ The reason why Chinese developers used the pirated XCode in the first place is t
 
 Related evaluation points:
 
-- :ref:`software-comes-from-secure-sources`
+- :ref:`software-installation-from-safe-sources`
 
 
 
@@ -726,7 +726,7 @@ Related evaluation points:
 
 - :ref:`password-manager`
 
-- :ref:`sensitive-data-access-limitations`
+- :ref:`limited-sensitive-data-access`
 
 - :ref:`password-storage-best-practices`
 
@@ -884,6 +884,37 @@ Links:
 - `Coinbase denies security breach, defends spamming-friendly features (Help Net Security) <http://www.net-security.org/secworld.php?id=16628>`_
 
 - `Update on Coinbase Data Security <https://blog.coinbase.com/2014/04/01/update-on-coinbase-data-security/>`_
+
+
+
+
+
+.. _squirrelmail:
+
+SquirrelMail
+==============================================================
+
+*Date: 2007-12-18*
+
+SquirrelMail source code repository was poisoned.
+
+SquirrelMail was a popular self-hosted web email application. The download repository was compromised. The distributed package was modified to include a remote file inclusion bug allowing the attackers to execute arbitrary code on any compromised SquirrelMail installation.
+
+
+
+Related evaluation points:
+
+- :ref:`software-installation-from-safe-sources`
+
+
+
+
+
+Links:
+
+- `SquirrelMail Repository Poisoned with Critical flaw (Sûnnet Beskerming) <http://www.beskerming.com/commentary/2007/12/19/313/SquirrelMail_Repository_Poisoned_with_Critical_flaw>`_
+
+- `SquirrelMail Repository Poisoned <http://it.slashdot.org/story/07/12/18/1847233/squirrelmail-repository-poisoned>`_
 
 
 

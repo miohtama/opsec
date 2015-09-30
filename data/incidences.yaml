@@ -380,3 +380,15 @@ coinbase:
     - Coinbase design allows for mass, targeted phishing of its users (Shubham Shah), http://blog.shubh.am/full-disclosure-coinbase-security/
     - Coinbase denies security breach, defends spamming-friendly features (Help Net Security), http://www.net-security.org/secworld.php?id=16628
     - Update on Coinbase Data Security, https://blog.coinbase.com/2014/04/01/update-on-coinbase-data-security/
+
+squirrelmail:
+  date: 2007-12-18
+  title: SquirrelMail
+  description: |
+    SquirrelMail source code repository was poisoned.
+
+    SquirrelMail was a popular self-hosted web email application. The download repository was compromised. The distributed package was modified to include a remote file inclusion bug allowing the attackers to execute arbitrary code on any compromised SquirrelMail installation.
+
+  links:
+    - SquirrelMail Repository Poisoned with Critical flaw (Sûnnet Beskerming), http://www.beskerming.com/commentary/2007/12/19/313/SquirrelMail_Repository_Poisoned_with_Critical_flaw
+    - SquirrelMail Repository Poisoned, http://it.slashdot.org/story/07/12/18/1847233/squirrelmail-repository-poisoned

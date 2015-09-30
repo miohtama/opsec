@@ -110,7 +110,11 @@ def generate_word(chapters:dict, incidences:dict):
             p = document.add_paragraph()
             # table.rows[4].cells[0].text = "Rationale"
             p = table.rows[2].cells[0].add_paragraph()
-            run = p.add_run(question["rationale"])
+            try:
+                run = p.add_run(question["rationale"])
+            except KeyError:
+                raise RuntimeError("Question missing rationale: {}".format(question_id))
+
             run.font.name = "Courier New"
             run.font.size = Pt(12)
 
