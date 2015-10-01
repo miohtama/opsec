@@ -219,6 +219,8 @@ questions:
     links:
       - SSH key and passwordless login basics for developers (Mikko Ohtamaa), https://opensourcehacker.com/2012/10/24/ssh-key-and-passwordless-login-basics-for-developers/
       - Linode Hacks (Bitcoin Thefts), https://bitcointhefts.com/details/linode-hacks
+    incidences:
+      - linode
 
   Two-factor authentication on server login:
     question: The terminal access to the server requires two-factor authentication
@@ -233,6 +235,7 @@ questions:
     applies: everyone
     incidences:
       - bitstamp
+      - linode
     links:
       - SSH login with Google Authenticator TTOP two-factor, http://sam.xnet.tk/2014/09/ubuntu-2-factor-login-public-key-google-authenticator/
       - Two-Factor-Authentication with SSH (Carsten Heesch), https://sysconfig.org.uk/two-factor-authentication-with-ssh.html

@@ -392,3 +392,19 @@ squirrelmail:
   links:
     - SquirrelMail Repository Poisoned with Critical flaw (Sûnnet Beskerming), http://www.beskerming.com/commentary/2007/12/19/313/SquirrelMail_Repository_Poisoned_with_Critical_flaw
     - SquirrelMail Repository Poisoned, http://it.slashdot.org/story/07/12/18/1847233/squirrelmail-repository-poisoned
+
+linode:
+  date: 2012-03-01
+  title: Linode
+  description: |
+    A vulnerability in the customer support system of a Linode webhost was used to obtain administrator access to the servers of multiple Bitcoin companies.
+
+    Linode offers budget virtual servers for hosting. Several Bitcoin companies where hosting their site at Linode.
+
+    The attackers exploited a vulnerability in the Linode customer support interface. The root password was changed and the servers were restarted through web-based administrator panel. Then the attackers proceeded to logging in the servers and drained the hot wallets. 230k USD worth of Bitcoins were stolen.
+
+  links:
+    - Cloud Service Linode Hacked, Bitcoin Accounts Emptied (ThreatPost), https://threatpost.com/cloud-service-linode-hacked-bitcoin-accounts-emptied-030212/76278/#sthash.PMEXbvX9.dpuf
+    - Linode Hacks (Bitcoin Thefts), https://bitcointhefts.com/details/linode-hacks
+    - Customer support transcript with Linode (Marek Palatinus), http://pastebin.com/UW7iT5fj
+

@@ -444,6 +444,11 @@ Applies for: Everyone
 
 
 
+Related incidences:
+
+- :ref:`linode`
+
+
 
 
 Links:
@@ -482,6 +487,8 @@ Applies for: Everyone
 Related incidences:
 
 - :ref:`bitstamp`
+
+- :ref:`linode`
 
 
 

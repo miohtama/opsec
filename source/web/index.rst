@@ -5,10 +5,12 @@
 Web security
 ===========================================
 
-The web and application development process is in par with the current security best practices. This chapter focuses on the matters specific to building a wb application which is exposed to Internet.
+This chapter discusses about web development best practices for Internet services.
 
 Background
 ==========
+
+When developing an sensitive Internet service, special attentation should be paid on the security. It is possible, and not even too difficult, to build unhackable systems. However to accomplish this the development team needs discipline,
 
 Ultimately any Internet facing service must accept user input over the Internet. If the application is not written following the best practices, it's trivial to conduct an attack exploiting the application vulnerabilities.
 

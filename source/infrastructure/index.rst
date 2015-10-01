@@ -157,6 +157,8 @@ Related incidences:
 
 - :ref:`bitly`
 
+- :ref:`linode`
+
 
 
 
