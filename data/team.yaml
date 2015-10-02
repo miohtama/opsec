@@ -221,6 +221,7 @@ questions:
       - Linode Hacks (Bitcoin Thefts), https://bitcointhefts.com/details/linode-hacks
     incidences:
       - linode
+      - maxcdn
 
   Two-factor authentication on server login:
     question: The terminal access to the server requires two-factor authentication
@@ -248,6 +249,8 @@ questions:
       This allows quickly address the issues when a compromise is suspected.
     answers: default
     applies: mle
+    incidences:
+      - maxcdn
 
   Software installation from safe sources:
     question: Software is installed from known good sources

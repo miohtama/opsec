@@ -448,6 +448,8 @@ Related incidences:
 
 - :ref:`linode`
 
+- :ref:`maxcdn`
+
 
 
 
@@ -522,6 +524,11 @@ This allows quickly address the issues when a compromise is suspected.
 
 Applies for: Medium and large enterprises
 
+
+
+Related incidences:
+
+- :ref:`maxcdn`
 
 
 
