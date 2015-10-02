@@ -1,37 +1,57 @@
 %YAML 1.2
 ---
 meta:
-  title: Protecting site users
+  title: Protecting service users
   description:
-    This chapter discussed protecting the service end users and guiding them to secure their accounts properly.
+    This chapter discussed protecting the end users and guiding them to secure their accounts properly.
 
   background: |
 
-    Even if the team members and the service maintains high security standards, the malicious actors can go after the end users. For example, phishing operations target a group of users who are likely users of the service. If the service users give out their login credentials to the phisher, the phisher may damage this individual user, even though the integrity of the service as a whole is not compromised.
+    Even if the team members maintains high security standards internally, the malicious actors can go after the end users. For example, phishing operations target a group of users who are likely users of the service. If the end users give out their login credentials in the phishing attack, the attacker may damage these user, even though the integrity of the service as a whole is not compromised.
 
-    The service should take several measures to protect it users, so that even if the attacker gains access to the user email inbox or password, cannot cause harm to the user.
+    The service should take several measures to protect its users, so that even if the attacker gains access to the user email inbox or password, the harm to the user is minimized.
 
 questions:
 
   Two-factor authentication:
-    question: The site users are encouraged to use two-factor authentication
+    answers: default
+    applies: everyone
+    question: The service users are encouraged to use two-factor authentication
     rationale:  |
-      The site user loes their password through many channels: passwords are recycled across multiple sites (e.g. email account), passwords are too weak, password are given out through phishing emails or devices are compromised by malware. In this case, the two-factor authentication should stop the attacker with a mere password to access the user account.
+      Two-factor authentication a.k.a multifactor authentication a.k.a. secure login is a method to ask one-time token from the user when logging in. The primary purpose of two-factor authentication is to protect the user against password compromise.
 
-      Having the two-factor authentication as optional is not often enough, as the users only see the reduced usability (longer login process) and are not aware of thread models. Incentives, like reduced fees, should be used to encourage enabling the two-factor authentication. From business perspective, this can be justified as reduced support cost of dealing with hacked account cases.
+      The end users may lose their passwords through multiple threats, like
 
-      Popular two-factor authentication methods include Time-Based One Time Password (TOTP, mobile apps, Google Authenticator), One time pad (HOTP, paper codes, used by many European banks), SMS and hardware devices (like YubiKey).
+      * The user device is compromised by malware and the password is keylogged or extracted from the running password manager
+
+      * The password is reused across multiple sites and one of the sites gets compromised. You can buy stock email and password lists on the black market.
+
+      * The password are given out on a phishing site (see :ref:`trademark-protection`)
+
+      * The password is extracted through man-in-the-middle attack (see :ref:`https-tls-only`)
+
+      Two-factor authentication stops the attacker, equipped with a mere password, to access the victim's account.
+
+      Having the two-factor authentication as an option is not enough. The users should be educated about the two-factor authentication. Often users are not aware of threat models and harm they may receive because of lax security. Incentives, like reduced fees, should be applied to encourage enabling the two-factor authentication. From business perspective, this can be justified as reduced support cost of dealing with hacked account cases.
+
+      Popular two-factor authentication methods include
+
+      * Mobile apps: Time-Based One Time Password (TOTP), Google Authenticator
+
+      * Paper codes: One time pad, HOTP, popular with European banks
+
+      * SMS and other phone based methods
+
+      * Hardware devices: YubiKey, others
 
       External services like Authy and Clef provide two-factor-as-a-service.
 
-      Google Authenticator is a popular open mobile two-factor app. Despite the name says Google, you can use it on your own site, the application can be used independently of Google services, offline, the RFC is open and there are multiple open source implementations.
+      Google Authenticator is a popular two-factor mobile app. Despite the name says Google, you can use it on your own site. The application can be used independently from Google services, offline. Google Authenticator is based on RFC 6238. There are multiple open source implementations for all desktop and mobile operating systems.
 
       .. note::
 
-        SMS is not deemed secure in large scale. SMS messages are intercepted by mobile malware. SMS may travel in plain text and various parties in operator business can read them. Mobile number portability opens a vector for the attacker to gain access to the victims phone number. SMS may not be reliable in third world countries, thus making it not viable option for global business.
+        SMS is not deemed secure in large scale. SMS messages are intercepted by mobile malware. SMS may travel in plain text and various parties in operator business chain can read them. Mobile number portability opens a vector for the attacker to gain access to the victims phone number. SMS may not be reliable in third world countries, thus making it not viable option for global business.
 
-    answers: default
-    applies: everyone
     links:
       - HMAC-based One-time Password Algorithm (Wikipedia), https://en.wikipedia.org/wiki/HMAC-based_One-time_Password_Algorithm
       - Time-based One-time Password Algorithm (Wikipedia), https://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm
@@ -39,6 +59,7 @@ questions:
       - $45k stolen in phone porting scam (SC Magazine), http://www.itnews.com.au/news/45k-stolen-in-phone-porting-scam-282310/page0
       - What is YubiKey?, https://www.yubico.com/faq/yubikey/
       - Google Authenticator (Wikipedia), https://en.wikipedia.org/wiki/Google_Authenticator
+      - Google Authenticator Project (Github), https://github.com/google/google-authenticator/wiki
       - Authy, https://www.authy.com/
       - Clef, https://getclef.com/
     incidences:
@@ -47,22 +68,27 @@ questions:
       - sms-malware
 
   Third-factor authentication:
-    question: The user login goes through additional check in abnormal circumstanses
+    question: The login process goes through additional check in abnormal circumstances
     rationale: |
-      The users might not have two-factor authentication enabled. Even with the two-factor authentication there is a chance that the tokens are compromised through a phishing site. In these cases the service should detect abnormal conditions and perform additional checks before letting the login to proceed.
+      The login process should perform an additional check if there is a reason to believe the login attempt might not be genuine.
 
-      The common third factor authentication criteria include
-      * Country of the IP
-      * New device or browser by stored permacookie
+      The users might not have two-factor authentication enabled. Even with two-factor authentication enabled there is a chance that the user gives out the codes on a phishing site. In these cases the service should detect abnormal conditions and perform additional checks before letting the login to proceed.
+
+      The common criteria triggering the third factor authentication include
+
+      * The country of the user IP address has changed
+
+      * The device or the web browser of the user has not been seen before, identified by a stored permacookie
 
       In these cases the service should prompt the login to go through additional verification step. This could be
 
       * Email confirmation
+
       * SMS confirmation
 
       .. note ::
 
-        Third-factor authentication does not protect against cases where the device of the user is compromised by malware and the service cannot differetiate between the legit and the malicious traffic coming from the same device.
+        Third-factor authentication does not protect against cases where the device of the user is compromised by malware and the service cannot differentiate between legit and malicious traffic coming from the same device.
 
     incidences:
       - lastpass
@@ -72,20 +98,22 @@ questions:
       - Introducing Login Approvals (Facebook), https://www.facebook.com/notes/facebook-engineering/introducing-login-approvals/10150172618258920
 
   Re-authentication on sensitive actions:
-    question: Security sensitive actions should prompt for authentication
+    question: Sensitive actions should prompt for authentication again
     answers: default
     rationale: |
-      Security sensitive actions should ask the user perform additional authentication besides loggging in to the system.
+      Security sensitive actions should ask for an additional authentication attempt. Mere logging in to the service should not enable the attacker to perform sensitive actions.
 
-      The additional authetication could be
+      The additional authentication step can be
 
       * Give the password again
 
       * Email confirmation
 
+      * SMS confirmation
+
       * Give another two-factor authentication token
 
-      Security sensitive actions include e.g.
+      Sensitive actions may include e.g.
 
       * Making withdraw from the service
 
@@ -95,38 +123,37 @@ questions:
 
       * Closing the account
 
-      Asking the additional authentication gives another layer of protection against phishing and XSS attacks.
+      Asking for an additional authentication makes it difficult to automatize malicious actions, creating another layer of protection against phishing and XSS attacks.
 
-      The most sensitive operations, like where money is transferred out from the system, should require minimum of two different two-factor tokens: one for login and one for transfer. This makes two-factor intercepting phishing site operation less robust, as the users are more likely notice bad URLs if they need to spend more time on the phishing site. With only one authentication token the phishing site can do transfer out on the second the user hits the login, making phishing more likely to success.
+      The sensitive operations, like where money is transferred out from the service, should require minimum of two different two-factor authentication codes: one for login and one for transfer. This makes phishing site operations, which intercept two-factor authentication codes, less robust. The users are more likely to notice bad URLs the longer they need to spend time on the phishing site. The reuse of two-factor authentication codes allows the attacker to transfer out the assets if the victim logs in to the phishing site even once.
+    incidences:
+      - blockchaininfo
 
   Brute force login prevention:
-    question: Site login attemps are throttled in multiple ways
+    question: Service login attempts are throttled in multiple ways
     rationale: |
-      The attackers try to brute force the logins of the users. The site should take adequate measures that so that multiple login attempts are effectively stopped.
 
-      There are few different password brute force attack modes:
+      The attackers may try to brute force the logins of the users. The service should have adequate measures to prevent multiple login attempts and make them effectively stopped.
 
-        * Spearhead bruteforcing targetting a single user
+      There are few different brute force attack modes:
 
-        * Email and password combination guessing from a third party site leak or blackmarket
+        * Spearhead brute force attack against a single high value victim
 
-        * Email and common password list guessing, like 1000 most common passwords
+        * Known email and known password combination list, leaked from a third party site or bought from black market
 
-        * Scraping the site for user account names and then combining them with above
+        * Known email and common password list, guessing 1000 most common passwords
 
-      The attacker may be in possession of thousands of IP addresses.
+      The attackers have been shown to possess of thousands of IP addresses, so blocking individual IP addresses is not effective against well-versed attacker.
 
-      The counter actions should include:
+      To prevent the brute force attacks the counter actions should include:
 
-        * CAPTCA on second login (allow one wrong password attempt per user)
+        * Prevent multiple login attempts per user: require CAPTCA verification on second login attempt - allow only one wrong password attempt per user
 
-        * Prevent login attempts per IP (fail2ban)
-
-        * Prevent login attempts per username (spearhead attack)
+        * Prevent multiple login attempts from the same IP address or network
 
         * Force all users to go through CAPTCHA before login if the system global login rate is abnormal high (botnet-based attack)
 
-      Relying solely to CAPTCHA to prevent brute forcing is not recommended, as the automated CAPTCHA solving success rates are counted in tens of percents.
+      Relying solely to CAPTCHA to prevent brute forcing is not recommended, as the automated CAPTCHA solving success rates are counted in tens of percents. Thus, the malicious networks should be identified and dropped.
 
       Beside the security ramifications, well-armed brute force logging attacker may cause denial of service, as the system is not able to handle all the login attempts.
 
@@ -144,19 +171,21 @@ questions:
       - icloud
 
   Effective session kill:
-    question: When the user account is deactivated, all related sessions are killed
+    question: When the user account is deactivated or changed, the related sessions are dropped
     rationale: |
-      If the attacker gains access to an user account the system administrators must be able to kick out the attacker. The account deactivation may only affect the database records of the account, not dropping the active HTTP sessions which are stored in a separate store. When an user account is deactivated, all communication channels to this user must be dropped.
+      If the attacker gains access to an user account the system administrators must be able to kick out the attacker. In certain security related actions it is also good practice to drop the sessions of the user.
 
-      All user sessions should be dropped on
+      The account deactivation, besides marking the user account deactivated in the database records, should also drop the active sessions which are usually stored in a separate backend like Memcached or Redis. When a user account is deactivated, all communication channels to this user must be dropped: HTTP sessions, WebSocket sessions, mobile application sessions and so on.
 
-      * Account delete
+      Furthermore, all user sessions should be dropped on when the users themselves perform changes which may affect the account security. These includes
 
       * Password change
 
-      * Email change
+      * Email address change
 
-      * Third factor authentication
+      * Phone number change
+
+      After the change has been performed the user must relogin to the service. This allows the users themselves to act quickly in situations where they notice that somebody has hacked into the account, e.g. via an incoming email notification. In this case the user is still probably logged in to the system with stolen credentials and user may hurry to change the password to kick the attacker out.
 
     links:
       - Simultaneous Session Logons (OWASP), https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Considerations_When_Using_Multiple_Cookies
@@ -164,13 +193,15 @@ questions:
     - slack
 
   User audit logs:
-    question: The service keeps audit logs of sensitive user actions
+    question: The service retains audit logs of sensitive user actions
     rationale: |
-      All sensitive actions of the users should be logged to a user specific action list. In the case case of a crime, the user audit log may be handed to the officials. The user itself may or may not review his past actions based on this list.
+      All sensitive actions should be logged to a user specific action log.
 
-      The list is also important to protect the service operator itself against fraud. For example. the user can arrange stealing of the user account. The thief transfers the assets of the user to the friendly party of theirs. Then the user can blackmail and threat to sue the service unless the user is (incorrecly) reimbursed. The user audit logs prove  the correct password and authentications codes were used to initiate the transfer and shift the resposibility to the users themselves.
+      The users may or may not be able view these log entries themselves. In the case the user reports hacked account the action log can be reviewed for swift judgement. In the case filed police report, due to an account hack, the user audit log can be handed to the officials.
 
-      The log should include at least:
+      The user audit log also serve in an important role to protect the service operator itself against fraud. For example, a user can make a frivolous claim their account got hacked and threats to sue the service and publish the incident unless there is (incorrecly) reimbursement. In fact the user might just transferred out assets himself / herself to a friendly third party. The user audit logs prove the correct password and authentications codes were used to initiate the transfer and shift the responsibility to the user themselves.
+
+      The user audit log should include at least:
 
       * The user logins and login attempts
 
@@ -188,12 +219,9 @@ questions:
 
       * User agent
 
-
-      Furthermore the user audit logs can be used to recover the system in the case of flaw leading to a mass account compromise.
-
     links:
-    - "Logging Sessions Life Cycle: Monitoring Creation: Usage, and Destruction of Session IDs (OWASP), https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Considerations_When_Using_Multiple_Cookies"
-    - Investigation report of the claimed security breach at LocalBitcoins, http://localbitcoins.blogspot.fi/2014/04/investigation-report-of-claimed.html
+      - "Logging Sessions Life Cycle: Monitoring Creation: Usage, and Destruction of Session IDs (OWASP), https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Considerations_When_Using_Multiple_Cookies"
+      - Investigation report of the claimed security breach at LocalBitcoins, http://localbitcoins.blogspot.fi/2014/04/investigation-report-of-claimed.html
 
     incidences:
     - steam
@@ -202,9 +230,9 @@ questions:
     question: The creation of bogus accounts is prevented
     answers: default_na
     rationale: |
-      This only applies for services where users can interact with other users or the world e.g. spam and harrash them.
+      In services where it is possible to spam or harass other users fake accounts are a common problem.
 
-      To keep the system clean, one should prevent the creation of fake and robot accounts. The cost of automatic account creation should be so high that there is no financial gain to use the account for automated harrashment. The account creation proces should be still easy enough not to discourage the users to sign up.
+      To keep the service clean, one should prevent the creation of fake and robot accounts. The cost of automated account creation should be  high enough that there is no financial gain to create and use the accounts for spamming. On the other hand, the account creation process should be still smooth enough that it doesn't discourage the users to signs up.
 
       The account verification is also important for anti-money laundering (AML) and know-your-customer (KYC) cases where it is imperative to know one is dealing with the rightful holder of the financial assets.
 
@@ -242,34 +270,38 @@ questions:
     question: Actions sending messages to other users are throttled
     answers: default
     rationale: |
-      When the service provides actions to message or contact other users or users outside the service, these actions should be throttled so that flood attack is not possible.
+      When the service provides ways to message or contact other users, these actions should be throttled so that one cannot flood messaging by sending a large number of useless messages.
 
-      Example actions include
+      Example actions that should be throttled include
 
       * Sending messages to the other users
 
       * Sending invitation emails
 
-      If a malicious actor is free to send infinite number of messages, this can be used to harrass people. Even if direct financial damage is not possible, the service takes a reputation hit and the brand suffers.
+      * Sending SMS messages
 
-      Actions sending outgoing messages or signals should be throttled, so that a malicious actor cannot flood the system. If the threshold of the actions in a time window exceeds the limit what a normal person would do, the action should be disabled or the user banned.
+      If a malicious actor is free to send infinite number of messages this can be exploited for harassment. Even if the exploit doesn't lead to direct financial gain to the attacker, the service may take a reputation hit and the brand suffers due to poor user experience.
+
+      Throttling can be done by having time window thresholds how much messages one user can send or how much messages can be send on global level. If the frequency of actions exceeds the limit what a normal person would do, the action should be disabled or the user banned.
 
     incidences:
       - coinbase
+    links:
+      - Rolling time window counters with Redis and mitigating botnet (Mikko Ohtamaa)
 
-    Trademark protection:
-      applies: sme
-      question: Is the name of the service trademarked?
-      rationale: |
-          A trademark helps to protect against advertisement phishing.
+  Trademark protection:
+    applies: sme
+    question: Is the name of the service trademarked?
+    rationale: |
+        A trademark helps to protect against advertisement phishing.
 
-          If you type in a service name to Google or web browser address bar search, Google displays advertisements on the top of the actual search results. These advertisement can be bought out to create misleading phishing links, like  *www.blockchain.com.de/wallet/login*. Normal end users cannot distinct between phishing advertisements and actual search results.
+        If you type the service name into Google or web browser address bar search, Google displays advertisements on the top of the actual search results. These advertisement can be bought out to create misleading phishing links, like  *www.blockchain.com.de/wallet/login*. Normal end users cannot distinct between phishing advertisements and actual search results.
 
-          If you have properly trademarked your service name, you can ask Google AdWords to not to allow it being used in the advertisements, making advertisement phishing harder.
+        If you have properly trademarked your service name, you can ask Google AdWords to not to allow it being used in the advertisements, making advertisement phishing harder.
 
-          Google AdWords is know to take down phishing advertisement quite slowly when reported.
-      links:
-        - AdWord Trademark Policy, https://support.google.com/adwordspolicy/answer/6118?hl=en
-        - Report a phishing page (SafeBrowsing), https://www.google.com/safebrowsing/report_phish/
-      incidences:
-        - blockchaininfo
+        Google AdWords is know to take down phishing advertisement quite slowly when reported.
+    links:
+      - AdWord Trademark Policy, https://support.google.com/adwordspolicy/answer/6118?hl=en
+      - Report a phishing page (SafeBrowsing), https://www.google.com/safebrowsing/report_phish/
+    incidences:
+      - blockchaininfo

@@ -1058,6 +1058,10 @@ Related evaluation points:
 
 - :ref:`third-factor-authentication`
 
+- :ref:`re-authentication-on-sensitive-actions`
+
+- :ref:`trademark-protection`
+
 
 
 
