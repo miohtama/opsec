@@ -2,10 +2,10 @@
 .. This is a generated file from data/. DO NOT EDIT.
 
 ===========================================
-Web development security
+Web development practices
 ===========================================
 
-This chapter discusses about the web development best practices for sensitive Internet services.
+This chapter discusses about the need for web development best practices when creating sensitive Internet services.
 
 Background
 ==========
@@ -14,7 +14,7 @@ When developing a sensitive Internet service, special attention should be paid o
 
 Most application-level vulnerabilities are related to the input handling. Any Internet facing service accepts incoming traffic and user input, both good and bad. It's a social contract: when you plug in your service to Internet, you acknowledge that anyone in the world is allowed to use the service.
 
-HTTP and HTML where built on the era where thread models and security issues where different. Many security features have retrofitted or they are hacked on the top of the original HTML. Anyone who is not expert in HTTP, HTML and JavaScript has a lot to learn about potential attack modes. Thus, it is an imperative that the development team uses a proper *software development framework* to built the service. Usually the framework authors are well-versed in the security matters and have thought out and documented the proper processes for things like form submission handling, file uploads and exposing database to the world.
+HTTP and HTML were built on the era with less threat models and need for security. Many security features have retrofitted or they are hacked on the top of the original HTML. Anyone who is not expert in HTTP, HTML and JavaScript has a lot to learn about potential attack modes. Thus, it is an imperative that the development team uses a proper *software development framework* to built the service. Usually the framework authors are well-versed in the security matters and have thought out and documented the proper processes for things like form submission handling, file uploads and exposing database to the world.
 
 
 
@@ -472,7 +472,7 @@ Whitehat program
 
 **The service has a public whitehat or security bounty program?** Yes / No
 
-A whitehat program, also known as a security bountry program, is a published guide how the service deals with the security researchers. The purpose of a whitehat program is to encourage legit security research to cover issues on the service and credit third parties for doing this work.
+A whitehat program, also known as a security bountry program, is a published guide how the service deals with security researchers. The purpose of a whitehat program is to encourage legit security research to cover issues on the service and credit third parties for doing this work.
 
 The third party security researches usually scan the service using a web security audit tools like Burp Suite and try to discover XSS, CSRF, database injection and authorization flaws.
 
@@ -511,10 +511,6 @@ Links:
 
 
 - `HackerOne <https://hackerone.com/>`_
-
-
-
-- `Burp <https://portswigger.net/burp/>`_
 
 
 
