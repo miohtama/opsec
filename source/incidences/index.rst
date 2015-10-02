@@ -1021,9 +1021,7 @@ Related evaluation points:
 
 - :ref:`data-scrubbing`
 
-- :ref:`internal-servers-not-exposed`
-
-- :ref:`publicly-exposed-services-and-firewalling`
+- :ref:`internal-services-not-exposed`
 
 
 

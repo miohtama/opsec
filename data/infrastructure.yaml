@@ -2,121 +2,123 @@
 ---
 meta:
   title: Infrastructure security
-  description:
-    This chapter discussed protecting your servers and other infrastructure used to run your application.
+  description: |
+    This chapter discusses how to protect servers and other infrastructure needed to run the service.
 
-    This chapter uses the term infrastructure to cover whatever is needed to run a custom software. One needs to have servers somewhere. One needs to access and protect the servers somehow. One needs to trust the server provider. Many parts of the infrastructure (DNS) cannot be under the direct control of the stakeholders.
+  background: |
 
-  background:
+    Infrastructure here covers everything what runs your Internet service. It is mostly territory for system administrators, who know how to tune servers and what keeps them ticking. Everything cannot be done in-house and one most likely needs to rely on third party services for some things and they should be accounted too.
 
 questions:
-
-  Login throttle:
-    question: Throttle or ban IPs with multiple login attempts
-    rationale:
-        Prevent bruteforce attacks against your service by blocking multiple login attempts. asdf
-
-        Log monitoring software like fail2ban can do this with almost zero configuration for stock applications like SSH and common web servers.
-
-        Please note that IP blocking is not effective against adversaries with botnets with thousands of global IPs in their posession.
-    answers: default
-    applies: everyone
-    links:
-      - fail2ban, http://www.fail2ban.org/
-      - Banning IPv6 addresses (ServerFault), http://serverfault.com/q/631160/74975
-
-  Security proxy:
-    question: Servers are behind security proxy
-    rationale:
-      Using a security proxy service hides the IP of your servers from the attacker, thus making denial-of-service attacks more difficult to perform.
-
-      The security proxy services are provided by specialized companies who possess geographically distributed servers, a lot of bandwidth and can thus withstand attacks. Furthermore these services apply rules on the traffic to prevent common malicious visitors and crawlers.
-    links:
-      - CloudFlare, http://cloudflare.com/
-      - Incapsula, https://www.incapsula.com/
-
-  Internal servers not exposed:
-    question: Internal servers and domains cannot be discovered from public records
-    rationale:
-      Internal services, testing and staging servers, which are likely to be less protected and monitor, should not be publicly known. The   DNS records should not expose services which are not for public consumption.
-
-      Usually testing and staging servers have more people, the developers, with privileged access. This increases the potential attack surface from compromised devices and accounts. If there is no specific reason why the server needs to be publicly accessible, it should be hidden behind VPN and not be visible in public domain records. For internal services run a custom DNS server or use a non-guessable secondary domain name.
-
-    incidences:
-      - patreon
-
-  Log server:
-    question: Critical logs are mirrored to a append only service
-    rationale:
-      Critical log files should be mirrored to a destination where the logs can be only appended. The logs cannot be read back or manipulated. The log server or service should have different access credentials from the administrators of normal systems.
-
-      In the case the attacker gains access to infrastructure, this prevents wiping or manipulating logs. This allows robust recovery and post-mortem from potential infrastructure attack.
-
-    applies: mle
-    links:
-      - Amazon CloudWatch, https://aws.amazon.com/cloudwatch/
-      - Creating a Centralized Syslog Server (Linux Journal), http://www.linuxjournal.com/content/creating-centralized-syslog-server
 
   Encrypted server data:
     question: Data is stored on encrypted partitions
     rationale: |
-      All user data should be stored on encrypted partitions or files. In the case of unauthorized physical access the data cannot be compromised. Encryption should apply for backups and other offsite files too.
+      All data should be stored on encrypted partitions or files. In the case of unauthorized physical access or unauthorized reboot the data cannot be compromised. Encryption should also apply for backups and other offsite files.
 
-      Disk encryption protects the data when the server is offline. All sensitive databases should reside on the partitions which are not accessible if the physical machine is compromised. If the server is rebooted without authorization the server should ask a passphrase to unecrypt the data partitions. The easiest way to achieve this is to have separate partitions for boot volume and data volume. Having separate "high" and "low" states the server cannot enter to to the state with access to data unless an authorized person enters a passphrase through a terminal.
+      Data on encrypted partitions protect against
 
-      This protects the loss of data against
+      * Hosting provider attacks or social engineering attacks against the hosting provider where the root password is reset through single-user mode reboot
 
-      * Hosting provider attacks or social engineering attacks against the hosting provider
+      * Law enforcement attacks where the servers are physically confiscated
 
-      * Law enforcement attacks
+      Disk encryption protects the data when the server is offline. All sensitive databases should reside on the partitions which are not accessible if the physical machine is compromised.
+
+      If the server is rebooted without authorization the server should ask a passphrase to decrypt the data partitions. The easiest way to achieve this is to have separate partitions for boot volume and data volume. By having separate "high" and "low" states the server cannot enter to to the state with access to data unless an authorized person enters a passphrase through a terminal.
+
+      All unaccounted reboots should be suspicious as when the server is offline the boot mechanism can be compromised to record the data decryption keys.
 
       .. note ::
 
-        All virtual machines, like ones provided by Amazon EC2, are ultimately unsafe. It's possible to make a silent copy of a virtual machine and its disk, even if encrypted, without the authorization of the server owner. If your adversiers include law enforcement agencies and nation state actors it is recommended to use only physical servers which cannot be rebooted without notice. The servers should be enabled with physical chassis removal detection which stop at BIOS boot if they detect the server chassis to be opened.
+        Virtual machines, like ones provided by Amazon EC2 or Digital Ocean, are ultimately unsafe. It's possible to make a silent copy of a virtual machine and its disk, even if encrypted, without the authorization of the server owner. If the adversaries include law enforcement agencies and nation state actors it is recommended to use physical servers with chassis removal detection in a locked rack.
 
-      Furthermore all dedicated servers which you do not install yourself in your own rack can be deemed as unsafe. If you do not have the key to th  physical lock at the rack you can never be sure that somebody tampers with the server.
+    links:
+      - How To Use DM-Crypt to Create an Encrypted Volume on an Ubuntu (Digital Ocean), https://www.digitalocean.com/community/tutorials/how-to-use-dm-crypt-to-create-an-encrypted-volume-on-an-ubuntu-vps
+      - Duplicity, encrypting backup utility, http://duplicity.nongnu.org/
 
     incidences:
       - bitly
       - linode
       - maxcdn
-    links:
-    - U.S. v. Ross Ulbricht: Declaration of Joshua J. Horowitz [dissemination], https://news.ycombinator.com/item?id=8401627
-    - Analyzing the FBI’s Explanation of How They Located Silk Road (Nik Cubrilovic), https://www.nikcub.com/posts/analyzing-fbi-explanation-silk-road/
-    - LocalBitcoins received an attack against the site infrastructure (Hacker News), https://news.ycombinator.com/item?id=7692750
 
-  Secure server-to-server connections:
-    question: Server-to-serve connections are secure
+  Security proxy:
+    question: Servers are behind security proxy
     rationale: |
-      Nation state actors and other capable adversaries are proven to be able to tap Internet backbone connections and data centers.
+      Security proxy services act as a front end for the web traffic and mitigate attacks and accelerate the site traffic.
 
-      The server-to-server connections should be encrypted in a manner that anyone tapping a physical cable cannot any extract any information.
+      Using a security proxy service hides the IP of your servers from the attacker, thus making denial-of-service attacks more difficult to perform. The security proxies are provided by specialized companies who maintain geographically distributed servers and a lot of bandwidth to withstand attacks. The security proxies may utilize IP reputation system and force botnet IP addresses to go through additional CAPTCHAs before allowed to connect.
 
-      The connection encryption methods include SSH tunnels and VPN.
+      The security proxies also mitigate legal threats against your hosting provider. Without public knowledge who is hosting the servers it is more difficult to take legal action against the service.
 
     links:
-      - Room 641A (Wikipedia), https://en.wikipedia.org/wiki/Room_641A
-      - Googlers say “F*** you” to NSA, company encrypts internal network (Ars Technica), http://arstechnica.com/information-technology/2013/11/googlers-say-f-you-to-nsa-company-encrypts-internal-network/
-      - Reports that NSA taps into Google and Yahoo data hubs infuriate tech giants (The Guardian), http://www.theguardian.com/technology/2013/oct/30/google-reports-nsa-secretly-intercepts-data-links
+      - CloudFlare, http://cloudflare.com/
+      - Incapsula, https://www.incapsula.com/
 
-  Publicly exposed services and firewalling:
-    question: Unnecessary services are not exposed to Internet
+  Internal services not exposed:
+    question: Internal servers, services and domains cannot be discovered through public records
     rationale: |
-      All private services like databases, queue services and caches should be not Internet accessible.
+      Internal services, testing and staging servers, should not be exposed to public. The DNS records should not contain services which are not for public consumption.
 
-      The services should bind to private network or localhost IPs only.
+      Usually testing and staging servers have more people with privileged access. This increases the potential attack surface from compromised devices and accounts. If there is no specific reason why the server needs to be publicly accessible, it should be hidden behind VPN and not be visible in public DNS records. For internal services run a custom DNS server or use a non-guessable secondary domain name.
 
-      The easiest method to verify this is to scan the ports of all public IPs. Only the publicly accessible endpoints, like HTTP and HTTPS, should be available.
+      Firewall should be only a secondary layer protecting human errors. The services should be configure in a manner that they to do not bind to publicly exposed IPs, but only bind to localhost or internal IPs. Furthermore firewalling outgoing connections might be problematic, as many services rely on third party API service today.
 
-      .. note ::
-
-        A firewall should be only a secondary measure. By default the services should be configure in a manner that they to do not bind to publicly exposed IPs. Furthermore firewalling outgoing connections might be problematic, as many services rely on third party API service today.
+      Within the server any installed software is run under non-admin (non-root) account. This limits the impact of attack if arbitrary code execution vulnerability in the native applications is exploited. The attacker cannot leave further backdoors in the system and is able to gain only limited intel.
 
     incidences:
       - patreon
 
     links:
       - Nmap, https://nmap.org/
+      - Privledge separation (Wikipedia), https://en.wikipedia.org/wiki/Privilege_separation
+
+  Traffic throttle:
+    question: Throttle or ban IP addresses with excessive requests
+    rationale: |
+        Prevent denial-of-service, brute force and scraping attacks against your service by blocking clients doing excessive traffic.
+
+        Normal users and clients should be able to do only four to twenty burst HTTP requests to the service. If there is more incoming traffic and the client is not whitelisted then the client is unlikely coming with good intentions.
+
+        A log monitoring software like fail2ban can do this with almost zero configuration for stock applications like SSH and common web servers.
+
+        Please note that IP blocking alone is not effective against adversaries with botnets and thousands of global IPs in their possession.
+
+        .. note ::
+
+            Don't accidentally ban good known bots, like GoogleBot and Bing.
+
+    answers: default
+    applies: everyone
+    links:
+      - NGINX - throttle requests to prevent abuse (ServerFault), http://serverfault.com/q/179646/74975
+      - fail2ban, http://www.fail2ban.org/
+      - Banning IPv6 addresses (ServerFault), http://serverfault.com/q/631160/74975
+
+  Log server:
+    question: Critical logs are mirrored to a log service
+    rationale: |
+      Critical log files should be mirrored to a destination where the logs can be only appended. The logs cannot be read back or manipulated.
+
+      The log service should have different access credentials from the administrators of normal systems. In the case the attacker gains access to the infrastructure, this prevents wiping or manipulating logs. This allows robust recovery and post-mortem from potential attacks.
+
+    applies: mle
+    links:
+      - Amazon CloudWatch, https://aws.amazon.com/cloudwatch/
+      - Creating a Centralized Syslog Server (Linux Journal), http://www.linuxjournal.com/content/creating-centralized-syslog-server
+
+  Secure server-to-server connections:
+    question: Server-to-serve connections are secure
+    rationale: |
+      Nation state actors and other capable adversaries are proven to be able to tap Internet backbone connections and data centers.
+
+      The server-to-server connections should be encrypted in a manner that anyone tapping physical cables cannot extract any information, like raw database traffic.
+
+      The connection encryption methods VPN and SSH tunnels.
+
+    links:
+      - Room 641A (Wikipedia), https://en.wikipedia.org/wiki/Room_641A
+      - Googlers say “F*** you” to NSA, company encrypts internal network (Ars Technica), http://arstechnica.com/information-technology/2013/11/googlers-say-f-you-to-nsa-company-encrypts-internal-network/
+      - Reports that NSA taps into Google and Yahoo data hubs infuriate tech giants (The Guardian), http://www.theguardian.com/technology/2013/oct/30/google-reports-nsa-secretly-intercepts-data-links
 
   Intrusion detection:
     question: Intrusion detection alerts on unexpected server activity
@@ -124,16 +126,10 @@ questions:
     rationale: |
       Intrusion detection software monitors the servers and alerts in the case there is unexpected activity.
 
-      Intrusion detection is a measure to detect compromised servers. Intrusion detection software monitors processes, file system, configuration files, passwords and user database. In the case there are changes not matching the predefined ruleset an alert is fired.
+      Intrusion detection is monitoring measure to detect server compromises. Intrusion detection software monitors processes, file system, configuration files, passwords and user database. In the case there are changes not matching the predefined ruleset an alert is fired.
+
+      Intrusion detection cannot detect in-process compromises and tailored attack payloads. Thus, it efficiency against well-versed adversaries is questionable.
 
     links:
       - Tripwire, http://www.tripwire.com/
       - OSSEC, http://www.ossec.net/
-
-  Priviledge separated software installation:
-    question: Software installations are under custom accounts and rights
-    rationale: |
-      Any installed software is under non-root (non-admin) account. The compromise of the software throguh an exploit cannot compromise the server as a whole.
-
-    links:
-      - Privledge separation (Wikipedia), https://en.wikipedia.org/wiki/Privilege_separation
