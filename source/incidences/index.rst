@@ -970,7 +970,7 @@ MaxCDN, a content-delivery network service hosting bootstrapcdn.com, the default
 
 The vendor of MaxCDN had laid off a support engineer with access to the servers where BootstrapCDN runs. The credentials of the engineer were not revoked. The attackers gained these credentials. Then the attackers rebooted a server into single-user mode, changed the root password, and SSH’d into the server. Bootstrap JavaScript files were modified to serve an exploit toolkit.
 
-Because Bootstrap is widely deployed and CDN option is one recommended way to include it on your site, the attack payload got served to tens of thousands of visitors in short period of time. 
+Because Bootstrap is widely deployed and CDN option is one recommended way to include it on your site, the attack payload got served to tens of thousands of visitors in short period of time.
 
 
 
@@ -991,6 +991,84 @@ Related evaluation points:
 Links:
 
 - `BootstrapCDN Security Post-Mortem <https://www.maxcdn.com/blog/bootstrapcdn-security-post-mortem/?utm_source=text>`_
+
+
+
+
+
+.. _patreon:
+
+Patreon
+==============================================================
+
+*Date: 2015-09-01*
+
+Patreon, a crowdfunding site, had their development server compromised, leading to the loss of production data and source code.
+
+Email addresses, private messages and bcrypt-encrypted passwords of 2 million users were lost, totaling 15 gigabytes of data. The data was copied off from Amazon AWS development server. The development server contained full dataset without any scrubbed data.
+
+The credit card data was hosted on an external service, Stripe, and was not lost.
+
+Patreon claims social security numbers and tax information was further encrypted, but does not clarify if the attacker gained the key to decrypt this information.
+
+As the writing of this, it is not disclosed who the attackers gained access to the development server.
+
+
+
+Related evaluation points:
+
+- :ref:`limited-sensitive-data-access`
+
+- :ref:`data-scrubbing`
+
+- :ref:`internal-servers-not-exposed`
+
+- :ref:`publicly-exposed-services-and-firewalling`
+
+
+
+
+
+Links:
+
+- `Important Security Notice from Patreon <https://www.patreon.com/posts/important-notice-3457485>`_
+
+- `Gigabytes of user data from hack of Patreon donations site dumped online (Ars Technica) <http://arstechnica.com/security/2015/10/gigabytes-of-user-data-from-hack-of-patreon-donations-site-dumped-online/>`_
+
+
+
+
+
+.. _blockchaininfo:
+
+Blockchain.info
+==============================================================
+
+*Date: 2015-06-01*
+
+Blockchain.info, a popular Bitcoin wallet service, has been targeted through Google AdWords phishing advertisements multiple times over the years 2013-2015.
+
+The attackers buy the top spot of the Google AdWords and make it point to the phishing. The end users cannot distinguish difference between the phishing ad and the legit search results when arriving to Google Search through the web browser search bar. The link in the advertisement can be genuine-like *www.blockchain.com.de/wallet/login* or totally bogus pointing to some random static site hosting service.
+
+When the victim logs in to the phishing site, made to look like blockchain.info, the attackers steal the credentials and then proceed to move assets from the blockchain.info wallet.
+
+
+
+Related evaluation points:
+
+- :ref:`third-factor-authentication`
+
+
+
+
+
+Links:
+
+- `Blockchain.info Phishing site 1st result on Google, paid ad. WT*! (Reddit) <https://www.reddit.com/r/Bitcoin/comments/2pm4tx/blockchaininfo_phishing_site_1st_result_on_google/>`_
+
+- `Blockchain info phishing adverts on Google front page. This lasts already few months and Blockchain does not care at all! (Reddit) <https://www.reddit.com/r/Bitcoin/comments/3bhtu5/blockchain_info_phishing_adverts_on_google_front/>`_
+
+- `Blockchain.info gets tough on phishing (CoinDesk 2013) <http://www.coindesk.com/blockchaininfo-gets-tough-on-phishing/>`_
 
 
 

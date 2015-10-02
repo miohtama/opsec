@@ -3,11 +3,11 @@
 meta:
   title: Protecting site users
   description:
-    This chapter discussed protecting your users and guiding them to maintain necessary security.
+    This chapter discussed protecting the service end users and guiding them to secure their accounts properly.
 
-  background:
+  background: |
 
-    Even if the service and team themselves are well secured, the malicious actors can go after invididual users. For example, phishing operations target a group of users who are likely users of the service. If the service users give out their login credentials to the phisher, the phisher may damage this individual user, even though the integrity of the service as a whole is not compromised.
+    Even if the team members and the service maintains high security standards, the malicious actors can go after the end users. For example, phishing operations target a group of users who are likely users of the service. If the service users give out their login credentials to the phisher, the phisher may damage this individual user, even though the integrity of the service as a whole is not compromised.
 
     The service should take several measures to protect it users, so that even if the attacker gains access to the user email inbox or password, cannot cause harm to the user.
 
@@ -66,6 +66,7 @@ questions:
 
     incidences:
       - lastpass
+      - blockchaininfo
     links:
       - Detecting suspicious account activity (Google), http://gmailblog.blogspot.fi/2010/03/detecting-suspicious-account-activity.html
       - Introducing Login Approvals (Facebook), https://www.facebook.com/notes/facebook-engineering/introducing-login-approvals/10150172618258920
@@ -255,3 +256,20 @@ questions:
 
     incidences:
       - coinbase
+
+    Trademark protection:
+      applies: sme
+      question: Is the name of the service trademarked?
+      rationale: |
+          A trademark helps to protect against advertisement phishing.
+
+          If you type in a service name to Google or web browser address bar search, Google displays advertisements on the top of the actual search results. These advertisement can be bought out to create misleading phishing links, like  *www.blockchain.com.de/wallet/login*. Normal end users cannot distinct between phishing advertisements and actual search results.
+
+          If you have properly trademarked your service name, you can ask Google AdWords to not to allow it being used in the advertisements, making advertisement phishing harder.
+
+          Google AdWords is know to take down phishing advertisement quite slowly when reported.
+      links:
+        - AdWord Trademark Policy, https://support.google.com/adwordspolicy/answer/6118?hl=en
+        - Report a phishing page (SafeBrowsing), https://www.google.com/safebrowsing/report_phish/
+      incidences:
+        - blockchaininfo

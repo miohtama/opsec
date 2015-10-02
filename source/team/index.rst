@@ -614,6 +614,8 @@ Related incidences:
 
 - :ref:`hacking-team`
 
+- :ref:`patreon`
+
 
 
 
@@ -683,6 +685,8 @@ Applies for: Everyone
 Related incidences:
 
 - :ref:`ashley-madison`
+
+- :ref:`patreon`
 
 
 

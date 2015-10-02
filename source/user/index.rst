@@ -5,13 +5,16 @@
 Protecting site users
 ===========================================
 
-This chapter discussed protecting your users and guiding them to maintain necessary security.
+This chapter discussed protecting the service end users and guiding them to secure their accounts properly.
 
 Background
 ==========
 
-Even if the service and team themselves are well secured, the malicious actors can go after invididual users. For example, phishing operations target a group of users who are likely users of the service. If the service users give out their login credentials to the phisher, the phisher may damage this individual user, even though the integrity of the service as a whole is not compromised.
+
+Even if the team members and the service maintains high security standards, the malicious actors can go after the end users. For example, phishing operations target a group of users who are likely users of the service. If the service users give out their login credentials to the phisher, the phisher may damage this individual user, even though the integrity of the service as a whole is not compromised.
+
 The service should take several measures to protect it users, so that even if the attacker gains access to the user email inbox or password, cannot cause harm to the user.
+
 
 
 
@@ -121,6 +124,8 @@ In these cases the service should prompt the login to go through additional veri
 Related incidences:
 
 - :ref:`lastpass`
+
+- :ref:`blockchaininfo`
 
 
 

@@ -77,17 +77,22 @@ Links:
 
 
 
-.. _internal-domains-not-exposed:
+.. _internal-servers-not-exposed:
 
-Internal domains not exposed
+Internal servers not exposed
 ==============================================================
 
-**Internal services cannot be discovered from public data?** 
+**Internal servers and domains cannot be discovered from public records?** 
 
-Internal services, testing and staging servers, which are likely to be less protected and monitor, should not be publicly known. The public DNS records should not expose any services which are not public.
-For internal services run a custom DNS server or use a non-guessable secondary domain name.
+Internal services, testing and staging servers, which are likely to be less protected and monitor, should not be publicly known. The   DNS records should not expose services which are not for public consumption.
+Usually testing and staging servers have more people, the developers, with privileged access. This increases the potential attack surface from compromised devices and accounts. If there is no specific reason why the server needs to be publicly accessible, it should be hidden behind VPN and not be visible in public domain records. For internal services run a custom DNS server or use a non-guessable secondary domain name.
 
 
+
+
+Related incidences:
+
+- :ref:`patreon`
 
 
 
@@ -236,6 +241,11 @@ The easiest method to verify this is to scan the ports of all public IPs. Only t
 
 
 
+
+
+Related incidences:
+
+- :ref:`patreon`
 
 
 

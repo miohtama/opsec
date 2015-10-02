@@ -35,12 +35,15 @@ questions:
       - CloudFlare, http://cloudflare.com/
       - Incapsula, https://www.incapsula.com/
 
-  Internal domains not exposed:
-    question: Internal services cannot be discovered from public data
+  Internal servers not exposed:
+    question: Internal servers and domains cannot be discovered from public records
     rationale:
-      Internal services, testing and staging servers, which are likely to be less protected and monitor, should not be publicly known. The public DNS records should not expose any services which are not public.
+      Internal services, testing and staging servers, which are likely to be less protected and monitor, should not be publicly known. The   DNS records should not expose services which are not for public consumption.
 
-      For internal services run a custom DNS server or use a non-guessable secondary domain name.
+      Usually testing and staging servers have more people, the developers, with privileged access. This increases the potential attack surface from compromised devices and accounts. If there is no specific reason why the server needs to be publicly accessible, it should be hidden behind VPN and not be visible in public domain records. For internal services run a custom DNS server or use a non-guessable secondary domain name.
+
+    incidences:
+      - patreon
 
   Log server:
     question: Critical logs are mirrored to a append only service
@@ -108,6 +111,9 @@ questions:
       .. note ::
 
         A firewall should be only a secondary measure. By default the services should be configure in a manner that they to do not bind to publicly exposed IPs. Furthermore firewalling outgoing connections might be problematic, as many services rely on third party API service today.
+
+    incidences:
+      - patreon
 
     links:
       - Nmap, https://nmap.org/
