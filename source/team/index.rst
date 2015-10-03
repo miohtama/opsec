@@ -40,6 +40,8 @@ Related incidences:
 
 - :ref:`bitstamp`
 
+- :ref:`bitpay`
+
 
 
 
@@ -63,7 +65,7 @@ The rigged files may include
 
 * PDF files
 
-The dangerous ommunication channels include anything where team members can be freely contacted. For example:
+The dangerous communication channels include anything where team members can be freely contacted. For example:
 
 * Email
 
@@ -316,6 +318,8 @@ Applies for: Everyone
 
 
 Related incidences:
+
+- :ref:`bitpay`
 
 - :ref:`cloudflare`
 

@@ -453,3 +453,30 @@ blockchaininfo:
       - Blockchain.info Phishing site 1st result on Google, paid ad. WT*! (Reddit), https://www.reddit.com/r/Bitcoin/comments/2pm4tx/blockchaininfo_phishing_site_1st_result_on_google/
       - Blockchain info phishing adverts on Google front page. This lasts already few months and Blockchain does not care at all! (Reddit), https://www.reddit.com/r/Bitcoin/comments/3bhtu5/blockchain_info_phishing_adverts_on_google_front/
       - Blockchain.info gets tough on phishing (CoinDesk 2013), http://www.coindesk.com/blockchaininfo-gets-tough-on-phishing/
+
+bitpay:
+    date: 2015-09-17
+    title: bitpay
+    description: |
+      Bitpay, a popular Bitcoin payment gateway, lost 1.8M USD in phishing attack.
+
+      Bitpay's Chief Financial Office, Bryan Krohn, received an email from a business partner email address having a link pointing to a phishing site where Krohn proceeded to give out his email account credentials. The attacker logged into Khrohn's email and gained intel from the past conversations in the inbox.
+
+      Then the attacker send email to CEO Stephen Pair and executive chairman Tony Gallippi to authorize payments to "a customer wallet". There were four different payments, total of 5,000 BTC, 5,000 BTC, 3,000 BTC and 1,000 BTC. The CEO Pair confirmed from the Krohn via email whether the last payment was genuine. The attacker, still control of the Krohn's email accout, replied.
+
+      Apparently the C-level executives of Bitpay become aware of the attack because one of the real customers was CC'd in the email conversation and the customer contacted Bitpay that they had not asked for the payment.
+
+      Bitpay tried to get its insurer to cover $950,000 of the loss, but in June the insurer declined to pay. Bitpay is now suing the insurer.
+
+    links:
+      - Atlanta's Bitpay got hacked for $1.8 million in bitcoins (Atlanta Business Chronicle), http://www.bizjournals.com/atlanta/blog/atlantech/2015/09/atlantas-bitpay-got-hacked-for-1-8-million-in.html
+      - BitPay Sues Insurer After Losing $1.8 Million in Phishing Attack (CoinDesk), http://www.coindesk.com/bitpay-sues-insurer-after-losing-1-8-million-in-phishing-attack/
+
+mtgox:
+    date: 2014-02-01
+    title: Mt. Gox
+    description: |
+      *"Mt. Gox was a bitcoin exchange based in Tokyo, Japan. It was launched in July 2010, and by 2013 was handling 70% of all bitcoin transactions. In February 2014, the Mt. Gox company suspended trading, closed its website and exchange service, and filed for a form of bankruptcy protection from creditors called minji saisei, or civil rehabilitation, to allow courts to seek a buyer. In April 2014, the company began liquidation proceedings.[4] It announced that around 850,000 bitcoins belonging to customers and the company were missing and likely stolen, an amount valued at more than $450 million at the time.[5][6] Although 200,000 bitcoins have since been "found", the reason(s) for the disappearance—theft, fraud, mismanagement, or a combination of these—are unclear as of March 2014."* (Wikipedia)
+    links:
+      - Mt. Gox (Wikipedia), https://en.wikipedia.org/wiki/Mt._Gox
+      - Mt. Gox bank fraud investigation (CCI AG), http://www.mtgoxinvestigation.com/

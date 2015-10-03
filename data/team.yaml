@@ -24,6 +24,7 @@ questions:
     applies: everyone
     incidences:
     - bitstamp
+    - bitpay
 
   Dangerous file attachments:
     question: Potentially dangerous file attachments are handled securely
@@ -38,7 +39,7 @@ questions:
 
       * PDF files
 
-      The dangerous ommunication channels include anything where team members can be freely contacted. For example:
+      The dangerous communication channels include anything where team members can be freely contacted. For example:
 
       * Email
 
@@ -154,6 +155,7 @@ questions:
       - Two-factor Authentication List, https://twofactorauth.org/
       - Google 2-Step Verification, https://www.google.com/landing/2step/
     incidences:
+      - bitpay
       - cloudflare
 
   Two-factor authentication on critical services:

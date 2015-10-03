@@ -5,15 +5,17 @@
 Digital currencies and securities
 ===========================================
 
-This chapter discusses about storing digital securities on the behalf of a customer. The securities here refer to crypto securities, assets and digital currencies, like Bitcoin. Usually these protocols have only non-reversable transaction mechanism.
+This chapter discusses about the security aspects of storing and handling digital currencies and securities, like Bitcoin.
 
 Background
 ==========
 
 
-The services serving high amount of crypto securities are especially valuable cybercrime targets. The securities transactions are non-reversible and non-traceable, making stealing the securities, laundering and liquiding them an easy operation.
+Digital currency services are especially attractive cybercrime targets. The digital currency transactions are anonymous, non-reversible and non-traceable. This makes stealing, laundering and liquidating digital currencies very easy for criminals. The non-reversable transaction mechanism complicates attacks, as often the services neither can chargeback the lost assets nor reimburse the customer losses.
 
-Traditional credit and debit card backed transaction mechanism are usually reversible. Furthermore the institutions maintaining the balances have mechanism to address the stolen assets and the user funds are insured. Thus, the traditional transaction mechanism do not have the same issues to deal with.
+Traditional credit card, debit card and wire transfer backed transaction mechanisms are more merciful. The transactions can be reversed making it harder to liquidate the stolen assets. Anti money laundering regulation ensures it is not possible to move assets without leaving a trace for investigation. Furthermore the institutions issuing cards and bank accounts have mechanisms to address fraud, co-operate with police and insure funds. For example, the compromise of an e-commerce site posses relative little risk to its owners and customer unless the site was maintaining balance in digital currencies.
+
+Thus, the services dealing with digital currencies and securities should approach security matters with tremendous seriousness. The history shows that companies possessing millions of dollars funding to address the security still fail in basic execution (:ref:`bitstamp`, :ref:`bitpay`).
 
 
 
@@ -24,9 +26,14 @@ Traditional credit and debit card backed transaction mechanism are usually rever
 Cold wallet
 ==============================================================
 
-**Cold wallet maintains the most of assets offline?** Yes / No
+**Cold wallet maintains most assets offline?** Yes / No
 
-In the case of the compromised service, the attacker cannot get access to all assets and only can steal minor part of them, severely limiting the damage. Most of the assets are stored offline, in a non-connected computer, which has only physical offline access in a safe location. Thus, the attack taking all the assets would need a physical access to this device, making over-the-internet attacks impossible.
+Cold wallet is a system where private keys for digital assets are stored on a computer not connected to Internet. To move the assets, somebody has to go to this computer physically and make the transaction.
+
+The opposite of the cold wallet is hot wallet, which is running on the continuously running on the server and accessible online. The hot wallet assets are instantly liquid and most customer facing transactions happen in hot wallet. When the hot wallet gets "too full", the assets are moved to the cold wallet to make them safe. On the other hand, when hot wallet is drying up due to customer withdraws, the hot wallet must be topped up from the cold wallet.
+
+In the case of a service compromise, the attacker can only drain hot wallet, severely limiting the amount of potentially stolen funds.
+
 
 
 Applies for: Everyone
@@ -34,6 +41,8 @@ Applies for: Everyone
 
 
 Related incidences:
+
+- :ref:`linode`
 
 - :ref:`bitstamp`
 
@@ -52,70 +61,6 @@ Links:
 
 
 
-.. _transaction-verification:
-
-Transaction verification
-==============================================================
-
-**Outgoing transactions are verified by heurestics?** 
-
-Outgoing transactions are verified by heurestics, so that unusual transactions need manual verification or other human interaction.
-This prevents emptying the hot wallet in the case private keys or hot wallet API access is compromised.
-TODO
-
-
-
-
-Related incidences:
-
-- :ref:`bitstamp`
-
-
-
-
-Links:
-
-
-- `BitGo <https://www.bitgo.com/>`_
-
-
-
-- `BitGoD (Github) <https://github.com/BitGo/bitgod>`_
-
-
-
-
-
-
-.. _multisignature-for-major-transactions:
-
-Multisignature for major transactions
-==============================================================
-
-**Minimum of two parties are required to make major a customer assets transfer?** Yes / No
-
-A sole person alone should not be able to embezzle the customer assets.
-
-Digital currencies provide a multisignature mechanisms needing the approvement of at least two different parties to sign the transfer of the assets. Such a mechanism should be used any time a large fraction of customer assets are moved e.g. topping up the hot wallet from the cold wallet. This decreases the risk of corruption or blackmail attacks.
-
-
-
-Applies for: Medium and large enterprises
-
-
-
-
-
-Links:
-
-
-- `Multisignature (Bitcoin Wiki) <https://en.bitcoin.it/wiki/Multisignature>`_
-
-
-
-
-
-
 .. _race-condition-prevention:
 
 Race condition prevention
@@ -123,10 +68,16 @@ Race condition prevention
 
 **A systematic development method prevents race conditions?** Yes / No
 
-A systematic development method is applied to all transactions, so that race conditions cannot exist in financial transactions. Otherwise exploiting a race condition allows the attacker to manipulate account balances.
+A systematic development method is applied to all financial transactions, so that race conditions cannot compromise the transaction integrity. Otherwise exploiting the race condition allows the attacker to manipulate account balances.
+
 For all financial transactions
+
 * Optimistic database-level transaction isolation is applied or...
-* Pessimistic application level locks are applie
+
+* Pessimistic application level locks are applied
+
+The software should be developed in such a manner that there is only one function to make transfers out from the system or within the system. This function is has a locking mechanism that simultaneous transactions from the same account cannot compromise the atomicity, leading to double top up, double withdraw or account overdrawn.
+
 
 
 
@@ -160,6 +111,138 @@ Links:
 
 
 - `How I stole roughly 100 BTC from an exchange and how I could have stolen more <https://www.reddit.com/r/Bitcoin/comments/1wtbiu/how_i_stole_roughly_100_btc_from_an_exchange_and/>`_
+
+
+
+
+
+
+.. _transaction-verification:
+
+Transaction verification
+==============================================================
+
+**Withdraws are verified by heuristics?** 
+
+Withdraws are verified by heuristics, so that unusual outgoing transactions need another round of authorization from the customer or human interaction from the support team.
+
+Outgoing transaction verification provides additional layer of protection against asset theft:
+
+* Customer withdraws are verified. If the parameters of the transaction do not match the prior customer activity and a malicious withdraw is suspected, the customer must to reauthorize the transaction (see see :ref:`third-factor-authentication`).
+
+* How wallet drain attacks are prevented, as the heuristics would detect such and stop them.
+
+The transaction verification is usually implemented as multi-signature service with a third party. A third party holds one key required to make the transaction. When a transaction is created, the third party service checks the transaction parameters against known good  rules. If the transaction looks ok the third party service signs their part of the transaction. Because the third party is independent and specialized in transaction verification process, it is unlikely that the attacker would manage to compromise them too.
+
+
+
+
+
+Related incidences:
+
+- :ref:`bitstamp`
+
+- :ref:`linode`
+
+
+
+
+Links:
+
+
+- `BitGo <https://www.bitgo.com/>`_
+
+
+
+- `BitGoD (Github) <https://github.com/BitGo/bitgod>`_
+
+
+
+
+
+
+.. _multisignature-for-major-withdraws:
+
+Multisignature for major withdraws
+==============================================================
+
+**Minimum of two parties are required to make high volume withdraw?** Yes / No
+
+A sole person alone should not be able to compromise the cold wallet or customer assets. Requiring authorization from two different people makes it less likely that one person disappears with all the customer assets.
+
+Digital currencies provide a multi-signature mechanisms. A withdraw action can be set to require minimum of two different parties to confirm it. Such a mechanism should be used any time a large fraction of assets are moved e.g. topping up the hot wallet from the cold wallet.
+
+
+
+Applies for: Medium and large enterprises
+
+
+
+Related incidences:
+
+- :ref:`bitpay`
+
+
+
+
+Links:
+
+
+- `Multisignature (Bitcoin Wiki) <https://en.bitcoin.it/wiki/Multisignature>`_
+
+
+
+
+
+
+.. _proof-of-solvency:
+
+Proof of solvency
+==============================================================
+
+**The service is able to perform Proof-of-solvency?** Yes / No
+
+Proof of solvency (PoS) is a scheme designed to let users verify the solvency of online websites which accept Bitcoin deposits in a way that doesn't compromise the privacy of users.
+
+Proof of solvency is used as a public proof to verify the service does not run as fractional reserve e.g. some of the customer assets could not be withdrawn on a given moment. It is mostly used by Bitcoin exchanges to prove they still have the assets the customers have deposited.
+
+The current proof of solvency schemes usually involves
+
+* A (merkle tree) hashing scheme
+
+* A third party auditor
+
+* A public statement
+
+The third party verifies the exchange was control in all the given Bitcoin addresses and they have more unspent Bitcoins than claimed total customer assets.
+
+The service should be able to perform proof of solvency audit, at least internally.
+
+
+
+Applies for: Medium and large enterprises
+
+
+
+Related incidences:
+
+- :ref:`mtgox`
+
+
+
+
+Links:
+
+
+- `Proving Your Bitcoin Reserves (Zak Wilcox) <https://iwilcox.me.uk/2014/proving-bitcoin-reserves>`_
+
+
+
+- `Proof of Solvency specification <https://github.com/olalonde/proof-of-solvency>`_
+
+
+
+- ` <Bitfinex Passes Stefan Thomas's Proof Of Solvency Audit ()>`_
 
 
 
