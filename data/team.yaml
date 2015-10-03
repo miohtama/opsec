@@ -251,6 +251,8 @@ questions:
     applies: mle
     incidences:
       - maxcdn
+    links:
+      - Universal SSH Key Manager (SSH Communications Security), http://www.ssh.com/products/universal-ssh-key-manager
 
   Software installation from safe sources:
     question: Software is installed from known good sources

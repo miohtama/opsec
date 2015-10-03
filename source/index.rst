@@ -9,21 +9,21 @@
 
 .. note ::
 
-    This is a living, work-in-progress, document. We kindly ask you no to refer to this document or use the material presented here until the authors release the version 1.0.
+    This is a living, work-in-progress, document. We kindly ask that you not to refer to this document or use the material presented herein until the authors release the version 1.0.
 
 OPSEC - Operations Security
 ===========================
 
 This is an online guide for operations security (OPSEC) for Internet services.
 
-Operations security (OPSEC) is multidisciplinary approach for protecting information and services. Though the term has a wider general meaning, this guide discusses OPSEC in the context of securing Internet services. This includes, but is not limited to, protecting information from industrial espionage, blackhat hackers, law enforcement, social engineering, and mass surveillance. `Please read further introduction to OPSEC in Wikipedia <https://en.wikipedia.org/wiki/Opsec>`_.
+Operations security (OPSEC) is a multidisciplinary approach for protecting information and services. Though the term has a wider general meaning, this guide discusses OPSEC in the context of securing Internet services. This includes, but is not limited to, protecting information from industrial espionage, blackhat hackers, law enforcement, social engineering, and mass surveillance. `Please read further a introduction to OPSEC on Wikipedia <https://en.wikipedia.org/wiki/Opsec>`_.
 
 About this guide
 ================
 
 |opsec| is a security guide and assessment tool for developing sensitive Internet services.
 
-The aim is to provide transparent, lightweight and practical way to develop and evaluate the security of an Internet service from a holistic viewpoint. The scope of the guide is interdisciplinary, covering the full range of business operations from mobile phone usage to safe software development practices. :doc:`Read more how and why this guide was created <background/index>`.
+The aim is to provide transparent, lightweight and practical ways to develop and evaluate the security of an Internet service from a holistic viewpoint. The scope of the guide is interdisciplinary, covering the full range of business operations from mobile phone usage to safe software development practices. :doc:`Read more about how and why this guide was created <background/index>`.
 
 Chapters
 ========
@@ -53,5 +53,5 @@ Chapters
 More
 ====
 
-`Follow us in Twitter <https://twitter.com/OpSecSanta>`_.
+`Follow us on Twitter <https://twitter.com/OpSecSanta>`_.
 

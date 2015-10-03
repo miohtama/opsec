@@ -285,6 +285,10 @@ Links:
 
 
 
+- `Password strength (Wikipedia) <https://en.wikipedia.org/wiki/Password_strength>`_
+
+
+
 
 
 

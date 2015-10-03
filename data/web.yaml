@@ -115,6 +115,7 @@ questions:
     links:
       - PBKDF2 (Password-Based Key Derivation Function 2) in Wikipedia, https://en.wikipedia.org/wiki/PBKDF2
       - Password storage cheat sheet in OWASP, https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet
+      - Password strength (Wikipedia), https://en.wikipedia.org/wiki/Password_strength
     incidences:
       - sebastian
       - slack

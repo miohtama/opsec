@@ -167,6 +167,7 @@ questions:
       - Blocking Brute Force Attacks (OWASP), https://www.owasp.org/index.php/Blocking_Brute_Force_Attacks
       - Rolling time window counters with Redis and mitigating botnet (Mikko Ohtamaa), https://opensourcehacker.com/2014/07/09/rolling-time-window-counters-with-redis-and-mitigating-botnet-driven-login-attacks/
       - reCAPTCHA, https://www.google.com/recaptcha/intro/index.html
+      - Password strength (Wikipedia), https://en.wikipedia.org/wiki/Password_strength#Guidelines_for_strong_passwords
     incidences:
       - icloud
 
