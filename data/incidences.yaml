@@ -438,6 +438,7 @@ patreon:
     links:
       - Important Security Notice from Patreon, https://www.patreon.com/posts/important-notice-3457485
       - Gigabytes of user data from hack of Patreon donations site dumped online (Ars Technica), http://arstechnica.com/security/2015/10/gigabytes-of-user-data-from-hack-of-patreon-donations-site-dumped-online/
+      - How Patreon got hacked – Publicly exposed Werkzeug Debugger (Detectify Labs), http://labs.detectify.com/post/130332638391/how-patreon-got-hacked-publicly-exposed-werkzeug
 
 blockchaininfo:
     date: 2015-06-01

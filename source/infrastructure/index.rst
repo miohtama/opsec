@@ -116,7 +116,7 @@ Internal services, testing and staging servers, should not be exposed to public.
 
 Usually testing and staging servers have more people with privileged access. This increases the potential attack surface from compromised devices and accounts. If there is no specific reason why the server needs to be publicly accessible, it should be hidden behind VPN and not be visible in public DNS records. For internal services run a custom DNS server or use a non-guessable secondary domain name.
 
-Firewall should be only a secondary layer protecting human errors. The services should be configure in a manner that they to do not bind to publicly exposed IPs, but only bind to localhost or internal IPs. Furthermore firewalling outgoing connections might be problematic, as many services rely on third party API service today.
+Firewall should be only a secondary layer protecting human errors. The services should be configure in a manner that they to do not bind to publicly exposed IPs, but only bind to localhost or internal IPs. If public IP addresses are needed the internal service should minimally have HTTP Basic Authentication password prompt, so that scanners and robots cannot find it.
 
 Within the server any installed software is run under non-admin (non-root) account. This limits the impact of attack if arbitrary code execution vulnerability in the native applications is exploited. The attacker cannot leave further backdoors in the system and is able to gain only limited intel.
 
@@ -139,6 +139,10 @@ Links:
 
 
 - `Privledge separation (Wikipedia) <https://en.wikipedia.org/wiki/Privilege_separation>`_
+
+
+
+- `Basic access authentication (Wikipedia) <https://en.wikipedia.org/wiki/Basic_access_authentication>`_
 
 
 
