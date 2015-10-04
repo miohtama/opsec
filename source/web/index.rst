@@ -456,6 +456,8 @@ Related incidences:
 
 - :ref:`veeder-root`
 
+- :ref:`patreon`
+
 
 
 

@@ -203,6 +203,7 @@ questions:
     applies: everyone
     incidences:
       - veeder-root
+      - patreon
     links:
       - Failure to restrict URL Access in OWASP, https://www.owasp.org/index.php/Top_10_2010-A8-Failure_to_Restrict_URL_Access
 
