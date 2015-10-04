@@ -267,8 +267,8 @@ sms-malware:
     When the user receives two-factor authentication codes over SMS they are forwared to the attacker. Furthermore the malware intercepts logins and passwords to popular services.
 
   links:
-    - New Banking Trojan Targets Android, Steals SMS, https://threatpost.com/new-banking-trojan-targets-android-steals-sms/110819/
-    - Zeus Banking Trojan Hits Android Phones, http://www.informationweek.com/mobile/zeus-banking-trojan-hits-android-phones/d/d-id/1098909?
+    - New Banking Trojan Targets Android, Steals SMS (ThreatPost), https://threatpost.com/new-banking-trojan-targets-android-steals-sms/110819/
+    - Zeus Banking Trojan Hits Android Phones (InformationWeek), http://www.informationweek.com/mobile/zeus-banking-trojan-hits-android-phones/d/d-id/1098909?
 
 instagram:
   date: 2014-12-08

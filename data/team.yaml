@@ -185,7 +185,6 @@ questions:
       - Multi-Factor Authentication (Amazon Web Services), https://aws.amazon.com/iam/details/mfa/
     incidences:
       - bitly
-      - icloud
 
   Two-factor authentication for admins:
     question: The website administrators use two-factor authentication
