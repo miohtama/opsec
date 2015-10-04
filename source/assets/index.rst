@@ -166,7 +166,7 @@ Links:
 Multisignature for major withdraws
 ==============================================================
 
-**Minimum of two parties are required to make high volume withdraw?** Yes / No
+**Minimum of two parties are required to large withdraw?** Yes / No
 
 A sole person alone should not be able to compromise the cold wallet or customer assets. Requiring authorization from two different people makes it less likely that one person disappears with all the customer assets.
 

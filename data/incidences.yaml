@@ -457,7 +457,7 @@ blockchaininfo:
 
 bitpay:
     date: 2015-09-17
-    title: bitpay
+    title: Bitpay
     description: |
       Bitpay, a popular Bitcoin payment gateway, lost 1.8M USD in phishing attack.
 

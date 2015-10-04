@@ -7,31 +7,49 @@ Incidences
 
 This chapter contains references to historical security breaches, their implications and what operational security measurements could have been taken to prevent them.
 
+Incident summary
+================
+
+.. raw :: html
+
+    <table class="table-incidences">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Related security assessment points</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for incidence_id, incidence in incidences.items() %}
+                <tr>
+                    <td>
+                        <a href="{{ incidence_id|normalize_id }}.html">{{ incidence.title }}</a>
+                    </td>
+                    <td class="col-date">
+                        {{ incidence.date }}
+                    </td>
+                    <td>
+                        {% for chapter_id, question_id, question_title in incidence.references %}
+                            <p>
+                                <a href="../{{ chapter_id }}/index.html#{{ question_id|normalize_id }}">{{ question_title }}</a>
+                            </p>
+                        {% endfor %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+Indicent list
+=============
+
+.. toctree::
+    :maxdepth: 2
 {% for incidence_id, incidence in incidences.items() %}
-
-.. _{{ incidence_id|normalize_id }}:
-
-{{ incidence.title }}
-==============================================================
-
-*Date: {{ incidence.date }}*
-
-{{ incidence.description }}
-
-{% if incidence.references %}
-Related evaluation points:
-{% for chapter_id, question_id in incidence.references %}
-- :ref:`{{ question_id|normalize_id }}`
+    {{ incidence_id }}
 {% endfor %}
 
-{% endif %}
 
-{% if incidence.links %}
-Links:
-{% for link in incidence.links %}
-- `{{ ','.join(link.split(',')[0:-1]) }} <{{ ((link.split(',')|length) > 1) and link.split(',')[-1].strip() }}>`_
-{% endfor %}
-{% endif %}
 
-{% endfor %}
 

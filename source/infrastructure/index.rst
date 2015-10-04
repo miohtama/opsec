@@ -53,8 +53,6 @@ Related incidences:
 
 - :ref:`linode`
 
-- :ref:`maxcdn`
-
 
 
 

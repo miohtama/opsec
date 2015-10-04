@@ -73,10 +73,12 @@ def get_incidences_data(chapters):
                     raise RuntimeError("Bad incidence list for question: {}".format(question_id))
 
                 if incidence_id in [inc.lower() for inc in incidence_ids]:
-                    incidence["references"].append((chapter_id, question_id))
+                    incidence["references"].append((chapter_id, question_id, question["question"]))
 
                 previous_question_id = question_id
 
+    # Sort incidences alphabetically
+    struct = OrderedDict(sorted(struct.items(), key=lambda item: item[1]["title"]))
 
     return struct
 
@@ -178,6 +180,13 @@ incidences = get_incidences_data(chapters)
 doc = incidences_template.render(incidences=incidences)
 with open("source/incidences/index.rst", "wt") as out:
     out.write(doc)
+
+# Build individual incidences pages
+incidence_template = env.get_template('incidence.rst')
+for incidence_id, incidence in incidences.items():
+    doc = incidence_template.render(incidence=incidence, incidence_id=incidence_id)
+    with open("source/incidences/{}.rst".format(incidence_id), "wt") as out:
+        out.write(doc)
 
 # Generate chapters
 for chapter_id, chapter in chapters.items():

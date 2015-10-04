@@ -39,7 +39,6 @@ questions:
     incidences:
       - bitly
       - linode
-      - maxcdn
 
   Security proxy:
     question: Servers are behind security proxy

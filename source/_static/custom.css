@@ -1,0 +1,21 @@
+.table-incidences td,
+.table-incidences th {
+    vertical-align: top;
+    text-align: left;
+    padding: 10px;
+}
+
+.table-incidences td:first-child,
+.table-incidences th:first-child {
+    padding-left: 0;
+}
+
+
+.col-date {
+    min-width: 150px;
+}
+
+/* Non-user visible hack to make Sphinx to understand how docs are supposed to be in index */
+#hidden-index {
+    display: none;
+}

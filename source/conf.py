@@ -119,7 +119,9 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-html_theme_options = {'sticky_navigation' : True}
+html_theme_options = {
+    'sticky_navigation' : True,
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -364,3 +366,13 @@ rst_epilog = """
 .. |opsec| replace:: OPSEC - Operations Security Guide
 """
 
+
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
+html_context = {
+'css_files': [
+    'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
+    'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
+    '_static/custom.css',
+],
+}

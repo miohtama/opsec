@@ -79,7 +79,7 @@ questions:
       - linode
 
   Multisignature for major withdraws:
-    question: Minimum of two parties are required to make high volume withdraw
+    question: Minimum of two parties are required to large withdraw
     applies: mle
     answers: default
     rationale: |
