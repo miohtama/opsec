@@ -137,6 +137,8 @@ questions:
       Instead of email, closed tools and services should be used for team internal communications.
 
       For highly sensitive projects the communication should be contained in an in-house server.
+    incidences:
+      - bitpay
     links:
       - Email Privacy (Wikipedia), https://en.wikipedia.org/wiki/Email_privacy
       - Modern Team Communication Tools for Developers (Stefan Mayer), http://stefanmayer.me/2014/08/28/slack-flowdock-hipchat-comparison/

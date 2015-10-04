@@ -32,10 +32,6 @@ Incident summary
                     <td>
                         
                             <p>
-                                <a href="../team/index.html#two-factor-authentication-on-critical-services">Infrastructure services requires two-factor authentication</a>
-                            </p>
-                        
-                            <p>
                                 <a href="../user/index.html#two-factor-authentication">The service users are encouraged to use two-factor authentication</a>
                             </p>
                         
@@ -120,11 +116,15 @@ Incident summary
                             </p>
                         
                             <p>
+                                <a href="../team/index.html#minimized-email-usage">Email is not used for internal communications</a>
+                            </p>
+                        
+                            <p>
                                 <a href="../team/index.html#two-factor-authentication-on-email">The team member work and personal email accounts require two-factor authentication to log in</a>
                             </p>
                         
                             <p>
-                                <a href="../assets/index.html#multisignature-for-major-withdraws">Minimum of two parties are required to large withdraw</a>
+                                <a href="../assets/index.html#multisignature-for-major-withdraws">Minimum of two parties are required for a large withdraw</a>
                             </p>
                         
                     </td>

@@ -20,8 +20,6 @@ Apple did not apologize.
 
 Related evaluation points:
 
-- :ref:`two-factor-authentication-on-critical-services`
-
 - :ref:`two-factor-authentication`
 
 - :ref:`brute-force-login-prevention`

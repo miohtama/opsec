@@ -24,6 +24,8 @@ Related evaluation points:
 
 - :ref:`basic-security-practices`
 
+- :ref:`minimized-email-usage`
+
 - :ref:`two-factor-authentication-on-email`
 
 - :ref:`multisignature-for-major-withdraws`

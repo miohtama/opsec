@@ -284,6 +284,11 @@ For highly sensitive projects the communication should be contained in an in-hou
 
 
 
+Related incidences:
+
+- :ref:`bitpay`
+
+
 
 
 Links:
@@ -372,8 +377,6 @@ Two-factor authentication provides additional layer of security against cases wh
 Related incidences:
 
 - :ref:`bitly`
-
-- :ref:`icloud`
 
 
 
