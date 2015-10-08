@@ -160,10 +160,6 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../team/index.html#basic-security-practices">The team members follow the basic IT security practices</a>
-                            </p>
-                        
-                            <p>
                                 <a href="../team/index.html#dangerous-file-attachments">Potentially dangerous file attachments are handled securely</a>
                             </p>
                         

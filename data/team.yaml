@@ -23,7 +23,6 @@ questions:
     answers: default
     applies: everyone
     incidences:
-    - bitstamp
     - bitpay
 
   Dangerous file attachments:

@@ -38,8 +38,6 @@ Applies for: Everyone
 
 Related incidences:
 
-- :ref:`bitstamp`
-
 - :ref:`bitpay`
 
 

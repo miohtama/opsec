@@ -39,8 +39,6 @@ After the incidence Bitstamp rebuild the server infrastructure and opted in to B
 
 Related evaluation points:
 
-- :ref:`basic-security-practices`
-
 - :ref:`dangerous-file-attachments`
 
 - :ref:`two-factor-authentication-on-server-login`

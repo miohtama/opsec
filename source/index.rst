@@ -25,7 +25,7 @@ About this guide
 
 The aim is to provide transparent, lightweight and practical ways to develop and evaluate the security of an Internet service from a holistic viewpoint. The scope of the guide is interdisciplinary, covering the full range of business operations from team computer and mobile phone setup to safe software development practices. :doc:`Read more about how and why this guide was created <background/index>`.
 
-The guide presents 49 assesment points to evaluate different aspects of Internet service security. The security assessment points are referred in 31 :doc:`historical security incidences <incidences/index>` which could have been avoided if the operators had followed practices presented here.
+The guide presents 49 assesment points to evaluate different aspects of team and service. The security assessment points are referred in 31 :doc:`historical security incidences <incidences/index>` which could have been avoided if the operators had followed practices presented here.
 
 Chapters
 ========
