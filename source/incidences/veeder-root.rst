@@ -8,11 +8,18 @@ Veeder-Root
 
 *Date: 2015-01-23*
 
+
+
+
+
+
 Gas stations use automated tank gauges (ATGs) for remote control and diagnostics. Automated tank gauges were exposed to Internet through serial port servers that map ATG serial interfaces to the Internet-accessible TCP port.
 
-Most of ATGs were manufactured bt Veeder-Root, a petroleum equipment service company. The system allows maximum of six letters password, but often the password is not set.
+Most of ATGs were manufactured by Veeder-Root, a petroleum equipment service company. The system allows maximum of six letters password, but often the password is not set.
 
-The attacker could change the calibration and make the tank report full or empty. Worst case the attacker could shut down the pumps.
+The attacker could change the calibration and make the tank report invalid full or empty status. In the worst case, the attacker could shut down the pumps of a gas station.
+
+The hackers laters exploited this and toyed with US gas stations.
 
 
 

@@ -223,6 +223,8 @@ Related incidences:
 
 - :ref:`twitter`
 
+- :ref:`soho`
+
 
 
 
@@ -503,6 +505,8 @@ Applies for: Medium and large enterprises
 
 
 Related incidences:
+
+- :ref:`starbucks`
 
 - :ref:`coinbase`
 

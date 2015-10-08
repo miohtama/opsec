@@ -8,6 +8,13 @@ Soho
 
 *Date: 2015-05-16*
 
+
+Compromised user accoutns: **300k**
+
+
+
+
+
 Hackers hijack 300,000 SOHO routers with man-in-the-middle attacks.
 
 SOHO routers were infected via drive-by download attacks and malvertising on popular websites. The initial drive-by attack exploited a CSRF flaw in the router administration page. When a victim behind the router visited a malicious site, a JavaScript payload reconfigured the routers.
@@ -19,6 +26,8 @@ The attackers modified the routers DNS settings so that everybody from the route
 Related evaluation points:
 
 - :ref:`https-tls-only`
+
+- :ref:`cross-site-request-forgery-csrf`
 
 
 

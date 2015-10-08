@@ -8,7 +8,12 @@ PurseIO
 
 *Date: 2015-07-31*
 
-Guessable ids allowed the researcher to scrape private orders from PurseIO service.
+
+
+
+
+
+Guessable ids and sequences allowed the researcher to scrape private order data from PurseIO service.
 
 PurseIO is a service where one can pay in Bitcoin for somebody to ask him or her to make an Amazon order on the behalf of the payer.
 

@@ -8,6 +8,13 @@ NASA
 
 *Date: 2012-11-15*
 
+
+Compromised user accoutns: **10k**
+
+
+
+
+
 NASA lost a laptop containing data on 10,000 users.
 
 Personally identifiable information of at least 10,000 NASA employees and contractors remained at risk of compromise.

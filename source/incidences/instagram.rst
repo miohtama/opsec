@@ -8,13 +8,18 @@ Instagram
 
 *Date: 2014-12-08*
 
-Instagram deleted millions of accounts.
 
-Due to lax account creation process, A large proportion of Instagram accounts were fake and automatically created robot accounts. The fake accounts can be exploited as fake followers or to send spam. Social media PR companies may buy fake followers to inflate their campaign success rates.
 
-It can be speculated that even if being aware of the severity of the issue Instagram was not in rush to delete the fake accounts before acquisition by Facebook to inflate their market value.
 
-Some celebrities lost up to 90% of their followers. Instagram's own Instagram account lost 30% of its followers.
+
+
+Instagram deleted millions of fake accounts.
+
+Due to relaxed account creation process, a large proportion of Instagram accounts were fake robot accounts. The fake accounts can be used as fake followers or to send spam. Social media and PR companies often buy fake followers to inflate their campaign success rates.
+
+It can be speculated that even if being aware of the issue Instagram was not in rush to delete the fake accounts or fix the account creation process before the acquisition by Facebook. Larger user count looks better in the valuation.
+
+In December 2014 Instagram decided it's time delete the fake accounts. Some celebrities lost up to 90% of their followers. Instagram's own Instagram account lost 30% of its followers.
 
 
 

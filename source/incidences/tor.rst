@@ -8,11 +8,18 @@ Tor
 
 *Date: 2014-01-22*
 
+
+
+
+
+
 Security researches detected Tor exit nodes performing man-in-the-middle attack on the traffic.
 
-Tor is a layered network to obfuscate the source of the traffic i.e. hide your tracks. It is used by criminals, privacy advocates and security researchers. Tor relies on *exit nodes* where the traffic comes out from Tor network and connects to normal Internet.
+Tor is a layered network to obfuscate the source of the traffic i.e. hide your tracks. It is used by criminals, privacy advocates and security researchers. Tor relies on exit nodes computers where the traffic comes out from Tor network and connects to normal Internet.
 
-Malicious Tor exit nodes where intercepting the traffic. They performed HTTP traffic snooping, HTTP -> HTTPS redirection interception and HTTPS man-in-the-middle with self-signed certificate. There are recorded cases where the victim accepted the invalid HTTPS certificate even though Firefox-based Tor browser presented a red warning screen with difficult options to proceed beyond it.
+Malicious Tor exit nodes where intercepting the traffic. They performed HTTP traffic snooping, HTTP -> HTTPS redirection interception and HTTPS man-in-the-middle with self-signed certificate. There are known cases where the victim accepted the self-signed HTTPS certificate even though Firefox-based Tor browser presented a red warning screen and stating one should not proceed.
+
+Tor developers are working to make Tor network and Tor browser to mitigate this kind of attacks.
 
 
 

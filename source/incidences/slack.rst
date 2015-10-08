@@ -8,9 +8,20 @@ Slack
 
 *Date: 2015-03-01*
 
-Slack is a popular team communication tool among software companies and in US. The database of Slack got compromised, leading to the exposure of salted passwords.
 
-After the breach Slack detected suspicious activity targetting some of its customers. Slack reseted the passwords for these customers. Furthermore, after the incident, Slack enabled two-factor authentication and kill switch as options for its users. Two-factor authentication was not an option before Slack got hacked.
+Compromised user accoutns: **500k**
+
+
+
+
+
+The database of Slack, a popular team communication tool, was leaked.
+
+Slack is a popular team communication tool among software development companies. The database of Slack got compromised, leading to the exposure of salted passwords.
+
+Slack did not disclose how the attackers got access to their database.
+
+After the breach Slack detected suspicious activity targeting some of its customers. Slack reseted the passwords for these customers. Furthermore, after the incident, Slack enabled two-factor authentication and kill switch as options for its users. Two-factor authentication was not an option before Slack got hacked.
 
 Whether two-factor authentication effectively stops the attackers in the case of database breach is a subject to discussion. If the salted passwords are compromised you usually also lose the two-factor authentication tokens stored in the same database.
 

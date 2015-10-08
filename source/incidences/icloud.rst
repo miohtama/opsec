@@ -8,11 +8,16 @@ Apple iCloud
 
 *Date: 2014-09-01*
 
-Apple iCloud service was subject to login brute force attack leading to the compromise of several celebrity accounts.
 
-Apple did not follow the security best practices to prevent brute forced login attempts. Find my iPhone, a part of iCloud services, allowed unthrottled login attempts.
 
-Later the private photos of victims, most of them being celebrities, were leaked in Internet, causing harm to these people.
+
+
+
+Apple iCloud service was subject to login brute force attack leading to the leak of celebrity private photos.
+
+Apple did not follow the security best practices to prevent brute forced login attempts. Find my iPhone, a part of iCloud services, allowed unlimited login attempts. This allowed the attackers to guess simple passwords for known email addresses.
+
+Later the private photos of victims, most of them being celebrities, were leaked in Internet.
 
 Apple did not apologize.
 

@@ -254,6 +254,7 @@ questions:
     applies: mle
     incidences:
       - maxcdn
+      - ashley-madison
     links:
       - Universal SSH Key Manager (SSH Communications Security), http://www.ssh.com/products/universal-ssh-key-manager
 

@@ -103,6 +103,7 @@ questions:
       - Sending form data (Mozilla Developer Network), https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data
     incidences:
       - twitter
+      - soho
 
   Password storage best practices:
     question: The user passwords and two-factor seeds are hashed and salted against bruteforcing
@@ -230,6 +231,7 @@ questions:
 
       There exist third party services providing the creation and management of whitehat programs (Cobalt, HackerOne).
     incidences:
+      - starbucks
       - coinbase
     links:
       - Cobalt, https://cobalt.io/

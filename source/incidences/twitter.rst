@@ -8,9 +8,14 @@ Twitter
 
 *Date: 2010-09-26*
 
+
+
+
+
+
 Twitter allowed to post a tweet using a HTTP GET request.
 
-The attacker created a worm which posted itself on behalf of the user when the users clicked a link they saw in their friends feed.
+There was no CSRF check for posting a tweet this way. The attacker created a worm which posted itself on the users timeline when the users saw and clicked the malicious tweet in their feed.
 
 
 

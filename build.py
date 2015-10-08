@@ -83,6 +83,25 @@ def get_incidences_data(chapters):
     return struct
 
 
+def friendly_number(number:str) -> int:
+    """Convert 180M like number to an integer for summing."""
+
+    multipliers = dict(M=1000000, k=1000)
+
+    if not number:
+        return 0
+
+    if type(number) == int:
+        return number
+
+    if number[0].isdigit():
+        multiplier = number[-1]
+        number = number[0:-1]
+        return float(number) * multipliers[multiplier]
+    else:
+        return 0  # "Not disclosed"
+
+
 def generate_word(chapters:dict, incidences:dict):
     """Generate the word document for proof reading.
 
@@ -132,7 +151,8 @@ def generate_word(chapters:dict, incidences:dict):
             document.add_page_break()
         document.save("{}.docx".format(chapter_id))
 
-    return
+    print("Building incidences.docx")
+    document = Document()
 
     document.add_heading('Incidences', 0)
     document.add_page_break()
@@ -156,6 +176,8 @@ def generate_word(chapters:dict, incidences:dict):
 
         document.add_page_break()
 
+    document.save("incidences.docx".format(chapter_id))
+
 
 
 
@@ -174,10 +196,19 @@ doc = index_template.render(chapters=chapters)
 with open("source/index.rst", "wt") as out:
     out.write(doc)
 
+
+
 # Generate incidences
 incidences_template = env.get_template('incidences.rst')
 incidences = get_incidences_data(chapters)
-doc = incidences_template.render(incidences=incidences)
+
+assets_lost = sum([friendly_number(incidence.get("assets-stolen")) for incidence in incidences.values()])
+compromised_accounts = sum([friendly_number(incidence.get("compromised-users")) for incidence in incidences.values()])
+
+assets_lost /= 1000000;
+compromised_accounts /= 1000000;
+
+doc = incidences_template.render(incidences=incidences, assets_lost=assets_lost, compromised_accounts=compromised_accounts)
 with open("source/incidences/index.rst", "wt") as out:
     out.write(doc)
 

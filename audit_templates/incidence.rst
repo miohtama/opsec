@@ -8,6 +8,15 @@
 
 *Date: {{ incidence.date }}*
 
+{% if incidence['compromised-users'] %}
+Compromised user accoutns: **{{ incidence['compromised-users'] }}**
+{% endif %}
+
+
+{% if incidence['assets-stolen'] %}
+Assets stolen: **{{ incidence['assets-stolen'] }} USD**
+{% endif %}
+
 {{ incidence.description }}
 
 {% if incidence.references %}

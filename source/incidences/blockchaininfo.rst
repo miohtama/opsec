@@ -8,11 +8,24 @@ Blockchain.info
 
 *Date: 2015-06-01*
 
-Blockchain.info, a popular Bitcoin wallet service, has been targeted through Google AdWords phishing advertisements multiple times over the years 2013-2015.
 
-The attackers buy the top spot of the Google AdWords and make it point to the phishing. The end users cannot distinguish difference between the phishing ad and the legit search results when arriving to Google Search through the web browser search bar. The link in the advertisement can be genuine-like *www.blockchain.com.de/wallet/login* or totally bogus pointing to some random static site hosting service.
 
-When the victim logs in to the phishing site, made to look like blockchain.info, the attackers steal the credentials and then proceed to move assets from the blockchain.info wallet.
+
+
+Assets stolen: **60k USD**
+
+
+Blockchain.info, a popular Bitcoin wallet service, has been a target for Google AdWords phishing campaigns multiple times over the years 2013-2015.
+
+The attackers buy the top spot of the Google AdWords for words "blockchain info". The advertisement points to a phishing site.
+
+The users arrive to Google search results when typing "blockchain info" or similar input to the web browser URL bar. When viewing the result page, the end users don't understand the difference between the phishing ad and the legit search results.
+
+The link in the phishing advertisement has been genuine-like *www.blockchain.com.de/wallet/login* or totally bogus pointing to some random static site hosting service.
+
+When the victim logs in to the phishing site, which have been made to look like blockchain.info, the attackers steal the credentials. Then the attackers proceed to empty the blockchain.info wallet of the victim.
+
+Blockchain.info does not disclose phishing data or Bitcoins lost to phishing. They do not reimburse the users' losses. The reports from individual users on popular forums suggest at least 25 BTC have been stolen this way.
 
 
 

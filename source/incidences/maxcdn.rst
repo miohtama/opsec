@@ -8,11 +8,16 @@ MaxCDN
 
 *Date: 2013-07-02*
 
-MaxCDN, a content-delivery network service hosting bootstrapcdn.com, the default CDN option for popular Bootstrap front end framework, got compromised.
 
-The vendor of MaxCDN had laid off a support engineer with access to the servers where BootstrapCDN runs. The credentials of the engineer were not revoked. The attackers gained these credentials. Then the attackers rebooted a server into single-user mode, changed the root password, and SSH’d into the server. Bootstrap JavaScript files were modified to serve an exploit toolkit.
 
-Because Bootstrap is widely deployed and CDN option is one recommended way to include it on your site, the attack payload got served to tens of thousands of visitors in short period of time.
+
+
+
+MaxCDN, a content-delivery network service had their servers compromised. MaxCDN is running bootstrapcdn.com, a CDN download for popular Bootstrap front end framework.
+
+The vendor of MaxCDN had laid off a support engineer having access to the servers where BootstrapCDN runs. The credentials of the support engineer were not properly revoked. The attackers had gained access to these credentials. The attackers rebooted the server into single-user mode, changed the root password, and SSH’d into the server. Bootstrap JavaScript files were modified to serve an exploit toolkit.
+
+Bootstrap is widely deployed and CDN option is one of the recommended ways to include Bootstrap on your website. BootstrapCDN gets a lot of downloads. Thus, the attack payload was served to tens of thousands of visitors in short period of time.
 
 
 

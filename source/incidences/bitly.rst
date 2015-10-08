@@ -8,9 +8,18 @@ Bitly
 
 *Date: 2014-05-08*
 
-Bitly unecrypted backups got compromised.
 
-Bitly is a URL shortening service. The users can log in with their Facebook and Twitter accounts. In the incidence, the attacked gained access to offsite unencrypted database backups. It is assumed the database contained (OAuth) tokens to take actions in Facebook and Twitter on behalf of the user.
+Compromised user accoutns: **Not disclosed**
+
+
+
+
+
+Bitly, an URL shortening service, had their unecrypted backups compromised.
+
+Bitly is a URL shortening service. The users can log in with their Facebook and Twitter accounts and shorten URLs. Bit.ly also offers enterprise services where the customers are allowed to use custom domains.
+
+In the incidence, the attacker gained access to offsite unencrypted database backups. It is assumed the database contained (OAuth) tokens to take actions in Facebook and Twitter on behalf of the user.
 
 "On May 8 [2014], the Bitly security team learned of the potential compromise of Bitly user credentials from the security team of another technology company. We immediately began operating under the assumption that we had a breach and started the search for all possible compromise vectors." (More detail)
 
@@ -18,9 +27,11 @@ Bitly is a URL shortening service. The users can log in with their Facebook and 
 
 "We audited the security history for our hosted source code repository that contains the credentials for access to the offsite database backup storage and discovered an unauthorized access on an employee’s account.  We immediately enabled two-factor authentication for all Bitly accounts on the source code repository and began the process of securing the system against any additional vulnerabilities." (More detail)
 
-"Hashed passwords were exposed but plain text passwords were not.  All passwords are salted and hashed.  If you registered, logged in or changed your password after January 8th, 2014, your password was converted to be hashed with BCrypt and HMAC using a unique salt.  Before that, it was salted MD5." (More detail)
+"Hashed passwords were exposed but plain text passwords were not. All passwords are salted and hashed. If you registered, logged in or changed your password after January 8th, 2014, your password was converted to be hashed with BCrypt and HMAC using a unique salt. Before that, it was salted MD5." (More detail)
 
-The authoritative report "More detail", by Bitly, is now taken down (http://blog.bitly.com/#85169217199).
+After the incidence users were asked to reset their passwords and all OAuth tokens were revoked.
+
+The authoritative report "More detail", by Bitly, is now taken down (dead URL is http://blog.bitly.com/#85169217199).
 
 
 

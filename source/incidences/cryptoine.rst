@@ -8,11 +8,18 @@ Cryptoine
 
 *Date: 2015-04-04*
 
-A race condition existed in the software of Cryptoine, now defunct Bitcoin exchange.
 
-The race condition allowed the attacker to drain all hot wallets.
 
-This damage caused the closure of the exchange.
+
+
+Assets stolen: **1800 USD**
+
+
+A race condition existed in the service of Cryptoine, now defunct Bitcoin exchange.
+
+The race condition allowed the attacker to drain hot wallets of multiple cryptocurrencies of the service.
+
+This damage caused the closure of the exchange. However the service was not popular, having only around 6 Bitcoins in their hot wallet.
 
 
 

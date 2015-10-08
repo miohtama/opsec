@@ -8,15 +8,20 @@ Patreon
 
 *Date: 2015-09-01*
 
+
+Compromised user accoutns: **2.3M**
+
+
+
+
+
 Patreon, a crowdfunding site, had their development server compromised, leading to the loss of production data and source code.
 
-Email addresses, private messages and bcrypt-encrypted passwords of 2 million users were lost, totaling 15 gigabytes of data. The data was copied off from Amazon AWS development server. The development server contained full dataset without any scrubbed data. The development server had on-authenticated debug interface connected to the Patreon Python web application (Werkzeuk on Flash). Anyone could connect to it with full access to the system.
+Email addresses, private messages and bcrypt-encrypted passwords of 2.3 million users were lost with 15 gigabytes of data. The data was copied off from Amazon AWS development server. The development server contained full production dataset without any scrubbing.
 
-The credit card data was hosted on an external service, Stripe, and was not lost.
+The development server was running a debug interface connected to the Patreon Python web application (Werkzeuk on Flash). There was no authentication for the debug interface access. Anyone could connect to it and have full access to the system.
 
-Patreon claims social security numbers and tax information was further encrypted, but does not clarify if the attacker gained the key to decrypt this information.
-
-As the writing of this, it is not disclosed who the attackers gained access to the development server.
+Patreon claims social security numbers and tax information were encrypted in the database, but does not clarify if the attacker gained the keys to decrypt this information.
 
 
 

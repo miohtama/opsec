@@ -8,13 +8,18 @@ Hacking Team
 
 *Date: 2015-06-05*
 
-Hacking Team was a company selling offensive intrusion and surveillance capabilities to governments. Hacking Team got compromised, all 400GB of internal data leaked.
 
-All the stolen information was likely accessed via the compromised computers of Christian Pozzi and Mauro Romeo, two Hacking Team’s sysadmins.
 
-The leaked data demostrated Hacking Team operations security standards were not high. Weak password policies, lack of sensitive data access limitations and bad software development practices. For example, the customer software contained a hidden switch to disable it. This switch was exposed in the leak, forcing all the customers to stop using the software.
 
-As the writing of this the attacker is still not known.
+
+
+Hacking Team was a company selling offensive intrusion and surveillance capabilities to governments. Hacking Team got compromised, having 400GB of internal data leaked.
+
+The stolen information was likely accessed and downloaded via the compromised computers of Christian Pozzi and Mauro Romeo, two Hacking Team’s sysadmins.
+
+Though the company worked in highly sensitive business, the leaked data demonstrated lax security standards of Hacking Team operations. Weak password policies, lack of sensitive data access limitations and bad software development practices. For example, the customer software contained a hidden switch to disable it. This switch was exposed in the leak, forcing all the customers to stop using the software.
+
+As the writing of this the attacker and the attack vectors are still unknown.
 
 
 

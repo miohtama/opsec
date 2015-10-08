@@ -1,14 +1,30 @@
 {# One chapter of the questions #}
 .. This is a generated file from data/. DO NOT EDIT.
 
-==========
+==============================
+Security incidence reference
+==============================
+
+This chapter contains references to historical security incidences, why they happened, the implications and what operational security measurements could have been taken to prevent them.
+
+.. attention ::
+
+    *All Internet service incidences listed here could have been avoided by following the security practices presented in this guide.*
+
+Some of the incidences are not directly related to a particular Internet service, e.g. SMS intercepting, but the case reflects the associated security risk it may pose to any Internet service and its user.
+
 Incidences
-==========
+===================
 
-This chapter contains references to historical security breaches, their implications and what operational security measurements could have been taken to prevent them.
+Number of incidence summaries: **{{ incidences|length }}**
 
-Incident summary
-================
+Compromised user accounts: **{{ compromised_accounts|round(2, 'floor') }}M**
+
+Lost assets: **{{ assets_lost|round(2, 'floor') }}M USD**
+
+Bankcrupted companies: **1**
+
+Fired employees: **0**
 
 .. raw :: html
 
@@ -41,8 +57,8 @@ Incident summary
         </tbody>
     </table>
 
-Indicent list
-=============
+Indicent index
+==============
 
 .. toctree::
     :maxdepth: 2

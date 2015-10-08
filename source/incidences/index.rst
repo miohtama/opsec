@@ -1,14 +1,30 @@
 
 .. This is a generated file from data/. DO NOT EDIT.
 
-==========
+==============================
+Security incidence reference
+==============================
+
+This chapter contains references to historical security incidences, why they happened, the implications and what operational security measurements could have been taken to prevent them.
+
+.. attention ::
+
+    *All Internet service incidences listed here could have been avoided by following the security practices presented in this guide.*
+
+Some of the incidences are not directly related to a particular Internet service, e.g. SMS intercepting, but the case reflects the associated security risk it may pose to any Internet service and its user.
+
 Incidences
-==========
+===================
 
-This chapter contains references to historical security breaches, their implications and what operational security measurements could have been taken to prevent them.
+Number of incidence summaries: **31**
 
-Incident summary
-================
+Compromised user accounts: **39.29M**
+
+Lost assets: **457.19M USD**
+
+Bankcrupted companies: **1**
+
+Fired employees: **0**
 
 .. raw :: html
 
@@ -50,6 +66,10 @@ Incident summary
                         2015-07-01
                     </td>
                     <td>
+                        
+                            <p>
+                                <a href="../team/index.html#audited-server-login-keys">A real-time method of maintaining and revoking keys across all servers</a>
+                            </p>
                         
                             <p>
                                 <a href="../team/index.html#limited-sensitive-data-access">Sensitive data access by administrators is limited</a>
@@ -531,6 +551,10 @@ Incident summary
                                 <a href="../web/index.html#https-tls-only">The service is HTTPS-only with security HTTP headers</a>
                             </p>
                         
+                            <p>
+                                <a href="../web/index.html#cross-site-request-forgery-csrf">The software is written in a manner that it doesn't accept cross-site requests</a>
+                            </p>
+                        
                     </td>
                 </tr>
             
@@ -558,6 +582,10 @@ Incident summary
                         2015-05-21
                     </td>
                     <td>
+                        
+                            <p>
+                                <a href="../web/index.html#whitehat-program">The service has a public whitehat or security bounty program</a>
+                            </p>
                         
                             <p>
                                 <a href="../assets/index.html#race-condition-prevention">A systematic development method prevents race conditions</a>
@@ -649,8 +677,8 @@ Incident summary
         </tbody>
     </table>
 
-Indicent list
-=============
+Indicent index
+==============
 
 .. toctree::
     :maxdepth: 2

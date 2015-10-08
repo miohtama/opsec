@@ -8,11 +8,20 @@ XCode
 
 *Date: 2015-09-17*
 
-XCode is Apple's development tool for building iOS and OSX applications. A pirated version was distributed with an ability to infect all applications created with the pirated versions. Many official Chinese applications in App Store got rigged. The high valued targets included the official application of Baidu, a large Chinese search engine.
+
+
+
+
+
+XCode is Apple's development tool for building iOS and OSX applications. A pirated version was distributed with an ability to infect all created applications with malware code.
+
+A pirated version of XCode was popular among Chinese iOS developers. The development tool is large (3GB) and downloading it from official Apple sources is very slow in China.
+
+Chinese developers used the pirated XCode to create applications, leading to compromise of many official Chinese applications in App Store. The high value targets included an official application from Baidu, a large Chinese search engine.
 
 Apple's App Store review policies did not caught the malware and rigged applications passed the review.
 
-The reason why Chinese developers used the pirated XCode in the first place is that the development tool is large (3GB) and downloading it from official Apple sources takes forever in China.
+Later Apple made a Chinese mirror for XCode downloads.
 
 
 

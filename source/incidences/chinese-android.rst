@@ -8,9 +8,16 @@ Asian Android phones
 
 *Date: 2015-09-01*
 
-Various (low budget) Asian Android phones ship with malware preinstalled. This includes brands available in western markets, like Huawei, Lenovo and Xiaomi.
+
+
+
+
+
+Various Android phones manufactured in Asia ship with malware preinstalled. This includes brands available in western markets like Huawei, Lenovo and Xiaomi.
 
 G DATA security experts discovered over 26 Android phone models which are sold having malware preinstalled. Supply chain companies, operators or manufacturers themselves are suspected of planting the malware. The attacker siphons the user data and then resells it on the black markets to substitute the phone price. The malware is usually hidden in a legitimate app which is manipulated to contain malware as an add-on.
+
+The incident puts the Asian phone companies into very bad light, as it hints their devices should not be trusted in sensitive projects.
 
 
 

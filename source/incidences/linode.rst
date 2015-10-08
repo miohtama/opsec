@@ -8,11 +8,20 @@ Linode
 
 *Date: 2012-03-01*
 
-A vulnerability in the customer support system of a Linode webhost was used to obtain administrator access to the servers of multiple Bitcoin companies.
 
-Linode offers budget virtual servers for hosting. Several Bitcoin companies where hosting their site at Linode.
 
-The attackers exploited a vulnerability in the Linode customer support interface. The root password was changed and the servers were restarted through web-based administrator panel. Then the attackers proceeded to logging in the servers and drained the hot wallets. 230k USD worth of Bitcoins were stolen.
+
+
+Assets stolen: **230k USD**
+
+
+A vulnerability in the customer support system of Linode, a hosting provider, was used to obtain administrator access to the servers of multiple Bitcoin services.
+
+Linode offers budget virtual servers for hosting. Several Bitcoin companies where hosting their site at Linode back in 2012.
+
+The attackers exploited a vulnerability in the Linode customer support interface. The web interface for server maintenance offered a root password reset through a single user mode reboot. The attackers used this feature to the servers and root passwords. Then the attackers proceeded to logging in the servers and drained the hot wallets of victim Bitcoin services. 230k USD worth of Bitcoins were stolen.
+
+Linode has not disclosed what kind of vulnerability it had.
 
 
 

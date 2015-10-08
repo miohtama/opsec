@@ -8,12 +8,23 @@ Sebastian
 
 *Date: 2013-10-23*
 
-A hacker group TeamBerserk claimed to have stolen more than 100k USD via SQL injeciton injection from Sebastian, a Californian based ISP.
 
-Through SQL injection, the attackers downloaded the list of ISP's customers, their usernames and passwords in clear text.
-The attackers exploited the fact the users recycle the same password and used usernames and passwords login GMail, PayPal, CitiBank, etc. The attack was demostrated on a video uploaded to MEGA (now defunct).
+Compromised user accoutns: **Not disclosed**
 
-Tom Dominico, marketing and business development manager for Sebastian, told “We are aware of the claims that our system has been compromised. We have checked with our service providers and their records indicate that no such attack has occurred. We take the security of our customer's personal information very seriously and are constantly working to keep them safe from online threats.”
+
+
+
+Assets stolen: **100k USD**
+
+
+A hacker group TeamBerserk claimed to have stolen more than 100k USD via SQL injection attack from Sebastian, a Californian based ISP.
+
+The attackers downloaded the list of ISP's customers, their email addresses and passwords in clear text, through a SQL injection attack.
+The attackers then exploited the fact the users recycle the same password through popular services like GMail, PayPal, CitiBank, etc. The attacker used the credentials to log in to these services and empty the accounts.
+
+The attack was demonstrated on a video uploaded to MEGA (now defunct).
+
+Tom Dominico, the marketing and business development manager for Sebastian, told “We are aware of the claims that our system has been compromised. We have checked with our service providers and their records indicate that no such attack has occurred. We take the security of our customer's personal information very seriously and are constantly working to keep them safe from online threats.”
 
 
 

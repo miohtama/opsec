@@ -8,12 +8,16 @@ Facebook
 
 *Date: 2011-04-11*
 
-Facebook status update functionality did not properly escape parameters.
 
-It was possible to post HTML content which was not properly sanitized which further loaded JavaScript. The loaded JavaScript then took actions on the behalf of the user.
-This allowed the attacker to create a worm which propagated through Facebook walls.
 
-The root cause was is that PHP's built-in `parse_url()` function does not properly check for malformed URLs. The issue still exists in PHP today and is only addresses in the documentation.
+
+
+
+Facebook status update functionality did not properly escape HTML.
+
+It was possible to post HTML content which was not properly sanitized. The malicious HTML snippet could load and execute JavaScript code in the wall comment. This allowed the attacker to create a worm which propagated through Facebook walls.
+
+The root cause is that PHP's built-in `parse_url()` function does not properly check for malformed URLs. The issue still exists in PHP today and is only addresses in the documentation.
 
 
 
