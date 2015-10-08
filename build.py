@@ -188,11 +188,15 @@ env.filters["normalize_id"] = normalize_id
 chapter_template = env.get_template('chapter.rst')
 chapter_ids = load(open("data/index.yaml", "rt"))
 chapters = get_chapters(chapter_ids)
-
+incidences = get_incidences_data(chapters)
+assets_lost = sum([friendly_number(incidence.get("assets-stolen")) for incidence in incidences.values()])
+compromised_accounts = sum([friendly_number(incidence.get("compromised-users")) for incidence in incidences.values()])
+incidence_count = len(incidences)
+security_assesment_point_count = sum([len(chapter["questions"]) for chapter in chapters.values()])
 
 # Generate index
 index_template = env.get_template('index.rst')
-doc = index_template.render(chapters=chapters)
+doc = index_template.render(chapters=chapters, incidence_count=incidence_count, security_assesment_point_count=security_assesment_point_count)
 with open("source/index.rst", "wt") as out:
     out.write(doc)
 
@@ -200,10 +204,7 @@ with open("source/index.rst", "wt") as out:
 
 # Generate incidences
 incidences_template = env.get_template('incidences.rst')
-incidences = get_incidences_data(chapters)
 
-assets_lost = sum([friendly_number(incidence.get("assets-stolen")) for incidence in incidences.values()])
-compromised_accounts = sum([friendly_number(incidence.get("compromised-users")) for incidence in incidences.values()])
 
 assets_lost /= 1000000;
 compromised_accounts /= 1000000;
