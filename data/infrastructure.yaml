@@ -7,30 +7,30 @@ meta:
 
   background: |
 
-    Infrastructure here covers everything what runs your Internet service. It is mostly territory for system administrators, who know how to tune servers and what keeps them ticking. Everything cannot be done in-house and one most likely needs to rely on third party services for some things and they should be accounted too.
-
+    Infrastructure here covers everything that runs your Internet service. It is mostly territory for system administrators, who know how to tune servers and who understand what keeps them ticking. Everything cannot be done in-house; one most likely needs to rely on third-party services for some things, and they should be accounted for, too.
 questions:
 
   Encrypted server data:
     question: Data is stored on encrypted partitions
+    spellchecked: 2015-10-10
     rationale: |
-      All data should be stored on encrypted partitions or files. In the case of unauthorized physical access or unauthorized reboot the data cannot be compromised. Encryption should also apply for backups and other offsite files.
+      All data should be stored on encrypted partitions or files. In the case of unauthorized physical access or unauthorized reboot, the data cannot be compromised. Encryption should also apply for backups and other offsite files.
 
-      Data on encrypted partitions protect against
+      Data on encrypted partitions protect against:
 
-      * Hosting provider attacks or social engineering attacks against the hosting provider where the root password is reset through single-user mode reboot
+      * Hosting provider attacks or social engineering attacks against the hosting provider in which the root password is reset through single-user mode reboot
 
-      * Law enforcement attacks where the servers are physically confiscated
+      * Law enforcement attacks in which the servers are physically confiscated
 
-      Disk encryption protects the data when the server is offline. All sensitive databases should reside on the partitions which are not accessible if the physical machine is compromised.
+      Disk encryption protects data when the server is offline. All sensitive databases should reside on the partitions which are not accessible if the physical machine is compromised.
 
-      If the server is rebooted without authorization the server should ask a passphrase to decrypt the data partitions. The easiest way to achieve this is to have separate partitions for boot volume and data volume. By having separate "high" and "low" states the server cannot enter to to the state with access to data unless an authorized person enters a passphrase through a terminal.
+      If the server is rebooted without authorization, the server should ask for a passphrase to decrypt the data partitions. The easiest way to achieve this is to have separate partitions for boot volume and data volume. By having separate "high" and "low" states, the server cannot enter into the state with access to data unless an authorized person enters a passphrase through a terminal.
 
-      All unaccounted reboots should be suspicious as when the server is offline the boot mechanism can be compromised to record the data decryption keys.
+      All unaccounted reboots should be suspicious, as when the server is offline the boot mechanism can be compromised to record the data decryption keys.
 
       .. note ::
 
-        Virtual machines, like ones provided by Amazon EC2 or Digital Ocean, are ultimately unsafe. It's possible to make a silent copy of a virtual machine and its disk, even if encrypted, without the authorization of the server owner. If the adversaries include law enforcement agencies and nation state actors it is recommended to use physical servers with chassis removal detection in a locked rack.
+        Virtual machines, like those provided by Amazon EC2 or Digital Ocean, are ultimately unsafe. It's possible to make a silent copy of a virtual machine and its disk, even if encrypted, without the authorization of the server owner. If the adversaries include law enforcement agencies and nation state actors, it is recommended to use physical servers with chassis removal detection in a locked rack.
 
     links:
       - How To Use DM-Crypt to Create an Encrypted Volume on an Ubuntu (Digital Ocean), https://www.digitalocean.com/community/tutorials/how-to-use-dm-crypt-to-create-an-encrypted-volume-on-an-ubuntu-vps
@@ -42,12 +42,13 @@ questions:
 
   Security proxy:
     question: Servers are behind security proxy
+    spellchecked: 2015-10-10
     rationale: |
-      Security proxy services act as a front end for the web traffic and mitigate attacks and accelerate the site traffic.
+      Security proxy services act as a front end for web traffic. They mitigate attacks and accelerate site traffic.
 
-      Using a security proxy service hides the IP of your servers from the attacker, thus making denial-of-service attacks more difficult to perform. The security proxies are provided by specialized companies who maintain geographically distributed servers and a lot of bandwidth to withstand attacks. The security proxies may utilize IP reputation system and force botnet IP addresses to go through additional CAPTCHAs before allowed to connect.
+      Using a security proxy service hides the IP of your servers from the attacker, thus making denial-of-service attacks more difficult to perform. Security proxies are provided by specialized companies that maintain geographically distributed servers and a lot of bandwidth to withstand attacks. The security proxies may utilize an IP reputation system and force botnet IP addresses to go through additional CAPTCHAs before being allowed to connect.
 
-      The security proxies also mitigate legal threats against your hosting provider. Without public knowledge who is hosting the servers it is more difficult to take legal action against the service.
+      Security proxies also mitigate legal threats against your hosting provider. Without public knowledge of who is hosting the servers, it is more difficult to take legal action against the service.
 
     links:
       - CloudFlare, http://cloudflare.com/
@@ -55,14 +56,15 @@ questions:
 
   Internal services not exposed:
     question: Internal servers, services and domains cannot be discovered through public records
+    spellchecked: 2015-10-10
     rationale: |
-      Internal services, testing and staging servers, should not be exposed to public. The DNS records should not contain services which are not for public consumption.
+      Internal services, testing and staging servers should not be exposed to the public. DNS records should not contain services which are not for public consumption.
 
-      Usually testing and staging servers have more people with privileged access. This increases the potential attack surface from compromised devices and accounts. If there is no specific reason why the server needs to be publicly accessible, it should be hidden behind VPN and not be visible in public DNS records. For internal services run a custom DNS server or use a non-guessable secondary domain name.
+      Usually testing and staging servers have more people with privileged access. This increases the potential attack surface from compromised devices and accounts. If there is no specific reason why the server needs to be publicly accessible, it should be hidden behind VPN and not be visible in public DNS records. For internal services, run a custom DNS server or use a non-guessable secondary domain name.
 
-      Firewall should be only a secondary layer protecting human errors. The services should be configure in a manner that they to do not bind to publicly exposed IPs, but only bind to localhost or internal IPs. If public IP addresses are needed the internal service should minimally have HTTP Basic Authentication password prompt, so that scanners and robots cannot find it.
+      A firewall should be only a secondary layer protecting human errors. The services should be configured in a manner such that they do not bind to publicly exposed IPs, but bind only to localhost or internal IPs. Furthermore, firewalling outgoing connections might be problematic, as many services today rely on third-party API service.
 
-      Within the server any installed software is run under non-admin (non-root) account. This limits the impact of attack if arbitrary code execution vulnerability in the native applications is exploited. The attacker cannot leave further backdoors in the system and is able to gain only limited intel.
+      Within the server, any installed software is run under a non-admin (non-root) account. This limits the impact of an attack if arbitrary code execution vulnerability in the native applications is exploited. The attacker cannot leave further backdoors in the system and is able to gain only limited intel.
 
     incidences:
       - patreon
@@ -74,18 +76,20 @@ questions:
 
   Traffic throttle:
     question: Throttle or ban IP addresses with excessive requests
+    spellchecked: 2015-10-10
     rationale: |
-        Prevent denial-of-service, brute force and scraping attacks against your service by blocking clients doing excessive traffic.
+      Prevent denial-of-service, brute force and scraping attacks against your service by blocking clients doing excessive traffic.
 
-        Normal users and clients should be able to do only four to twenty burst HTTP requests to the service. If there is more incoming traffic and the client is not whitelisted then the client is unlikely coming with good intentions.
+      Normal users and clients should be able to do only four to twenty burst HTTP requests to the service. If there is more incoming traffic and the client is not whitelisted, the client likely does not have good intentions.
 
-        A log monitoring software like fail2ban can do this with almost zero configuration for stock applications like SSH and common web servers.
+      A log monitoring software like fail2ban can do this with almost zero configuration for stock applications like SSH and common web servers.
 
-        Please note that IP blocking alone is not effective against adversaries with botnets and thousands of global IPs in their possession.
+      Please note that IP blocking alone is not effective against adversaries with botnets and thousands of global IPs in their possession.
 
-        .. note ::
+      .. note ::
 
-            Don't accidentally ban good known bots, like GoogleBot and Bing.
+        Don't accidentally ban good known bots like GoogleBot and Bing.
+
 
     answers: default
     applies: everyone
@@ -96,10 +100,13 @@ questions:
 
   Log server:
     question: Critical logs are mirrored to a log service
+    spellchecked: 2015-10-10
     rationale: |
+
       Critical log files should be mirrored to a destination where the logs can be only appended. The logs cannot be read back or manipulated.
 
-      The log service should have different access credentials from the administrators of normal systems. In the case the attacker gains access to the infrastructure, this prevents wiping or manipulating logs. This allows robust recovery and post-mortem from potential attacks.
+      The log service should have different access credentials from the administrators of normal systems. In case the attacker gains access to the infrastructure, this prevents the wiping or manipulating of logs. This allows robust recovery and post-mortem from potential attacks.
+
 
     applies: mle
     links:
@@ -107,13 +114,14 @@ questions:
       - Creating a Centralized Syslog Server (Linux Journal), http://www.linuxjournal.com/content/creating-centralized-syslog-server
 
   Secure server-to-server connections:
-    question: Server-to-serve connections are secure
+    question: Server-to-server connections are secure
+    spellchecked: 2015-10-10
     rationale: |
       Nation state actors and other capable adversaries are proven to be able to tap Internet backbone connections and data centers.
 
-      The server-to-server connections should be encrypted in a manner that anyone tapping physical cables cannot extract any information, like raw database traffic.
+      The server-to-server connections should be encrypted in a manner such that anyone tapping physical cables cannot extract any information, like raw database traffic.
 
-      The connection encryption methods VPN and SSH tunnels.
+      The connection encryption methods are VPN and SSH tunnels.
 
     links:
       - Room 641A (Wikipedia), https://en.wikipedia.org/wiki/Room_641A
@@ -122,13 +130,14 @@ questions:
 
   Intrusion detection:
     question: Intrusion detection alerts on unexpected server activity
+    spellchecked: 2015-10-10
     applies: mle
     rationale: |
-      Intrusion detection software monitors the servers and alerts in the case there is unexpected activity.
+      Intrusion detection software monitors servers and alerts in case there is unexpected activity.
 
-      Intrusion detection is monitoring measure to detect server compromises. Intrusion detection software monitors processes, file system, configuration files, passwords and user database. In the case there are changes not matching the predefined ruleset an alert is fired.
+      Intrusion detection is a monitoring measure that detects server compromises. Intrusion detection software monitors processes, file systems, configuration files, passwords and user databases. In case there are changes not matching the predefined ruleset, an alert is fired.
 
-      Intrusion detection cannot detect in-process compromises and tailored attack payloads. Thus, it efficiency against well-versed adversaries is questionable.
+      Intrusion detection cannot detect in-process compromises and tailored attack payloads. Thus, its efficiency against well-versed adversaries is questionable.
 
     links:
       - Tripwire, http://www.tripwire.com/
