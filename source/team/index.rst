@@ -13,7 +13,7 @@ Background
 
 Instead of trying to exploit the service directly, the adversaries may go after team members, managers and partners working on the project. The project should aim to protect team communications, devices and authorization keys so that they are unlikely to get compromised. This involves following basic IT security practices, cyberhygiene, key management and limiting the impact of potentially leaked data.
 
-The physical security, like door access keys or security cameras, is de-emphasized because these security aspects rarely reflect the reality of a mobile contemporary worker. Regardless of the broken physical security, the service should stay intact and uncompromised.
+Physical security, like door access keys and security cameras, is de-emphasized because these security aspects rarely reflect the reality of a mobile contemporary worker. Regardless of the broken physical security, the service should stay intact and uncompromised.
 
 
 
@@ -24,11 +24,11 @@ The physical security, like door access keys or security cameras, is de-emphasiz
 Basic security practices
 ==============================================================
 
-**The team members follow the basic IT security practices?** Yes / No
+**Team members follow the basic IT security practices?** Yes / No
 
-The team members are trained and aware of common cyber threads like phishing attacks and social engineering. They can identify basic attacks, like spearhead phishing emails, and do not fall victim to those.
+Team members are trained on and aware of common cyber threats like phishing attacks and social engineering. They can identify basic attacks, like spearhead phishing emails, and do not fall victim to them.
 
-The team members maintain cyber hygiene and do not use work devices to visit sites which might compromise the web browser. Software, both desktop and server software, is maintained in up-to-date versions where know vulnerabilities do not exist.
+Team members maintain cyberhygiene and do not use work devices to visit sites which might compromise the web browser. Software, both desktop and server, is maintained in up-to-date versions in which known vulnerabilities do not exist.
 
 
 
@@ -55,15 +55,15 @@ Dangerous file attachments
 
 File attachments in email and chat are one of the most common attack vectors.
 
-The rigged files may include
+Rigged files may include:
 
-* Office files (Microsoft Word, Microsoft Excel, related)
+* Office files (Microsoft Word, Microsoft Excel, and related)
 
 * Flash animations
 
 * PDF files
 
-The dangerous communication channels include anything where team members can be freely contacted. For example:
+Dangerous communication channels include anything on which team members can be freely contacted, including:
 
 * Email
 
@@ -71,7 +71,7 @@ The dangerous communication channels include anything where team members can be 
 
 * WhatsApp
 
-The desktop applications and web browser plugins opening this kind of content should be disabled. If disabling is not an option then the attachments in email or outside team internal communication tool should be opened securely and never using the productivity applications themselves. The secure open methods includes opening the file in a web based viewer, web email preview or otherwise sandboxed tool. Furthermore a safe version of desktop productivity suite should be used which is preferably up-to-date open source tool.
+The desktop applications and web browser plugins opening this kind of content should be disabled. If disabling is not an option, the attachments in an email or outside team internal communication tool should be opened securely and never using the productivity applications themselves. Secure open methods include opening the file in a web-based viewer, web email preview or otherwise sandboxed tool. Furthermore, a safe version of a desktop productivity suite, which is preferably an up-to-date open source tool, should be used.
 
 
 
@@ -109,11 +109,11 @@ Links:
 Password manager
 ==============================================================
 
-**The team members use password manager?** Yes / No
+**Team members use a password manager?** Yes / No
 
-All team members use a password manager for their passwords. Randomized passwords using a password manager is to only cognitively sane way to manage a lot of sensitive and strong passwords. Without randomized passwords, one compromised password may lead to loss of other passwords due to password reuse or password pattern reuse.
+All team members use a password manager for their passwords. Randomization using a password manager is the only cognitively safe way to manage a lot of sensitive and strong passwords. Without randomized passwords, one compromised password may lead to the loss of other passwords due to password reuse or password pattern reuse.
 
-Whether one can trust third party cloud-based service to store password is a subject to discussion depending on the sensitivity of the project.
+Whether one can trust a third-party cloud-based service to store passwords is subject to discussion depending on the sensitivity of the project.
 
 
 
@@ -149,11 +149,11 @@ Links:
 Third party devices
 ==============================================================
 
-**The team members do not use third party devices for logging in?** Yes / No
+**Team members do not use third-party devices for logging in?** Yes / No
 
-If a device comes from an non-trusted party, it may contain keyloggers and other malware to record the user actions. Such devices include internet kiosks, school and library computers and other free terminals.
+If a device comes from a non-trusted party, it may contain keyloggers and other malware to record the user’s actions. Such devices include Internet kiosks, school and library computers, and other free terminals.
 
-The team members use only assigned devices for the work. Furthermore the devices should be sourced from a reputable vendor.
+Team members use only assigned devices for their work. Furthermore, the devices should be sourced from a reputable vendor.
 
 
 
@@ -176,11 +176,11 @@ Related incidences:
 Encrypted computers
 ==============================================================
 
-**The work computers have disk encryption?** Yes / No
+**Work computers have disk encryption?** Yes / No
 
-The permanent storage, SSD or hard disk, on the team member computers is fully encrypted.
+The permanent storage, SSD or hard disk on team members’ computers is fully encrypted.
 
-All desktop operating systems have disk encryption technology available: FileVault (OSX), dm-crypt (Linux) or BitLocker (Windows). The usage of disk encryption implies password authentication on computer power on and wake up, so that powered on devices cannot be accessed.
+All desktop operating systems have disk encryption technology available: FileVault (OSX), dm-crypt (Linux) or BitLocker (Windows). The usage of disk encryption implies password authentication upon computer power-on and wake-up so that powered-on devices cannot be accessed.
 
 A lost device, when encrypted, cannot lead to any kind of compromise.
 
@@ -220,20 +220,20 @@ Links:
 Encrypted mobile devices
 ==============================================================
 
-**The team members have disk encryption on their phones and tablets?** Yes / No
+**Team members have disk encryption on their phones and tablets?** Yes / No
 
 
-A lost device, when encrypted, cannot lead to any kind of compromises. Even if the device were not to contain sensitive data per se it could contain active email inboxes and team chats leading to further account compromise and phishing.
+A lost device, when encrypted, cannot lead to any kind of compromise. Even if the device were not to contain sensitive data per se, it could contain active email inboxes and team chats, leading to further account compromise and phishing.
 
-The device should be protected by password and not easily guessable pattern or easily foolable fingerprint scanner.
-
-.. note ::
-
-  Having any kind of online recovery option for a forgotten device password is deemed unsafe. In the case of a forgotten password the device should be wiped and factory reseted.
+The device should be protected by password and a not-easily guessable pattern or easily foolable fingerprint scanner.
 
 .. note ::
 
-  Remote wiping tools give almost zero protection in the case of a lost device. It's trivial to take a mobile device offline and extract data from a powered down device.
+  Having any kind of online recovery option for a forgotten device password is unsafe. In the case of a forgotten password, the device should be wiped and factory reset.
+
+.. note ::
+
+  Remote wiping tools give almost zero protection in the case of a lost device. It's trivial to take a mobile device offline and extract data from a powered-down device.
 
 
 
@@ -272,11 +272,11 @@ Minimized email usage
 
 **Email is not used for internal communications?** 
 
-Email as media is insecure. Email travels plain-text through Internet. Even if the message content itself is encrypted the metadata is still readable.
+Email as media is insecure. Email travels plain-text through the Internet. Even if the message content itself is encrypted, the metadata is still readable.
 
 Instead of email, closed tools and services should be used for team internal communications.
 
-For highly sensitive projects the communication should be contained in an in-house server.
+For highly sensitive projects, the communication should be contained in an in-house server.
 
 
 
@@ -308,11 +308,11 @@ Links:
 Two-factor authentication on email
 ==============================================================
 
-**The team member work and personal email accounts require two-factor authentication to log in?** Yes / No
+**Team members’ work and personal email accounts require two-factor authentication to log in.?** Yes / No
 
-Inboxes contain sensitive information. Often email acts as the key to third party services and infrastructure, as email is used for logging with a forgotten password option. Thus, getting into the inbox further compromises other services.
+Inboxes contain sensitive information. Often email acts as the key to third-party services and infrastructure, as email is used for logging in with a forgotten password option. Thus, getting into the inbox further compromises other services.
 
-Email is an attractive target to hack in as email is either public or easily guessable. Even if the email account is protected by strong password, flaws may exist in the password reset process, e.g. by intercepting the voice mail of the target user. Two-factor authentication provides additional protection against such attacks.
+Email is an attractive target to hack, as email is either public or easily guessable. Even if the email account is protected by a strong password, flaws may exist in the password reset process, e.g., by intercepting the voice mail of the target user. Two-factor authentication provides additional protection against such attacks.
 
 
 
@@ -348,11 +348,12 @@ Links:
 Two-factor authentication on critical services
 ==============================================================
 
-**Infrastructure services requires two-factor authentication?** Yes / No
+**Infrastructure services require two-factor authentication?** Yes / No
 
-If infrastructure services provide a two-factor authentication this option is used.
 
-Internet services often rely on third party services for infrastructure. The infrastructure services could include
+If infrastructure services provide a two-factor authentication, this option is used.
+
+Internet services often rely on third-party services for infrastructure. The infrastructure services could include:
 
 * Server hosting
 
@@ -366,7 +367,7 @@ Internet services often rely on third party services for infrastructure. The inf
 
 * Proxy and CDN services, etc.
 
-Two-factor authentication provides additional layer of security against cases where the passwords of the team members get compromised. It also gives protection against social engineering and password reset attacks which the attacker may try against the infrastructure service accounts.
+Two-factor authentication provides an additional layer of security against cases in which passwords of team members get compromised. It also gives protection against social engineering and password reset attacks which the attacker may try against the infrastructure service accounts.
 
 
 
@@ -398,13 +399,13 @@ Links:
 Two-factor authentication for admins
 ==============================================================
 
-**The website administrators use two-factor authentication?** Yes / No
+**Website administrators use two-factor authentication?** Yes / No
 
-The team members, support personel and other people with the administrative access to the website use two-factor authentication.
+Team members, support personnel and other people with administrative access to the website use two-factor authentication.
 
-Internet services often provide an administrative site or access where the site managers perform in-house updates, edits and other support tasks. This kind of administrative access should be available only through two-factor authentication.
+Internet services often provide an administrative site or access in which the site managers perform in-house updates, edits and other support tasks. This kind of administrative access should be available only through two-factor authentication.
 
-If the attacker compromises a password of a team member they should not be able to get in to the administrative site. Furthermore the administrative access can be limited to VPN or other well-known (office) IPs.
+If the attacker compromises a password of a team member, the attacker should not be able to get into the administrative site. Furthermore, administrative access can be limited to VPN or other well-known (office) IPs.
 
 See also :ref:`two-factor-authentication`.
 
@@ -433,15 +434,15 @@ Passphrase on server login keys
 
 **The terminal access to the server requires passphrase protected key?** Yes / No
 
-Logging to the server containing private data is only allowed with the passphrase protected key files.
+Logging in to the server containing private data is allowed only with passphrase-protected key files.
 
-The usual logging method is by SSH secure shell connection, but if alternative methods to access the server exist the key files should be used there too.
+The usual logging method is by SSH secure shell connection, but if alternative methods to access the server exist, the key files should be used there, too.
 
-Using key files instead of passwords protects against brute force attacks, simple keylogging attacks, weak password attacks and such. Furthermore the keys must be passphrase protected so in the the case a key file itself leaks it is useless for the attacker.
+Using key files instead of passwords protects against brute force attacks, simple keylogging attacks, weak password attacks and such. Furthermore, the keys must be passphrase protected so that in case a key file itself leaks, it is useless to the attacker.
 
 .. note ::
 
-  If the hosting provider has console, terminal or root password reset option on the server a special attention should be paid on this. It is better either to disable this feature or make sure it is behind two-factor authentication and cannot be performed by the hosting provider personel.
+  If the hosting provider has a console, terminal or root password reset option on the server, special attention should be paid to this. It is better to either disable this feature or to make sure it is behind two-factor authentication and cannot be performed by hosting provider personnel.
 
 
 
@@ -477,11 +478,11 @@ Links:
 Two-factor authentication on server login
 ==============================================================
 
-**The terminal access to the server requires two-factor authentication?** Yes / No
+**Terminal access to the server requires two-factor authentication?** Yes / No
 
-Logging to the server containing private data requires two-factor authentication.
+Logging in to the server containing private data requires two-factor authentication.
 
-The server login is further restricted with two-factor authentication, so that even in the case the computer of a server administrator is hijacked by malware, this computer cannot login to the server without user interaction and two-factor token from a separate device. This makes it near impossible to hijack the secure connection to the server unnoticed.
+Server login is further restricted with two-factor authentication, so that even in case the computer of a server administrator is hijacked by malware, this computer cannot log in to the server without user interaction and a two-factor token from a separate device. This makes it nearly impossible to hijack the secure connection to the server unnoticed.
 
 See also :ref:`two-factor-authentication`.
 
@@ -521,9 +522,9 @@ Audited server login keys
 
 **A real-time method of maintaining and revoking keys across all servers?** Yes / No
 
-In any point of time, the administrators of the project can revoke any key used by the team. Full audit logs of key provision and usage is available and stored separately.
+In any point of time, the administrators of the project can revoke any key used by the team. Full audit logs of key provision andAt any point in time, administrators of the project can revoke any key used by the team. Full audit logs of key provision and usage are available and stored separately.
 
-This allows quickly address the issues when a compromise is suspected.
+This allows for the quick address of issues when a compromise is suspected.
 
 
 
@@ -557,10 +558,11 @@ Software installation from safe sources
 
 **Software is installed from known good sources?** Yes / No
 
-Pirated software is riddled with malware. The team members installs software coming from legit sources only, reducing the risk the software comes with malware.
+
+Pirated software is riddled with malware. Team members install software coming from legit sources only, reducing the risk that the software comes with malware.
 
 
-The safe software channels include
+Safe software channels include:
 
 * App stores by operating system vendors
 
@@ -568,9 +570,9 @@ The safe software channels include
 
 * Programming community package repositories
 
-Basic security understanding and cyberhygiene should be still applied when installing from the safe channels. E.g. Google Play is known to host several rigged applications.
+Basic security understanding and cyberhygiene should still be applied when installing from safe channels (e.g., Google Play is known to host several rigged applications).
 
-Even if the malware is not targetting the project itself, the malware authors inspect the infected computers for high value targets and may open an attack if they notice such a successful infection.
+Even if malware is not targeting the project itself, malware authors inspect infected computers for high-value targets and may open an attack if they notice such a successful infection.
 
 
 
@@ -610,9 +612,9 @@ Limited sensitive data access
 
 **Sensitive data access by administrators is limited?** Yes / No / Not applicable
 
-Administrative access often implies being able to view user private data.
+Administrative access often implies the ability to view users’ private data.
 
-When the team members access private data, the access is limited in a way that the sensitive information is not exposed unless necessary for performing the work. For example, social security numbers are not viewable among normal data, unless the administrator chooses to explicitly show it.
+When team members access private data, the access is limited in a way such that sensitive information is not exposed unless necessary for performing work. For example, social security numbers are not viewable among normal data unless the administrator chooses to explicitly show them.
 
 See also: ref:`Authorization and permission framework`.
 
@@ -643,13 +645,13 @@ Logged sensitive data access
 
 **Sensitive data access by administrators is logged?** Yes / No
 
-All actions on administrators accessing and manipulating sensitive data are logged.
+All actions related to administrators’ accessing and manipulating sensitive data are logged. This includes direct database connections, API services and other internal access methods.
 
-In the case of privacy breach claims these logs can be used to reconstruct the scenario who have been accessing or manipulating the data.
+In case of privacy breach claims, these logs can be used to reconstruct the scenario regarding who has been accessing or manipulating the data. Sensitive data access logs protect against insider threats. Knowing that one cannot get away without being caught discourages malicious attempts.
 
-This can be implementd e.g. by storing the full HTTP access logs, including POST parameters, from all logged in administrators.
+Access logs should be detailed as possible, including timestamp and details of performed actions. Access logging can be implemented, for example, by storing the full HTTP request logs, including POST parameters and body, from all logged-in administrators.
 
-See also :ref:`log-server`.
+See also :ref:`log-server` and :ref:`user-audit-logs`.
 
 
 
@@ -672,15 +674,15 @@ Related incidences:
 Data scrubbing
 ==============================================================
 
-**Data dumps are cleaned from sensitive information?** Yes / No
+**Data dumps are cleaned of sensitive information?** Yes / No
 
-Instead of working with full production datasets, there exist a repeatable process of making a cleaned dataset with sensitive information removed from the data.
+Instead of working with full production datasets, there exists a repeatable process of making a cleaned dataset with sensitive information removed from the data.
 
-The data scrubbing process e.g. can reset
+The data scrubbing process can reset:
 
 * User email addresses
 
-* Phone numbers, physical addresses and social security number
+* Phone numbers, physical addresses and social security numbers
 
 * Password hashes
 
@@ -688,7 +690,7 @@ The data scrubbing process e.g. can reset
 
 The cleaned dataset is then given to the team members who need to analyse, test and develop against the data.
 
-The cleaning process limits the impact of potential data leak in the cases where the data dump accidentally ends up to the third party. Furthermore the cleaned data ensures that messages from the testing environment cannot reach the actual users.
+The cleaning process limits the impact of potential data leak in cases in which the data dump accidentally ends up at the third party. Furthermore, the cleaned data ensures that messages from the testing environment cannot reach actual users.
 
 
 

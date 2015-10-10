@@ -3,26 +3,28 @@
 meta:
   title: Digital currencies and securities
   description:
-    This chapter discusses about the security aspects of storing and handling digital currencies and securities, like Bitcoin.
+    This chapter discusses the security aspects of storing and handling digital currencies and securities like Bitcoin.
 
   background: |
 
-    Digital currency services are especially attractive cybercrime targets. The digital currency transactions are anonymous, non-reversible and non-traceable. This makes stealing, laundering and liquidating digital currencies very easy for criminals. The non-reversable transaction mechanism complicates attacks, as often the services neither can chargeback the lost assets nor reimburse the customer losses.
+    Digital currency services are especially attractive cybercrime targets. Digital currency transactions are anonymous, non-reversible and non-traceable. This makes stealing, laundering and liquidating digital currencies very easy for criminals. The non-reversable transaction mechanism complicates attacks, as often the services can neither chargeback lost assets nor reimburse customer losses.
 
-    Traditional credit card, debit card and wire transfer backed transaction mechanisms are more merciful. The transactions can be reversed making it harder to liquidate the stolen assets. Anti money laundering regulation ensures it is not possible to move assets without leaving a trace for investigation. Furthermore the institutions issuing cards and bank accounts have mechanisms to address fraud, co-operate with police and insure funds. For example, the compromise of an e-commerce site posses relative little risk to its owners and customer unless the site was maintaining balance in digital currencies.
+    Traditional credit card, debit card and wire transfer-backed transaction mechanisms are more merciful. Such transactions can be reversed, making it harder to liquidate stolen assets. Anti-money-laundering regulation ensures that it is not possible to move assets without leaving a trace for investigation. Furthermore, the institutions issuing cards and bank accounts have mechanisms to address fraud, co-operate with police and insure funds. For example, the compromise of an e-commerce site poses relatively little risk to its owners and customers unless the site was maintaining a balance in digital currencies.
 
-    Thus, the services dealing with digital currencies and securities should approach security matters with tremendous seriousness. The history shows that companies possessing millions of dollars funding to address the security still fail in basic execution (:ref:`bitstamp`, :ref:`bitpay`).
+    Thus, services dealing with digital currencies and securities should approach security matters with tremendous seriousness. History shows that companies possessing millions of dollars of funding to address security still fail in basic executio
+     (:ref:`bitstamp`, :ref:`bitpay`).
 
 questions:
 
   Cold wallet:
     question: Cold wallet maintains most assets offline
+    spellchecked: 2015-10-10
     rationale: |
-      Cold wallet is a system where private keys for digital assets are stored on a computer not connected to Internet. To move the assets, somebody has to go to this computer physically and make the transaction.
+      Cold wallet is a system in which private keys for digital assets are stored on a computer, not connected to the Internet. To move the assets, somebody has to go to the computer physically and make the transaction.
 
-      The opposite of the cold wallet is hot wallet, which is running on the continuously running on the server and accessible online. The hot wallet assets are instantly liquid and most customer facing transactions happen in hot wallet. When the hot wallet gets "too full", the assets are moved to the cold wallet to make them safe. On the other hand, when hot wallet is drying up due to customer withdraws, the hot wallet must be topped up from the cold wallet.
+      The opposite of cold wallet is hot wallet, which is continuously running on the server and accessible online. Hot wallet assets are instantly liquid; most customer facing transactions happen in the hot wallet. When the hot wallet gets "too full," assets are moved to the cold wallet to make them safe. On the other hand, when the hot wallet is drying up due to customer withdraws, it must be topped up from the cold wallet.
 
-      In the case of a service compromise, the attacker can only drain hot wallet, severely limiting the amount of potentially stolen funds.
+      In case of a service compromise, the attacker can only drain the hot wallet, severely limiting the amount of potentially stolen funds.
 
     answers: default
     applies: everyone
@@ -35,17 +37,18 @@ questions:
 
   Race condition prevention:
     question: A systematic development method prevents race conditions
+    spellchecked: 2015-10-10
     answers: default
     rationale: |
-      A systematic development method is applied to all financial transactions, so that race conditions cannot compromise the transaction integrity. Otherwise exploiting the race condition allows the attacker to manipulate account balances.
+      A systematic development method is applied to all financial transactions so that race conditions cannot compromise transaction integrity. Otherwise exploiting the race condition allows the attacker to manipulate account balances.
 
-      For all financial transactions
+      For all financial transactions:
 
       * Optimistic database-level transaction isolation is applied or...
 
-      * Pessimistic application level locks are applied
+      * Pessimistic application level locks are applied.
 
-      The software should be developed in such a manner that there is only one function to make transfers out from the system or within the system. This function is has a locking mechanism that simultaneous transactions from the same account cannot compromise the atomicity, leading to double top up, double withdraw or account overdrawn.
+      The software should be developed in such a manner that there is only one function to make transfers out from the system or within the system. This function has a locking mechanism such that simultaneous transactions from the same account cannot compromise the atomicity, leading to double top up, double withdraw or account overdrawn.
 
     incidences:
       - cryptoine
@@ -61,15 +64,15 @@ questions:
   Transaction verification:
     question: Withdraws are verified by heuristics
     rationale: |
-      Withdraws are verified by heuristics, so that unusual outgoing transactions need another round of authorization from the customer or human interaction from the support team.
+      Withdraws are verified by heuristics so that unusual outgoing transactions need another round of authorization from the customer or human interaction from the support team.
 
-      Outgoing transaction verification provides additional layer of protection against asset theft:
+      Outgoing transaction verification provides an additional layer of protection against asset theft:
 
-      * Customer withdraws are verified. If the parameters of the transaction do not match the prior customer activity and a malicious withdraw is suspected, the customer must to reauthorize the transaction (see see :ref:`third-factor-authentication`).
+      * Customer withdraws are verified. If the parameters of the transaction do not match prior customer activity and a malicious withdraw is suspected, the customer must reauthorize the transaction (see :ref:`third-factor-authentication`).
 
       * How wallet drain attacks are prevented, as the heuristics would detect such and stop them.
 
-      The transaction verification is usually implemented as multi-signature service with a third party. A third party holds one key required to make the transaction. When a transaction is created, the third party service checks the transaction parameters against known good  rules. If the transaction looks ok the third party service signs their part of the transaction. Because the third party is independent and specialized in transaction verification process, it is unlikely that the attacker would manage to compromise them too.
+      Transaction verification is usually implemented as a multi-signature service with a third party. A third party holds one key required to make the transaction. When a transaction is created, the third-party service checks the transaction parameters against known good rules. If the transaction looks okay, the third-party service signs its part of the transaction. Because the third party is independent and specialized in the transaction verification process, it is unlikely that the attacker would manage to compromise it, too.
 
     links:
       - BitGo, https://www.bitgo.com/
@@ -79,7 +82,8 @@ questions:
       - linode
 
   Multisignature for major withdraws:
-    question: Minimum of two parties are required for a large withdraw
+    question: A minimum of two parties are required for a large withdraw
+    spellchecked: 2015-10-10
     applies: mle
     answers: default
     rationale: |
@@ -95,24 +99,25 @@ questions:
 
   Proof of solvency:
     question: The service is able to perform Proof-of-solvency
+    spellchecked: 2015-10-10
     applies: mle
     answers: default
     rationale: |
       Proof of solvency (PoS) is a scheme designed to let users verify the solvency of online websites which accept Bitcoin deposits in a way that doesn't compromise the privacy of users.
 
-      Proof of solvency is used as a public proof to verify the service does not run as fractional reserve e.g. some of the customer assets could not be withdrawn on a given moment. It is mostly used by Bitcoin exchanges to prove they still have the assets the customers have deposited.
+      Proof of solvency is used as a public proof to verify that the service does not run as a fractional reserve, e.g., some of the customer assets could not be withdrawn on a given moment. It is mostly used by Bitcoin exchanges to prove that they still have the assets that the customers have deposited.
 
-      The current proof of solvency schemes usually involves
+      The current proof of solvency schemes usually involves:
 
       * A (merkle tree) hashing scheme
 
-      * A third party auditor
+      * A third-party auditor
 
       * A public statement
 
-      The third party verifies the exchange was control in all the given Bitcoin addresses and they have more unspent Bitcoins than claimed total customer assets.
+      The third party verifies that the exchange was controlled in all given Bitcoin addresses and that they have more unspent Bitcoins than claimed total customer assets.
 
-      The service should be able to perform proof of solvency audit, at least internally.
+      The service should be able to perform a proof of solvency audit, at least internally.
 
     incidences:
       - mtgox

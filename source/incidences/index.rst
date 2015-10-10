@@ -48,7 +48,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../user/index.html#two-factor-authentication">The service users are encouraged to use two-factor authentication</a>
+                                <a href="../user/index.html#two-factor-authentication">Service users are encouraged to use two-factor authentication</a>
                             </p>
                         
                             <p>
@@ -80,7 +80,7 @@ Fired employees: **0**
                             </p>
                         
                             <p>
-                                <a href="../team/index.html#data-scrubbing">Data dumps are cleaned from sensitive information</a>
+                                <a href="../team/index.html#data-scrubbing">Data dumps are cleaned of sensitive information</a>
                             </p>
                         
                     </td>
@@ -96,7 +96,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../team/index.html#third-party-devices">The team members do not use third party devices for logging in</a>
+                                <a href="../team/index.html#third-party-devices">Team members do not use third-party devices for logging in</a>
                             </p>
                         
                     </td>
@@ -112,7 +112,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../team/index.html#two-factor-authentication-on-critical-services">Infrastructure services requires two-factor authentication</a>
+                                <a href="../team/index.html#two-factor-authentication-on-critical-services">Infrastructure services require two-factor authentication</a>
                             </p>
                         
                             <p>
@@ -132,7 +132,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../team/index.html#basic-security-practices">The team members follow the basic IT security practices</a>
+                                <a href="../team/index.html#basic-security-practices">Team members follow the basic IT security practices</a>
                             </p>
                         
                             <p>
@@ -140,11 +140,11 @@ Fired employees: **0**
                             </p>
                         
                             <p>
-                                <a href="../team/index.html#two-factor-authentication-on-email">The team member work and personal email accounts require two-factor authentication to log in</a>
+                                <a href="../team/index.html#two-factor-authentication-on-email">Team members’ work and personal email accounts require two-factor authentication to log in.</a>
                             </p>
                         
                             <p>
-                                <a href="../assets/index.html#multisignature-for-major-withdraws">Minimum of two parties are required for a large withdraw</a>
+                                <a href="../assets/index.html#multisignature-for-major-withdraws">A minimum of two parties are required for a large withdraw</a>
                             </p>
                         
                     </td>
@@ -164,7 +164,7 @@ Fired employees: **0**
                             </p>
                         
                             <p>
-                                <a href="../team/index.html#two-factor-authentication-on-server-login">The terminal access to the server requires two-factor authentication</a>
+                                <a href="../team/index.html#two-factor-authentication-on-server-login">Terminal access to the server requires two-factor authentication</a>
                             </p>
                         
                             <p>
@@ -188,7 +188,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../user/index.html#third-factor-authentication">The login process goes through additional check in abnormal circumstances</a>
+                                <a href="../user/index.html#third-factor-authentication">The login process goes through an additional check in abnormal circumstances</a>
                             </p>
                         
                             <p>
@@ -212,7 +212,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../team/index.html#two-factor-authentication-on-email">The team member work and personal email accounts require two-factor authentication to log in</a>
+                                <a href="../team/index.html#two-factor-authentication-on-email">Team members’ work and personal email accounts require two-factor authentication to log in.</a>
                             </p>
                         
                     </td>
@@ -268,7 +268,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../web/index.html#cross-site-scripting-xss">The software is written in a manner that there is no possibility of cross-site scripting attack</a>
+                                <a href="../web/index.html#cross-site-scripting-xss">Software is written in a manner such that there is no possibility of a cross-site scripting attack</a>
                             </p>
                         
                     </td>
@@ -284,7 +284,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../team/index.html#password-manager">The team members use password manager</a>
+                                <a href="../team/index.html#password-manager">Team members use a password manager</a>
                             </p>
                         
                             <p>
@@ -292,7 +292,7 @@ Fired employees: **0**
                             </p>
                         
                             <p>
-                                <a href="../web/index.html#password-storage-best-practices">The user passwords and two-factor seeds are hashed and salted against bruteforcing</a>
+                                <a href="../web/index.html#password-storage-best-practices">User passwords and two-factor seeds are hashed and salted against bruteforcing</a>
                             </p>
                         
                     </td>
@@ -324,15 +324,15 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../team/index.html#password-manager">The team members use password manager</a>
+                                <a href="../team/index.html#password-manager">Team members use a password manager</a>
                             </p>
                         
                             <p>
-                                <a href="../web/index.html#password-storage-best-practices">The user passwords and two-factor seeds are hashed and salted against bruteforcing</a>
+                                <a href="../web/index.html#password-storage-best-practices">User passwords and two-factor seeds are hashed and salted against bruteforcing</a>
                             </p>
                         
                             <p>
-                                <a href="../user/index.html#third-factor-authentication">The login process goes through additional check in abnormal circumstances</a>
+                                <a href="../user/index.html#third-factor-authentication">The login process goes through an additional check in abnormal circumstances</a>
                             </p>
                         
                     </td>
@@ -352,7 +352,7 @@ Fired employees: **0**
                             </p>
                         
                             <p>
-                                <a href="../team/index.html#two-factor-authentication-on-server-login">The terminal access to the server requires two-factor authentication</a>
+                                <a href="../team/index.html#two-factor-authentication-on-server-login">Terminal access to the server requires two-factor authentication</a>
                             </p>
                         
                             <p>
@@ -388,7 +388,7 @@ Fired employees: **0**
                             </p>
                         
                             <p>
-                                <a href="../web/index.html#https-tls-only">The service is HTTPS-only with security HTTP headers</a>
+                                <a href="../web/index.html#https-tls-only">Service is HTTPS-only with security HTTP headers</a>
                             </p>
                         
                     </td>
@@ -420,7 +420,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../team/index.html#encrypted-computers">The work computers have disk encryption</a>
+                                <a href="../team/index.html#encrypted-computers">Work computers have disk encryption</a>
                             </p>
                         
                     </td>
@@ -440,11 +440,11 @@ Fired employees: **0**
                             </p>
                         
                             <p>
-                                <a href="../team/index.html#data-scrubbing">Data dumps are cleaned from sensitive information</a>
+                                <a href="../team/index.html#data-scrubbing">Data dumps are cleaned of sensitive information</a>
                             </p>
                         
                             <p>
-                                <a href="../web/index.html#non-public-administration-site">The administration site is not accessible or known to public</a>
+                                <a href="../web/index.html#non-public-administration-site">The administration site is not accessible or known to the public</a>
                             </p>
                         
                             <p>
@@ -484,7 +484,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../user/index.html#two-factor-authentication">The service users are encouraged to use two-factor authentication</a>
+                                <a href="../user/index.html#two-factor-authentication">Service users are encouraged to use two-factor authentication</a>
                             </p>
                         
                     </td>
@@ -500,11 +500,11 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../web/index.html#database-injection">The software uses a framework for database queries</a>
+                                <a href="../web/index.html#database-injection">Software uses a framework for database queries</a>
                             </p>
                         
                             <p>
-                                <a href="../web/index.html#password-storage-best-practices">The user passwords and two-factor seeds are hashed and salted against bruteforcing</a>
+                                <a href="../web/index.html#password-storage-best-practices">User passwords and two-factor seeds are hashed and salted against bruteforcing</a>
                             </p>
                         
                     </td>
@@ -520,11 +520,11 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../web/index.html#password-storage-best-practices">The user passwords and two-factor seeds are hashed and salted against bruteforcing</a>
+                                <a href="../web/index.html#password-storage-best-practices">User passwords and two-factor seeds are hashed and salted against bruteforcing</a>
                             </p>
                         
                             <p>
-                                <a href="../user/index.html#two-factor-authentication">The service users are encouraged to use two-factor authentication</a>
+                                <a href="../user/index.html#two-factor-authentication">Service users are encouraged to use two-factor authentication</a>
                             </p>
                         
                             <p>
@@ -544,11 +544,11 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../web/index.html#https-tls-only">The service is HTTPS-only with security HTTP headers</a>
+                                <a href="../web/index.html#https-tls-only">Service is HTTPS-only with security HTTP headers</a>
                             </p>
                         
                             <p>
-                                <a href="../web/index.html#cross-site-request-forgery-csrf">The software is written in a manner that it doesn't accept cross-site requests</a>
+                                <a href="../web/index.html#cross-site-request-forgery-csrf">Software is written in a manner that it doesn't accept cross-site requests</a>
                             </p>
                         
                     </td>
@@ -600,7 +600,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../user/index.html#user-audit-logs">The service retains audit logs of sensitive user actions</a>
+                                <a href="../user/index.html#user-audit-logs">Service retains audit logs of sensitive user actions</a>
                             </p>
                         
                     </td>
@@ -616,7 +616,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../web/index.html#https-tls-only">The service is HTTPS-only with security HTTP headers</a>
+                                <a href="../web/index.html#https-tls-only">Service is HTTPS-only with security HTTP headers</a>
                             </p>
                         
                     </td>
@@ -632,7 +632,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../web/index.html#cross-site-request-forgery-csrf">The software is written in a manner that it doesn't accept cross-site requests</a>
+                                <a href="../web/index.html#cross-site-request-forgery-csrf">Software is written in a manner that it doesn't accept cross-site requests</a>
                             </p>
                         
                     </td>
@@ -648,7 +648,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../web/index.html#non-public-administration-site">The administration site is not accessible or known to public</a>
+                                <a href="../web/index.html#non-public-administration-site">The administration site is not accessible or known to the public</a>
                             </p>
                         
                     </td>
