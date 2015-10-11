@@ -1,13 +1,13 @@
 About the author
 ================
 
-Mikko Ohtamaa has been a web developer and Linux sysadmin since mid-nineties. His primary development technologies are Python and JavaScript, but he has also written a great share of PHP, Java, C and assembler.
+Mikko Ohtamaa has passionately been working in technology startups and mobile companies since mid nineties. Before a graduation in MSc. in Industrial Engineering and Management from University of Oulu, Mikko worked for mobile web pioneers such as Nokia, iobox and MyOrigo. Later Mikko pursued enterprenerial career first in open source consultancy and health care and then as the CTO of LocalBitcoins.
 
-Mikko's professional experience includes the architecture of international medical systems where data security and privacy played a key role. When working as the CTO of LocalBitcoins, a large global Bitcoin exchange, he was in the receiving end of phishing, denial or service, black hat hacking and various other attacks.
+Mikko's professional past includes crafting architecture for international medical systems where privacy and proper authorization played a key role. When working as the CTO of LocalBitcoins, a global Bitcoin exchange, he has protecting the financial assets of thousands of customers at the receiving end of phishing, denial or service, black hat and other attacks. This responsibility where a security compromise might mean the death of business and harm for millions of people resulted to the begin of this guide. Mikko wants to educate about his business approach to security with responsibility and practicality: always know what you are doing, why you are doing and how to minimize the risks.
 
-Mikko has been actively following the web security scene during his career. He writes blog `opensourcehacker.com <https://opensourcehacker.com>`_ where web development focused security-themed articles appear now and then.
+Mikko has wrote HTML since 1995. His core programming languages includes Python and JavaScript. He has been working with all major web development ecosystems, mobile ecosystems and some embedded systems. You can follow his blog `opensourcehacker.com <https://opensourcehacker.com>`_ where web development and security-themed articles appear now and then.
 
-Further information
+More information
 
 * `Blog <https://opensourcehacker.com>`_
 

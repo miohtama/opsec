@@ -2,44 +2,40 @@
 Background
 ==========
 
-Introduction
-============
+Introduction: Welcome to the Internet
+=====================================
 
-This Operations Security guide provides information for designing secure Internet services and a tool to do as security assessments.
+Internet is global, in both and good and bad. Intenet allows us to connect to anybody in a blink of an eye. Internet allows us to have all the information in the world in our fingertips, no matter who wrote it, where and when. The advancements in communications have brought the unimaginable pace of development and research.
 
-The landscape of the Internet security has greatly changed during 2010s. The cyberthriller worst case threat scenarios are no longer fiction. Foreign malicious actors are state sponsored - in the case of an incident there is no remedy through legal means. The global nature of Internet makes it a lawless anarchy. When you plug your server to Internet, you make a social contract that you accept any traffic coming over the wire, even if it is malicious.
+What makes Internet to be what it is, global and everpresent? When you plug your device to Internet, you make a social contract saying you accept any traffic coming over the wire, even if you don't like it. Internet itself doesn't discriminate. No evil bit exists in a network packet telling you maybe you should not open it, since there are no universal moral standards for evil. What might be a horredous cyber act of a killing well-intentioned startup for one might be a small victory against the oppressors of a thief nation for the other.
 
-In most cases saying "our data is encrypted" does not mean anything. Having the server disks encrypted protects only against very unlikely event that the physical access of the offline server is compromised. Data must be decryptable for the service to be able to run. Thus, the data must always pass in plain text in the server memory. Anybody gaining the access to the live server, through the application vulnerability or the compromised team member device, has the full data access.
+Thus, in its heart, Internet is a lawless cyberanarchy. The hostile actors are foreign and often state sponsored - there is no legal remedy against them as they are not criminal by their own standards. Having an IP address of an adversary doesn't help if you cannot bring justice on the opposite side of the planet. There is no world police who would hear your case.
 
-Sensitive and high value services
-=================================
+Internet has always been this way. However, today's threats are no longer just fiction in cyberthrillers. The landscape of Internet security changed greatly during 2010s. As more business and personal life moves online, we have become dependent on Internet. We can receive more damage over Internet: there is more to lose in privacy, financial, business, industrial and political aspects. Those who could benefit of exploiting this know this as well.
 
-Sensitive services generally include
+When Internet itself is greater than the justice system of any nation only way to cope against threats is to build hack-proof services. It is possible. It is not difficult. It is what this guide is all about.
 
-* **Hosting services**: Running and managing somebody else's software and data sets you in a privileged position to abuse or to be exploited. See :ref:`linode`.
+However hack-proof services do not happen with phrases like "in our privacy policy we state we follow modern security practices" or "our data is encrypted". Opaque statements like these lack factual content - the reader doesn't know *which* practices are followed and *how* your data is encrypted. The service user or peers cannot *find security* there. Alas, the history shows that the sentences like this often don't mean anything, as they have been written in the policies of every compromised service.
 
-* **Banking and financial services**: provide access to the assets of the users.See :ref:`bitstamp`.
+To build safer Internet with real security we must work together to find transparent ways to educate and evalute services and their operators. This guide aims to be a step to this direction.
 
-* **Health services**: sensitive private information which can be used against the users. See :ref:`linode`.
+Mission statement
+=================
 
-* **Dating service**: sensitive private information which can be used against the users. See :ref:`ashley-madison`.
+|opsec| tells you how to design secure Internet services and how to assess their level of security.
 
-* **Government and legal**: having government service compromised is not good for politics.
+**Building responsible security culture yields to healthy Internet society**. Every day more and more of our lives is transformed to online. People who create and nurture online services act as the deputies in this society. The motivation towards transparent trust and safety declarations must start with these people and resonate through their work.
 
-* **Digital non-tanglible services**: gaming industry where players trade with each other, by rules or on blackmarket, is common abuse target. See :ref:`steam`.
+**Security should be open and free**: Nobody should need to pay to the ensure the state of the art security of their work. A willing person should be able to learn information and access tools needed to build safe Internet services for free.
 
-* **Large sites**:
+**Security should be transparent**: There should be an effective way or appromaximation to say whether one can trust to the safety of a service. There should be ways for service operators to communicate their intent of security in veriafable facts, not just in claim.
 
-Even if the service is not a high value target per se, one might host information which is valuable blackmail or cyber reconnaissance material for a nation-state actor. If you are carefree you might even be stamped by an attack which was not especially targeting you. The worst case scenario is that the incident will strip everything of the service and it's unlikely there is an insurance fund which will cover this.
+Guide goals
+===========
 
-The guide goals
-===============
+|opsec| is an effort towards safer Internet services. There exist similar projects with partially overlapping scopes. This project is geared towards Internet services operators and business decision makers following the principles on which Internet itself was built. The guide aims to be
 
-|opsec| is a collaborate effort from people who need to deal with Internet security in their professional life. There exist similar projects, but
-
-There exist projects which partially overlapping scope. We aim to be
-
-* **Holistic**: We aim to guarantee the security of the project as a whole. This includes organization practices, tools and devices, infrastructure and not just a piece of software.
+* **Holistic**: The guide tells how to guarantee the security of the project as a whole. This includes organization practices, tools and devices, infrastructure and e.g. is not limited to one task like software development practices. 
 
 * **Grassroots effort**: from bottom to up, from individuals to decision makers. The effort sprouts from real life security practices. The authors and audience are not limited to security researchers, but include software developers and project managers.
 
@@ -81,5 +77,3 @@ Further reading and related work include
 * `PCI Security Sandard Council, The Payment Card Industry Data Security Standard <https://www.pcisecuritystandards.org/security_standards/documents.php?agreements=pcidss&association=pcidss>`_ addresses the security from credit card payment processing industry. The requirements are detailed, but the level of documentation, process management and reviews is not in the reach of small business, like 24/7 security staff. PCI DSS is very relevant for large enterprises where the organization does not see profit in maintaining the security and must be forced to do so by an external factor.
 
 * `Health Insurance Portability and Accountability Act (HIPAA) <http://www.hhs.gov/ocr/privacy/>`_ defines how US national standard for health  care companies handling private information in electronic form. `The text is in legal like <http://www.hhs.gov/ocr/privacy/hipaa/administrative/combined/index.html>`_, more useful for lawyers than the service operators or developers.
-
-

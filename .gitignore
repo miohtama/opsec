@@ -1,2 +1,4 @@
 build/
 *.docx
+site/output
+__pycache__
