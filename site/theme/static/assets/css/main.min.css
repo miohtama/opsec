@@ -7725,6 +7725,13 @@ p {
 .social-links li.soundcloud a {
   background: #ff5500;
 }
+.navbar-brand img {
+  max-height: 32px;
+}
+.img-header {
+  max-width: 100%;
+  border-radius: 3px;
+}
 .section {
   /* padding: (@line-height-computed * 4) 0;
 
@@ -8433,4 +8440,9 @@ p {
 }
 .project-modal .project-description p:last-child {
   margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .navbar-form.navbar-right:last-child {
+    margin-right: -30px;
+  }
 }

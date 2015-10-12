@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -8,7 +8,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">OPSEC</a>
+      <a class="navbar-brand" href="/">
+          <img src="{{ SITEURL }}/theme/images/logo-site.png">
+      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,10 +18,10 @@
       <ul class="nav navbar-nav">
         <li><a href="{{ SITEURL }}/docs">Documentation</a></li>
         <li><a href="{{ SITEURL }}/blog">Blog</a></li>
-        <li><a href="{{ SITEURL }}/contact">Contact</a></li>
+        <li><a href="{{ SITEURL }}/docs/background/contact.html">Contact</a></li>
       </ul>
 
-      <form class="navbar-form navbar-left" role="search" id="rtd-search-form" action="/search.html" method="get">
+      <form class="navbar-form navbar-right" role="search" id="rtd-search-form" action="/docs/search.html" method="get">
         <div class="form-group">
           <input type="text" name="q" class="form-control" placeholder="Search docs" />
           <input type="hidden" name="check_keywords" value="yes" />

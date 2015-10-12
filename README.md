@@ -8,5 +8,8 @@ This is a Pelican, Sphinx and YAML source code for the site.
 
 * Pelican drives the generation of a static web site and blog
 
+sphinx_rtd_theme base:
+
+    pip install -e "git+git@github.com:snide/sphinx_rtd_theme.git@012d42db6a2b00f799223963fb8b0aa3754630eb#egg=sphinx_rtd_theme"
 
 

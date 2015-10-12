@@ -28,7 +28,7 @@
      objecttolerance="10"
      borderopacity="1"
      inkscape:current-layer="svg2560"
-     inkscape:cx="382.72768"
+     inkscape:cx="383.51596"
      inkscape:cy="970.79863"
      inkscape:window-y="0"
      inkscape:window-x="0"
@@ -72,39 +72,41 @@
   </metadata>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:71.79354095px;line-height:200%;font-family:'Sofia Pro';-inkscape-font-specification:'Sofia Pro, Medium';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-     x="431.0444"
-     y="250.4751"
+     style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:111.33268738px;line-height:200%;font-family:'Sofia Pro';-inkscape-font-specification:'Sofia Pro, Medium';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="409.37241"
+     y="259.12048"
      id="text4189"
      sodipodi:linespacing="200%"
      inkscape:export-xdpi="179.89"
-     inkscape:export-ydpi="179.89"><tspan
+     inkscape:export-ydpi="179.89"
+     transform="scale(1.0354603,0.96575409)"><tspan
        sodipodi:role="line"
-       x="431.0444"
-       y="250.4751"
+       x="409.37241"
+       y="259.12048"
        id="tspan4193"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:71.79354095px;line-height:200%;font-family:'Sofia Pro';-inkscape-font-specification:'Sofia Pro, Medium';text-align:start;letter-spacing:17.94838524px;writing-mode:lr-tb;text-anchor:start;fill:#333333;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:111.33268738px;line-height:200%;font-family:'Stencil Style New';-inkscape-font-specification:'Stencil Style New';text-align:start;letter-spacing:27.83317184px;writing-mode:lr-tb;text-anchor:start;fill:#333333"
        dx="0"
-       dy="0.14358708">OPSEC</tspan></text>
+       dy="0.22266538">OPSEC</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:62.68161774px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-     x="427.01352"
-     y="365.12939"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.05355072px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="421.08441"
+     y="377.51385"
      id="text4197"
      sodipodi:linespacing="125%"
      inkscape:export-xdpi="179.89"
-     inkscape:export-ydpi="179.89"><tspan
+     inkscape:export-ydpi="179.89"
+     transform="scale(1.0136212,0.98656184)"><tspan
        sodipodi:role="line"
        id="tspan4199"
-       x="427.01352"
-       y="365.12939"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:62.68161774px;line-height:125%;font-family:'Sofia Pro';-inkscape-font-specification:'Sofia Pro, Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#333333;">Operations</tspan><tspan
+       x="421.08441"
+       y="377.51385"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.05355072px;line-height:125%;font-family:'Stencil Style New';-inkscape-font-specification:'Stencil Style New';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#333333;letter-spacing:5.25000001px">Operations</tspan><tspan
        sodipodi:role="line"
-       x="427.01352"
-       y="443.48141"
+       x="421.08441"
+       y="455.86588"
        id="tspan4201"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:62.68161774px;line-height:125%;font-family:'Sofia Pro';-inkscape-font-specification:'Sofia Pro, Medium';text-align:start;letter-spacing:12px;writing-mode:lr-tb;text-anchor:start;fill:#333333;">Security</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.05355072px;line-height:125%;font-family:'Stencil Style New';-inkscape-font-specification:'Stencil Style New';text-align:start;letter-spacing:14.17708492px;writing-mode:lr-tb;text-anchor:start;fill:#333333">Security</tspan></text>
   <rect
      style="fill:#333333;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect4222"
@@ -114,4 +116,15 @@
      y="515.84265"
      inkscape:export-xdpi="179.89"
      inkscape:export-ydpi="179.89" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="636.92694"
+     y="405.48404"
+     id="text4147"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4149"
+       x="636.92694"
+       y="405.48404"></tspan></text>
 </svg>

@@ -20,6 +20,14 @@
     display: none;
 }
 
+.site-header .container {
+    width: 800px;
+}
+
+.site-footer {
+    font-size: 16px;
+}
+
 .site-footer .container {
     width: 800px;
 }
@@ -31,6 +39,7 @@
 .site-footer label {
     font-weight: normal;
     color: #969fa8;
+    font-size: 16px;
 }
 
 .wy-nav-side {
@@ -50,4 +59,10 @@
 .navbar-default {
     border: 0;
     border-radius: 0;
+}
+
+.site-footer input[type='email'] {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-size: 16px;
 }
