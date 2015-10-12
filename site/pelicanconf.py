@@ -31,5 +31,21 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = False
 
+DIRECT_TEMPLATES = ['categories', 'authors', 'archives', 'index']
+
+PAGINATED_DIRECT_TEMPLATES = ['index']
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+# https://github.com/getpelican/pelican/issues/735
+ARTICLE_URL = 'blog/{slug}.html'
+ARTICLE_SAVE_AS = 'blog/{slug}.html'
+DEFAULT_PAGINATION = 10
+
+INDEX_SAVE_AS = 'blog_index.html'
+
+
+# TEMPLATE_PAGES = {"index.html", "blog.html"}
+
+# DIRECT_TEMPLATES = ['blog']
+# PAGINATED_DIRECT_TEMPLATES = ['blog']

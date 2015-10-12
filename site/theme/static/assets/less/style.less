@@ -722,69 +722,10 @@
 		color: #fff;
 		border-radius: @line-height-computed;
 	}
-}
 
-.project-modal {
-	.close {
-		width: @line-height-computed;
-		height: @line-height-computed;
-		border-radius: @line-height-computed;
-		color: #fff;
-		position: absolute;
-		right: -12px;
-		top: -12px;
-		display: block;
-		outline: none;
-		z-index: 2;
-		.opacity(1);
-		.box-shadow(0 0 3px rgba(0,0,0,.5));
-
-		.fa {
-			display: block;
-			width: @line-height-computed;
-			height: @line-height-computed;
-			background: @gray-dark;
-			border-radius: @line-height-computed;
-			line-height: 20px;
-			border: 2px solid #fff;
-			font-size: 12px;
-		}
-	}
-
-	.single-project {
-		font-size: @font-size-small;
-		line-height: @line-height-computed;
-	}
-
-	.project-thumbnail {
-		img {
-			max-width: 100%;
-			height: auto;
-		}
-	}
-
-	.project-title {
-		font-size: 24px;
-		line-height: @line-height-computed;
-		margin: @line-height-computed 0 0;
-	}
-
-	.project-meta {
-		color: @gray-light;
-		line-height: @line-height-computed * 2;
-
-		> span {
-			margin-right: 20px;
-		}
-
-		.fa {
-			margin-right: 5px;
-		}
-	}
-
-	.project-description p:last-child {
-		margin-bottom: 0;
-	}
+    label {
+      font-weight: normal;
+    }
 }
 
 @media (min-width: 768px) {

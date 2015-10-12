@@ -8390,57 +8390,8 @@ p {
   color: #fff;
   border-radius: 26px;
 }
-.project-modal .close {
-  width: 26px;
-  height: 26px;
-  border-radius: 26px;
-  color: #fff;
-  position: absolute;
-  right: -12px;
-  top: -12px;
-  display: block;
-  outline: none;
-  z-index: 2;
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-}
-.project-modal .close .fa {
-  display: block;
-  width: 26px;
-  height: 26px;
-  background: #333333;
-  border-radius: 26px;
-  line-height: 20px;
-  border: 2px solid #fff;
-  font-size: 12px;
-}
-.project-modal .single-project {
-  font-size: 14px;
-  line-height: 26px;
-}
-.project-modal .project-thumbnail img {
-  max-width: 100%;
-  height: auto;
-}
-.project-modal .project-title {
-  font-size: 24px;
-  line-height: 26px;
-  margin: 26px 0 0;
-}
-.project-modal .project-meta {
-  color: #999999;
-  line-height: 52px;
-}
-.project-modal .project-meta > span {
-  margin-right: 20px;
-}
-.project-modal .project-meta .fa {
-  margin-right: 5px;
-}
-.project-modal .project-description p:last-child {
-  margin-bottom: 0;
+.site-footer label {
+  font-weight: normal;
 }
 @media (min-width: 768px) {
   .navbar-form.navbar-right:last-child {

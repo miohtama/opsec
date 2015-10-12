@@ -52,9 +52,4 @@ Chapters
     background/contact
     background/license
 
-More
-====
-
-`Follow us on Twitter <https://twitter.com/OpSecSanta>`_.
-
 
