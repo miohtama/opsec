@@ -12,4 +12,11 @@ sphinx_rtd_theme base:
 
     pip install -e "git+git@github.com:snide/sphinx_rtd_theme.git@012d42db6a2b00f799223963fb8b0aa3754630eb#egg=sphinx_rtd_theme"
 
+Building docs:
+
+    python build.py && make clean html
+
+Building and publishing the site:
+
+    make clean html && aws s3 sync output s3://operationssecurity.org --exclude "*node_modules*" --follow-symlinks
 
