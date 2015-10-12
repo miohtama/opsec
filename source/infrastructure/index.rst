@@ -5,8 +5,7 @@
 Infrastructure security
 ===========================================
 
-*This chapter discusses how to protect servers and other infrastructure needed to run the service.
-*
+*This chapter discusses how to protect servers and other infrastructure needed to run the service.*
 
 
 Infrastructure here covers everything that runs your Internet service. It is mostly territory for system administrators, who know how to tune servers and who understand what keeps them ticking. Everything cannot be done in-house; one most likely needs to rely on third-party services for some things, and they should be accounted for, too.

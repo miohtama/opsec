@@ -2,7 +2,7 @@
 ---
 meta:
   title: Infrastructure security
-  description: |
+  description:
     This chapter discusses how to protect servers and other infrastructure needed to run the service.
 
   background: |

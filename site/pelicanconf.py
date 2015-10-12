@@ -42,7 +42,7 @@ ARTICLE_URL = 'blog/{slug}.html'
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
 DEFAULT_PAGINATION = 10
 
-INDEX_SAVE_AS = 'blog_index.html'
+INDEX_SAVE_AS = 'blog.html'
 
 
 # TEMPLATE_PAGES = {"index.html", "blog.html"}

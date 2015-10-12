@@ -18,14 +18,6 @@ This is an online guide for operations security (OPSEC) for Internet services.
 
 Operations security (OPSEC) is a multidisciplinary approach for protecting information and services. Though the term has a wider general meaning, this guide discusses OPSEC in the context of securing Internet services. This includes, but is not limited to, protecting information from industrial espionage, blackhat hackers, law enforcement, social engineering, and mass surveillance. `Please read further a introduction to OPSEC on Wikipedia <https://en.wikipedia.org/wiki/Opsec>`_.
 
-
-Get notified about eBook
-========================
-
-.. attention::
-
-    OPSEC - Operations Security eBook is coming. Be first to get it. Subscribe to the mailing list and `follow us on Twitter <https://twitter.com/OpSecSanta>`_.
-
 About this guide
 ================
 
