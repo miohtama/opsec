@@ -23,11 +23,16 @@
 
       <form class="navbar-form navbar-right" role="search" id="rtd-search-form" action="/docs/search.html" method="get">
         <div class="form-group">
-          <input type="text" name="q" class="form-control" placeholder="Search docs" />
+          <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search docs" />
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+              </span>
+          </div>
           <input type="hidden" name="check_keywords" value="yes" />
           <input type="hidden" name="area" value="default" />
         </div>
-        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+
       </form>
     </div><!-- /.navbar-collapse -->
 

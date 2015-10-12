@@ -72,3 +72,16 @@
     border-bottom-left-radius: 3px;
     font-size: 16px;
 }
+
+@media (max-width: 768px) {
+    .navbar-default {
+        display: none;
+    }
+
+    .site-footer .container {
+        width: auto;
+    }
+
+
+}
+
