@@ -7726,16 +7726,27 @@ p {
   background: #ff5500;
 }
 .section {
-  padding: 104px 0;
+  /* padding: (@line-height-computed * 4) 0;
+
+	@media (max-width: @screen-lg) {
+		padding: (@line-height-computed * 3) 0;
+	}
+
+	@media (max-width: @screen-xs-max) {
+		padding: (@line-height-computed * 2) 0;
+	}
+
+    */
+  padding: 0;
 }
 @media (max-width: 1200px) {
   .section {
-    padding: 78px 0;
+    padding: 0;
   }
 }
 @media (max-width: 767px) {
   .section {
-    padding: 52px 0;
+    padding: 0;
   }
 }
 .section .section-header {

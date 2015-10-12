@@ -68,7 +68,8 @@ clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 
 regenerate:
-	ln -s ../../build/html/ output/docs
+	install -d output
+	test -h output/docs || ln -s ../../build/html/ output/docs
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 

@@ -34,8 +34,15 @@ import sphinx_rtd_theme
 # ones.
 extensions = []
 
+PELICAN_TEMPLATES = os.path.join(os.getcwd(),  "..", "site", "theme", "templates")
+
+assert os.path.exists(os.path.join(PELICAN_TEMPLATES, "base_site.html")), "Oopsie, main website where?"
+
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = [
+    '_templates',
+    PELICAN_TEMPLATES,
+]
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -366,13 +373,11 @@ rst_epilog = """
 .. |opsec| replace:: OPSEC - Operations Security Guide
 """
 
-
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-
 html_context = {
 'css_files': [
     'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
     'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
+    '/theme/assets/css/main.min.css',
     '_static/custom.css',
 ],
 }

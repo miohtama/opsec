@@ -19,3 +19,35 @@
 #hidden-index {
     display: none;
 }
+
+.site-footer .container {
+    width: 800px;
+}
+
+.site-footer a:hover {
+    text-decoration: none;
+}
+
+.site-footer label {
+    font-weight: normal;
+    color: #969fa8;
+}
+
+.wy-nav-side {
+    background: #f8f8f8;
+    padding-top: 80px;
+}
+
+.wy-nav-side a {
+    color: #777777;
+}
+
+.wy-nav-side a:hover {
+    color: #969fa8;
+    background: #2c3e50;
+}
+
+.navbar-default {
+    border: 0;
+    border-radius: 0;
+}
