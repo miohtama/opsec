@@ -37,7 +37,7 @@ The authoritative report "More detail", by Bitly, is now taken down (dead URL is
 
 Related evaluation points:
 
-- :ref:`two-factor-authentication-on-critical-services`
+- :ref:`two-factor-authentication-on-infrastructure-services`
 
 - :ref:`encrypted-server-data`
 

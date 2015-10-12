@@ -35,8 +35,6 @@ Physical security, like door access keys and security cameras, is de-emphasized 
 
     two-factor-authentication-on-email
 
-    two-factor-authentication-on-critical-services
-
     two-factor-authentication-for-admins
 
     passphrase-on-server-login-keys

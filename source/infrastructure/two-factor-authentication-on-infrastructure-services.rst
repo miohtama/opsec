@@ -1,9 +1,9 @@
 
 .. This is a generated file from data/. DO NOT EDIT.
 
-.. _two-factor-authentication-on-critical-services:
+.. _two-factor-authentication-on-infrastructure-services:
 
-Two-factor authentication on critical services
+Two-factor authentication on infrastructure services
 ==============================================================
 
 **Infrastructure services require two-factor authentication?** Yes / No

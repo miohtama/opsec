@@ -8393,6 +8393,9 @@ p {
 .site-footer label {
   font-weight: normal;
 }
+.site-footer a {
+  color: white;
+}
 @media (min-width: 768px) {
   .navbar-form.navbar-right:last-child {
     margin-right: -30px;

@@ -112,7 +112,7 @@ Fired employees: **0**
                     <td>
                         
                             <p>
-                                <a href="../team/index.html#two-factor-authentication-on-critical-services">Infrastructure services require two-factor authentication</a>
+                                <a href="../infrastructure/index.html#two-factor-authentication-on-infrastructure-services">Infrastructure services require two-factor authentication</a>
                             </p>
                         
                             <p>
