@@ -9,6 +9,25 @@ Sometimes it's necessary to know that the organization and its services are secu
 
 This operations security guide is created in a manner that it can assess the security in an objective manner with little room for the interpretation. The assessment process is transparent and open. The guide consists of evaluation points which are easy to verify and have only outcomes "it's secure" or "it's not secure". You either get green light or red light - there is no room for grey area. When you say you have assessed the security based on Operations Security guide you can name the individual facts that were checked.
 
+Chapters and evaluation points
+==============================
+
+The guide is divided to different chapters, each chapter reflecting different organizational or IT functionality.
+
+The chapters consist of questions, called *evalution points*, on a specific matter. Ultimately you want to be able to answer yes to every evaluation point.
+
+Applicable criteria
+===================
+
+Some evaluation points might not be applicable for small businesses. For example, having a tool for managing server login keys might not be in the reach of a team of few members or less. Or it would be not needed at all, because only one person has access to the servers. Thus, each evaluation point contains an applicable criteria.
+
+The following rough rules can be used to decide whether your organization should consider the evaluation point:
+
+* **Everybody**: Everybody should do this, regardless of the mature and resources of their organization
+
+* **Medium and large enterprises**: Organizations with more than two million yearly revenue or two million raised capital. These organizations generally have multiple people working on the service and can afford to hire a security consultancy, training and tools.
+
+
 Learning security
 =================
 
@@ -55,3 +74,4 @@ Publishing the assessment results
 * The organization can decide whether the statement is published. The statements are published on operationssecurity.org and the service can use operationssecurity.org badge to link to the results on their website.
 
 * If some of the issues noted during the assessment are too cumbersome to be addresses on the spot, the organization can have the second assessment round. The reviewer comes back and goes through the remaining issues to see they were addresses and the evaluation point clears green.
+

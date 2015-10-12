@@ -29,7 +29,7 @@ for root, dirs, files in os.walk(".", topdown=False, followlinks=True):
             sitemap_files.append(dict(path=path, lastmod=lastmod))
 
 template = env.get_template('sitemap.xml')
-doc = template.render(files=sitemap_files)
+doc = template.render(files=sitemap_files, site="https://operationssecurity.org")
 
 
 with open("sitemap.xml", "wt") as out:

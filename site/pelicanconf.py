@@ -44,6 +44,8 @@ DEFAULT_PAGINATION = 10
 
 INDEX_SAVE_AS = 'blog.html'
 
+DISQUS_SITENAME = "opsec"
+
 
 # TEMPLATE_PAGES = {"index.html", "blog.html"}
 
