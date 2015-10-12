@@ -66,6 +66,8 @@ html:
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
+	install -d output
+	test -h output/docs || ln -s ../../build/html/ output/docs
 
 regenerate:
 	install -d output

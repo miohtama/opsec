@@ -186,6 +186,7 @@ env = jinja2.Environment(loader=loader)
 env.filters["normalize_id"] = normalize_id
 
 chapter_template = env.get_template('chapter.rst')
+question_template = env.get_template('question.rst')
 chapter_ids = load(open("data/index.yaml", "rt"))
 chapters = get_chapters(chapter_ids)
 incidences = get_incidences_data(chapters)
@@ -223,8 +224,15 @@ for incidence_id, incidence in incidences.items():
 # Generate chapters
 for chapter_id, chapter in chapters.items():
     md = chapter_template.render(answers=ANSWERS, applies=APPLIES, **chapter)
+
     with open("source/{}/index.rst".format(chapter_id), "wt") as out:
         out.write(md)
+
+    for question_title, question in chapter["questions"].items():
+        question_id = slugify(question_title)
+        md = question_template.render(question_title=question_title, question=question, answers=ANSWERS, applies=APPLIES)
+        with open("source/{}/{}.rst".format(chapter_id, question_id), "wt") as out:
+            out.write(md)
 
 
 generate_word(chapters, incidences)
