@@ -7731,6 +7731,7 @@ p {
 .img-header {
   max-width: 100%;
   border-radius: 3px;
+  margin-bottom: 26px;
 }
 .section {
   /* padding: (@line-height-computed * 4) 0;
