@@ -53,6 +53,8 @@ Related evaluation points:
 
 Links:
 
+- `Working Link of Leaked Bitstamp Incident Report <https://imgur.com/a/hLt5uQm>`_
+
 - `Hackers steal $5 million from major bitcoin exchange (Fortuna) <http://fortune.com/2015/01/05/bitstamp-bitcoin-freeze-hack/>`_
 
 - `Major Bitcoin Exchange Bitstamp Goes Offline After Possible Hack (WIRED) <http://www.wired.com/2015/01/bitstamp-offline/>`_
