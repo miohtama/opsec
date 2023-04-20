@@ -1,6 +1,8 @@
 #
 # Based on https://coderefinery.github.io/documentation/gh_workflow/
 #
+# Deployed from gh-pages branch
+#
 name: Publish on Github
 on: [push, pull_request, workflow_dispatch]
 permissions:
