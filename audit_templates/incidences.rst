@@ -7,11 +7,11 @@ Security incidence reference
 
 This chapter contains references to historical security incidences, why they happened, the implications and what operational security measurements could have been taken to prevent them.
 
-.. attention ::
+.. note ::
 
-    *All Internet service incidences listed here could have been avoided by following the security practices presented in this guide.*
-
-Some of the incidences are not directly related to a particular Internet service, e.g. SMS intercepting, but the case reflects the associated security risk it may pose to any Internet service and its user.
+    The list was updated 2013-2015. It does not contain recent incidences. There has been
+    only very few new attack vectors since then, so all best practices and malpractices
+    found here stil apply.
 
 Incidences
 ===================
