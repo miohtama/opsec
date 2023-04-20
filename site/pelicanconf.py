@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Mikko Ohtamaa'
-SITENAME = 'OPSEC - How to not get hacked'
+SITENAME = 'OPSEC - Operations Security'
 SITEURL = ''
 
 PATH = 'content'

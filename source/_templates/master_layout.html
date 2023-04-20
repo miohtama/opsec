@@ -88,13 +88,10 @@
       <div class="wy-side-scroll">
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          {% block menu %}
 
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-            </ul>
+          <img class="logo" alt="OPSEC" src="{{ pathto('_static/logo-site.png', 1) }}">
+
+          {% block menu %}
 
             {% set toctree = toctree(maxdepth=4, collapse=theme_collapse_navigation, includehidden=True) %}
             {% if toctree %}
@@ -115,8 +112,6 @@
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
         <a href="{{ pathto(master_doc) }}">{{ project }}</a>
       </nav>
-
-      {% include "base_header.html" %}
 
       {# PAGE CONTENT #}
       <div class="wy-nav-content">

@@ -1,3 +1,16 @@
+h1 {
+    font-size: 26px;
+}
+
+.logo {
+    margin: 20px;
+    width: 160px;
+}
+
+.wy-grid-for-nav {
+    background: rgb(44, 62, 80);
+}
+
 .wy-body-for-nav {
     font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     font-weight: normal;

@@ -32,6 +32,12 @@ cd site
 make clean html serve
 ```
 
+One liner:
+
+```shell
+make clean html && (cd site && make clean html serve)
+```
+
 Building and publishing the site:
 
     make clean html && aws s3 sync output s3://operationssecurity.org --exclude "*node_modules*" --follow-symlinks

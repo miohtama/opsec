@@ -20,18 +20,18 @@ Sensitive and high value services
 
 Sensitive services generally include
 
+* **Cryptocurrency services**: gaming industry where players trade with each other, by rules or on blackmarket, is common abuse target. See :ref:`steam`.
+
 * **Hosting services**: Running and managing somebody else's software and data sets you in a privileged position to abuse or to be exploited. See :ref:`linode`.
 
 * **Banking and financial services**: provide access to the assets of the users.See :ref:`bitstamp`.
 
-* **Health services**: sensitive private information which can be used against the users. See :ref:`linode`.
+* **Health services**: sensitive private information which can be used against the users. 
 
 * **Dating service**: sensitive private information which can be used against the users. See :ref:`ashley-madison`.
 
-* **Government and legal**: having government service compromised is not good for politics.
+* **Government and legal**: having government or military service compromised is not good for politics.
 
-* **Digital non-tanglible services**: gaming industry where players trade with each other, by rules or on blackmarket, is common abuse target. See :ref:`steam`.
-
-* **Large sites**:
+* **Critical infrastructure services**: Electricity, gas, fuel, telecom and other modern society services that are a high-value target for cyber warfare.
 
 Even if the service is not a high value target per se, one might host information which is valuable blackmail or cyber reconnaissance material for a nation-state actor. If you are carefree you might even be stamped by an attack which was not especially targeting you. The worst case scenario is that the incident will strip everything of the service and it's unlikely there is an insurance fund which will cover this.
