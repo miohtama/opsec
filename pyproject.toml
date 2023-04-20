@@ -9,11 +9,12 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 sphinx_rtd_theme = { git = "https://github.com/readthedocs/sphinx_rtd_theme.git", rev = "012d42db6a2b00f799223963fb8b0aa3754630eb" }
-sphinx = "3"
+sphinx = "<2"
 pyyaml = "^6.0"
 python-docx = "^0.8.11"
 jinja2 = "<3.1"
 python-slugify = "^8.0.1"
+pelican = "^4.8.0"
 
 [build-system]
 requires = ["poetry-core"]

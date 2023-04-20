@@ -16,16 +16,20 @@ Install:
 poetry install
 ```
 
-Building the book:
+Building the Sphinx content material:
 
 ```shell
 poetry shell
 make book
 ```
 
-Viewing HTML locally:
+Building the website and viewing HTML locally:
 
 ```shell
+cd site
+make serve
+```
+
 open build/html/index.html
 ```
 
@@ -40,3 +44,7 @@ Building and publishing the site:
 * Sphinx drives the generation of online documentation and eBook
 
 * Pelican drives the generation of a static web site and blog
+
+# Contact
+
+mikko at opensourcehacker dot com
