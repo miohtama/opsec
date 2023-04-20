@@ -16,6 +16,8 @@ This chapter contains references to historical security incidences, why they hap
 Incidences
 ===================
 
+Last time list updated: 2015
+
 Number of incidence summaries: **{{ incidences|length }}**
 
 Compromised user accounts: **{{ compromised_accounts|round(2, 'floor') }}M**
