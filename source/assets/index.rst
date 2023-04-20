@@ -1,9 +1,9 @@
 
 .. This is a generated file from data/. DO NOT EDIT.
 
-===========================================
-Digital currencies and securities
-===========================================
+===============================
+Cryptocurrency related security
+===============================
 
 *This chapter discusses the security aspects of storing and handling digital currencies and securities like Bitcoin.*
 
