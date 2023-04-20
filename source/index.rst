@@ -7,10 +7,6 @@
     :alt: Opsec - Operations Security
 
 
-.. note ::
-
-    This is a living, work-in-progress, document. We kindly ask that you not to refer to this document or use the material presented herein until the authors release the version 1.0.
-
 OPSEC - Operations Security
 ===========================
 
@@ -27,13 +23,22 @@ The aim is to provide transparent, lightweight and practical ways to develop and
 
 The guide presents 49 assesment points to evaluate different aspects of team and service security. The security assessment points are referred in 31 :doc:`historical security incidences <incidences/index>` which could have been avoided if the operators had followed practices presented here.
 
+Who is this for
+===============
+
+OPSEC - Operations security is a guide and assessment tool for Internet service development.
+Developers, system administrators and decision-makers can learn to guarantee the safety of their projects against external and internal threats. The practical guide applies to one-man teams as well as large organizations building websites. 
+
+A special emphasis is put on high-value targets like government and cryptocurrency services.
+
 Chapters
 ========
 
 .. toctree::
     :maxdepth: 1
 
-    background/audience
+    background/history
+    background/audience    
     background/index
     assessment/index
 

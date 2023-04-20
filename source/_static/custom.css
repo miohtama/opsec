@@ -7,6 +7,15 @@ h1 {
     width: 160px;
 }
 
+.logo-link {
+    padding: 0;
+    margin: 0;
+}
+
+.wy-nav-content-wrap {
+    background: rgb(44, 62, 80);
+}
+
 .wy-grid-for-nav {
     background: rgb(44, 62, 80);
 }
@@ -63,7 +72,7 @@ h1 {
 
 .wy-nav-side {
     background: #f8f8f8;
-    padding-top: 80px;
+    padding-top: 10px;
 }
 
 .wy-nav-side a {
