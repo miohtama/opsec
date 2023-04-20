@@ -1,4 +1,7 @@
-name: Publish
+#
+# Based on https://coderefinery.github.io/documentation/gh_workflow/
+#
+name: Publish on Github
 on: [push, pull_request, workflow_dispatch]
 permissions:
     contents: write
@@ -25,6 +28,8 @@ jobs:
       - name: Sphinx build
         run: |
           poetry env use '3.10' 
+          VENV_BIN=`poetry env info -p`/bin
+          PATH=$VENV_BIN:$PATH
           make html
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
