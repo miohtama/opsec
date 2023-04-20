@@ -1,0 +1,943 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Security incidence reference - Operations Security</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/main.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Operations Security (latest) documentation" href="../index.html"/>
+        <link rel="next" title="Apple iCloud" href="icloud.html"/>
+        <link rel="prev" title="Proof of solvency" href="../assets/proof-of-solvency.html"/>
+ 
+<link rel="stylesheet" href="../_static/custom.css" type="text/css">
+<meta name="google-site-verification" content="CKshf5Es8jYfgBEAr-aBAcMToRE9d3MSVoSYHAsw9vY">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+          <!-- can't f#$%#$% figure out how to Sphinx would correctly link to index doc -->
+          <a class="logo-link" href="/opsec/">
+            <img class="logo" alt="OPSEC" src="../_static/logo-site.png">
+          </a>
+
+          
+
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../background/history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/audience.html">Audience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/audience.html#sensitive-and-high-value-services">Sensitive and high value services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/index.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assessment/index.html">Assessing security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../team/index.html">Team security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/index.html">Web development practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">Protecting service users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../infrastructure/index.html">Infrastructure security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/index.html">Cryptocurrency related security</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Security incidence reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#incidences">Incidences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#indicent-index">Indicent index</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="icloud.html">Apple iCloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ashley-madison.html">Ashley Madison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chinese-android.html">Asian Android phones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitly.html">Bitly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitpay.html">Bitpay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitstamp.html">Bitstamp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blockchaininfo.html">Blockchain.info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudflare.html">CloudFlare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coinbase.html">Coinbase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptoine.html">Cryptoine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="facebook.html">Facebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hacking-team.html">Hacking Team</a></li>
+<li class="toctree-l3"><a class="reference internal" href="instagram.html">Instagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lastpass.html">LastPass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linode.html">Linode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maxcdn.html">MaxCDN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mtgox.html">Mt. Gox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nasa.html">NASA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patreon.html">Patreon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="purse.html">PurseIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sms-malware.html">SMS intercepting trojans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sebastian.html">Sebastian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="slack.html">Slack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="soho.html">Soho</a></li>
+<li class="toctree-l3"><a class="reference internal" href="squirrelmail.html">SquirrelMail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="starbucks.html">Starbucks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="steam.html">Steam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tor.html">Tor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="twitter.html">Twitter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="veeder-root.html">Veeder-Root</a></li>
+<li class="toctree-l3"><a class="reference internal" href="xcode.html">XCode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../background/contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/license.html">License and copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Operations Security</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+
+    <li><a href="../index.html">OPSEC</a> &raquo;</li>
+      
+    <li>Security incidence reference</li>
+
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="security-incidence-reference">
+<h1>Security incidence reference<a class="headerlink" href="#security-incidence-reference" title="Permalink to this headline">¶</a></h1>
+<p>This chapter contains references to historical security incidences, why they happened, the implications and what operational security measurements could have been taken to prevent them.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last"><em>All Internet service incidences listed here could have been avoided by following the security practices presented in this guide.</em></p>
+</div>
+<p>Some of the incidences are not directly related to a particular Internet service, e.g. SMS intercepting, but the case reflects the associated security risk it may pose to any Internet service and its user.</p>
+<div class="section" id="incidences">
+<h2>Incidences<a class="headerlink" href="#incidences" title="Permalink to this headline">¶</a></h2>
+<p>Number of incidence summaries: <strong>31</strong></p>
+<p>Compromised user accounts: <strong>39.29M</strong></p>
+<p>Lost assets: <strong>457.19M USD</strong></p>
+<p>Bankcrupted companies: <strong>1</strong></p>
+<p>Fired employees: <strong>0</strong></p>
+<table class="table-incidences">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Related security assessment points</th>
+        </tr>
+    </thead>
+    <tbody>
+
+            <tr>
+                <td>
+                    <a href="icloud.html">Apple iCloud</a>
+                </td>
+                <td class="col-date">
+                    2014-09-01
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../user/index.html#two-factor-authentication">Service users are encouraged to use two-factor authentication</a>
+                        </p>
+
+                        <p>
+                            <a href="../user/index.html#brute-force-login-prevention">Service login attempts are throttled in multiple ways</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="ashley-madison.html">Ashley Madison</a>
+                </td>
+                <td class="col-date">
+                    2015-07-01
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../team/index.html#audited-server-login-keys">A real-time method of maintaining and revoking keys across all servers</a>
+                        </p>
+
+                        <p>
+                            <a href="../team/index.html#limited-sensitive-data-access">Sensitive data access by administrators is limited</a>
+                        </p>
+
+                        <p>
+                            <a href="../team/index.html#logged-sensitive-data-access">Sensitive data access by administrators is logged</a>
+                        </p>
+
+                        <p>
+                            <a href="../team/index.html#data-scrubbing">Data dumps are cleaned of sensitive information</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="chinese-android.html">Asian Android phones</a>
+                </td>
+                <td class="col-date">
+                    2015-09-01
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../team/index.html#third-party-devices">Team members do not use third-party devices for logging in</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="bitly.html">Bitly</a>
+                </td>
+                <td class="col-date">
+                    2014-05-08
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../infrastructure/index.html#two-factor-authentication-on-infrastructure-services">Infrastructure services require two-factor authentication</a>
+                        </p>
+
+                        <p>
+                            <a href="../infrastructure/index.html#encrypted-server-data">Data is stored on encrypted partitions</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="bitpay.html">Bitpay</a>
+                </td>
+                <td class="col-date">
+                    2015-09-17
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../team/index.html#basic-security-practices">Team members follow the basic IT security practices</a>
+                        </p>
+
+                        <p>
+                            <a href="../team/index.html#minimized-email-usage">Email is not used for internal communications</a>
+                        </p>
+
+                        <p>
+                            <a href="../team/index.html#two-factor-authentication-on-email">Team members’ work and personal email accounts require two-factor authentication to log in.</a>
+                        </p>
+
+                        <p>
+                            <a href="../assets/index.html#multisignature-for-major-withdraws">A minimum of two parties are required for a large withdraw</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="bitstamp.html">Bitstamp</a>
+                </td>
+                <td class="col-date">
+                    2015-01-04
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../team/index.html#dangerous-file-attachments">Potentially dangerous file attachments are handled securely</a>
+                        </p>
+
+                        <p>
+                            <a href="../team/index.html#two-factor-authentication-on-server-login">Terminal access to the server requires two-factor authentication</a>
+                        </p>
+
+                        <p>
+                            <a href="../assets/index.html#cold-wallet">Cold wallet maintains most assets offline</a>
+                        </p>
+
+                        <p>
+                            <a href="../assets/index.html#transaction-verification">Withdraws are verified by heuristics</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="blockchaininfo.html">Blockchain.info</a>
+                </td>
+                <td class="col-date">
+                    2015-06-01
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../user/index.html#third-factor-authentication">The login process goes through an additional check in abnormal circumstances</a>
+                        </p>
+
+                        <p>
+                            <a href="../user/index.html#re-authentication-on-sensitive-actions">Sensitive actions should prompt for authentication again</a>
+                        </p>
+
+                        <p>
+                            <a href="../user/index.html#trademark-protection">Is the name of the service trademarked?</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="cloudflare.html">CloudFlare</a>
+                </td>
+                <td class="col-date">
+                    2012-06-04
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../team/index.html#two-factor-authentication-on-email">Team members’ work and personal email accounts require two-factor authentication to log in.</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="coinbase.html">Coinbase</a>
+                </td>
+                <td class="col-date">
+                    2014-04-01
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../web/index.html#whitehat-program">The service has a public whitehat or security bounty program</a>
+                        </p>
+
+                        <p>
+                            <a href="../user/index.html#flood-action-throttle">Actions sending messages to other users are throttled</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="cryptoine.html">Cryptoine</a>
+                </td>
+                <td class="col-date">
+                    2015-04-04
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../assets/index.html#cold-wallet">Cold wallet maintains most assets offline</a>
+                        </p>
+
+                        <p>
+                            <a href="../assets/index.html#race-condition-prevention">A systematic development method prevents race conditions</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="facebook.html">Facebook</a>
+                </td>
+                <td class="col-date">
+                    2011-04-11
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../web/index.html#cross-site-scripting-xss">Software is written in a manner such that there is no possibility of a cross-site scripting attack</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="hacking-team.html">Hacking Team</a>
+                </td>
+                <td class="col-date">
+                    2015-06-05
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../team/index.html#password-manager">Team members use a password manager</a>
+                        </p>
+
+                        <p>
+                            <a href="../team/index.html#limited-sensitive-data-access">Sensitive data access by administrators is limited</a>
+                        </p>
+
+                        <p>
+                            <a href="../web/index.html#password-storage-best-practices">User passwords and two-factor seeds are hashed and salted against bruteforcing</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="instagram.html">Instagram</a>
+                </td>
+                <td class="col-date">
+                    2014-12-08
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../user/index.html#account-verification-process">The creation of bogus accounts is prevented</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="lastpass.html">LastPass</a>
+                </td>
+                <td class="col-date">
+                    2015-06-10
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../team/index.html#password-manager">Team members use a password manager</a>
+                        </p>
+
+                        <p>
+                            <a href="../web/index.html#password-storage-best-practices">User passwords and two-factor seeds are hashed and salted against bruteforcing</a>
+                        </p>
+
+                        <p>
+                            <a href="../user/index.html#third-factor-authentication">The login process goes through an additional check in abnormal circumstances</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="linode.html">Linode</a>
+                </td>
+                <td class="col-date">
+                    2012-03-01
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../team/index.html#passphrase-on-server-login-keys">The terminal access to the server requires passphrase protected key</a>
+                        </p>
+
+                        <p>
+                            <a href="../team/index.html#two-factor-authentication-on-server-login">Terminal access to the server requires two-factor authentication</a>
+                        </p>
+
+                        <p>
+                            <a href="../infrastructure/index.html#encrypted-server-data">Data is stored on encrypted partitions</a>
+                        </p>
+
+                        <p>
+                            <a href="../assets/index.html#cold-wallet">Cold wallet maintains most assets offline</a>
+                        </p>
+
+                        <p>
+                            <a href="../assets/index.html#transaction-verification">Withdraws are verified by heuristics</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="maxcdn.html">MaxCDN</a>
+                </td>
+                <td class="col-date">
+                    2013-07-02
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../team/index.html#passphrase-on-server-login-keys">The terminal access to the server requires passphrase protected key</a>
+                        </p>
+
+                        <p>
+                            <a href="../team/index.html#audited-server-login-keys">A real-time method of maintaining and revoking keys across all servers</a>
+                        </p>
+
+                        <p>
+                            <a href="../web/index.html#https-tls-only">Service is HTTPS-only with security HTTP headers</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="mtgox.html">Mt. Gox</a>
+                </td>
+                <td class="col-date">
+                    2014-02-01
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../assets/index.html#proof-of-solvency">The service is able to perform Proof-of-solvency</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="nasa.html">NASA</a>
+                </td>
+                <td class="col-date">
+                    2012-11-15
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../team/index.html#encrypted-computers">Work computers have disk encryption</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="patreon.html">Patreon</a>
+                </td>
+                <td class="col-date">
+                    2015-09-01
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../team/index.html#limited-sensitive-data-access">Sensitive data access by administrators is limited</a>
+                        </p>
+
+                        <p>
+                            <a href="../team/index.html#data-scrubbing">Data dumps are cleaned of sensitive information</a>
+                        </p>
+
+                        <p>
+                            <a href="../web/index.html#non-public-administration-site">The administration site is not accessible or known to the public</a>
+                        </p>
+
+                        <p>
+                            <a href="../infrastructure/index.html#internal-services-not-exposed">Internal servers, services and domains cannot be discovered through public records</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="purse.html">PurseIO</a>
+                </td>
+                <td class="col-date">
+                    2015-07-31
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../web/index.html#authorization-and-permission-framework">Private pages and data access is protected by authorization framework</a>
+                        </p>
+
+                        <p>
+                            <a href="../web/index.html#non-guessable-ids">Publicly exposed ids are not guessable</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="sms-malware.html">SMS intercepting trojans</a>
+                </td>
+                <td class="col-date">
+                    2015-09-01
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../user/index.html#two-factor-authentication">Service users are encouraged to use two-factor authentication</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="sebastian.html">Sebastian</a>
+                </td>
+                <td class="col-date">
+                    2013-10-23
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../web/index.html#database-injection">Software uses a framework for database queries</a>
+                        </p>
+
+                        <p>
+                            <a href="../web/index.html#password-storage-best-practices">User passwords and two-factor seeds are hashed and salted against bruteforcing</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="slack.html">Slack</a>
+                </td>
+                <td class="col-date">
+                    2015-03-01
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../web/index.html#password-storage-best-practices">User passwords and two-factor seeds are hashed and salted against bruteforcing</a>
+                        </p>
+
+                        <p>
+                            <a href="../user/index.html#two-factor-authentication">Service users are encouraged to use two-factor authentication</a>
+                        </p>
+
+                        <p>
+                            <a href="../user/index.html#effective-session-kill">When the user account is deactivated or changed, the related sessions are dropped</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="soho.html">Soho</a>
+                </td>
+                <td class="col-date">
+                    2015-05-16
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../web/index.html#https-tls-only">Service is HTTPS-only with security HTTP headers</a>
+                        </p>
+
+                        <p>
+                            <a href="../web/index.html#cross-site-request-forgery-csrf">Software is written in a manner that it doesn't accept cross-site requests</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="squirrelmail.html">SquirrelMail</a>
+                </td>
+                <td class="col-date">
+                    2007-12-18
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../team/index.html#software-installation-from-safe-sources">Software is installed from known good sources</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="starbucks.html">Starbucks</a>
+                </td>
+                <td class="col-date">
+                    2015-05-21
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../web/index.html#whitehat-program">The service has a public whitehat or security bounty program</a>
+                        </p>
+
+                        <p>
+                            <a href="../assets/index.html#race-condition-prevention">A systematic development method prevents race conditions</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="steam.html">Steam</a>
+                </td>
+                <td class="col-date">
+                    2015-07-25
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../user/index.html#user-audit-logs">Service retains audit logs of sensitive user actions</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="tor.html">Tor</a>
+                </td>
+                <td class="col-date">
+                    2014-01-22
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../web/index.html#https-tls-only">Service is HTTPS-only with security HTTP headers</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="twitter.html">Twitter</a>
+                </td>
+                <td class="col-date">
+                    2010-09-26
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../web/index.html#cross-site-request-forgery-csrf">Software is written in a manner that it doesn't accept cross-site requests</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="veeder-root.html">Veeder-Root</a>
+                </td>
+                <td class="col-date">
+                    2015-01-23
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../web/index.html#non-public-administration-site">The administration site is not accessible or known to the public</a>
+                        </p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="xcode.html">XCode</a>
+                </td>
+                <td class="col-date">
+                    2015-09-17
+                </td>
+                <td>
+
+                        <p>
+                            <a href="../team/index.html#software-installation-from-safe-sources">Software is installed from known good sources</a>
+                        </p>
+
+                </td>
+            </tr>
+
+    </tbody>
+</table></div>
+<div class="section" id="indicent-index">
+<h2>Indicent index<a class="headerlink" href="#indicent-index" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="icloud.html">Apple iCloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ashley-madison.html">Ashley Madison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chinese-android.html">Asian Android phones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitly.html">Bitly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitpay.html">Bitpay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitstamp.html">Bitstamp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockchaininfo.html">Blockchain.info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudflare.html">CloudFlare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coinbase.html">Coinbase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryptoine.html">Cryptoine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="facebook.html">Facebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking-team.html">Hacking Team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instagram.html">Instagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lastpass.html">LastPass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linode.html">Linode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maxcdn.html">MaxCDN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mtgox.html">Mt. Gox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nasa.html">NASA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="patreon.html">Patreon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="purse.html">PurseIO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms-malware.html">SMS intercepting trojans</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sebastian.html">Sebastian</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slack.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soho.html">Soho</a></li>
+<li class="toctree-l1"><a class="reference internal" href="squirrelmail.html">SquirrelMail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="starbucks.html">Starbucks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="steam.html">Steam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tor.html">Tor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="twitter.html">Twitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="veeder-root.html">Veeder-Root</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xcode.html">XCode</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="icloud.html" class="btn btn-default float-right" title="Apple iCloud">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../assets/proof-of-solvency.html" class="btn btn-default" title="Proof of solvency"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+</footer>
+        </div>
+      </div>
+
+      <footer class="site-footer section section-inverse">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <p>© 2015-2023 <a href="https://twitter.com/moo9000">Mikko Ohtamaa</a></p>
+                </div>
+
+                <div>
+                    <ul class="social-links">
+                        <li class="footer-icon"><a href="https://twitter.com/moo9000"><i class="fa fa-twitter"></i></a></li>
+                        <li class="footer-icon"><a href="https://linkedin.com/in/ohtis"><i class="fa fa-linkedin"></i></a></li>
+                        <li class="footer-icon"><a href="https://github.com/miohtama/opsec"><i class="fa fa-github"></i></a></li>
+                      </ul>      
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'(latest)',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+
+
+</body>
+</html>

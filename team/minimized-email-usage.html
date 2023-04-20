@@ -1,0 +1,245 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Minimized email usage - Operations Security</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/main.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Operations Security (latest) documentation" href="../index.html"/>
+        <link rel="up" title="Team security" href="index.html"/>
+        <link rel="next" title="Two-factor authentication on email" href="two-factor-authentication-on-email.html"/>
+        <link rel="prev" title="Encrypted mobile devices" href="encrypted-mobile-devices.html"/>
+ 
+<link rel="stylesheet" href="../_static/custom.css" type="text/css">
+<meta name="google-site-verification" content="CKshf5Es8jYfgBEAr-aBAcMToRE9d3MSVoSYHAsw9vY">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+          <!-- can't f#$%#$% figure out how to Sphinx would correctly link to index doc -->
+          <a class="logo-link" href="/opsec/">
+            <img class="logo" alt="OPSEC" src="../_static/logo-site.png">
+          </a>
+
+          
+
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../background/history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/audience.html">Audience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/audience.html#sensitive-and-high-value-services">Sensitive and high value services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/index.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assessment/index.html">Assessing security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Team security</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basic-security-practices.html">Basic security practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dangerous-file-attachments.html">Dangerous file attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="password-manager.html">Password manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="third-party-devices.html">Third party devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="encrypted-computers.html">Encrypted computers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="encrypted-mobile-devices.html">Encrypted mobile devices</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Minimized email usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="two-factor-authentication-on-email.html">Two-factor authentication on email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="two-factor-authentication-for-admins.html">Two-factor authentication for admins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passphrase-on-server-login-keys.html">Passphrase on server login keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="two-factor-authentication-on-server-login.html">Two-factor authentication on server login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audited-server-login-keys.html">Audited server login keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software-installation-from-safe-sources.html">Software installation from safe sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limited-sensitive-data-access.html">Limited sensitive data access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logged-sensitive-data-access.html">Logged sensitive data access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-scrubbing.html">Data scrubbing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../web/index.html">Web development practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">Protecting service users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../infrastructure/index.html">Infrastructure security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/index.html">Cryptocurrency related security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidences/index.html">Security incidence reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/license.html">License and copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Operations Security</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+
+    <li><a href="../index.html">OPSEC</a> &raquo;</li>
+      
+          <li><a href="index.html">Team security</a> &raquo;</li>
+      
+    <li>Minimized email usage</li>
+
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="minimized-email-usage">
+<span id="id1"></span><h1>Minimized email usage<a class="headerlink" href="#minimized-email-usage" title="Permalink to this headline">¶</a></h1>
+<p><strong>Email is not used for internal communications?</strong></p>
+<p>Email as media is insecure. Email travels plain-text through the Internet. Even if the message content itself is encrypted, the metadata is still readable.</p>
+<p>Instead of email, closed tools and services should be used for team internal communications.</p>
+<p>For highly sensitive projects, the communication should be contained in an in-house server.</p>
+<p>Related incidences:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../incidences/bitpay.html#bitpay"><span class="std std-ref">Bitpay</span></a></li>
+</ul>
+<p>Links:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Email_privacy">Email Privacy (Wikipedia)</a></li>
+<li><a class="reference external" href="http://stefanmayer.me/2014/08/28/slack-flowdock-hipchat-comparison/">Modern Team Communication Tools for Developers (Stefan Mayer)</a></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="two-factor-authentication-on-email.html" class="btn btn-default float-right" title="Two-factor authentication on email">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="encrypted-mobile-devices.html" class="btn btn-default" title="Encrypted mobile devices"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+</footer>
+        </div>
+      </div>
+
+      <footer class="site-footer section section-inverse">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <p>© 2015-2023 <a href="https://twitter.com/moo9000">Mikko Ohtamaa</a></p>
+                </div>
+
+                <div>
+                    <ul class="social-links">
+                        <li class="footer-icon"><a href="https://twitter.com/moo9000"><i class="fa fa-twitter"></i></a></li>
+                        <li class="footer-icon"><a href="https://linkedin.com/in/ohtis"><i class="fa fa-linkedin"></i></a></li>
+                        <li class="footer-icon"><a href="https://github.com/miohtama/opsec"><i class="fa fa-github"></i></a></li>
+                      </ul>      
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'(latest)',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+
+
+</body>
+</html>

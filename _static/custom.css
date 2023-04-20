@@ -1,0 +1,115 @@
+h1 {
+    font-size: 26px;
+}
+
+.logo {
+    margin: 20px;
+    width: 160px;
+}
+
+.logo-link {
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 1100px) {
+
+    .wy-nav-content-wrap {
+        background: rgb(44, 62, 80);
+    }
+    
+    .wy-grid-for-nav {
+        background: rgb(44, 62, 80);
+    }
+
+}
+
+
+
+.wy-body-for-nav {
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    font-weight: normal;
+    color: #404040;
+}
+
+.table-incidences td,
+.table-incidences th {
+    vertical-align: top;
+    text-align: left;
+    padding: 10px;
+}
+
+.table-incidences td:first-child,
+.table-incidences th:first-child {
+    padding-left: 0;
+}
+
+
+.col-date {
+    min-width: 150px;
+}
+
+/* Non-user visible hack to make Sphinx to understand how docs are supposed to be in index */
+#hidden-index {
+    display: none;
+}
+
+.site-header .container {
+    width: 800px;
+}
+
+.site-footer {
+    font-size: 16px;
+}
+
+.site-footer .container {
+    
+}
+
+.site-footer a:hover {
+    text-decoration: none;
+}
+
+.site-footer label {
+    font-weight: normal;
+    color: #969fa8;
+    font-size: 16px;
+}
+
+.wy-nav-side {
+    background: #f8f8f8;
+    padding-top: 10px;
+}
+
+.wy-nav-side a {
+    color: #777777;
+}
+
+.wy-nav-side a:hover {
+    color: #969fa8;
+    background: #2c3e50;
+}
+
+.navbar-default {
+    border: 0;
+    border-radius: 0;
+}
+
+.site-footer input[type='email'] {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .navbar-default {
+        display: none;
+    }
+
+    .site-footer .container {
+        width: auto;
+    }
+
+
+}
+

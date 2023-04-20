@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Assessing security - Operations Security</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/main.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Operations Security (latest) documentation" href="../index.html"/>
+        <link rel="next" title="Team security" href="../team/index.html"/>
+        <link rel="prev" title="Background" href="../background/index.html"/>
+ 
+<link rel="stylesheet" href="../_static/custom.css" type="text/css">
+<meta name="google-site-verification" content="CKshf5Es8jYfgBEAr-aBAcMToRE9d3MSVoSYHAsw9vY">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+          <!-- can't f#$%#$% figure out how to Sphinx would correctly link to index doc -->
+          <a class="logo-link" href="/opsec/">
+            <img class="logo" alt="OPSEC" src="../_static/logo-site.png">
+          </a>
+
+          
+
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../background/history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/audience.html">Audience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/audience.html#sensitive-and-high-value-services">Sensitive and high value services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/index.html">Background</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Assessing security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chapters-and-evaluation-points">Chapters and evaluation points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#applicable-criteria">Applicable criteria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#learning-security">Learning security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#self-assessment">Self assessment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#third-party-assessment">Third party assessment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-third-party-security-assessment-example">A third party security assessment example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publishing-the-assessment-results">Publishing the assessment results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../team/index.html">Team security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/index.html">Web development practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">Protecting service users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../infrastructure/index.html">Infrastructure security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/index.html">Cryptocurrency related security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidences/index.html">Security incidence reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/license.html">License and copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Operations Security</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+
+    <li><a href="../index.html">OPSEC</a> &raquo;</li>
+      
+    <li>Assessing security</li>
+
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="assessing-security">
+<h1>Assessing security<a class="headerlink" href="#assessing-security" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes it’s necessary to know that the organization and its services are secure in fact, not just in claim. Every privacy policy has a disclaimer saying they follow the industry security best practices. Rarely anybody clarifies what we are these best practices and how they are being followed. Furthermore the incidences history has shown that often the claims themselves are bogus.</p>
+<p>This operations security guide is created in a manner that it can assess the security in an objective manner with little room for the interpretation. The assessment process is transparent and open. The guide consists of evaluation points which are easy to verify and have only outcomes “it’s secure” or “it’s not secure”. You either get green light or red light - there is no room for grey area. When you say you have assessed the security based on Operations Security guide you can name the individual facts that were checked.</p>
+</div>
+<div class="section" id="chapters-and-evaluation-points">
+<h2>Chapters and evaluation points<a class="headerlink" href="#chapters-and-evaluation-points" title="Permalink to this headline">¶</a></h2>
+<p>The guide is divided to different chapters, each chapter reflecting different organizational or IT functionality.</p>
+<p>The chapters consist of questions, called <em>evalution points</em>, on a specific matter. Ultimately you want to be able to answer yes to every evaluation point.</p>
+</div>
+<div class="section" id="applicable-criteria">
+<h2>Applicable criteria<a class="headerlink" href="#applicable-criteria" title="Permalink to this headline">¶</a></h2>
+<p>Some evaluation points might not be applicable for small businesses. For example, having a tool for managing server login keys might not be in the reach of a team of few members or less. Or it would be not needed at all, because only one person has access to the servers. Thus, each evaluation point contains an applicable criteria.</p>
+<p>The following rough rules can be used to decide whether your organization should consider the evaluation point:</p>
+<ul class="simple">
+<li><strong>Everybody</strong>: Everybody should do this, regardless of the mature and resources of their organization</li>
+<li><strong>Medium and large enterprises</strong>: Organizations with more than two million yearly revenue or two million raised capital. These organizations generally have multiple people working on the service and can afford to hire a security consultancy, training and tools.</li>
+</ul>
+</div>
+<div class="section" id="learning-security">
+<h2>Learning security<a class="headerlink" href="#learning-security" title="Permalink to this headline">¶</a></h2>
+<p>If you are still starting a project, you are new to security to or generally wish to learn more about secure Internet services, this guide can serve you as openreference material. It contains relevant links and past security incidences which are cross-referenced with the evaluation points, building a picture how failing security has caused incidences. With historical background and more hands on examples we hope the guide is more entertaining to study than purely abstract study material.</p>
+</div>
+<div class="section" id="self-assessment">
+<h2>Self assessment<a class="headerlink" href="#self-assessment" title="Permalink to this headline">¶</a></h2>
+<p>Self assessment is a procedure where somebody within organization itself goes through the project and evaluates the security principles. This is to harden the system and make sure the project is prepared for developing secure services.</p>
+<p>This guide can serve as a base for doing a self assessment. It contains a list of evaluation points a member of the organization can go through and suggest changes to the peers how the issues should be addressed.</p>
+</div>
+<div class="section" id="third-party-assessment">
+<h2>Third party assessment<a class="headerlink" href="#third-party-assessment" title="Permalink to this headline">¶</a></h2>
+<p>A third party assessment happens when a person who is not a stakeholder in the project is invited to review the project. If the reviewer has no conflict of interest, there is little reason to embellish the results, leading to more objective and accurate assessment.</p>
+<p>The results can be published or left as an internal memo. Publishing the results is a trust building tool: if the Internet has a reason to trust the person who did the assessment, the audience learns the organization knows what they are doing and can trust their services.</p>
+<div class="section" id="a-third-party-security-assessment-example">
+<h3>A third party security assessment example<a class="headerlink" href="#a-third-party-security-assessment-example" title="Permalink to this headline">¶</a></h3>
+<p>The following assessment process</p>
+<ul class="simple">
+<li>The organization signs NDA with the reviewer</li>
+<li>The reviewer goes through the <a class="reference internal" href="../background/index.html"><span class="doc">evaluation points</span></a> with the representatives of organization</li>
+<li>Each evaluation point is confirmed with manual inspection. If the organization claims the devices are encrypted, the reviewer checks that this is indeed in the case, probably starting from the laptop and mobile phone of the CEO.</li>
+<li>The reviewer gives feedback to address the issues. For example, if a two-factor authentication is not enabled on the hosting provider account, the reviewer and the representative enable it during the assessment.</li>
+<li>If there is sensitive material, like site source code, it is handled only offline, through USB stick. The material is copied only to a specific computer which is reset before and after the assessment. This shields reviewer itself against any potential compromises.</li>
+<li>The report and evaluation point notes are also written offline on the same specific computer. The evaluation point notes are never put online.</li>
+<li>The reviewer gives feedback to the organization including the full evaluation point notes and scores.</li>
+</ul>
+</div>
+<div class="section" id="publishing-the-assessment-results">
+<h3>Publishing the assessment results<a class="headerlink" href="#publishing-the-assessment-results" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The reviewer writes a public statement regarding the service security. The statement includes evaluation point score summaries for each chapter and written letter of recommendation.</li>
+<li>The organization can decide whether the statement is published. The statements are published on operationssecurity.org and the service can use operationssecurity.org badge to link to the results on their website.</li>
+<li>If some of the issues noted during the assessment are too cumbersome to be addresses on the spot, the organization can have the second assessment round. The reviewer comes back and goes through the remaining issues to see they were addresses and the evaluation point clears green.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../team/index.html" class="btn btn-default float-right" title="Team security">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../background/index.html" class="btn btn-default" title="Background"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+</footer>
+        </div>
+      </div>
+
+      <footer class="site-footer section section-inverse">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <p>© 2015-2023 <a href="https://twitter.com/moo9000">Mikko Ohtamaa</a></p>
+                </div>
+
+                <div>
+                    <ul class="social-links">
+                        <li class="footer-icon"><a href="https://twitter.com/moo9000"><i class="fa fa-twitter"></i></a></li>
+                        <li class="footer-icon"><a href="https://linkedin.com/in/ohtis"><i class="fa fa-linkedin"></i></a></li>
+                        <li class="footer-icon"><a href="https://github.com/miohtama/opsec"><i class="fa fa-github"></i></a></li>
+                      </ul>      
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'(latest)',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+
+
+</body>
+</html>

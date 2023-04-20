@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>User audit logs - Operations Security</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/main.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Operations Security (latest) documentation" href="../index.html"/>
+        <link rel="up" title="Protecting service users" href="index.html"/>
+        <link rel="next" title="Account verification process" href="account-verification-process.html"/>
+        <link rel="prev" title="Effective session kill" href="effective-session-kill.html"/>
+ 
+<link rel="stylesheet" href="../_static/custom.css" type="text/css">
+<meta name="google-site-verification" content="CKshf5Es8jYfgBEAr-aBAcMToRE9d3MSVoSYHAsw9vY">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+          <!-- can't f#$%#$% figure out how to Sphinx would correctly link to index doc -->
+          <a class="logo-link" href="/opsec/">
+            <img class="logo" alt="OPSEC" src="../_static/logo-site.png">
+          </a>
+
+          
+
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../background/history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/audience.html">Audience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/audience.html#sensitive-and-high-value-services">Sensitive and high value services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/index.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assessment/index.html">Assessing security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../team/index.html">Team security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/index.html">Web development practices</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Protecting service users</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="two-factor-authentication.html">Two-factor authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="third-factor-authentication.html">Third-factor authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-authentication-on-sensitive-actions.html">Re-authentication on sensitive actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brute-force-login-prevention.html">Brute force login prevention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="effective-session-kill.html">Effective session kill</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">User audit logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-verification-process.html">Account verification process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flood-action-throttle.html">Flood action throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trademark-protection.html">Trademark protection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../infrastructure/index.html">Infrastructure security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/index.html">Cryptocurrency related security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidences/index.html">Security incidence reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/license.html">License and copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Operations Security</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+
+    <li><a href="../index.html">OPSEC</a> &raquo;</li>
+      
+          <li><a href="index.html">Protecting service users</a> &raquo;</li>
+      
+    <li>User audit logs</li>
+
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="user-audit-logs">
+<span id="id1"></span><h1>User audit logs<a class="headerlink" href="#user-audit-logs" title="Permalink to this headline">¶</a></h1>
+<p><strong>Service retains audit logs of sensitive user actions?</strong></p>
+<p>All sensitive actions should be logged to a user-specific action log.</p>
+<p>The users may or may not be able to view these log entries themselves. In the case of a user reporting a hacked account, the action log can be reviewed for swift judgement. In the case of a filed police report, due to an account hack, the user audit log can be handed to the officials.</p>
+<p>The user audit log also serves an important role in protecting the service operator itself against fraud. For example, a user can make a frivolous claim that the user’s account got hacked, then threaten to sue the service and publish the incident unless there is (incorrectly) reimbursement. In fact, the user might have just transferred out assets himself/herself to a friendly third party. The user audit logs prove the correct password and authentication codes were used to initiate the transfer and shift the responsibility to the user himself or herself.</p>
+<p>The user audit log should include at least:</p>
+<ul class="simple">
+<li>User logins and login attempts</li>
+<li>Password change and reset operations</li>
+<li>Enabling and disabling two-factor authentication</li>
+<li>Email change operations</li>
+<li>All financial operations</li>
+<li>Timestamp with timezone</li>
+<li>IP address</li>
+<li>User agent</li>
+</ul>
+<p>Related incidences:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../incidences/steam.html#steam"><span class="std std-ref">Steam</span></a></li>
+</ul>
+<p>Links:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Considerations_When_Using_Multiple_Cookies">Logging Sessions Life Cycle: Monitoring Creation: Usage, and Destruction of Session IDs (OWASP)</a></li>
+<li><a class="reference external" href="http://localbitcoins.blogspot.fi/2014/04/investigation-report-of-claimed.html">Investigation report of the claimed security breach at LocalBitcoins</a></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="account-verification-process.html" class="btn btn-default float-right" title="Account verification process">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="effective-session-kill.html" class="btn btn-default" title="Effective session kill"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+</footer>
+        </div>
+      </div>
+
+      <footer class="site-footer section section-inverse">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <p>© 2015-2023 <a href="https://twitter.com/moo9000">Mikko Ohtamaa</a></p>
+                </div>
+
+                <div>
+                    <ul class="social-links">
+                        <li class="footer-icon"><a href="https://twitter.com/moo9000"><i class="fa fa-twitter"></i></a></li>
+                        <li class="footer-icon"><a href="https://linkedin.com/in/ohtis"><i class="fa fa-linkedin"></i></a></li>
+                        <li class="footer-icon"><a href="https://github.com/miohtama/opsec"><i class="fa fa-github"></i></a></li>
+                      </ul>      
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'(latest)',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+
+
+</body>
+</html>

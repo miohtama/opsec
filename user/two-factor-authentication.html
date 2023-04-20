@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Two-factor authentication - Operations Security</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/main.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Operations Security (latest) documentation" href="../index.html"/>
+        <link rel="up" title="Protecting service users" href="index.html"/>
+        <link rel="next" title="Third-factor authentication" href="third-factor-authentication.html"/>
+        <link rel="prev" title="Protecting service users" href="index.html"/>
+ 
+<link rel="stylesheet" href="../_static/custom.css" type="text/css">
+<meta name="google-site-verification" content="CKshf5Es8jYfgBEAr-aBAcMToRE9d3MSVoSYHAsw9vY">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+          <!-- can't f#$%#$% figure out how to Sphinx would correctly link to index doc -->
+          <a class="logo-link" href="/opsec/">
+            <img class="logo" alt="OPSEC" src="../_static/logo-site.png">
+          </a>
+
+          
+
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../background/history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/audience.html">Audience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/audience.html#sensitive-and-high-value-services">Sensitive and high value services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/index.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assessment/index.html">Assessing security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../team/index.html">Team security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/index.html">Web development practices</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Protecting service users</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Two-factor authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="third-factor-authentication.html">Third-factor authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-authentication-on-sensitive-actions.html">Re-authentication on sensitive actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brute-force-login-prevention.html">Brute force login prevention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="effective-session-kill.html">Effective session kill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-audit-logs.html">User audit logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-verification-process.html">Account verification process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flood-action-throttle.html">Flood action throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trademark-protection.html">Trademark protection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../infrastructure/index.html">Infrastructure security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/index.html">Cryptocurrency related security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidences/index.html">Security incidence reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/license.html">License and copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Operations Security</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+
+    <li><a href="../index.html">OPSEC</a> &raquo;</li>
+      
+          <li><a href="index.html">Protecting service users</a> &raquo;</li>
+      
+    <li>Two-factor authentication</li>
+
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="two-factor-authentication">
+<span id="id1"></span><h1>Two-factor authentication<a class="headerlink" href="#two-factor-authentication" title="Permalink to this headline">¶</a></h1>
+<p><strong>Service users are encouraged to use two-factor authentication?</strong> Yes / No</p>
+<p>Two-factor authentication, a.k.a. multifactor authentication, a.k.a. secure login, is a method to ask for a one-time token from the user when logging in. The primary purpose of two-factor authentication is to protect the user from password compromise.</p>
+<p>End users may lose their passwords through multiple threats like:</p>
+<ul class="simple">
+<li>The user device is compromised by malware and the password is keylogged or extracted from the running password manager</li>
+<li>The password is reused across multiple sites and one of the sites gets compromised. You can buy stock email and password lists on the black market.</li>
+<li>The password is given out on a phishing site (see <a class="reference internal" href="trademark-protection.html#trademark-protection"><span class="std std-ref">Trademark protection</span></a>)</li>
+<li>The password is extracted through a man-in-the-middle attack (see <a class="reference internal" href="../web/https-tls-only.html#https-tls-only"><span class="std std-ref">HTTPS / TLS only</span></a>)</li>
+</ul>
+<p>Two-factor authentication stops the attacker, equipped with a mere password, from accessing the victim’s account.</p>
+<p>Having two-factor authentication as an option is not enough. Users should be educated about two-factor authentication. Often users are not aware of threat models and the harm they may face because of lax security. Incentives, like reduced fees, should be applied to encourage the enabling of the two-factor authentication. From a business perspective, this can be justified as a reduced support cost of dealing with hacked account cases.</p>
+<p>Popular two-factor authentication methods include:</p>
+<ul class="simple">
+<li>Mobile apps: Time-Based One Time Password (TOTP), Google Authenticator</li>
+<li>Paper codes: One time pad, HOTP, popular with European banks</li>
+<li>SMS and other phone-based methods</li>
+<li>Hardware devices: YubiKey, others</li>
+</ul>
+<p>External services like Authy and Clef provide two-factor-as-a-service.</p>
+<p>Google Authenticator is a popular two-factor mobile app. Despite the fact that the name says Google, you can use it on your own site. The application can be used offline independently from Google services. Google Authenticator is based on RFC 6238. There are multiple open-source implementations for all desktop and mobile operating systems.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">SMS is not deemed secure in the large scale. SMS messages are intercepted by mobile malware. SMS may travel in plain text, and various parties in the operator business chain can read them. Mobile number portability opens a vector for the attacker to gain access to the victim’s phone number. SMS may not be reliable in third-world countries, thus making it not a viable option for global business.</p>
+</div>
+<p>Applies for: Everyone</p>
+<p>Related incidences:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../incidences/icloud.html#icloud"><span class="std std-ref">Apple iCloud</span></a></li>
+<li><a class="reference internal" href="../incidences/slack.html#slack"><span class="std std-ref">Slack</span></a></li>
+<li><a class="reference internal" href="../incidences/sms-malware.html#sms-malware"><span class="std std-ref">SMS intercepting trojans</span></a></li>
+</ul>
+<p>Links:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/HMAC-based_One-time_Password_Algorithm">HMAC-based One-time Password Algorithm (Wikipedia)</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm">Time-based One-time Password Algorithm (Wikipedia)</a></li>
+<li><a class="reference external" href="https://twofactorauth.org/">Two-factor Authentication List</a></li>
+<li><a class="reference external" href="http://www.itnews.com.au/news/45k-stolen-in-phone-porting-scam-282310/page0">$45k stolen in phone porting scam (SC Magazine)</a></li>
+<li><a class="reference external" href="https://www.yubico.com/faq/yubikey/">What is YubiKey?</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Google_Authenticator">Google Authenticator (Wikipedia)</a></li>
+<li><a class="reference external" href="https://github.com/google/google-authenticator/wiki">Google Authenticator Project (Github)</a></li>
+<li><a class="reference external" href="https://www.authy.com/">Authy</a></li>
+<li><a class="reference external" href="https://getclef.com/">Clef</a></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="third-factor-authentication.html" class="btn btn-default float-right" title="Third-factor authentication">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-default" title="Protecting service users"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+</footer>
+        </div>
+      </div>
+
+      <footer class="site-footer section section-inverse">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <p>© 2015-2023 <a href="https://twitter.com/moo9000">Mikko Ohtamaa</a></p>
+                </div>
+
+                <div>
+                    <ul class="social-links">
+                        <li class="footer-icon"><a href="https://twitter.com/moo9000"><i class="fa fa-twitter"></i></a></li>
+                        <li class="footer-icon"><a href="https://linkedin.com/in/ohtis"><i class="fa fa-linkedin"></i></a></li>
+                        <li class="footer-icon"><a href="https://github.com/miohtama/opsec"><i class="fa fa-github"></i></a></li>
+                      </ul>      
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'(latest)',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>HTTPS / TLS only - Operations Security</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/main.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Operations Security (latest) documentation" href="../index.html"/>
+        <link rel="up" title="Web development practices" href="index.html"/>
+        <link rel="next" title="Database injection" href="database-injection.html"/>
+        <link rel="prev" title="Web development practices" href="index.html"/>
+ 
+<link rel="stylesheet" href="../_static/custom.css" type="text/css">
+<meta name="google-site-verification" content="CKshf5Es8jYfgBEAr-aBAcMToRE9d3MSVoSYHAsw9vY">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+          <!-- can't f#$%#$% figure out how to Sphinx would correctly link to index doc -->
+          <a class="logo-link" href="/opsec/">
+            <img class="logo" alt="OPSEC" src="../_static/logo-site.png">
+          </a>
+
+          
+
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../background/history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/audience.html">Audience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/audience.html#sensitive-and-high-value-services">Sensitive and high value services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/index.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assessment/index.html">Assessing security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../team/index.html">Team security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Web development practices</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">HTTPS / TLS only</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database-injection.html">Database injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-site-scripting-xss.html">Cross-site scripting (XSS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-site-request-forgery-csrf.html">Cross-site request forgery (CSRF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="password-storage-best-practices.html">Password storage best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authorization-and-permission-framework.html">Authorization and permission framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no-caching-policy.html">No caching policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="non-guessable-ids.html">Non-guessable IDs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="non-public-administration-site.html">Non-public administration site</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whitehat-program.html">Whitehat program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code-reviews.html">Code reviews</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">Protecting service users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../infrastructure/index.html">Infrastructure security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/index.html">Cryptocurrency related security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidences/index.html">Security incidence reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/license.html">License and copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Operations Security</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+
+    <li><a href="../index.html">OPSEC</a> &raquo;</li>
+      
+          <li><a href="index.html">Web development practices</a> &raquo;</li>
+      
+    <li>HTTPS / TLS only</li>
+
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="https-tls-only">
+<span id="id1"></span><h1>HTTPS / TLS only<a class="headerlink" href="#https-tls-only" title="Permalink to this headline">¶</a></h1>
+<p><strong>Service is HTTPS-only with security HTTP headers?</strong> Yes / No</p>
+<p>The service is available only over an encrypted connection. A plain HTTP connection is allowed only for the initial redirect. Furthermore, the HTTP responses should include security headers like <em>HTTP Strict Transport Security</em>, <em>X-Frame-Option</em> and HTTPS-only cookies with no JavaScript access.</p>
+<p>Encryption protects again man-in-the-middle attacks which include:</p>
+<ul class="simple">
+<li>Malware tapping traffic locally</li>
+<li>Compromised Wi-Fi routers</li>
+<li>Malicious Tor exit nodes</li>
+<li>Nationstate actors and mass surveillance</li>
+</ul>
+<p>The <em>X-Frame-Option</em> HTTP response header prevents clickjacking attacks, though it is not related to transport security directly.</p>
+<p>If the site loads resources from external content delivery networks (CDNs), these downloads should be marked with subresource integrity tags to prevent attacks through a compromised CDN provider.</p>
+<p>Applies for: Everyone</p>
+<p>Related incidences:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../incidences/tor.html#tor"><span class="std std-ref">Tor</span></a></li>
+<li><a class="reference internal" href="../incidences/soho.html#soho"><span class="std std-ref">Soho</span></a></li>
+<li><a class="reference internal" href="../incidences/maxcdn.html#maxcdn"><span class="std std-ref">MaxCDN</span></a></li>
+</ul>
+<p>Links:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://letsencrypt.org/">Let’s Encrypt, a free, automated, and open certificate authority brought to you by the Internet Security Research Group (ISRG)</a></li>
+<li><a class="reference external" href="https://wiki.mozilla.org/Security/Server_Side_TLS">Security/Server Side TLS (Mozilla Wiki)</a></li>
+<li><a class="reference external" href="https://www.owasp.org/index.php/Clickjacking">Clickjacking (OWASP)</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options">X-Frame-Option (Mozilla Developer Network)</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity (Mozilla Developer Network)</a></li>
+<li><a class="reference external" href="http://w3c.github.io/webappsec/specs/subresourceintegrity/">Subresource Integrity (W3C specification)</a></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="database-injection.html" class="btn btn-default float-right" title="Database injection">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-default" title="Web development practices"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+</footer>
+        </div>
+      </div>
+
+      <footer class="site-footer section section-inverse">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <p>© 2015-2023 <a href="https://twitter.com/moo9000">Mikko Ohtamaa</a></p>
+                </div>
+
+                <div>
+                    <ul class="social-links">
+                        <li class="footer-icon"><a href="https://twitter.com/moo9000"><i class="fa fa-twitter"></i></a></li>
+                        <li class="footer-icon"><a href="https://linkedin.com/in/ohtis"><i class="fa fa-linkedin"></i></a></li>
+                        <li class="footer-icon"><a href="https://github.com/miohtama/opsec"><i class="fa fa-github"></i></a></li>
+                      </ul>      
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'(latest)',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+
+
+</body>
+</html>
