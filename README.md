@@ -57,8 +57,8 @@ This Git repository is a Pelican, Sphinx and YAML source code for building the b
 The folders
 
 - `source` contains Sphinx source code for the book
-- `site` contains Pelican website that serves landing page for the website
+- `site` contains old Pelican website that serves landing page for the website - not used anymore
 
 # Contact
 
-mikko at opensourcehacker dot com
+[Contact on LinkedIn](https://linkedin.com/in/ohtis)
