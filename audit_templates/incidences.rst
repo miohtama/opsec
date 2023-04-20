@@ -24,10 +24,6 @@ Compromised user accounts: **{{ compromised_accounts|round(2, 'floor') }}M**
 
 Lost assets: **{{ assets_lost|round(2, 'floor') }}M USD**
 
-Bankcrupted companies: **1**
-
-Fired employees: **0**
-
 .. raw :: html
 
     <table class="table-incidences">
