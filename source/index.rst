@@ -33,7 +33,6 @@ Chapters
 .. toctree::
     :maxdepth: 1
 
-    background/author
     background/audience
     background/index
     assessment/index

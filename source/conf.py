@@ -381,3 +381,5 @@ html_context = {
     '_static/custom.css',
 ],
 }
+
+html_baseurl = '/docs/'

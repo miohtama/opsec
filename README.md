@@ -46,6 +46,13 @@ This Git repository is a Pelican, Sphinx and YAML source code for building the b
 
 * Pelican drives the generation of a static website and blog
 
+* Python 3.10 seems to work, but all package date pre-2015
+
+The folders
+
+- `source` contains Sphinx source code for the book
+- `site` contains Pelican website that serves landing page for the website
+
 # Contact
 
 mikko at opensourcehacker dot com
