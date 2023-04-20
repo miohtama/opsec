@@ -57,7 +57,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Operations Security'
-copyright = '2015, Mikko Ohtamaa'
+copyright = '2015-2023, Mikko Ohtamaa'
 author = 'Mikko Ohtamaa'
 
 # The version info for the project you're documenting, acts as replacement for
