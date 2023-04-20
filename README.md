@@ -26,11 +26,9 @@ make book
 Building the website and viewing HTML locally:
 
 ```shell
+ln -s build/html/ site/output/docs/
 cd site
-make serve
-```
-
-open build/html/index.html
+make clean html serve
 ```
 
 Building and publishing the site:
