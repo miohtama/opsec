@@ -89,9 +89,9 @@
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
 
-          <a class="logo-link" href="{{ pathto('/index', 1) }}">
-            <!-- can't f#$%#$% figure out how to Sphinx would correctly link to index doc -->
-            <img class="logo" alt="OPSEC" src="/opsec/">
+          <!-- can't f#$%#$% figure out how to Sphinx would correctly link to index doc -->
+          <a class="logo-link" href="/opsec/">
+            <img class="logo" alt="OPSEC" src="{{ pathto('_static/logo-site.png', 1) }}">
           </a>
 
           {% block menu %}
