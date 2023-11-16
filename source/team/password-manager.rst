@@ -34,7 +34,7 @@ Links:
 
 
 
-- `KeePassX <https://www.keepassx.org/>`_
+- `KeePassXC <https://keepassxc.org/>`_
 
 
 
